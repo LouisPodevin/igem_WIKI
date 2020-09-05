@@ -1,6 +1,6 @@
 // @ts-check
 
-import "/Team:Ionis_Paris/scripts/gen/vue.js"
+import "../scripts/gen/vue.js"
 
 /** @type {Array<
  * {
