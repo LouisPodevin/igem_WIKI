@@ -3,6 +3,8 @@
 const navs = document.getElementsByClassName("navigation")
 
 export const initNavigation = async () => {
+    document.body.style.paddingLeft = "390px"
+
     // Load HTML
     const navHtlm = await (
         await fetch("/Team:Ionis_Paris/navigation/navigation.html")
