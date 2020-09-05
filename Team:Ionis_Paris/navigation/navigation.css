@@ -1,0 +1,13 @@
+#navigation {
+    background-color: white;
+    max-width: 350px;
+}
+
+#navigation .itemNav {
+    list-style-type: none;
+}
+
+#navigation .itemNavFlex {
+    display: flex;
+    justify-content: space-between;
+}

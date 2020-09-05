@@ -1,0 +1,22 @@
+<!--
+    JS and CSS loaded in /scripts/wiki-nav.js
+ -->
+
+<div id="navigation">
+    <div class="igemLogo">IGEM IONIS</div>
+    <nav>
+        <li v-for="groupNav in menu" :key="groupNav.index" class="itemNav">
+            <a v-if="groupNav.link" class="navTextLink" :href="groupNav.link"
+                >{{groupNav.title}}</a
+            >
+            <div v-else>
+                <div class="itemNavFlex" @click="toggleMenu(groupNav.index)">
+                    <div class="itemNavText">{{groupNav.title}}</div>
+                    <div class="iconNavChevron">^</div>
+                </div>
+
+                <div v-if="openedMenu[groupNav.index]">Yaya</div>
+            </div>
+        </li>
+    </nav>
+</div>
