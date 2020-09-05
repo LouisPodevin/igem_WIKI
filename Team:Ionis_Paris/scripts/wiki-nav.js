@@ -3,6 +3,9 @@
 const navs = document.getElementsByClassName("navigation")
 
 export const initNavigation = async () => {
+    if (navs.length === 0) {
+        return
+    }
     document.body.style.paddingLeft = "390px"
 
     // Load JS
@@ -21,10 +24,6 @@ export const initNavigation = async () => {
     const navHtlm = await (
         await fetch("/Team:Ionis_Paris/navigation/navigation.html")
     ).text()
-
-    if (navs.length === 0) {
-        return
-    }
 
     for (let itemNav of navs) {
         itemNav.innerHTML = navHtlm
