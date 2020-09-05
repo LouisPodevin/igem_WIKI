@@ -1,6 +1,6 @@
 // @ts-check
 
-import "/Team:Ionis_Paris/scripts/vue.js"
+import "/Team:Ionis_Paris/scripts/gen/vue.js"
 
 /** @type {Array<
  * {
@@ -94,6 +94,11 @@ new Vue({
             this.openedMenu = this.openedMenu.map((value, i) =>
                 i === index ? !value : value,
             )
+        },
+
+        getRotation(index) {
+            return { transform: `rotate(${this.openedMenu[index] ? "180" : "0"}deg)` }
+            // return { color: `${this.openedMenu[index] ? "blue" : "red"}` }
         },
     },
 })

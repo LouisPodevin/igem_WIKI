@@ -24,6 +24,7 @@
 #navigation .navTextLink,
 #navigation .itemNavFlex {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 7px 10px;
     border-radius: 5px;
@@ -40,6 +41,16 @@
     font-weight: 800;
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
+}
+
+#navigation .iconNavChevronContainer {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+#navigation .iconNavChevron {
+    height: 20px;
 }
 
 #navigation .navContent {

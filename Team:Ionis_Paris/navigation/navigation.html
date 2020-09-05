@@ -18,7 +18,12 @@
             <div v-else>
                 <div class="itemNavFlex" @click="toggleMenu(groupNav.index)">
                     <div class="itemNavText">{{groupNav.title}}</div>
-                    <div class="iconNavChevron">^</div>
+                    <div
+                        :style="getRotation(groupNav.index)"
+                        class="iconNavChevronContainer"
+                    >
+                        <i data-feather="chevron-down" class="iconNavChevron"></i>
+                    </div>
                 </div>
 
                 <div
