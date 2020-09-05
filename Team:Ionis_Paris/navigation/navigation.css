@@ -1,13 +1,63 @@
 #navigation {
     background-color: white;
-    max-width: 350px;
+    max-width: 330px;
+    padding: 40px 30px;
+}
+
+#navigation nav {
+    margin-top: 50px;
+}
+
+#navigation .igemLogo {
+    padding: 0 10px;
 }
 
 #navigation .itemNav {
     list-style-type: none;
+    margin-bottom: 6px;
 }
 
+#navigation .igemLogoImg {
+    width: 80px;
+}
+
+#navigation .navTextLink,
 #navigation .itemNavFlex {
     display: flex;
     justify-content: space-between;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navigation .navTextLink:hover,
+#navigation .itemNavFlex:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+#navigation .navTextLink,
+#navigation .itemNavText {
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+#navigation .navContent {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+#navigation .navSubItemsList {
+    padding: 7px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navigation .navSubItemsList:hover {
+    background-color: rgba(0, 0, 0, 0.03);
 }

@@ -3,7 +3,13 @@
  -->
 
 <div id="navigation">
-    <div class="igemLogo">IGEM IONIS</div>
+    <div class="igemLogo">
+        <img
+            src="/Team:Ionis_Paris/pictures/T--Ionis_Paris--Logo_Ionis.png"
+            alt="iGem Ionis Logo"
+            class="igemLogoImg"
+        />
+    </div>
     <nav>
         <li v-for="groupNav in menu" :key="groupNav.index" class="itemNav">
             <a v-if="groupNav.link" class="navTextLink" :href="groupNav.link"
@@ -15,7 +21,18 @@
                     <div class="iconNavChevron">^</div>
                 </div>
 
-                <div v-if="openedMenu[groupNav.index]">Yaya</div>
+                <div
+                    v-if="openedMenu[groupNav.index] && groupNav.childrens"
+                    class="navContent"
+                >
+                    <div
+                        v-for="subNavItem in groupNav.childrens"
+                        :key="subNavItem.title"
+                        class="navSubItemsList"
+                    >
+                        {{subNavItem.title}}
+                    </div>
+                </div>
             </div>
         </li>
     </nav>

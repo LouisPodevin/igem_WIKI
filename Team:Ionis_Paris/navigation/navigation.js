@@ -86,6 +86,7 @@ new Vue({
         return {
             menu: menu.map((value, index) => ({ ...value, index })),
             openedMenu: Array(menu.length).fill(false),
+            active: 0,
         }
     },
     methods: {
