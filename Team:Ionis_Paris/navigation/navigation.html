@@ -1,0 +1,45 @@
+<!--
+    JS and CSS loaded in /scripts/wiki-nav.js
+ -->
+
+<div id="__nav__mover__"></div>
+<div id="navigation">
+    <div class="igemLogo">
+        <img
+            src="/Team:Ionis_Paris/pictures/T--Ionis_Paris--Logo_Ionis.png"
+            alt="iGem Ionis Logo"
+            class="igemLogoImg"
+        />
+    </div>
+    <nav>
+        <li v-for="groupNav in menu" :key="groupNav.index" class="itemNav">
+            <a v-if="groupNav.link" class="navTextLink" :href="groupNav.link"
+                >{{groupNav.title}}</a
+            >
+            <div v-else>
+                <div class="itemNavFlex" @click="toggleMenu(groupNav.index)">
+                    <div class="itemNavText">{{groupNav.title}}</div>
+                    <div
+                        :style="getRotation(groupNav.index)"
+                        class="iconNavChevronContainer"
+                    >
+                        <i data-feather="chevron-down" class="iconNavChevron"></i>
+                    </div>
+                </div>
+
+                <div
+                    v-if="openedMenu[groupNav.index] && groupNav.childrens"
+                    class="navContent"
+                >
+                    <div
+                        v-for="subNavItem in groupNav.childrens"
+                        :key="subNavItem.title"
+                        class="navSubItemsList"
+                    >
+                        {{subNavItem.title}}
+                    </div>
+                </div>
+            </div>
+        </li>
+    </nav>
+</div>
