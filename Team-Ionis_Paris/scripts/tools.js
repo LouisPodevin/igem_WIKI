@@ -61,3 +61,24 @@ export const loadTriggerAction = async () => {
         }
     })
 }
+
+export const loadFont = async () => {
+    const cssFont = await (await fetch(window.ROOT_URL + "/fonts/fonts.css")).text()
+    const mappedCss = cssFont
+        .split("__ROOT_LOCATION__")
+        .join(window.location.origin + window.ROOT_URL)
+    const cssBlob = new Blob([mappedCss], { type: "text/css" })
+    const cssUrl = URL.createObjectURL(cssBlob)
+    const cssElm = document.createElement("link")
+    cssElm.setAttribute("rel", "stylesheet")
+    cssElm.setAttribute("href", cssUrl)
+    document.head.append(cssElm)
+}
+
+export const loadGlobalCss = async () => {
+    const cssElm = document.createElement("link")
+    cssElm.setAttribute("rel", "stylesheet")
+    cssElm.setAttribute("href", window.ROOT_URL + "/styles/global.css")
+    cssElm.setAttribute("type", "text/css")
+    document.head.append(cssElm)
+}
