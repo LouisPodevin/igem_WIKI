@@ -298,11 +298,59 @@ body {
 
 .factText {
     font-size: 15px;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.8);
     padding: 0 20px 20px 20px;
     line-height: 1.3;
 }
 
 .factText > b {
     font-weight: 800;
+}
+
+@keyframes animIconRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.iconRotate {
+    animation: animIconRotate 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animIconZip {
+    0% {
+        transform: translateY(0px);
+    }
+    5% {
+        transform: translateY(3px);
+    }
+    10% {
+        transform: translateY(-3px);
+    }
+    15% {
+        transform: translateY(3px);
+    }
+    20% {
+        transform: translateY(-3px);
+    }
+    30% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.iconZap {
+    animation: animIconZip 4s;
+    animation-iteration-count: infinite;
 }
