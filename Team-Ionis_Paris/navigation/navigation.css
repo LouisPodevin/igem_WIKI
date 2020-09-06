@@ -48,6 +48,12 @@
     font-weight: 800;
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
+    
+}
+
+#navigation .navTextLink,
+#navigation .itemNavText .Home{
+    color: rgba(255, 0, 0, 0.7);
 }
 
 #navigation .iconNavChevronContainer {
