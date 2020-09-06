@@ -82,3 +82,15 @@ export const loadGlobalCss = async () => {
     cssElm.setAttribute("type", "text/css")
     document.head.append(cssElm)
 }
+
+export const loadBootstrap = async () => {
+    const cssElm = document.createElement("link")
+    cssElm.setAttribute("rel", "stylesheet")
+    cssElm.setAttribute("href", window.ROOT_URL + "/scripts/gen/bootstrap.css")
+    document.head.append(cssElm)
+    await loadScript(window.ROOT_URL + "/scripts/gen/jquery.js", false, () => !!window.$),
+        await Promise.all([
+            loadScript(window.ROOT_URL + "/scripts/gen/popper.js"),
+            loadScript(window.ROOT_URL + "/scripts/gen/bootstrap.js"),
+        ])
+}
