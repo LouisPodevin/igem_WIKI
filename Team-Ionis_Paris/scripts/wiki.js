@@ -1,16 +1,17 @@
-import { loadScript } from "./tools.js"
+import { loadScript, loadTriggerAction, loadFont, loadGlobalCss } from "./tools.js"
 import { initNavigation } from "./wiki-nav.js"
+import "./gen/feather.js"
 
 window.ROOT_URL = "/Team-Ionis_Paris"
 
-const loadFeather = async () => {
-    await loadScript(window.ROOT_URL + "/scripts/gen/feather.js")
-}
-
 const init = async () => {
-    await Promise.all([initNavigation(), loadFeather()])
+    await Promise.all([initNavigation(), loadFont(), loadGlobalCss()])
 
-    setTimeout(() => feather.replace(), 200)
+    await loadScript(window.ROOT_URL + "/scripts/gen/rxjs.js", false, () => !!window.rxjs)
+
+    await Promise.all([loadTriggerAction()])
+
+    feather.replace()
 }
 
 init()
