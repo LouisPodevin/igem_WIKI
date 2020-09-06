@@ -19,7 +19,8 @@ import "../scripts/gen/vue.js"
 const menu = [
     {
         title: "Home",
-        link: "/Team:Ionis_Paris/",
+        // @ts-ignore
+        link: window.ROOT_URL + "/",
     },
     {
         title: "Team",
