@@ -18,13 +18,33 @@
             <div class="welcomeLogo">
                 <div id="bm"></div>
                 <script src="scripts/Bodymovin.js"></script>
-                <script>
-                    var animation = bodymovin.loadAnimation({
-                        container: document.getElementById('bm'),
-                        renderer: 'svg',
+                <script type="module">
+                    const animLogoElm = document.getElementById("bm")
+
+                    const animation = bodymovin.loadAnimation({
+                        container: animLogoElm,
+                        renderer: "svg",
                         autoplay: true,
-                        path: './pictures/logo_animate.json'
-                    });
+                        path: "./pictures/logo_animate.json",
+                        loop: false,
+                    })
+
+                    animation.setSpeed(3)
+
+                    let complete = false
+
+                    animation.addEventListener("complete", () => {
+                        console.log("TOOOO")
+                        complete = true
+                    })
+
+                    animLogoElm.addEventListener("mouseenter", () => {
+                        if (!complete) {
+                            return
+                        }
+                        complete = false
+                        animation.goToAndPlay(0)
+                    })
                 </script>
             </div>
         </div>
@@ -44,7 +64,11 @@
                     <div class="fact1">
                         <div class="fact1Header">
                             <div class="fact1LogoContainer">
-                                <img src="./pictures/Pills.svg" alt="Pill Antibiotics" class="fact1Logo" />
+                                <img
+                                    src="./pictures/Pills.svg"
+                                    alt="Pill Antibiotics"
+                                    class="fact1Logo"
+                                />
                             </div>
                             <div class="fact1Title">
                                 They are considered as one of the biggest therapeutic
@@ -82,7 +106,10 @@
                             <div class="feactHeaderNumber">25</div>
                             <div class="factHeaderSub">Years</div>
                             <div class="factIcon">
-                                <i data-feather="rotate-ccw" class="factIconFeather iconRotate"></i>
+                                <i
+                                    data-feather="rotate-ccw"
+                                    class="factIconFeather iconRotate"
+                                ></i>
                             </div>
                         </div>
                         <div class="factText">
