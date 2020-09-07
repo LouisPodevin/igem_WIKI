@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .welcomeContent {
@@ -218,11 +218,11 @@ body {
     font-weight: 800;
     color: #8d1f24;
     line-height: 1.2;
-    font-size-adjust: 18px;
+    font-size: 18px;
 }
 
 .fact1Text {
-    font-size-adjust: 15px;
+    font-size: 15px;
     padding: 20px 25px;
 }
 
@@ -353,4 +353,181 @@ body {
 .iconZap {
     animation: animIconZip 4s;
     animation-iteration-count: infinite;
+}
+
+/* Information */
+
+#information {
+    margin: 100px 0 0 0;
+}
+
+.infomationIconContainer {
+    background-color: rgba(231, 52, 39, 0.2);
+    border-radius: 999px;
+    color: #e73327;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informationIcon {
+    height: 30px;
+}
+
+.informationText {
+    margin: 20px 20px 20px 0px;
+    padding: 0 0 0 25px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.informationCard {
+    opacity: 0;
+}
+
+@keyframes informationCardAnim {
+    0% {
+        opacity: 0;
+        position: relative;
+        right: 80px;
+    }
+    100% {
+        opacity: 1;
+        position: relative;
+        right: 0px;
+    }
+}
+
+.informationCard.active {
+    opacity: 1;
+    animation: informationCardAnim 1s;
+}
+
+.informationText > b {
+    font-weight: 800;
+}
+
+.align-middle {
+    display: flex;
+    align-items: center;
+}
+
+.illustrationFakeInformation {
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 350px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Project Description */
+
+#projectDescription {
+    margin: 80px 0 0 0;
+}
+
+.titleProjectDescription {
+    font-size: 25px;
+    color: #8d1f24;
+    font-weight: 800;
+    text-align: center;
+    opacity: 0;
+}
+
+@keyframes titleProjectDescriptionAnim {
+    0% {
+        position: relative;
+        top: 80px;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.titleProjectDescription.active {
+    opacity: 1;
+    animation: titleProjectDescriptionAnim 1s;
+}
+
+.illustrationProjectDescriptionFake {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    width: 100%;
+    height: 500px;
+    margin: 40px 0;
+}
+
+@keyframes illustrationProjectDescriptionFakeAnim {
+    0% {
+        position: relative;
+        top: 80px;
+        opacity: 0;
+    }
+    50% {
+        position: relative;
+        top: 80px;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.illustrationProjectDescriptionFake.active {
+    opacity: 1;
+    animation: illustrationProjectDescriptionFakeAnim 1.4s;
+}
+
+/* Wiki Links */
+
+#wikiLinks {
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    margin: 20px 40px;
+}
+
+.wikiLinkContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.wikiLinkCard {
+    background-color: white;
+    border-radius: 20px;
+
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    height: 300px;
+    max-width: 250px;
+    flex-grow: 1;
+    opacity: 0;
+}
+
+@keyframes triggerBottomAnim {
+    0% {
+        position: relative;
+        top: 80px;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.wikiLinkCard.active {
+    opacity: 1;
+    animation: triggerBottomAnim 1s;
 }

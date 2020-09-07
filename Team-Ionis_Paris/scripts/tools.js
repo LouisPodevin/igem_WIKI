@@ -60,6 +60,8 @@ export const loadTriggerAction = async () => {
             }
         }
     })
+
+    sourceScroll.next()
 }
 
 export const loadFont = async () => {
@@ -93,4 +95,20 @@ export const loadBootstrap = async () => {
             loadScript(window.ROOT_URL + "/scripts/gen/popper.js"),
             loadScript(window.ROOT_URL + "/scripts/gen/bootstrap.js"),
         ])
+}
+
+export const loadFooter = async () => {
+    const footerElm = document.getElementsByTagName("footer")[0]
+
+    if (!footerElm) {
+        return
+    }
+
+    const footerHtml = await (await fetch(window.ROOT_URL + "/footer/footer.html")).text()
+    footerElm.innerHTML = footerHtml
+
+    const cssFooter = document.createElement("link")
+    cssFooter.setAttribute("rel", "stylesheet")
+    cssFooter.setAttribute("href", window.ROOT_URL + "/footer/footer.css")
+    document.head.append(cssFooter)
 }
