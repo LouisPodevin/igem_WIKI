@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="./index.css" />
 </head>
+
 <body>
     <div class="navigation"></div>
     <div id="welcome" class="container">
@@ -14,10 +16,16 @@
                 <div class="welcomeText3">With care !</div>
             </div>
             <div class="welcomeLogo">
-                <img
-                    src="./pictures/T--Ionis_Paris--Logo_Bactail.png"
-                    alt="iGEM Team Logo Bactail"
-                />
+                <div id="bm"></div>
+                <script src="scripts/Bodymovin.js"></script>
+                <script>
+                    var animation = bodymovin.loadAnimation({
+                        container: document.getElementById('bm'),
+                        renderer: 'svg',
+                        autoplay: true,
+                        path: './pictures/logo_animate.json'
+                    });
+                </script>
             </div>
         </div>
     </div>
@@ -36,11 +44,7 @@
                     <div class="fact1">
                         <div class="fact1Header">
                             <div class="fact1LogoContainer">
-                                <img
-                                    src="./pictures/Pills.svg"
-                                    alt="Pill Antibiotics"
-                                    class="fact1Logo"
-                                />
+                                <img src="./pictures/Pills.svg" alt="Pill Antibiotics" class="fact1Logo" />
                             </div>
                             <div class="fact1Title">
                                 They are considered as one of the biggest therapeutic
@@ -78,10 +82,7 @@
                             <div class="feactHeaderNumber">25</div>
                             <div class="factHeaderSub">Years</div>
                             <div class="factIcon">
-                                <i
-                                    data-feather="rotate-ccw"
-                                    class="factIconFeather iconRotate"
-                                ></i>
+                                <i data-feather="rotate-ccw" class="factIconFeather iconRotate"></i>
                             </div>
                         </div>
                         <div class="factText">
