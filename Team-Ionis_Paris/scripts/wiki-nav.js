@@ -1,3 +1,5 @@
+import { loadScript } from "./tools.js"
+
 const navs = document.getElementsByClassName("navigation")
 
 export const initNavigation = async () => {
@@ -6,7 +8,15 @@ export const initNavigation = async () => {
     if (navs.length === 0) {
         return
     }
+
     document.body.style.paddingLeft = "390px"
+
+    // Load HTML
+    const navHtlm = await (await fetch(rootUrl + "/navigation/navigation.html")).text()
+
+    for (let itemNav of navs) {
+        itemNav.innerHTML = navHtlm
+    }
 
     // Load JS
     const scriptElm = document.createElement("script")
@@ -19,11 +29,4 @@ export const initNavigation = async () => {
     cssElm.setAttribute("rel", "stylesheet")
     cssElm.setAttribute("href", rootUrl + "/navigation/navigation.css")
     document.head.append(cssElm)
-
-    // Load HTML
-    const navHtlm = await (await fetch(rootUrl + "/navigation/navigation.html")).text()
-
-    for (let itemNav of navs) {
-        itemNav.innerHTML = navHtlm
-    }
 }
