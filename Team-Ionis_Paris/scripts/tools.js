@@ -31,6 +31,8 @@ export const loadTriggerAction = async () => {
 
     const sourceScroll = new Subject()
 
+    window.scrollSource = sourceScroll
+
     window.addEventListener("scroll", () => {
         sourceScroll.next()
     })

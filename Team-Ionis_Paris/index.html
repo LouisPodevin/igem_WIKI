@@ -132,33 +132,57 @@
                     </div>
                 </div>
                 <div class="col-xl-6 align-middle">
-                    <div class="illustrationFakeInformation">
+                    <div class="illustrationInformation">
                         <div id="lm"></div>
                         <script src="scripts/Bodymovin.js"></script>
-                        <script type="module">
-                            const animLogoElm = document.getElementById("lm")
+                        <script type="module" defer>
+                            const initAnim = async () => {
+                                const animLogoElm = document.getElementById("lm")
 
-                            const animation = bodymovin.loadAnimation({
-                                container: animLogoElm,
-                                renderer: "svg",
-                                autoplay: true,
-                                path: "./pictures/graphique_animate.json",
-                                loop: false,
-                            })
+                                const animation = bodymovin.loadAnimation({
+                                    container: animLogoElm,
+                                    renderer: "svg",
+                                    autoplay: false,
+                                    path: "./pictures/graphique_animate.json",
+                                    loop: false,
+                                })
 
-                            let complete = false
+                                let animStarted = false
 
-                            animation.addEventListener("complete", () => {
-                                complete = true
-                            })
+                                const startAnim = () => {
+                                    if (animStarted) {
+                                        return
+                                    }
 
-                            animLogoElm.addEventListener("mouseenter", () => {
-                                if (!complete) {
-                                    return
+                                    const elmPos = animLogoElm.getBoundingClientRect().top
+                                    const posFromMiddle = elmPos - window.innerHeight / 2
+
+                                    if (posFromMiddle < 0) {
+                                        animStarted = true
+                                        animation.goToAndPlay(0)
+                                    }
                                 }
-                                complete = false
-                                animation.goToAndPlay(0)
-                            })
+
+                                while (!window.rxjs) {
+                                    await new Promise(res => setTimeout(res, 300))
+                                }
+
+                                const { Subject, interval } = rxjs
+                                const { throttle } = rxjs.operators
+
+                                window.scrollSource
+                                    .pipe(
+                                        throttle(() => interval(300), {
+                                            leading: true,
+                                            trailing: true,
+                                        }),
+                                    )
+                                    .subscribe(startAnim)
+
+                                window.scrollSource.next()
+                            }
+
+                            initAnim()
                         </script>
                     </div>
                 </div>
