@@ -62,11 +62,7 @@
                     <div class="fact1">
                         <div class="fact1Header">
                             <div class="fact1LogoContainer">
-                                <img
-                                    src="./pictures/Pills.svg"
-                                    alt="Pill Antibiotics"
-                                    class="fact1Logo"
-                                />
+                                <img src="./pictures/Pills.svg" alt="Pill Antibiotics" class="fact1Logo" />
                             </div>
                             <div class="fact1Title">
                                 They are considered as one of the biggest therapeutic
@@ -104,10 +100,7 @@
                             <div class="feactHeaderNumber">25</div>
                             <div class="factHeaderSub">Years</div>
                             <div class="factIcon">
-                                <i
-                                    data-feather="rotate-ccw"
-                                    class="factIconFeather iconRotate"
-                                ></i>
+                                <i data-feather="rotate-ccw" class="factIconFeather iconRotate"></i>
                             </div>
                         </div>
                         <div class="factText">
@@ -139,7 +132,36 @@
                     </div>
                 </div>
                 <div class="col-xl-6 align-middle">
-                    <div class="illustrationFakeInformation"></div>
+                    <div class="illustrationFakeInformation">
+                        <div id="lm"></div>
+                        <script src="scripts/Bodymovin.js"></script>
+                        <script type="module">
+                            const animLogoElm = document.getElementById("lm")
+
+                            const animation = bodymovin.loadAnimation({
+                                container: animLogoElm,
+                                renderer: "svg",
+                                autoplay: true,
+                                path: "./pictures/graphique_animate.json",
+                                loop: false,
+                            })
+
+                            let complete = false
+
+                            animation.addEventListener("complete", () => {
+                                console.log("TOOOO")
+                                complete = true
+                            })
+
+                            animLogoElm.addEventListener("mouseenter", () => {
+                                if (!complete) {
+                                    return
+                                }
+                                complete = false
+                                animation.goToAndPlay(0)
+                            })
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>

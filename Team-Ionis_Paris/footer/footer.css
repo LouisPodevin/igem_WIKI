@@ -2,5 +2,41 @@
     background-color: #8d1f24;
     padding: 70px 0;
     color: white;
-    font-weight: 800;
 }
+
+.IonisTitle {
+    font-weight: 800;
+    color: #FFF;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+.IonisText {
+    font-size: 15px;
+    padding: 20px 25px;
+}
+
+.IonisInfo {
+    font-size: 15px;
+    padding: 20px 25px;
+}
+
+.SponsorsTitle {
+    font-weight: 800;
+    color: #FFF;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+.sponsors-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sponsors-height img{
+    height: 100px;
+  }
+  
+  .sponsors-width img{
+    height: 50px;
+  }
