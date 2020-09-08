@@ -4,39 +4,56 @@
     color: white;
 }
 
-.IonisTitle {
+#footer .Ionis {
+    margin: 0px 0px 30px 0px;
+}
+
+#footer .IonisTitle {
     font-weight: 800;
-    color: #FFF;
+    color: #fff;
     line-height: 1.2;
     font-size: 18px;
 }
 
-.IonisText {
+#footer .IonisText {
     font-size: 15px;
-    padding: 20px 25px;
+    padding: 30px 0 0 0;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.IonisInfo {
+#footer .IonisInfo {
     font-size: 15px;
-    padding: 20px 25px;
+    padding: 20px 0px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.SponsorsTitle {
+#footer .Sponsors {
+    margin: 0 0 30px 0;
+}
+
+#footer .SponsorsList {
+    margin: 30px 0 0 0;
+}
+
+#footer .SponsorsTitle {
     font-weight: 800;
-    color: #FFF;
+    color: #fff;
     line-height: 1.2;
     font-size: 18px;
 }
 
-.sponsors-block {
+#footer .SponsorsList {
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .sponsors-height img{
-    height: 100px;
-  }
-  
-  .sponsors-width img{
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#footer .SponsorsList img {
     height: 50px;
-  }
+}
+
+#footer .SponsorsList img.big {
+    height: 80px;
+}

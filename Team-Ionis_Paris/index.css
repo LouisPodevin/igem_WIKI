@@ -517,6 +517,31 @@ body {
     max-width: 250px;
     flex-grow: 1;
     opacity: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wikiLinkCardText {
+    position: absolute;
+    bottom: 20px;
+}
+
+.wikiLinkCard > img {
+    transform: scale(1);
+}
+
+.projectCard {
+    color: #8d1f24;
+}
+
+.humainCard {
+    color: #e73327;
+}
+
+.softwareCard {
+    color: #e97c79;
 }
 
 @keyframes triggerBottomAnim {

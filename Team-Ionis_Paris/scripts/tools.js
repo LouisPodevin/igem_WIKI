@@ -111,4 +111,10 @@ export const loadFooter = async () => {
     cssFooter.setAttribute("rel", "stylesheet")
     cssFooter.setAttribute("href", window.ROOT_URL + "/footer/footer.css")
     document.head.append(cssFooter)
+
+    const sponsorsImg = document.getElementsByClassName("__sponsorImg")
+    for (let sponsorImg of sponsorsImg) {
+        const imgPath = window.ROOT_URL + sponsorImg.getAttribute("src")
+        sponsorImg.setAttribute("src", imgPath)
+    }
 }
