@@ -67,10 +67,10 @@ export const loadTriggerAction = async () => {
 }
 
 export const loadFont = async () => {
-    const cssFont = await (await fetch(window.ROOT_URL + "/fonts/fonts.css")).text()
+    const cssFont = await (await fetch(window.LINKS.fonts.url)).text()
     const mappedCss = cssFont
         .split("__ROOT_LOCATION__")
-        .join(window.location.origin + window.ROOT_URL)
+        .join(window.location.origin + window.ASSETS_ROOT_URL)
     const cssBlob = new Blob([mappedCss], { type: "text/css" })
     const cssUrl = URL.createObjectURL(cssBlob)
     const cssElm = document.createElement("link")
@@ -82,7 +82,7 @@ export const loadFont = async () => {
 export const loadGlobalCss = async () => {
     const cssElm = document.createElement("link")
     cssElm.setAttribute("rel", "stylesheet")
-    cssElm.setAttribute("href", window.ROOT_URL + "/styles/global.css")
+    cssElm.setAttribute("href", window.LINKS.globalCss.url)
     cssElm.setAttribute("type", "text/css")
     document.head.append(cssElm)
 }
@@ -90,12 +90,12 @@ export const loadGlobalCss = async () => {
 export const loadBootstrap = async () => {
     const cssElm = document.createElement("link")
     cssElm.setAttribute("rel", "stylesheet")
-    cssElm.setAttribute("href", window.ROOT_URL + "/scripts/gen/bootstrap.css")
+    cssElm.setAttribute("href", window.LINKS.bootstrapCss.url)
     document.head.append(cssElm)
-    await loadScript(window.ROOT_URL + "/scripts/gen/jquery.js", false, () => !!window.$),
+    await loadScript(window.LINKS.jquery.url, false, () => !!window.$),
         await Promise.all([
-            loadScript(window.ROOT_URL + "/scripts/gen/popper.js"),
-            loadScript(window.ROOT_URL + "/scripts/gen/bootstrap.js"),
+            loadScript(window.LINKS.popper.url),
+            loadScript(window.LINKS.bootstrapJs.url),
         ])
 }
 
@@ -106,17 +106,11 @@ export const loadFooter = async () => {
         return
     }
 
-    const footerHtml = await (await fetch(window.ROOT_URL + "/footer/footer.html")).text()
+    const footerHtml = await (await fetch(window.LINKS.footerHtml.url)).text()
     footerElm.innerHTML = footerHtml
 
     const cssFooter = document.createElement("link")
     cssFooter.setAttribute("rel", "stylesheet")
-    cssFooter.setAttribute("href", window.ROOT_URL + "/footer/footer.css")
+    cssFooter.setAttribute("href", window.LINKS.footerCss.url)
     document.head.append(cssFooter)
-
-    const sponsorsImg = document.getElementsByClassName("__sponsorImg")
-    for (let sponsorImg of sponsorsImg) {
-        const imgPath = window.ROOT_URL + sponsorImg.getAttribute("src")
-        sponsorImg.setAttribute("src", imgPath)
-    }
 }
