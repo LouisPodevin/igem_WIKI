@@ -7,7 +7,7 @@
     padding: 40px 30px;
     height: 100vh;
     max-height: 100vh;
-    overflow-y: hidden;
+    overflow-y: scroll;
     position: fixed;
     top: 0;
     left: 0;
@@ -54,11 +54,10 @@
     font-weight: 800;
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
-    
 }
 
 #navigation .navTextLink,
-#navigation .itemNavText .Home{
+#navigation .itemNavText .Home {
     color: rgba(255, 0, 0, 0.7);
 }
 
