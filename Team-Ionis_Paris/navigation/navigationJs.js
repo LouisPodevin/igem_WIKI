@@ -1,7 +1,5 @@
 // @ts-check
 
-import "../scripts/gen/vue.js"
-
 /** @type {Array<
  * {
  *  title: string
@@ -80,26 +78,33 @@ const menu = [
     },
 ]
 
-// @ts-ignore
-new Vue({
-    el: "#navigation",
-    data() {
-        return {
-            menu: menu.map((value, index) => ({ ...value, index })),
-            openedMenu: Array(menu.length).fill(false),
-            active: 0,
-        }
-    },
-    methods: {
-        toggleMenu(index) {
-            this.openedMenu = this.openedMenu.map((value, i) =>
-                i === index ? !value : value,
-            )
-        },
+const initNav = async () => {
+    // @ts-ignore
+    await import(window.LINKS.vueJs.url)
 
-        getRotation(index) {
-            return { transform: `rotate(${this.openedMenu[index] ? "180" : "0"}deg)` }
-            // return { color: `${this.openedMenu[index] ? "blue" : "red"}` }
+    // @ts-ignore
+    new Vue({
+        el: "#navigation",
+        data() {
+            return {
+                menu: menu.map((value, index) => ({ ...value, index })),
+                openedMenu: Array(menu.length).fill(false),
+                active: 0,
+            }
         },
-    },
-})
+        methods: {
+            toggleMenu(index) {
+                this.openedMenu = this.openedMenu.map((value, i) =>
+                    i === index ? !value : value,
+                )
+            },
+
+            getRotation(index) {
+                return { transform: `rotate(${this.openedMenu[index] ? "180" : "0"}deg)` }
+                // return { color: `${this.openedMenu[index] ? "blue" : "red"}` }
+            },
+        },
+    })
+}
+
+initNav()

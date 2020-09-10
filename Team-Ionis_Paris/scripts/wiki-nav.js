@@ -1,9 +1,7 @@
-import { loadScript } from "./tools.js"
-
 const navs = document.getElementsByClassName("navigation")
 
 export const initNavigation = async () => {
-    const rootUrl = window.ROOT_URL
+    const links = window.LINKS
 
     if (navs.length === 0) {
         return
@@ -12,7 +10,7 @@ export const initNavigation = async () => {
     document.body.style.paddingLeft = "390px"
 
     // Load HTML
-    const navHtlm = await (await fetch(rootUrl + "/navigation/navigation.html")).text()
+    const navHtlm = await (await fetch(links.navigationHtml.url)).text()
 
     for (let itemNav of navs) {
         itemNav.innerHTML = navHtlm
@@ -20,13 +18,13 @@ export const initNavigation = async () => {
 
     // Load JS
     const scriptElm = document.createElement("script")
-    scriptElm.setAttribute("src", rootUrl + "/navigation/navigation.js")
+    scriptElm.setAttribute("src", links.navigationJs.url)
     scriptElm.setAttribute("type", "module")
     document.body.append(scriptElm)
 
     // Load CSS
     const cssElm = document.createElement("link")
     cssElm.setAttribute("rel", "stylesheet")
-    cssElm.setAttribute("href", rootUrl + "/navigation/navigation.css")
+    cssElm.setAttribute("href", links.navigationCss.url)
     document.head.append(cssElm)
 }

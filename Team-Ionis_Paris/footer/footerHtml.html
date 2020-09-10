@@ -19,40 +19,37 @@
             <div class="col-xl-6">
                 <div class="Sponsors">
                     <div class="SponsorsTitle">Sponsors</div>
-                    <div class="SponsorsList">
+                    <div class="SponsorsList" x-data="{}">
                         <!-- Real path picture are loaded from tools.js -->
                         <img
                             class="__sponsorImg big"
-                            src="/pictures/sponsors/supbiotech_igem.png"
+                            :src="window.LINKS.supbiotechSponsor.url"
                         />
                         <img
                             class="__sponsorImg big"
-                            src="/pictures/sponsors/esme_sudria_igem.png"
+                            :src="window.LINKS.esmeSudriaSponsor.url"
                         />
                         <img
                             class="__sponsorImg big"
-                            src="/pictures/sponsors/geneious_igem.png"
+                            :src="window.LINKS.geneiousSponsor.url"
                         />
-                        <img class="__sponsorImg" src="/pictures/sponsors/idt_igem.png" />
+                        <img class="__sponsorImg" :src="window.LINKS.idtSponsor.url" />
                         <img
                             class="__sponsorImg"
-                            src="/pictures/sponsors/mathworks_igem.png"
-                        />
-                        <img
-                            class="__sponsorImg"
-                            src="/pictures/sponsors/snapgene_igem.png"
+                            :src="window.LINKS.mathworksSponsor.url"
                         />
                         <img
                             class="__sponsorImg"
-                            src="/pictures/sponsors/benchling_igem.png"
+                            :src="window.LINKS.snapgeneSponsor.url"
                         />
                         <img
                             class="__sponsorImg"
-                            src="/pictures/sponsors/phages_igem.png"
+                            :src="window.LINKS.benchlingSponsor.url"
                         />
+                        <img class="__sponsorImg" :src="window.LINKS.phagesSponsor.url" />
                         <img
                             class="__sponsorImg"
-                            src="/pictures/sponsors/labiotech_igem.png"
+                            :src="window.LINKS.labiotechSponsor.url"
                         />
                     </div>
                 </div>

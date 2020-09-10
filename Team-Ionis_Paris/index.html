@@ -4,6 +4,11 @@
     <title>Home</title>
     <link rel="stylesheet" href="./index.css" />
 </head>
+<script type="module" src="./scripts/wiki.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    defer
+></script>
 
 <body>
     <div class="navigation"></div>
@@ -17,32 +22,38 @@
             </div>
             <div class="welcomeLogo">
                 <div id="bm"></div>
-                <script src="scripts/Bodymovin.js"></script>
                 <script type="module">
-                    const animLogoElm = document.getElementById("bm")
+                    const initAnim = async () => {
+                        const animLogoElm = document.getElementById("bm")
 
-                    const animation = bodymovin.loadAnimation({
-                        container: animLogoElm,
-                        renderer: "svg",
-                        autoplay: true,
-                        path: "./pictures/logo_animate.json",
-                        loop: false,
-                    })
-
-                    let complete = false
-
-                    animation.addEventListener("complete", () => {
-                        console.log("TOOOO")
-                        complete = true
-                    })
-
-                    animLogoElm.addEventListener("mouseenter", () => {
-                        if (!complete) {
-                            return
+                        while (!window.bodymovin) {
+                            await new Promise(res => setTimeout(res, 500))
                         }
-                        complete = false
-                        animation.goToAndPlay(0)
-                    })
+
+                        const animation = bodymovin.loadAnimation({
+                            container: animLogoElm,
+                            renderer: "svg",
+                            autoplay: true,
+                            path: window.LINKS.logoAnimationHome.url,
+                            loop: false,
+                        })
+
+                        let complete = false
+
+                        animation.addEventListener("complete", () => {
+                            complete = true
+                        })
+
+                        animLogoElm.addEventListener("mouseenter", () => {
+                            if (!complete) {
+                                return
+                            }
+                            complete = false
+                            animation.goToAndPlay(0)
+                        })
+                    }
+
+                    initAnim()
                 </script>
             </div>
         </div>
@@ -61,8 +72,12 @@
                 <div class="col-xl-6">
                     <div class="fact1">
                         <div class="fact1Header">
-                            <div class="fact1LogoContainer">
-                                <img src="./pictures/Pills.svg" alt="Pill Antibiotics" class="fact1Logo" />
+                            <div class="fact1LogoContainer" x-data="{}">
+                                <img
+                                    :src="window.LINKS.pillsHome.url"
+                                    alt="Pill Antibiotics"
+                                    class="fact1Logo"
+                                />
                             </div>
                             <div class="fact1Title">
                                 They are considered as one of the biggest therapeutic
@@ -100,7 +115,10 @@
                             <div class="feactHeaderNumber">25</div>
                             <div class="factHeaderSub">Years</div>
                             <div class="factIcon">
-                                <i data-feather="rotate-ccw" class="factIconFeather iconRotate"></i>
+                                <i
+                                    data-feather="rotate-ccw"
+                                    class="factIconFeather iconRotate"
+                                ></i>
                             </div>
                         </div>
                         <div class="factText">
@@ -134,16 +152,19 @@
                 <div class="col-xl-6 align-middle">
                     <div class="illustrationInformation">
                         <div id="lm"></div>
-                        <script src="scripts/Bodymovin.js"></script>
                         <script type="module" defer>
                             const initAnim = async () => {
                                 const animLogoElm = document.getElementById("lm")
+
+                                while (!window.bodymovin) {
+                                    await new Promise(res => setTimeout(res, 500))
+                                }
 
                                 const animation = bodymovin.loadAnimation({
                                     container: animLogoElm,
                                     renderer: "svg",
                                     autoplay: false,
-                                    path: "./pictures/graphique_animate.json",
+                                    path: window.LINKS.graphiqueAnimateHome.url,
                                     loop: false,
                                 })
 
@@ -199,17 +220,17 @@
     </div>
     <div id="wikiLinks">
         <div class="container">
-            <div class="wikiLinkContainer">
+            <div class="wikiLinkContainer" x-data="{}">
                 <div class="wikiLinkCard triggerMiddle">
-                    <img src="./pictures/project.svg" />
+                    <img :src="window.LINKS.projectHome.url" />
                     <div class="wikiLinkCardText projectCard">The Project</div>
                 </div>
                 <div class="wikiLinkCard triggerMiddle">
-                    <img src="./pictures/human.svg" />
+                    <img :src="window.LINKS.humanHome.url" />
                     <div class="wikiLinkCardText humainCard">Humans Pratices</div>
                 </div>
                 <div class="wikiLinkCard triggerMiddle">
-                    <img src="./pictures/software.svg" />
+                    <img :src="window.LINKS.softwareHome.url" />
                     <div class="wikiLinkCardText softwareCard">The Software</div>
                 </div>
             </div>
@@ -217,7 +238,6 @@
     </div>
     <footer></footer>
 </body>
-<script type="module" src="./scripts/wiki.js"></script>
 <script>
     const init = async () => {
         while (!window.$) {

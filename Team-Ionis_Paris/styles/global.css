@@ -2,3 +2,18 @@ html,
 body {
     font-family: Poppins, Arial, Helvetica, sans-serif !important;
 }
+
+#content {
+    width: initial !important;
+    padding: initial !important;
+    border: initial !important;
+    color: initial !important;
+    margin-left: initial !important;
+    margin-right: initial !important;
+    background-color: initial !important;
+    position: initial !important;
+}
+
+#top_title {
+    display: none !important;
+}
