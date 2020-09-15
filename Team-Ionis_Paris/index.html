@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./index.css" />
 </head>
 <script type="module" src="./scripts/wiki.js"></script>
+
 <body>
     <div class="navigation"></div>
     <div id="welcome" class="container">
@@ -68,11 +69,7 @@
                     <div class="fact1">
                         <div class="fact1Header">
                             <div class="fact1LogoContainer" x-data="{}">
-                                <img
-                                    :src="window.LINKS.pillsHome.url"
-                                    alt="Pill Antibiotics"
-                                    class="fact1Logo"
-                                />
+                                <img :src="window.LINKS.pillsHome.url" alt="Pill Antibiotics" class="fact1Logo" />
                             </div>
                             <div class="fact1Title">
                                 They are considered as one of the biggest therapeutic
@@ -94,10 +91,7 @@
                             <div class="feactHeaderNumber">10</div>
                             <div class="factHeaderSub">Million</div>
                             <div class="factIcon">
-                                <i
-                                    data-feather="frown"
-                                    class="factIconFeather iconFrown"
-                                ></i>
+                                <i data-feather="frown" class="factIconFeather iconFrown"></i>
                             </div>
                         </div>
                         <div class="factText">
@@ -113,10 +107,7 @@
                             <div class="feactHeaderNumber">25</div>
                             <div class="factHeaderSub">Years</div>
                             <div class="factIcon">
-                                <i
-                                    data-feather="trending-down"
-                                    class="factIconFeather iconTrending-down"
-                                ></i>
+                                <i data-feather="trending-down" class="factIconFeather iconTrending-down"></i>
                             </div>
                         </div>
                         <div class="factText">
@@ -214,7 +205,15 @@
             <div class="titleProjectDescription triggerMiddle">
                 So we created Bactail !
             </div>
-            <div class="illustrationProjectDescriptionFake triggerMiddle"></div>
+            <div class="illustrationProjectDescription triggerMiddle" x-data="{}">
+                <img :src="window.LINKS.schemaIndex.url" class="schemaIndex" alt="schema Index" />
+            </div>
+        </div>
+    </div>
+    <div id="projectVideo">
+        <div class="container">
+            <div class="ProjectVideo triggerMiddle">
+            </div>
         </div>
     </div>
     <div id="wikiLinks">

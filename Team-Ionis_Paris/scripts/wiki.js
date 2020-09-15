@@ -117,7 +117,11 @@ const links = {
         path: "/pictures/software",
         prod: "https://2020.igem.org/wiki/images/d/dc/T--Ionis_Paris--Software.svg",
     },
-
+    schemaIndex: {
+        ext: "svg",
+        path: "/pictures/schemaIndex",
+        prod: "https://2020.igem.org/wiki/images/7/71/T--Ionis_Paris--schemaIndex.svg",
+    },
     // Sponsors
     benchlingSponsor: {
         ext: "png",
