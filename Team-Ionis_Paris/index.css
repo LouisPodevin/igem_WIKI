@@ -288,12 +288,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
 }
 
 .factIconFeather {
-    height: 15px;
+    height: 30px;
 }
 
 .factText {
@@ -320,7 +320,7 @@ body {
     }
 }
 
-.iconRotate {
+.iconFrown {
     animation: animIconRotate 4s;
     animation-iteration-count: infinite;
 }
@@ -350,7 +350,7 @@ body {
     }
 }
 
-.iconZap {
+.iconTrending-down {
     animation: animIconZip 4s;
     animation-iteration-count: infinite;
 }
