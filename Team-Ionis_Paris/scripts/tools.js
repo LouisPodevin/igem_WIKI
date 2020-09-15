@@ -68,10 +68,7 @@ export const loadTriggerAction = async () => {
 
 export const loadFont = async () => {
     const cssFont = await (await fetch(window.LINKS.fonts.url)).text()
-    const mappedCss = cssFont
-        .split("__ROOT_LOCATION__")
-        .join(window.location.origin + window.ASSETS_ROOT_URL)
-    const cssBlob = new Blob([mappedCss], { type: "text/css" })
+    const cssBlob = new Blob([cssFont], { type: "text/css" })
     const cssUrl = URL.createObjectURL(cssBlob)
     const cssElm = document.createElement("link")
     cssElm.setAttribute("rel", "stylesheet")
