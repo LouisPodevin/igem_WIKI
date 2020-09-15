@@ -17,3 +17,8 @@ body {
 #top_title {
     display: none !important;
 }
+
+#globalWrapper {
+    padding: 0 !important;
+    margin-bottom: -20px;
+}
