@@ -5,8 +5,6 @@
     <link rel="stylesheet" href="./index.css" />
 </head>
 <script type="module" src="./scripts/wiki.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
 <body>
     <div class="navigation"></div>
     <div id="welcome" class="container">
@@ -70,7 +68,11 @@
                     <div class="fact1">
                         <div class="fact1Header">
                             <div class="fact1LogoContainer" x-data="{}">
-                                <img :src="window.LINKS.pillsHome.url" alt="Pill Antibiotics" class="fact1Logo" />
+                                <img
+                                    :src="window.LINKS.pillsHome.url"
+                                    alt="Pill Antibiotics"
+                                    class="fact1Logo"
+                                />
                             </div>
                             <div class="fact1Title">
                                 They are considered as one of the biggest therapeutic
@@ -92,7 +94,10 @@
                             <div class="feactHeaderNumber">10</div>
                             <div class="factHeaderSub">Million</div>
                             <div class="factIcon">
-                                <i data-feather="frown" class="factIconFeather iconFrown"></i>
+                                <i
+                                    data-feather="frown"
+                                    class="factIconFeather iconFrown"
+                                ></i>
                             </div>
                         </div>
                         <div class="factText">
@@ -108,7 +113,10 @@
                             <div class="feactHeaderNumber">25</div>
                             <div class="factHeaderSub">Years</div>
                             <div class="factIcon">
-                                <i data-feather="trending-down" class="factIconFeather iconTrending-down"></i>
+                                <i
+                                    data-feather="trending-down"
+                                    class="factIconFeather iconTrending-down"
+                                ></i>
                             </div>
                         </div>
                         <div class="factText">

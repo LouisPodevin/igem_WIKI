@@ -14,18 +14,17 @@
  *  }>})
  * >} */
 
+// @ts-ignore
+const rootUrl = window.ROOT_URL
+
 const menu = [
     {
         title: "Home",
-        // @ts-ignore
-        link: window.ROOT_URL + "/",
+        link: rootUrl + "/",
     },
     {
         title: "Team",
-        childrens: [
-            { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
-        ],
+        link: rootUrl + "/Team/",
     },
     {
         title: "Project",
