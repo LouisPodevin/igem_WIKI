@@ -12,8 +12,11 @@
         />
     </div>
     <nav>
-        <li v-for="groupNav in menu" :key="groupNav.index" class="itemNav">
-            <a v-if="groupNav.link" class="navTextLink" :href="groupNav.link"
+        <li v-for="(groupNav, index1) in menu" :key="groupNav.index" class="itemNav">
+            <a
+                v-if="groupNav.link"
+                :class="'navTextLink' + (active[index1] ? ' active' : '')"
+                :href="groupNav.link"
                 >{{groupNav.title}}</a
             >
             <div v-else>
@@ -32,9 +35,9 @@
                     class="navContent"
                 >
                     <div
-                        v-for="subNavItem in groupNav.childrens"
+                        v-for="(subNavItem, index2) in groupNav.childrens"
                         :key="subNavItem.title"
-                        class="navSubItemsList"
+                        :class="'navSubItemsList' + (active[index1][index2] ? ' active' : '')"
                     >
                         {{subNavItem.title}}
                     </div>

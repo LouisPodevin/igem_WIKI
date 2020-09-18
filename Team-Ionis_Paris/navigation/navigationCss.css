@@ -14,7 +14,6 @@
     -webkit-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.03);
     -moz-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.03);
     box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.03);
-
 }
 
 #navigation nav {
@@ -57,11 +56,9 @@
     text-decoration: none;
 }
 
-/* #navigation .navTextLink,
-#navigation .itemNavText .Home {
-    color: rgba(255, 0, 0, 0.7);
-} */
-
+#navigation .navTextLink.active {
+    color: #e73327;
+}
 #navigation .iconNavChevronContainer {
     display: flex;
     align-items: center;
@@ -86,6 +83,10 @@
     padding: 7px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#navigation .navSubItemsList.active {
+    color: #e73327;
 }
 
 #navigation .navSubItemsList:hover {
