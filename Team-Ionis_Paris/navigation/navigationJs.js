@@ -22,11 +22,12 @@ const menu = [
     {
         title: "Home",
         link: rootUrl + "/",
-        match: [rootUrl, `${rootUrl}/`],
+        match: [`^${rootUrl}$`, `^${rootUrl}/$`],
     },
     {
         title: "Team",
         link: rootUrl + "/Team/",
+        match: `^${rootUrl}/Team/`,
     },
     {
         title: "Project",
@@ -46,7 +47,10 @@ const menu = [
         title: "Safety",
         childrens: [
             { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
+            {
+                title: "sdmlqk",
+                link: "djqisdj",
+            },
         ],
     },
     {
@@ -95,12 +99,12 @@ const matchUrl = url => {
             }
 
             const regexElm = new RegExp(curr)
-            return actualPos.search(regexElm) !== -1
+            return regexElm.test(actualPos)
         }, false)
     }
 
     const regexElm = new RegExp(url)
-    return actualPos.search(regexElm) !== -1
+    return regexElm.test(actualPos)
 }
 
 /** @type {Array<boolean | Array<boolean>>} */
