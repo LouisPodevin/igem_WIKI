@@ -34,13 +34,14 @@
                     v-if="openedMenu[groupNav.index] && groupNav.childrens"
                     class="navContent"
                 >
-                    <div
+                    <a
                         v-for="(subNavItem, index2) in groupNav.childrens"
                         :key="subNavItem.title"
                         :class="'navSubItemsList' + (active[index1][index2] ? ' active' : '')"
+                        :href="subNavItem.link"
                     >
                         {{subNavItem.title}}
-                    </div>
+                    </a>
                 </div>
             </div>
         </li>
