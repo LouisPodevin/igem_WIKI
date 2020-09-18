@@ -2,7 +2,6 @@
 
 <head>
     <title>Home</title>
-    <link rel="stylesheet" href="./index.css" />
 </head>
 <script type="module" src="./scripts/wiki.js"></script>
 
@@ -69,7 +68,11 @@
                     <div class="fact1">
                         <div class="fact1Header">
                             <div class="fact1LogoContainer" x-data="{}">
-                                <img :src="window.LINKS.pillsHome.url" alt="Pill Antibiotics" class="fact1Logo" />
+                                <img
+                                    :src="window.LINKS.pillsHome.url"
+                                    alt="Pill Antibiotics"
+                                    class="fact1Logo"
+                                />
                             </div>
                             <div class="fact1Title">
                                 They are considered as one of the biggest therapeutic
@@ -91,7 +94,10 @@
                             <div class="feactHeaderNumber">10</div>
                             <div class="factHeaderSub">Million</div>
                             <div class="factIcon">
-                                <i data-feather="frown" class="factIconFeather iconFrown"></i>
+                                <i
+                                    data-feather="frown"
+                                    class="factIconFeather iconFrown"
+                                ></i>
                             </div>
                         </div>
                         <div class="factText">
@@ -107,7 +113,10 @@
                             <div class="feactHeaderNumber">25</div>
                             <div class="factHeaderSub">Years</div>
                             <div class="factIcon">
-                                <i data-feather="trending-down" class="factIconFeather iconTrending-down"></i>
+                                <i
+                                    data-feather="trending-down"
+                                    class="factIconFeather iconTrending-down"
+                                ></i>
                             </div>
                         </div>
                         <div class="factText">
@@ -206,14 +215,17 @@
                 So we created Bactail !
             </div>
             <div class="illustrationProjectDescription triggerMiddle" x-data="{}">
-                <img :src="window.LINKS.schemaIndex.url" class="schemaIndex" alt="schema Index" />
+                <img
+                    :src="window.LINKS.schemaIndex.url"
+                    class="schemaIndex"
+                    alt="schema Index"
+                />
             </div>
         </div>
     </div>
     <div id="projectVideo">
         <div class="container">
-            <div class="ProjectVideo triggerMiddle">
-            </div>
+            <div class="ProjectVideo triggerMiddle"></div>
         </div>
     </div>
     <div id="wikiLinks">
@@ -257,3 +269,618 @@
 
     init()
 </script>
+<style>
+    html,
+    body {
+        background-color: #fafafa !important;
+    }
+
+    /* Welcome */
+
+    #welcome h1 {
+        display: none;
+    }
+
+    #welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
+
+    .welcomeContent {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .welcomeText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    .welcomeText1,
+    .welcomeText3 {
+        color: #e73327;
+        text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
+    }
+
+    @keyframes welcome2 {
+        0% {
+            position: relative;
+            top: 200px;
+            opacity: 0;
+        }
+        50% {
+            position: relative;
+            top: 200px;
+            opacity: 0;
+        }
+        100% {
+            position: relative;
+            top: 0px;
+            opacity: 1;
+        }
+    }
+
+    .welcomeText2 {
+        color: #8d1f24;
+        font-size: 80px;
+        text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+        animation: welcome2 2s;
+    }
+
+    @keyframes welcome1 {
+        0% {
+            position: relative;
+            left: 200px;
+            opacity: 0;
+        }
+        100% {
+            position: relative;
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
+    .welcomeText1 {
+        font-size: 70px;
+        animation: welcome1 1s;
+    }
+
+    @keyframes welcome3 {
+        0% {
+            position: relative;
+            right: 200px;
+            opacity: 0;
+        }
+
+        66% {
+            position: relative;
+            right: 200px;
+            opacity: 0;
+        }
+        100% {
+            position: relative;
+            right: 0px;
+            opacity: 1;
+        }
+    }
+
+    .welcomeText3 {
+        font-size: 45px;
+        animation: welcome3 3s;
+    }
+
+    .welcomeLogo > img {
+        height: 300px;
+    }
+
+    /* See More */
+
+    @keyframes seeMoreAnim {
+        0% {
+            opacity: 0;
+            position: relative;
+            top: 30px;
+        }
+        80% {
+            opacity: 0;
+            position: relative;
+            top: 30px;
+        }
+        100% {
+            opacity: 1;
+            position: relative;
+            top: 0px;
+        }
+    }
+
+    #seeMore {
+        animation: seeMoreAnim 5s;
+    }
+
+    .seeMoreContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+        border: none;
+        background: none;
+    }
+
+    .seeMoreContainer:focus {
+        outline: 0;
+    }
+
+    .seeMoreLogoContainer {
+        background-color: white;
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        height: 50px;
+        width: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .seeMoreContainer:hover .seeMoreLogoContainer {
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        background-color: #fafafa;
+    }
+
+    .seeMoreLogo {
+        height: 20px;
+        transform: scale(1.6);
+        color: #8d1f24;
+        position: relative;
+        top: 1px;
+    }
+
+    .seeMoreText {
+        font-size: 15px;
+        color: #8d1f24;
+    }
+
+    /* Facts */
+
+    #facts {
+        margin-top: 100px;
+    }
+
+    .fact1Header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .fact1 {
+    }
+
+    .fact1LogoContainer {
+        flex-shrink: 0;
+        background-color: rgba(231, 52, 39, 0.2);
+        height: 50px;
+        width: 50px;
+        border-radius: 999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fact1Logo {
+        height: 27px;
+    }
+
+    .fact1Title {
+        flex-grow: 1;
+        font-weight: 800;
+        color: #8d1f24;
+        line-height: 1.2;
+        font-size: 18px;
+    }
+
+    .fact1Text {
+        font-size: 15px;
+        padding: 20px 25px;
+    }
+
+    .factCard {
+        opacity: 0;
+        border-radius: 20px;
+        background-color: white;
+
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    @keyframes animFactCard {
+        0% {
+            opacity: 0;
+            position: relative;
+            left: 80px;
+        }
+        100% {
+            opacity: 1;
+            position: relative;
+            left: 0px;
+        }
+    }
+
+    .factCard.active {
+        animation: animFactCard 1s;
+        opacity: 1;
+    }
+
+    .factHeader {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 20px;
+    }
+
+    .feactHeaderNumber {
+        color: #e73327;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 1;
+    }
+
+    .factHeaderSub {
+        color: #8d1f24;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    .factIcon {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #e73327;
+        background-color: rgba(231, 52, 39, 0.2);
+        border-radius: 999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+    }
+
+    .factIconFeather {
+        height: 30px;
+    }
+
+    .factText {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.8);
+        padding: 0 20px 20px 20px;
+        line-height: 1.3;
+    }
+
+    .factText > b {
+        font-weight: 800;
+    }
+
+    @keyframes animIconRotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        30% {
+            transform: rotate(-360deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    .iconFrown {
+        animation: animIconRotate 4s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes animIconZip {
+        0% {
+            transform: translateY(0px);
+        }
+        5% {
+            transform: translateY(3px);
+        }
+        10% {
+            transform: translateY(-3px);
+        }
+        15% {
+            transform: translateY(3px);
+        }
+        20% {
+            transform: translateY(-3px);
+        }
+        30% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .iconTrending-down {
+        animation: animIconZip 4s;
+        animation-iteration-count: infinite;
+    }
+
+    /* Information */
+
+    #information {
+        margin: 100px 0 0 0;
+    }
+
+    .infomationIconContainer {
+        background-color: rgba(231, 52, 39, 0.2);
+        border-radius: 999px;
+        color: #e73327;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .informationIcon {
+        height: 30px;
+    }
+
+    .informationText {
+        margin: 20px 20px 20px 0px;
+        padding: 0 0 0 25px;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    .informationCard {
+        opacity: 0;
+    }
+
+    @keyframes informationCardAnim {
+        0% {
+            opacity: 0;
+            position: relative;
+            right: 80px;
+        }
+        100% {
+            opacity: 1;
+            position: relative;
+            right: 0px;
+        }
+    }
+
+    .informationCard.active {
+        opacity: 1;
+        animation: informationCardAnim 1s;
+    }
+
+    .informationText > b {
+        font-weight: 800;
+    }
+
+    .align-middle {
+        display: flex;
+        align-items: center;
+    }
+
+    .illustrationInformation {
+        background-color: white;
+
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    /* Project Description */
+
+    #projectDescription {
+        margin: 80px 0 0 0;
+    }
+
+    .titleProjectDescription {
+        font-size: 25px;
+        color: #8d1f24;
+        font-weight: 800;
+        text-align: center;
+        opacity: 0;
+    }
+
+    @keyframes titleProjectDescriptionAnim {
+        0% {
+            position: relative;
+            top: 80px;
+            opacity: 0;
+        }
+        100% {
+            position: relative;
+            top: 0px;
+            opacity: 1;
+        }
+    }
+
+    .titleProjectDescription.active {
+        opacity: 1;
+        animation: titleProjectDescriptionAnim 1s;
+    }
+
+    .illustrationProjectDescription {
+        background-color: white;
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        border-radius: 20px;
+        width: 100%;
+        height: 1200px;
+        margin: 20px 0;
+        flex-grow: 1;
+        opacity: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .schemaIndex {
+        height: 1000px;
+    }
+
+    @keyframes illustrationProjectDescriptionAnim {
+        0% {
+            position: relative;
+            top: 80px;
+            opacity: 0;
+        }
+        50% {
+            position: relative;
+            top: 80px;
+            opacity: 0;
+        }
+        100% {
+            position: relative;
+            top: 0px;
+            opacity: 1;
+        }
+    }
+
+    .illustrationProjectDescription.active {
+        opacity: 1;
+        animation: illustrationProjectDescriptionAnim 1.4s;
+    }
+
+    /* Project Video */
+
+    #projectVideo {
+        margin: 80px 0 0 0;
+    }
+
+    .ProjectVideo {
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        width: 100%;
+        height: 500px;
+        margin: 40px 0;
+    }
+
+    @keyframes ProjectVideoAnim {
+        0% {
+            position: relative;
+            top: 80px;
+            opacity: 0;
+        }
+        50% {
+            position: relative;
+            top: 80px;
+            opacity: 0;
+        }
+        100% {
+            position: relative;
+            top: 0px;
+            opacity: 1;
+        }
+    }
+
+    .ProjectVideo.active {
+        opacity: 1;
+        animation: ProjectVideoAnim 1.4s;
+    }
+
+    /* Wiki Links */
+
+    #wikiLinks {
+        display: flex;
+        min-height: 70vh;
+        align-items: center;
+        margin: 20px 40px;
+    }
+
+    .wikiLinkContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .wikiLinkCard {
+        background-color: white;
+        border-radius: 20px;
+
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        height: 300px;
+        max-width: 250px;
+        flex-grow: 1;
+        opacity: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wikiLinkCardText {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .wikiLinkCard > img {
+        transform: scale(1);
+    }
+
+    .projectCard {
+        color: #8d1f24;
+    }
+
+    .humainCard {
+        color: #e73327;
+    }
+
+    .softwareCard {
+        color: #e97c79;
+    }
+
+    @keyframes triggerBottomAnim {
+        0% {
+            position: relative;
+            top: 80px;
+            opacity: 0;
+        }
+        100% {
+            position: relative;
+            top: 0px;
+            opacity: 1;
+        }
+    }
+
+    .wikiLinkCard.active {
+        opacity: 1;
+        animation: triggerBottomAnim 1s;
+    }
+</style>
