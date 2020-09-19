@@ -21,21 +21,29 @@ const rootUrl = window.ROOT_URL
 const menu = [
     {
         title: "Home",
-        link: rootUrl + "/",
-        match: `^${rootUrl}/?$`,
+        link: rootUrl,
+        match: `^${rootUrl}$`,
     },
     {
         title: "Team",
-        link: rootUrl + "/Team/",
-        match: `^${rootUrl}/Team/?$`,
+        link: rootUrl + "/Team",
+        match: `^${rootUrl}/Team$`,
     },
     {
         title: "Project",
         childrens: [
+<<<<<<< HEAD
             { title: "Description", link: rootUrl + "/Project/Description", match: `^${rootUrl}/Project/Description$`, },
 
             { title: "Test1", link: "jjj" },
             { title: "Toto", link: rootUrl + "/toto/", match: `^${rootUrl}/toto/?$` },
+=======
+            {
+                title: "Description",
+                link: rootUrl + "/Project/Description",
+                match: `^${rootUrl}/Project/Description$`,
+            },
+>>>>>>> 3c978589c06c26e64b0e2f70abbac80a04177959
         ],
     },
     {

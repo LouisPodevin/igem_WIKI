@@ -22,3 +22,9 @@ body {
     padding: 0 !important;
     margin-bottom: -20px;
 }
+
+p {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    text-align: inherit !important;
+}
