@@ -1,678 +1,672 @@
 <html>
-    <head>
-        <title>Description</title>
-        <script type="module" src="../scripts/wiki.js"></script>
-        <!-- <script type="module" src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
-    </head>
 
-    <body>
-        <div class="navigation"></div>
-        <div id="description" class="container">
-            <h1>Bactails - IGEM IONIS</h1>
-            <div class="descriptionContent">
-                <div class="descriptionText">
-                    <div class="descriptionText1">What is</div>
-                    <div class="descriptionText2">Bactail ?</div>
-                </div>
-                <div class="descriptionLogo" x-data="{}">
-                    <img
-                        :src="window.LINKS.descriptionLogo.url"
-                        alt="descriptionLogo"
-                        class="descriptionLogo"
-                    />
-                </div>
+<head>
+    <title>Description</title>
+    <script type="module" src="../scripts/wiki.js"></script>
+    <!-- <script type="module" src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+</head>
+
+<body>
+    <div class="navigation"></div>
+    <div id="description" class="container">
+        <h1>Bactails - IGEM IONIS</h1>
+        <div class="descriptionContent">
+            <div class="descriptionText">
+                <div class="descriptionText1">What is</div>
+                <div class="descriptionText2">Bactail ?</div>
+            </div>
+            <div class="descriptionLogo" x-data="{}">
+                <img :src="window.LINKS.descriptionLogo.url" alt="descriptionLogo" class="descriptionLogo" />
             </div>
         </div>
-        <div id="seeMore">
-            <button class="container seeMoreContainer">
-                <div class="seeMoreLogoContainer">
-                    <i class="seeMoreLogo" data-feather="chevron-down"></i>
+    </div>
+    <div id="seeMore">
+        <button class="container seeMoreContainer">
+            <div class="seeMoreLogoContainer">
+                <i class="seeMoreLogo" data-feather="chevron-down"></i>
+            </div>
+            <div class="seeMoreText">Click here to see more</div>
+        </button>
+    </div>
+    <div id="ourInspiration">
+        <div class="container">
+            <div class="inspirationTextContainer">
+                <div class="headInspiration">
+                    <i data-feather="sun"></i>
+
+                    <div class="titleOurInspiration">Our inspiration</div>
                 </div>
-                <div class="seeMoreText">Click here to see more</div>
-            </button>
-        </div>
-        <div id="ourInspiration">
-            <div class="container">
-                <div class="inspirationTextContainer">
-                    <div class="headInspiration">
-                        <i data-feather="sun"></i>
-
-                        <div class="titleOurInspiration">Our inspiration</div>
-                    </div>
-                    <div class="textOurInspiration">
-                        Initially, our team was mostly inspired by environment-based ideas
-                        like waste management, pollution reduction etc. We believed that
-                        these subjects could easily be understood and appreciated by
-                        society as public awareness is increasing on environmental issues.
-                        However, this was early 2020, before the global pandemic. As
-                        Covid-19 started to appear in France, great standards of hygiene
-                        and quarantine began for the population. In a time where Covid-19
-                        is affecting global health and hand-sanitizer is flowing, members
-                        from the IONIS Paris team brought up the fact that the worst is
-                        yet to come: antibiotic resistant bacteria. As our team’s main
-                        interest was to find a solution for a cause that affected the
-                        entire world, we started brainstorming on the subject of
-                        <b>superbugs</b>.
-                    </div>
+                <div class="textOurInspiration">
+                    Initially, our team was mostly inspired by environment-based ideas
+                    like waste management, pollution reduction etc. We believed that
+                    these subjects could easily be understood and appreciated by
+                    society as public awareness is increasing on environmental issues.
+                    However, this was early 2020, before the global pandemic. As
+                    Covid-19 started to appear in France, great standards of hygiene
+                    and quarantine began for the population. In a time where Covid-19
+                    is affecting global health and hand-sanitizer is flowing, members
+                    from the IONIS Paris team brought up the fact that the worst is
+                    yet to come: antibiotic resistant bacteria. As our team’s main
+                    interest was to find a solution for a cause that affected the
+                    entire world, we started brainstorming on the subject of
+                    <b>superbugs</b>.
                 </div>
-                <div class="inspirationPlanet triggerMiddle" x-data="{}">
-                    <img
-                        :src="window.LINKS.inspirationPlanet.url"
-                        alt="inspirationPlanet"
-                        class="inspirationPlanet"
-                    />
-                </div>
-                <div class="textOurInspiration1">
-                    <div class="textOurInspiration1Goal">
-                        <div class="textOurInspiration1GoalIconWrapper">
-                            <i data-feather="crosshair"></i>
-                        </div>
-                        Our goal
+            </div>
+            <div class="inspirationPlanet triggerMiddle" x-data="{}">
+                <img :src="window.LINKS.inspirationPlanet.url" alt="inspirationPlanet" class="inspirationPlanet" />
+            </div>
+            <div class="textOurInspiration1">
+                <div class="textOurInspiration1Goal">
+                    <div class="textOurInspiration1GoalIconWrapper">
+                        <i data-feather="crosshair"></i>
                     </div>
-                    <div class="textOurInspiration1GoalText">
-                        Develop an innovative solution to this extensively studied
-                        problem.
-                    </div>
+                    Our goal
                 </div>
-                <div class="inspirationDialog">
-                    <div id="jk"></div>
-                    <script type="module" defer>
-                        const initAnim = async () => {
-                            const animLogoElm = document.getElementById("jk")
+                <div class="textOurInspiration1GoalText">
+                    Develop an innovative solution to this extensively studied
+                    problem.
+                </div>
+            </div>
+            <div class="inspirationDialog">
+                <div id="jk"></div>
+                <script type="module" defer>
+                    const initAnim = async () => {
+                        const animLogoElm = document.getElementById("jk")
 
-                            while (!window.bodymovin) {
-                                await new Promise(res => setTimeout(res, 500))
-                            }
-
-                            const animation = bodymovin.loadAnimation({
-                                container: animLogoElm,
-                                renderer: "svg",
-                                autoplay: false,
-                                path: window.LINKS.dialogAnimateDescription.url,
-                                loop: false,
-                            })
-
-                            let animStarted = false
-
-                            const startAnim = () => {
-                                if (animStarted) {
-                                    return
-                                }
-
-                                const elmPos = animLogoElm.getBoundingClientRect().top
-                                const posFromMiddle = elmPos - window.innerHeight / 2
-
-                                if (posFromMiddle < 0) {
-                                    animStarted = true
-                                    animation.goToAndPlay(0)
-                                }
-                            }
-
-                            while (!window.rxjs) {
-                                await new Promise(res => setTimeout(res, 300))
-                            }
-
-                            const { Subject, interval } = rxjs
-                            const { throttle } = rxjs.operators
-
-                            window.scrollSource
-                                .pipe(
-                                    throttle(() => interval(300), {
-                                        leading: true,
-                                        trailing: true,
-                                    }),
-                                )
-                                .subscribe(startAnim)
-
-                            window.scrollSource.next()
+                        while (!window.bodymovin) {
+                            await new Promise(res => setTimeout(res, 500))
                         }
 
-                        initAnim()
-                    </script>
-                </div>
+                        const animation = bodymovin.loadAnimation({
+                            container: animLogoElm,
+                            renderer: "svg",
+                            autoplay: false,
+                            path: window.LINKS.dialogAnimateDescription.url,
+                            loop: false,
+                        })
+
+                        let animStarted = false
+
+                        const startAnim = () => {
+                            if (animStarted) {
+                                return
+                            }
+
+                            const elmPos = animLogoElm.getBoundingClientRect().top
+                            const posFromMiddle = elmPos - window.innerHeight / 2
+
+                            if (posFromMiddle < 0) {
+                                animStarted = true
+                                animation.goToAndPlay(0)
+                            }
+                        }
+
+                        while (!window.rxjs) {
+                            await new Promise(res => setTimeout(res, 300))
+                        }
+
+                        const { Subject, interval } = rxjs
+                        const { throttle } = rxjs.operators
+
+                        window.scrollSource
+                            .pipe(
+                                throttle(() => interval(300), {
+                                    leading: true,
+                                    trailing: true,
+                                }),
+                            )
+                            .subscribe(startAnim)
+
+                        window.scrollSource.next()
+                    }
+
+                    initAnim()
+                </script>
             </div>
         </div>
-        <div id="projectBackground">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="titleProjectBackground">Project background</div>
-                        <div class="projectBackgroundTimeline">
-                            <div class="projectBackgroundLine"></div>
-                            <div class="projectBackgroundContent">
-                                <div class="itemTimeline">
-                                    <div class="dotTimelineContainer">
-                                        <div class="dotTimeline"></div>
-                                    </div>
-                                    <div class="textProjectBackground">
-                                        <p>
-                                            The 20th century is marked by a major
-                                            healthcare breakthrough. Indeed, in 1928,
-                                            Alexander Fleming discovered
-                                            <b>penicillin</b>. This antibiotic (ATB) made
-                                            a big difference in the first half of the past
-                                            century as many
-                                            <b>bacterial infections</b> were successfully
-                                            treated thanks to it. Penicillin helped reduce
-                                            the number of deaths during WWII. Following
-                                            this, more ATBs were found, and their
-                                            efficiency contributed to the greatest medical
-                                            advances of the past century.
-                                        </p>
-                                    </div>
+    </div>
+    <div id="projectBackground">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="titleProjectBackground">Project background</div>
+                    <div class="projectBackgroundTimeline">
+                        <div class="projectBackgroundLine"></div>
+                        <div class="projectBackgroundContent">
+                            <div class="itemTimeline">
+                                <div class="dotTimelineContainer">
+                                    <div class="dotTimeline"></div>
                                 </div>
-                                <div class="itemTimeline">
-                                    <div class="dotTimelineContainer">
-                                        <div class="dotTimeline"></div>
-                                    </div>
-                                    <div class="textProjectBackground">
-                                        <p>
-                                            Nevertheless, the <b>overconsumption</b> and
-                                            misuse of ATBs nowadays is a major problem.
-                                            Indeed, the World Health Organization (WHO)
-                                            estimates that in some countries,
-                                            <b>more than half</b> of the antibiotics are
-                                            misused1. This can lead to
-                                            <b>deadly consequences</b> as natural
-                                            selection is favoring the evolution of
-                                            <b>resistant bacteria</b>. Indeed, ATBs induce
-                                            a selective pressure on bacteria which have
-                                            natural processes which encourage their
-                                            resistance<sup>2</sup>. It happens at a
-                                            genetic level through mutations. And, as
-                                            bacteria have the capability of transferring
-                                            their genetic material between each other,
-                                            these genetic advantages are spread throughout
-                                            bacteria.
-                                        </p>
-                                    </div>
+                                <div class="textProjectBackground">
+                                    <p>
+                                        The 20th century is marked by a major
+                                        healthcare breakthrough. Indeed, in 1928,
+                                        Alexander Fleming discovered
+                                        <b>penicillin</b>. This antibiotic (ATB) made
+                                        a big difference in the first half of the past
+                                        century as many
+                                        <b>bacterial infections</b> were successfully
+                                        treated thanks to it. Penicillin helped reduce
+                                        the number of deaths during WWII. Following
+                                        this, more ATBs were found, and their
+                                        efficiency contributed to the greatest medical
+                                        advances of the past century.
+                                    </p>
                                 </div>
-                                <div class="itemTimeline">
-                                    <div class="dotTimelineContainer">
-                                        <div class="dotTimeline"></div>
-                                    </div>
-                                    <div class="textProjectBackground">
-                                        <p>
-                                            Dangerous and untreatable pathogens are slowly
-                                            emerging such as methicillin-resistant
-                                            strains. These pathogens cause
-                                            <b>multidrug-resistant infections</b>,
-                                            representing a growing healthcare concern in
-                                            the whole World. Some infections include
-                                            pneumonia, tuberculosis, blood poisoning or
-                                            gonorrhea. With antibiotic resistance,
-                                            theseinfections can now potentially kill.
-                                            According to the WHO, we are close to reaching
-                                            the <b>post-antibiotic era</b>.
-                                        </p>
-                                    </div>
+                            </div>
+                            <div class="itemTimeline">
+                                <div class="dotTimelineContainer">
+                                    <div class="dotTimeline"></div>
+                                </div>
+                                <div class="textProjectBackground">
+                                    <p>
+                                        Nevertheless, the <b>overconsumption</b> and
+                                        misuse of ATBs nowadays is a major problem.
+                                        Indeed, the World Health Organization (WHO)
+                                        estimates that in some countries,
+                                        <b>more than half</b> of the antibiotics are
+                                        misused1. This can lead to
+                                        <b>deadly consequences</b> as natural
+                                        selection is favoring the evolution of
+                                        <b>resistant bacteria</b>. Indeed, ATBs induce
+                                        a selective pressure on bacteria which have
+                                        natural processes which encourage their
+                                        resistance<sup>2</sup>. It happens at a
+                                        genetic level through mutations. And, as
+                                        bacteria have the capability of transferring
+                                        their genetic material between each other,
+                                        these genetic advantages are spread throughout
+                                        bacteria.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="itemTimeline">
+                                <div class="dotTimelineContainer">
+                                    <div class="dotTimeline"></div>
+                                </div>
+                                <div class="textProjectBackground">
+                                    <p>
+                                        Dangerous and untreatable pathogens are slowly
+                                        emerging such as methicillin-resistant
+                                        strains. These pathogens cause
+                                        <b>multidrug-resistant infections</b>,
+                                        representing a growing healthcare concern in
+                                        the whole World. Some infections include
+                                        pneumonia, tuberculosis, blood poisoning or
+                                        gonorrhea. With antibiotic resistance,
+                                        theseinfections can now potentially kill.
+                                        According to the WHO, we are close to reaching
+                                        the <b>post-antibiotic era</b>.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="illustrationCircle">
-                            <div id="lm"></div>
-                            <script type="module" defer>
-                                const initAnim = async () => {
-                                    const animLogoElm = document.getElementById("lm")
+                </div>
+                <div class="col-lg-5">
+                    <div class="illustrationCircle">
+                        <div id="lm"></div>
+                        <script type="module" defer>
+                            const initAnim = async () => {
+                                const animLogoElm = document.getElementById("lm")
 
-                                    while (!window.bodymovin) {
-                                        await new Promise(res => setTimeout(res, 500))
-                                    }
-
-                                    const animation = bodymovin.loadAnimation({
-                                        container: animLogoElm,
-                                        renderer: "svg",
-                                        autoplay: false,
-                                        path: window.LINKS.circleAnimateDescription.url,
-                                        loop: false,
-                                    })
-
-                                    let animStarted = false
-
-                                    const startAnim = () => {
-                                        if (animStarted) {
-                                            return
-                                        }
-
-                                        const elmPos = animLogoElm.getBoundingClientRect()
-                                            .top
-                                        const posFromMiddle =
-                                            elmPos - window.innerHeight / 2
-
-                                        if (posFromMiddle < 0) {
-                                            animStarted = true
-                                            animation.goToAndPlay(0)
-                                        }
-                                    }
-
-                                    while (!window.rxjs) {
-                                        await new Promise(res => setTimeout(res, 300))
-                                    }
-
-                                    const { Subject, interval } = rxjs
-                                    const { throttle } = rxjs.operators
-
-                                    window.scrollSource
-                                        .pipe(
-                                            throttle(() => interval(300), {
-                                                leading: true,
-                                                trailing: true,
-                                            }),
-                                        )
-                                        .subscribe(startAnim)
-
-                                    window.scrollSource.next()
+                                while (!window.bodymovin) {
+                                    await new Promise(res => setTimeout(res, 500))
                                 }
 
-                                initAnim()
-                            </script>
-                        </div>
+                                const animation = bodymovin.loadAnimation({
+                                    container: animLogoElm,
+                                    renderer: "svg",
+                                    autoplay: false,
+                                    path: window.LINKS.circleAnimateDescription.url,
+                                    loop: false,
+                                })
+
+                                let animStarted = false
+
+                                const startAnim = () => {
+                                    if (animStarted) {
+                                        return
+                                    }
+
+                                    const elmPos = animLogoElm.getBoundingClientRect()
+                                        .top
+                                    const posFromMiddle =
+                                        elmPos - window.innerHeight / 2
+
+                                    if (posFromMiddle < 0) {
+                                        animStarted = true
+                                        animation.goToAndPlay(0)
+                                    }
+                                }
+
+                                while (!window.rxjs) {
+                                    await new Promise(res => setTimeout(res, 300))
+                                }
+
+                                const { Subject, interval } = rxjs
+                                const { throttle } = rxjs.operators
+
+                                window.scrollSource
+                                    .pipe(
+                                        throttle(() => interval(300), {
+                                            leading: true,
+                                            trailing: true,
+                                        }),
+                                    )
+                                    .subscribe(startAnim)
+
+                                window.scrollSource.next()
+                            }
+
+                            initAnim()
+                        </script>
                     </div>
                 </div>
             </div>
         </div>
-        <footer></footer>
-        <script>
-            const init = async () => {
-                while (!window.$) {
-                    await new Promise(res => setTimeout(res, 200))
-                }
+    </div>
+    <footer></footer>
+    <script>
+        const init = async () => {
+            while (!window.$) {
+                await new Promise(res => setTimeout(res, 200))
+            }
 
-                $(() => {
-                    const buttonSeeMore = document.querySelector(".seeMoreContainer")
-                    const factDiv = document.getElementById("ourInspiration")
-                    buttonSeeMore.addEventListener("click", e => {
-                        e.preventDefault()
-                        $("html, body").animate({
-                            scrollTop:
-                                factDiv.getBoundingClientRect().top +
-                                window.pageYOffset -
-                                30,
-                        })
+            $(() => {
+                const buttonSeeMore = document.querySelector(".seeMoreContainer")
+                const factDiv = document.getElementById("ourInspiration")
+                buttonSeeMore.addEventListener("click", e => {
+                    e.preventDefault()
+                    $("html, body").animate({
+                        scrollTop:
+                            factDiv.getBoundingClientRect().top +
+                            window.pageYOffset -
+                            30,
                     })
                 })
-            }
-
-            init()
-        </script>
-    </body>
-    <style>
-        html,
-        body {
-            background-color: #fafafa !important;
+            })
         }
 
-        /* Description */
+        init()
+    </script>
+</body>
+<style>
+    html,
+    body {
+        background-color: #fafafa !important;
+    }
 
-        #description h1 {
-            display: none;
-        }
+    /* Description */
 
-        #description {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-        }
+    #description h1 {
+        display: none;
+    }
 
-        .descriptionContent {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+    #description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
 
-        .descriptionText {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            text-transform: uppercase;
-            font-weight: 800;
-            line-height: 1;
-        }
+    .descriptionContent {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
-        @keyframes description2 {
-            0% {
-                position: relative;
-                top: 200px;
-                opacity: 0;
-            }
+    .descriptionText {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 1;
+    }
 
-            50% {
-                position: relative;
-                top: 200px;
-                opacity: 0;
-            }
-
-            100% {
-                position: relative;
-                top: 0px;
-                opacity: 1;
-            }
-        }
-
-        .descriptionText2 {
-            color: #8d1f24;
-            font-size: 80px;
-            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
-            animation: description2 2s;
-        }
-
-        @keyframes description1 {
-            0% {
-                position: relative;
-                left: 100px;
-                opacity: 0;
-            }
-
-            100% {
-                position: relative;
-                left: 0px;
-                opacity: 1;
-            }
-        }
-
-        .descriptionText1 {
-            color: #e73327;
-            text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
-            font-size: 70px;
-            animation: description1 1s;
-        }
-
-        @keyframes descriptionLogo {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .descriptionLogo > img {
-            height: 400px;
-            animation: descriptionLogo 2s;
-        }
-
-        /* See More */
-
-        @keyframes seeMoreAnim {
-            0% {
-                opacity: 0;
-                position: relative;
-                top: 30px;
-            }
-
-            80% {
-                opacity: 0;
-                position: relative;
-                top: 30px;
-            }
-
-            100% {
-                opacity: 1;
-                position: relative;
-                top: 0px;
-            }
-        }
-
-        #seeMore {
-            animation: seeMoreAnim 3s;
-        }
-
-        .seeMoreContainer {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 40px;
-            border: none;
-            background: none;
-        }
-
-        .seeMoreContainer:focus {
-            outline: 0;
-        }
-
-        .seeMoreLogoContainer {
-            background-color: white;
-            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
-            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
-            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 999px;
-            height: 50px;
-            width: 50px;
-            border: 1px solid rgba(0, 0, 0, 0.03);
-        }
-
-        .seeMoreContainer:hover .seeMoreLogoContainer {
-            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            background-color: #fafafa;
-        }
-
-        .seeMoreLogo {
-            height: 20px;
-            transform: scale(1.6);
-            color: #8d1f24;
+    @keyframes description2 {
+        0% {
             position: relative;
-            top: 1px;
-        }
-
-        .seeMoreText {
-            font-size: 15px;
-            color: #8d1f24;
-        }
-
-        /* Inspiration Part */
-
-        #ourInspiration {
-            margin-top: 100px;
-        }
-
-        .headInspiration {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .headInspiration > svg {
-            color: #8d1f24;
-        }
-
-        .inspirationTextContainer {
-            max-width: 700px;
-        }
-
-        .titleOurInspiration {
-            flex-grow: 1;
-            font-weight: 800;
-            color: #8d1f24;
-            line-height: 1.2;
-            font-size: 18px;
-        }
-
-        .textOurInspiration {
-            margin: 20px 20px 20px 0px;
-            padding: 0 0 0 25px;
-            font-size: 15px;
-            color: rgba(0, 0, 0, 0.8);
-        }
-
-        .textOurInspiration > b {
-            font-weight: 800;
-        }
-
-        .inspirationPlanet {
-            margin: 50px 0 50px 0;
-            text-align: center;
+            top: 200px;
             opacity: 0;
         }
 
-        .inspirationPlanet > img {
-            height: 100px;
-        }
-
-        @keyframes inspirationPlanetAnim {
-            0% {
-                position: relative;
-                top: 80px;
-                opacity: 0;
-            }
-
-            100% {
-                position: relative;
-                top: 0px;
-                opacity: 1;
-            }
-        }
-
-        .inspirationPlanet {
-            opacity: 1;
-            animation: inspirationPlanetAnim 1s;
-        }
-
-        .textOurInspiration1 {
-            font-weight: 800;
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
-            gap: 10px;
-            justify-content: center;
-            min-height: 50vh;
-        }
-
-        .textOurInspiration1Goal {
-            color: #8d1f24;
-            text-transform: uppercase;
-            font-size: 30px;
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .textOurInspiration1GoalIconWrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            width: 40px;
-            background-color: rgba(231, 52, 39, 0.2);
-            border-radius: 999px;
-        }
-
-        .textOurInspiration1GoalIconWrapper > svg {
-            color: #e73327;
-            height: 25px;
-            width: 25px;
-        }
-
-        .textOurInspiration1GoalText {
-            color: #e73327;
-            /* text-transform: uppercase; */
-            font-size: 40px;
-            max-width: 700px;
-        }
-        .inspirationDialog {
-            margin-top: 50px;
-            height: 300px;
-        }
-
-        /* Project background Part */
-
-        #projectBackground {
-            margin-top: 80px;
-        }
-
-        .projectBackgroundTimeline {
-            display: flex;
-            align-items: stretch;
-            margin: 50px 0 50px 0;
-        }
-
-        .projectBackgroundLine {
-            width: 4px;
-            border-radius: 99px;
-            background-color: #8d1f24;
-            flex-shrink: 0;
-        }
-
-        .itemTimeline {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
+        50% {
             position: relative;
-            right: 37px;
+            top: 200px;
+            opacity: 0;
         }
 
-        .dotTimelineContainer {
-            background-color: white;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 99px;
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
+        100% {
+            position: relative;
+            top: 0px;
+            opacity: 1;
+        }
+    }
 
-            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+    .descriptionText2 {
+        color: #8d1f24;
+        font-size: 80px;
+        text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+        animation: description2 2s;
+    }
+
+    @keyframes description1 {
+        0% {
+            position: relative;
+            left: 100px;
+            opacity: 0;
         }
 
-        .dotTimeline {
-            background-color: #8d1f24;
-            border-radius: 99px;
-            width: 10px;
-            height: 10px;
+        100% {
+            position: relative;
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
+    .descriptionText1 {
+        color: #e73327;
+        text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
+        font-size: 70px;
+        animation: description1 1s;
+    }
+
+    @keyframes descriptionLogo {
+        0% {
+            opacity: 0;
         }
 
-        .projectBackgroundContent {
-            flex-grow: 1;
-            padding: 15px 0 15px 25px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .descriptionLogo>img {
+        height: 400px;
+        animation: descriptionLogo 2s;
+    }
+
+    /* See More */
+
+    @keyframes seeMoreAnim {
+        0% {
+            opacity: 0;
+            position: relative;
+            top: 30px;
         }
 
-        .titleProjectBackground {
-            flex-grow: 1;
-            font-weight: 800;
-            color: #8d1f24;
-            font-size: 18px;
+        80% {
+            opacity: 0;
+            position: relative;
+            top: 30px;
         }
 
-        .textProjectBackground {
-            font-size: 15px;
-            color: rgba(0, 0, 0, 0.8);
-            max-width: 600px;
+        100% {
+            opacity: 1;
+            position: relative;
+            top: 0px;
+        }
+    }
+
+    #seeMore {
+        animation: seeMoreAnim 3s;
+    }
+
+    .seeMoreContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+        border: none;
+        background: none;
+    }
+
+    .seeMoreContainer:focus {
+        outline: 0;
+    }
+
+    .seeMoreLogoContainer {
+        background-color: white;
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        height: 50px;
+        width: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .seeMoreContainer:hover .seeMoreLogoContainer {
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        background-color: #fafafa;
+    }
+
+    .seeMoreLogo {
+        height: 20px;
+        transform: scale(1.6);
+        color: #8d1f24;
+        position: relative;
+        top: 1px;
+    }
+
+    .seeMoreText {
+        font-size: 15px;
+        color: #8d1f24;
+    }
+
+    /* Inspiration Part */
+
+    #ourInspiration {
+        margin-top: 100px;
+    }
+
+    .headInspiration {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .headInspiration>svg {
+        color: #8d1f24;
+    }
+
+    .inspirationTextContainer {
+        max-width: 700px;
+    }
+
+    .titleOurInspiration {
+        flex-grow: 1;
+        font-weight: 800;
+        color: #8d1f24;
+        line-height: 1.2;
+        font-size: 18px;
+    }
+
+    .textOurInspiration {
+        margin: 20px 20px 20px 0px;
+        padding: 0 0 0 25px;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    .textOurInspiration>b {
+        font-weight: 800;
+    }
+
+    .inspirationPlanet {
+        margin: 50px 0 20px 0;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .inspirationPlanet>img {
+        height: 100px;
+    }
+
+    @keyframes inspirationPlanetAnim {
+        0% {
+            position: relative;
+            top: 80px;
+            opacity: 0;
         }
 
-        .textProjectBackground > b {
-            font-weight: 800;
+        100% {
+            position: relative;
+            top: 0px;
+            opacity: 1;
         }
+    }
 
-        .illustrationCircle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: white;
-            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
-            height: 200px;
-            margin: 80px 0 80px 0;
-            border-radius: 20px;
-            padding: 0 0 0 10px;
-        }
-    </style>
+    .inspirationPlanet {
+        opacity: 1;
+        animation: inspirationPlanetAnim 1s;
+    }
+
+    .textOurInspiration1 {
+        font-weight: 800;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        gap: 10px;
+        justify-content: center;
+        min-height: 50vh;
+    }
+
+    .textOurInspiration1Goal {
+        color: #8d1f24;
+        text-transform: uppercase;
+        font-size: 30px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .textOurInspiration1GoalIconWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(231, 52, 39, 0.2);
+        border-radius: 999px;
+    }
+
+    .textOurInspiration1GoalIconWrapper>svg {
+        color: #e73327;
+        height: 25px;
+        width: 25px;
+    }
+
+    .textOurInspiration1GoalText {
+        color: #e73327;
+        /* text-transform: uppercase; */
+        font-size: 40px;
+        max-width: 700px;
+    }
+
+    .inspirationDialog {
+        height: 300px;
+    }
+
+    /* Project background Part */
+
+    #projectBackground {
+        margin-top: 80px;
+    }
+
+    .projectBackgroundTimeline {
+        display: flex;
+        align-items: stretch;
+        margin: 50px 0 50px 0;
+    }
+
+    .projectBackgroundLine {
+        width: 4px;
+        border-radius: 99px;
+        background-color: #8d1f24;
+        flex-shrink: 0;
+    }
+
+    .itemTimeline {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        position: relative;
+        right: 37px;
+    }
+
+    .dotTimelineContainer {
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 99px;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+    }
+
+    .dotTimeline {
+        background-color: #8d1f24;
+        border-radius: 99px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .projectBackgroundContent {
+        flex-grow: 1;
+        padding: 15px 0 15px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titleProjectBackground {
+        flex-grow: 1;
+        font-weight: 800;
+        color: #8d1f24;
+        font-size: 18px;
+    }
+
+    .textProjectBackground {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.8);
+        max-width: 600px;
+    }
+
+    .textProjectBackground>b {
+        font-weight: 800;
+    }
+
+    .illustrationCircle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+        height: 500px;
+        margin: 80px 0 80px 0;
+        border-radius: 20px;
+        padding: 0 0 0 10px;
+    }
+</style>
+
 </html>
