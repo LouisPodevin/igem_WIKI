@@ -168,6 +168,31 @@ const links = {
         path: "/pictures/sponsors/labiotech_igem",
         prod: "https://2020.igem.org/wiki/images/8/8a/T--Ionis_Paris--labiotech.png",
     },
+
+    // Description
+    descriptionLogo: {
+        ext: "svg",
+        path: "/pictures/descriptionLogo",
+        prod: "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--descriptionlogo.svg",
+    },
+    inspirationPlanet: {
+        ext: "svg",
+        path: "/pictures/inspirationPlanet",
+        prod: "https://2020.igem.org/wiki/images/a/ac/T--Ionis_Paris--descriptionPlanet.svg",
+    },
+    inspirationDialog: {
+        ext: "svg",
+        path: "/pictures/inspirationDialog",
+        prod: "https://2020.igem.org/wiki/images/c/cd/T--Ionis_Paris--Dialog.svg",
+    },
+    dialogAnimateDescription: {
+        ext: "json",
+        path: "/pictures/dialogDescription_animate",
+    },
+    circleAnimateDescription: {
+        ext: "json",
+        path: "/pictures/circleDescription_animate",
+    },
 }
 
 for (let link in links) {
