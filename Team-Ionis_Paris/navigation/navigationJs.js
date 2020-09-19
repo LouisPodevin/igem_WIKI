@@ -21,13 +21,13 @@ const rootUrl = window.ROOT_URL
 const menu = [
     {
         title: "Home",
-        link: rootUrl + "/",
-        match: `^${rootUrl}/?$`,
+        link: rootUrl,
+        match: `^${rootUrl}$`,
     },
     {
         title: "Team",
-        link: rootUrl + "/Team/",
-        match: `^${rootUrl}/Team/?$`,
+        link: rootUrl + "/Team",
+        match: `^${rootUrl}/Team$`,
     },
     {
         title: "Project",
