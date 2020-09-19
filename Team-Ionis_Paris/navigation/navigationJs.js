@@ -22,18 +22,23 @@ const menu = [
     {
         title: "Home",
         link: rootUrl + "/",
-        match: [`^${rootUrl}$`, `^${rootUrl}/$`],
+        match: `^${rootUrl}/?$`,
     },
     {
         title: "Team",
         link: rootUrl + "/Team/",
-        match: `^${rootUrl}/Team/`,
+        match: `^${rootUrl}/Team/?$`,
     },
     {
         title: "Project",
         childrens: [
+<<<<<<< HEAD
             { title: "Description", link: rootUrl + "/Project/Description", match: `^${rootUrl}/Project/Description$`, },
 
+=======
+            { title: "Test1", link: "jjj" },
+            { title: "Toto", link: rootUrl + "/toto/", match: `^${rootUrl}/toto/?$` },
+>>>>>>> c32a5904c7ff6604805dfea55b73425dab172801
         ],
     },
     {
