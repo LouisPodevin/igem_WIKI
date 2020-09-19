@@ -22,7 +22,7 @@ const menu = [
     {
         title: "Home",
         link: rootUrl,
-        match: `^${rootUrl}$`,
+        match: `^${rootUrl}/?$`,
     },
     {
         title: "Team",
