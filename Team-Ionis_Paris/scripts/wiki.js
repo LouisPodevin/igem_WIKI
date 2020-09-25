@@ -181,8 +181,8 @@ const links = {
 
     // Description
     descriptionLogo: {
-        ext: "svg",
-        path: "/pictures/descriptionLogo",
+        ext: "png",
+        path: "/project/hexagonal-description",
         prod:
             "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--descriptionlogo.svg",
     },
