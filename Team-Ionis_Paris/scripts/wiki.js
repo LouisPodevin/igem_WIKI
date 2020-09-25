@@ -210,6 +210,40 @@ const links = {
         path: "/pictures/glass",
         prod: "",
     },
+
+    // Project Design
+
+    designProjectLogo: {
+        ext: "png",
+        path: "/project/hexagonal-description",
+        prod:
+            "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--descriptionlogo.svg",
+    },
+    designProjectIntesting: {
+        ext: "png",
+        path: "/pictures/project/design/intestin",
+        prod: "",
+    },
+    designProjectPhase1: {
+        ext: "svg",
+        path: "/pictures/project/design/phase1",
+        prod: "",
+    },
+    designProjectPhase2: {
+        ext: "svg",
+        path: "/pictures/project/design/phase2",
+        prod: "",
+    },
+    designProjectPhase3: {
+        ext: "svg",
+        path: "/pictures/project/design/phase3",
+        prod: "",
+    },
+    designProjectPhase4: {
+        ext: "svg",
+        path: "/pictures/project/design/phase4",
+        prod: "",
+    },
 }
 
 for (let link in links) {

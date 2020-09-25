@@ -37,6 +37,11 @@ const menu = [
                 link: rootUrl + "/Project/Description",
                 match: `^${rootUrl}/Project/Description$`,
             },
+            {
+                title: "Design",
+                link: rootUrl + "/Project/Design",
+                match: `^${rootUrl}/Project.Design$`,
+            },
         ],
     },
     {

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Project Design</title>
+        <script type="module" src="../scripts/wiki.js"></script>
+        <!-- <script type="module" src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+    </head>
+    <body>
+        <div class="navigation"></div>
+        <div
+            class="landing"
+            x-data="{}"
+            :style="'background-image: url(' + window.LINKS.designProjectLogo.url + ')'"
+        >
+            <div class="container">
+                <div class="landingContent">
+                    <div class="landingText">
+                        <div class="landingText1">Design</div>
+                        <div class="landingText2">Project</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="seeMore">
+            <button class="container seeMoreContainer">
+                <div class="seeMoreLogoContainer">
+                    <i class="seeMoreLogo" data-feather="chevron-down"></i>
+                </div>
+                <div class="seeMoreText">Click here to see more</div>
+            </button>
+        </div>
+
+        <div id="projectDesignIntestin">
+            <div class="container">
+                <div class="intestin" x-data="{}">
+                    <img
+                        :src="window.LINKS.designProjectIntesting.url"
+                        class="intestinImg"
+                    />
+                    <div class="step1">
+                        <div class="pastille pastilleOne">
+                            <div>1</div>
+                        </div>
+                        <img
+                            class="phase1Img"
+                            :src="window.LINKS.designProjectPhase1.url"
+                        />
+                    </div>
+                    <div class="step2">
+                        <div class="pastille pastilleTwo">
+                            <div>2</div>
+                        </div>
+                        <img
+                            class="phase2Img"
+                            :src="window.LINKS.designProjectPhase2.url"
+                        />
+                    </div>
+                    <div class="step3">
+                        <div class="pastille pastilleThree">
+                            <div>3</div>
+                        </div>
+                        <img
+                            class="phase3Img"
+                            :src="window.LINKS.designProjectPhase3.url"
+                        />
+                    </div>
+
+                    <div class="step4">
+                        <div class="pastille pastilleFour">
+                            <div>4</div>
+                        </div>
+                        <img
+                            class="phase4Img"
+                            :src="window.LINKS.designProjectPhase4.url"
+                        />
+                    </div>
+
+                    <div class="phase1">
+                        <div class="titlePhase">Phase 1</div>
+                        <div class="contentPhase">Toto</div>
+                    </div>
+
+                    <div class="phase2">
+                        <div class="titlePhase">Phase 2</div>
+                        <div class="contentPhase">Toto</div>
+                    </div>
+                    <div class="phase3">
+                        <div class="titlePhase">Phase 3</div>
+                        <div class="contentPhase">Toto</div>
+                    </div>
+                    <div class="phase4">
+                        <div class="titlePhase">Phase 4</div>
+                        <div class="contentPhase">Toto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer></footer>
+    </body>
+    <script type="module">
+        const init = async () => {
+            while (!window.$) {
+                await new Promise(res => setTimeout(res, 200))
+            }
+
+            $(() => {
+                const buttonSeeMore = document.querySelector(".seeMoreContainer")
+                const factDiv = document.getElementById("projectDesignIntestin")
+                buttonSeeMore.addEventListener("click", e => {
+                    e.preventDefault()
+                    $("html, body").animate({
+                        scrollTop:
+                            factDiv.getBoundingClientRect().top + window.pageYOffset - 30,
+                    })
+                })
+            })
+        }
+
+        init()
+    </script>
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        .landing {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: top -80px right -80px;
+            background-size: auto 100%;
+        }
+
+        .landingContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .landingText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes landing2 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .landingText2 {
+            color: #e73327;
+            text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
+            font-size: 40px;
+            animation: landing2 2s;
+        }
+
+        @keyframes landing1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+        .landingText1 {
+            color: #8d1f24;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            font-size: 70px;
+            animation: landing1 1s;
+        }
+
+        /* See More */
+
+        @keyframes seeMoreAnim {
+            0% {
+                opacity: 0;
+                position: relative;
+                top: 30px;
+            }
+
+            80% {
+                opacity: 0;
+                position: relative;
+                top: 30px;
+            }
+
+            100% {
+                opacity: 1;
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        #seeMore {
+            animation: seeMoreAnim 3s;
+        }
+
+        .seeMoreContainer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+            border: none;
+            background: none;
+        }
+
+        .seeMoreContainer:focus {
+            outline: 0;
+        }
+
+        .seeMoreLogoContainer {
+            background-color: white;
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999px;
+            height: 50px;
+            width: 50px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .seeMoreContainer:hover .seeMoreLogoContainer {
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+            background-color: #fafafa;
+        }
+
+        .seeMoreLogo {
+            height: 20px;
+            transform: scale(1.6);
+            color: #8d1f24;
+            position: relative;
+            top: 1px;
+        }
+
+        .seeMoreText {
+            font-size: 15px;
+            color: #8d1f24;
+        }
+
+        #projectDesignIntestin {
+            margin: 250px 0;
+            overflow-x: scroll;
+        }
+
+        .intestin {
+            position: relative;
+            margin: auto;
+            width: 776px;
+        }
+
+        .intestinImg {
+            height: 1390px;
+        }
+
+        .pastille {
+            background-color: rgba(231, 52, 39, 0.2);
+            height: 35px;
+            width: 35px;
+            border-radius: 999px;
+            color: #e73327;
+            font-weight: 800;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step1 {
+            position: absolute;
+            top: 260px;
+            left: 410px;
+        }
+
+        .phase1Img {
+            height: 130px;
+            position: absolute;
+            left: 10px;
+            top: -25px;
+        }
+
+        .step2 {
+            position: absolute;
+            top: 480px;
+            left: 550px;
+        }
+
+        .phase2Img {
+            height: 130px;
+            position: absolute;
+            right: -15px;
+            top: 5px;
+        }
+
+        .step3 {
+            position: absolute;
+            top: 770px;
+            left: 400px;
+        }
+
+        .phase3Img {
+            height: 130px;
+            position: absolute;
+            right: -15px;
+            top: 5px;
+        }
+
+        .step4 {
+            position: absolute;
+            top: 1160px;
+            left: 320px;
+        }
+
+        .phase4Img {
+            height: 140px;
+            position: absolute;
+            left: 10px;
+            top: -50px;
+        }
+
+        .titlePhase {
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 800;
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        .contentPhase {
+            color: #8d1f24;
+            font-size: 50px;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .phase1 {
+            position: absolute;
+            top: 200px;
+            left: 680px;
+        }
+
+        .phase2 {
+            position: absolute;
+            top: 500px;
+            left: 200px;
+        }
+
+        .phase3 {
+            position: absolute;
+            top: 790px;
+            left: 30px;
+        }
+
+        .phase4 {
+            position: absolute;
+            top: 200px;
+            left: 680px;
+        }
+    </style>
+</html>
