@@ -117,10 +117,20 @@ const links = {
         path: "/pictures/software",
         prod: "https://2020.igem.org/wiki/images/d/dc/T--Ionis_Paris--Software.svg",
     },
-    schemaIndex: {
+    step1Home: {
         ext: "svg",
-        path: "/pictures/schemaIndex",
-        prod: "https://2020.igem.org/wiki/images/7/71/T--Ionis_Paris--schemaIndex.svg",
+        path: "/pictures/step1Home",
+        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step1Index.svg",
+    },
+    step2Home: {
+        ext: "svg",
+        path: "/pictures/step2Home",
+        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step1Index.svg",
+    },
+    step3Home: {
+        ext: "svg",
+        path: "/pictures/step3Home",
+        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step1Index.svg",
     },
     // Sponsors
     benchlingSponsor: {
@@ -173,12 +183,14 @@ const links = {
     descriptionLogo: {
         ext: "svg",
         path: "/pictures/descriptionLogo",
-        prod: "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--descriptionlogo.svg",
+        prod:
+            "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--descriptionlogo.svg",
     },
     inspirationPlanet: {
         ext: "svg",
         path: "/pictures/inspirationPlanet",
-        prod: "https://2020.igem.org/wiki/images/a/ac/T--Ionis_Paris--descriptionPlanet.svg",
+        prod:
+            "https://2020.igem.org/wiki/images/a/ac/T--Ionis_Paris--descriptionPlanet.svg",
     },
     inspirationDialog: {
         ext: "svg",
@@ -192,6 +204,11 @@ const links = {
     circleAnimateDescription: {
         ext: "json",
         path: "/pictures/circleDescription_animate",
+    },
+    glassDescription: {
+        ext: "svg",
+        path: "/pictures/glass",
+        prod: "",
     },
 }
 
