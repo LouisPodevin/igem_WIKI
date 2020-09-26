@@ -34,13 +34,13 @@ const menu = [
         childrens: [
             {
                 title: "Description",
-                link: rootUrl + "/Project/Description",
-                match: `^${rootUrl}/Project/Description$`,
+                link: rootUrl + "/Description",
+                match: `^${rootUrl}/Description$`,
             },
             {
                 title: "Design",
-                link: rootUrl + "/Project/Design",
-                match: `^${rootUrl}/Project.Design$`,
+                link: rootUrl + "/Design",
+                match: `^${rootUrl}/Design$`,
             },
         ],
     },
