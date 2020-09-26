@@ -222,27 +222,27 @@ const links = {
     designProjectIntesting: {
         ext: "png",
         path: "/pictures/project/design/intestin",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/a/a9/T--Ionis_Paris--Intestin.png",
     },
     designProjectPhase1: {
         ext: "svg",
         path: "/pictures/project/design/phase1",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/a/ac/T--Ionis_Paris--Design-Phase-1.svg",
     },
     designProjectPhase2: {
         ext: "svg",
         path: "/pictures/project/design/phase2",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/2/2d/T--Ionis_Paris--Design-Phase-2.svg",
     },
     designProjectPhase3: {
         ext: "svg",
         path: "/pictures/project/design/phase3",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/e/eb/T--Ionis_Paris--Design-Phase-3.svg",
     },
     designProjectPhase4: {
         ext: "svg",
         path: "/pictures/project/design/phase4",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/5/51/T--Ionis_Paris--Design-Phase-4.svg",
     },
 }
 
