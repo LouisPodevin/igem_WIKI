@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Project Design</title>
-        <script type="module" src="../scripts/wiki.js"></script>
+        <script type="module" src="./scripts/wiki.js"></script>
         <!-- <script type="module" src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
     </head>
     <body>
@@ -72,20 +72,24 @@
 
                     <div class="phase1 triggerMiddle fadeIn">
                         <div class="titlePhase">Phase 1</div>
-                        <div class="contentPhase">Toto</div>
+                        <div class="contentPhase">Target recognition</div>
+                        <a class="linkPhase" href="#">Link</a>
                     </div>
 
                     <div class="phase2 triggerMiddle fadeIn">
                         <div class="titlePhase">Phase 2</div>
-                        <div class="contentPhase">Toto</div>
+                        <div class="contentPhase">Lysis bacteria</div>
+                        <a class="linkPhase" href="#">Link</a>
                     </div>
                     <div class="phase3 triggerMiddle fadeIn">
                         <div class="titlePhase">Phase 3</div>
-                        <div class="contentPhase">Toto</div>
+                        <div class="contentPhase">Kill switch</div>
+                        <a class="linkPhase" href="#">Link</a>
                     </div>
                     <div class="phase4 triggerMiddle fadeIn">
                         <div class="titlePhase">Phase 4</div>
-                        <div class="contentPhase">Toto</div>
+                        <div class="contentPhase">Galenic form</div>
+                        <a class="linkPhase" href="#">Link</a>
                     </div>
                 </div>
             </div>
@@ -263,33 +267,47 @@
 
         .contentPhase {
             color: #8d1f24;
-            font-size: 50px;
+            font-size: 40px;
             line-height: 1.1;
             font-weight: 800;
         }
 
         .phase1 {
             position: absolute;
-            top: 200px;
-            left: 680px;
+            top: 230px;
+            left: 600px;
+            background-color: #fafafa;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .phase2 {
             position: absolute;
             top: 500px;
-            left: 200px;
+            left: 150px;
+            background-color: #fafafa;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .phase3 {
             position: absolute;
-            top: 790px;
-            left: 30px;
+            top: 750px;
+            left: 60px;
         }
 
         .phase4 {
             position: absolute;
-            top: 1150px;
+            top: 1130px;
             left: 650px;
+        }
+
+        .linkPhase {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .linkPhase:hover {
+            color: #e73327;
         }
     </style>
 </html>

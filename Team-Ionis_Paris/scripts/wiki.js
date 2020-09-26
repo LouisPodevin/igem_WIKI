@@ -184,7 +184,7 @@ const links = {
         ext: "png",
         path: "/project/hexagonal-description",
         prod:
-            "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--descriptionlogo.svg",
+            "https://2020.igem.org/wiki/images/c/cf/T--Ionis_Paris--descriptionlogo-hexagon.png",
     },
     inspirationPlanet: {
         ext: "svg",
@@ -217,7 +217,7 @@ const links = {
         ext: "png",
         path: "/project/hexagonal-description",
         prod:
-            "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--descriptionlogo.svg",
+            "https://2020.igem.org/wiki/images/c/cf/T--Ionis_Paris--descriptionlogo-hexagon.png",
     },
     designProjectIntesting: {
         ext: "png",
