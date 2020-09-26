@@ -111,3 +111,38 @@ export const loadFooter = async () => {
     cssFooter.setAttribute("href", window.LINKS.footerCss.url)
     document.head.append(cssFooter)
 }
+
+export const triggerSeeMore = async () => {
+    const seeMoreElms = document.getElementsByClassName("seeMore")
+
+    for (let seeMoreElm of seeMoreElms) {
+        seeMoreElm.innerHTML = `<button class="container seeMoreContainer">
+                                    <div class="seeMoreLogoContainer">
+                                        <i class="seeMoreLogo" data-feather="chevron-down"></i>
+                                    </div>
+                                    <div class="seeMoreText">Click here to see more</div>
+                                </button>`
+        const targetId = seeMoreElm.getAttribute("target-id")
+
+        if (targetId) {
+            const targetElm = document.getElementById(targetId)
+
+            if (!targetElm) {
+                return
+            }
+
+            seeMoreElm.addEventListener("click", async e => {
+                e.preventDefault()
+
+                while (!window.$) {
+                    await new Promise(res => setTimeout(res, 200))
+                }
+
+                $("html, body").animate({
+                    scrollTop:
+                        targetElm.getBoundingClientRect().top + window.pageYOffset - 30,
+                })
+            })
+        }
+    }
+}

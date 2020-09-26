@@ -8,3 +8,13 @@
 -   [Poppins](https://fonts.google.com/specimen/Poppins)
 -   [Bootstrap](https://getbootstrap.com/)
 -   [Alpine.js](https://github.com/alpinejs/alpine)
+
+# Utilities class
+
+-   triggerMiddle
+-   triggerBottom
+-   fromLeft
+-   fromRight
+-   fromTop
+-   fromBottom
+-   fadeIn

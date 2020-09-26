@@ -293,14 +293,16 @@ const init = async () => {
         loadGlobalCss,
         loadBootstrap,
         loadFooter,
+        triggerSeeMore,
     } = await import(links.tools.url)
 
     await Promise.all([
+        loadGlobalCss(),
         initNavigation(),
         loadFont(),
-        loadGlobalCss(),
         loadBootstrap(),
         loadFooter(),
+        triggerSeeMore(),
     ])
     feather.replace()
 

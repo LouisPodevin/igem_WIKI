@@ -24,14 +24,7 @@
                 </div>
             </div>
         </div>
-        <div id="seeMore">
-            <button class="container seeMoreContainer">
-                <div class="seeMoreLogoContainer">
-                    <i class="seeMoreLogo" data-feather="chevron-down"></i>
-                </div>
-                <div class="seeMoreText">Click here to see more</div>
-            </button>
-        </div>
+        <div class="seeMore" target-id="ourInspiration"></div>
         <div id="ourInspiration">
             <div class="container">
                 <div class="inspirationTextContainer">
@@ -301,7 +294,7 @@
                                 FIGHT AGAINST AMR.
                             </div>
                         </div>
-                        <div class="bactailCard">
+                        <div class="bactailCard triggerMiddle fromLeft">
                             <div class="bactailCardText">
                                 BacTail offers an <b>innovative alternative</b> to
                                 antibiotics. We are developing a
@@ -454,29 +447,6 @@
                 </div>
             </div>
             <footer></footer>
-            <script>
-                const init = async () => {
-                    while (!window.$) {
-                        await new Promise(res => setTimeout(res, 200))
-                    }
-
-                    $(() => {
-                        const buttonSeeMore = document.querySelector(".seeMoreContainer")
-                        const factDiv = document.getElementById("ourInspiration")
-                        buttonSeeMore.addEventListener("click", e => {
-                            e.preventDefault()
-                            $("html, body").animate({
-                                scrollTop:
-                                    factDiv.getBoundingClientRect().top +
-                                    window.pageYOffset -
-                                    30,
-                            })
-                        })
-                    })
-                }
-
-                init()
-            </script>
         </div>
     </body>
     <style>
@@ -922,7 +892,6 @@
         }
 
         .bactailCard {
-            opacity: 1;
             border-radius: 20px;
             background-color: white;
 
