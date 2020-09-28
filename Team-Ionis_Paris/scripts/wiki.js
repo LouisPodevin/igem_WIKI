@@ -244,6 +244,54 @@ const links = {
         path: "/pictures/project/design/phase4",
         prod: "https://2020.igem.org/wiki/images/5/51/T--Ionis_Paris--Design-Phase-4.svg",
     },
+
+    // Phase 1
+    phase1Bacteriophage: {
+        ext: "svg",
+        path: "/pictures/phase1Bacteriophage",
+        prod:
+            "https://2020.igem.org/wiki/images/8/80/T--Ionis_Paris--phase1Bacteriophage.svg",
+    },
+    phase1Board: {
+        ext: "svg",
+        path: "/pictures/phase1Board",
+        prod: "https://2020.igem.org/wiki/images/3/39/T--Ionis_Paris--phase1Board.svg",
+    },
+    phase1Bacteriophage2: {
+        ext: "svg",
+        path: "/pictures/phase1Bacteriophage2",
+        prod: "",
+    },
+    phase1DNA: {
+        ext: "svg",
+        path: "/pictures/phase1DNA",
+        prod: "",
+    },
+    phase1Animate: {
+        ext: "json",
+        path: "/pictures/phase1Animate",
+    },
+
+    //Phase 2
+    phase2DNA: {
+        ext: "svg",
+        path: "/pictures/phase2DNA",
+        prod: "",
+    },
+    phase2Board: {
+        ext: "svg",
+        path: "/pictures/phase2Board",
+        prod: "",
+    },
+    phase2DNA2: {
+        ext: "svg",
+        path: "/pictures/phase2DNA2",
+        prod: "",
+    },
+    phase2Animate: {
+        ext: "json",
+        path: "/pictures/phase2Animate",
+    },
 }
 
 for (let link in links) {

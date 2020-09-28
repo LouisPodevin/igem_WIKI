@@ -45,13 +45,6 @@ const menu = [
         ],
     },
     {
-        title: "Lab",
-        childrens: [
-            { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
-        ],
-    },
-    {
         title: "Safety",
         childrens: [
             { title: "Test1", link: "jjj" },
@@ -62,10 +55,18 @@ const menu = [
         ],
     },
     {
-        title: "Parts",
+        title: "Phases",
         childrens: [
-            { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
+            {
+                title: "Phase 1",
+                link: rootUrl + "/Phases/phase1",
+                match: `^${rootUrl}/Phases/phase1$`,
+            },
+            {
+                title: "Phase 2",
+                link: rootUrl + "/Phases/phase2",
+                match: `^${rootUrl}/Phases/phase2$`,
+            },
         ],
     },
     {
