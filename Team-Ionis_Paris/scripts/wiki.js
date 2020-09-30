@@ -292,6 +292,56 @@ const links = {
         ext: "json",
         path: "/pictures/phase2Animate",
     },
+
+    // Collaboration
+    collaboration1Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration1",
+    },
+    collaboration2Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration2",
+    },
+    collaboration3Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration3",
+    },
+    collaboration4Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration4",
+    },
+    collaboration5Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration5",
+    },
+    collaboration6Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration6",
+    },
+    collaboration7Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration7",
+    },
+    collaboration8Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration8",
+    },
+    collaboration9Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration9",
+    },
+    collaboration10Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration10",
+    },
+    collaboration11Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration11",
+    },
+    collaboration12Logo: {
+        ext: "jpg",
+        path: "/pictures/collaborations/collaboration12",
+    },
 }
 
 for (let link in links) {
@@ -313,6 +363,7 @@ for (let link in links) {
                 break
             case "svg":
             case "png":
+            case "jpg":
                 realUrl = links[link].prod
                 break
             default:

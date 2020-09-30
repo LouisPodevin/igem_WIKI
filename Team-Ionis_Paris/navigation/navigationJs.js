@@ -26,8 +26,13 @@ const menu = [
     },
     {
         title: "Team",
-        link: rootUrl + "/Team",
-        match: `^${rootUrl}/Team$`,
+        childrens: [
+            {
+                title: "Collaborations",
+                link: rootUrl + "/Collaborations",
+                match: `^${rootUrl}/Collaborations$`,
+            },
+        ],
     },
     {
         title: "Project",
