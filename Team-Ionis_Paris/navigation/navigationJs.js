@@ -136,6 +136,9 @@ const active = Array(menu.length)
         }
     })
 
+const localstorageMenu = "__OPEN_MENU__"
+const shouldOpenMenu = localStorage.getItem(localstorageMenu)
+
 const initNav = async () => {
     // @ts-ignore
     await import(window.LINKS.vueJs.url)
@@ -157,6 +160,7 @@ const initNav = async () => {
                         }
                     }),
                 active: active,
+                show: shouldOpenMenu !== "false",
             }
         },
         methods: {
@@ -170,6 +174,29 @@ const initNav = async () => {
                 return { transform: `rotate(${this.openedMenu[index] ? "180" : "0"}deg)` }
                 // return { color: `${this.openedMenu[index] ? "blue" : "red"}` }
             },
+            showMenu(event) {
+                event.stopPropagation()
+                this.show = !this.show
+            },
+            triggerMenuFull() {
+                if (!this.show) {
+                    this.show = true
+                }
+            },
+        },
+        computed: {
+            leftPos() {
+                return this.show ? "0px" : "-350px"
+            },
+        },
+        watch: {
+            show(val) {
+                document.body.style.paddingLeft = val ? "390px" : "40px"
+                localStorage.setItem(localstorageMenu, val ? "true" : "false")
+            },
+        },
+        mounted() {
+            document.body.style.paddingLeft = this.show ? "390px" : "40px"
         },
     })
 }

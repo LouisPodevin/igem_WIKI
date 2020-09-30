@@ -22,6 +22,7 @@
 }
 
 #navigation .igemLogo {
+    display: inline-block;
     padding: 0 10px;
 }
 
@@ -122,4 +123,26 @@
     align-items: center;
     color: black;
     height: 15px;
+}
+
+#navigation .toggleMenu {
+    height: 25px;
+    width: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 99px;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#navigation .toggleMenu > svg {
+    height: 20px;
+}
+
+#navigation .headerMenu {
+    position: relative;
+    width: 100%;
 }

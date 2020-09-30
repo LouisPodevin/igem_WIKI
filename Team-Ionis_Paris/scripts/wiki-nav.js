@@ -7,8 +7,6 @@ export const initNavigation = async () => {
         return
     }
 
-    document.body.style.paddingLeft = "390px"
-
     // Load HTML
     const navHtlm = await (await fetch(links.navigationHtml.url)).text()
 

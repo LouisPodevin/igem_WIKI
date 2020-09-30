@@ -3,13 +3,26 @@
  -->
 
 <div id="__nav__mover__"></div>
-<div id="navigation">
-    <div class="igemLogo">
-        <img
-            :src="window.LINKS.logoTeamIonis.url"
-            alt="iGem Ionis Logo"
-            class="igemLogoImg"
-        />
+<div
+    id="navigation"
+    :style="{left: leftPos, cursor: (show ? 'initial' : 'pointer')}"
+    @click="triggerMenuFull"
+>
+    <div class="headerMenu">
+        <div
+            class="toggleMenu"
+            @click="showMenu"
+            :style="{transform: 'rotate(' + (show ? 180 : 0) + 'deg)', right: (show ? '15px' : '-22px')}"
+        >
+            <i data-feather="chevron-right"></i>
+        </div>
+        <a class="igemLogo" :href="window.ROOT_URL">
+            <img
+                :src="window.LINKS.logoTeamIonis.url"
+                alt="iGem Ionis Logo"
+                class="igemLogoImg"
+            />
+        </a>
     </div>
     <nav>
         <li v-for="(groupNav, index1) in menu" :key="groupNav.index" class="itemNav">
