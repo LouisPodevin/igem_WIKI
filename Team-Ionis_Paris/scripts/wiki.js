@@ -267,9 +267,14 @@ const links = {
         path: "/pictures/phase1DNA",
         prod: "",
     },
+    phase1DNA2: {
+        ext: "svg",
+        path: "/pictures/phase1DNA2",
+        prod: "",
+    },
     phase1Animate: {
         ext: "json",
-        path: "/pictures/phase1Animate",
+        path: "/pictures/animate1/phase1Animate",
     },
 
     //Phase 2
@@ -290,7 +295,7 @@ const links = {
     },
     phase2Animate: {
         ext: "json",
-        path: "/pictures/phase2Animate",
+        path: "/pictures/animate2/phase2Animate",
     },
 }
 
