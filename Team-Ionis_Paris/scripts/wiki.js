@@ -342,6 +342,62 @@ const links = {
         ext: "jpg",
         path: "/pictures/collaborations/collaboration12",
     },
+    collaboration13Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration13",
+    },
+    collaboration14Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration14",
+    },
+    collaboration15Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration15",
+    },
+    collaboration16Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration16",
+    },
+    collaboration17Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration17",
+    },
+    collaboration18Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration18",
+    },
+    collaboration19Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration19",
+    },
+    collaboration20Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration20",
+    },
+    collaboration21Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration21",
+    },
+    collaboration22Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration22",
+    },
+    collaboration23Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration23",
+    },
+    collaboration24Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration24",
+    },
+    collaboration25Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration25",
+    },
+    collaboration26Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration26",
+    },
 }
 
 for (let link in links) {
