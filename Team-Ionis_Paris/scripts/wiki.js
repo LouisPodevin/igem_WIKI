@@ -297,6 +297,155 @@ const links = {
         ext: "json",
         path: "/pictures/animate2/phase2Animate",
     },
+
+    // Collaboration
+    collaboration1Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration1",
+        prod: "https://2020.igem.org/wiki/images/1/1e/T--Ionis_Paris--collaboration1.png",
+    },
+    collaboration2Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration2",
+        prod: "https://2020.igem.org/wiki/images/c/cd/T--Ionis_Paris--collaboration2.png",
+    },
+    collaboration3Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration3",
+        prod: "https://2020.igem.org/wiki/images/a/ad/T--Ionis_Paris--collaboration3.png",
+    },
+    collaboration4Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration4",
+        prod: "https://2020.igem.org/wiki/images/9/9b/T--Ionis_Paris--collaboration4.png",
+    },
+    collaboration5Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration5",
+        prod: "https://2020.igem.org/wiki/images/d/d3/T--Ionis_Paris--collaboration5.png",
+    },
+    collaboration6Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration6",
+        prod: "https://2020.igem.org/wiki/images/6/68/T--Ionis_Paris--collaboration6.png",
+    },
+    collaboration7Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration7",
+        prod: "https://2020.igem.org/wiki/images/2/29/T--Ionis_Paris--collaboration7.png",
+    },
+    collaboration8Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration8",
+        prod: "https://2020.igem.org/wiki/images/1/18/T--Ionis_Paris--collaboration8.png",
+    },
+    collaboration9Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration9",
+        prod: "https://2020.igem.org/wiki/images/8/8c/T--Ionis_Paris--collaboration9.png",
+    },
+    collaboration10Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration10",
+        prod:
+            "https://2020.igem.org/wiki/images/0/0a/T--Ionis_Paris--collaboration10.png",
+    },
+    collaboration11Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration11",
+        prod:
+            "https://2020.igem.org/wiki/images/2/20/T--Ionis_Paris--collaboration11.png",
+    },
+    collaboration12Logo: {
+        ext: "jpg",
+        path: "/pictures/collaborations/collaboration12",
+        prod:
+            "https://2020.igem.org/wiki/images/d/d8/T--Ionis_Paris--collaboration12.png",
+    },
+    collaboration13Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration13",
+        prod:
+            "https://2020.igem.org/wiki/images/6/63/T--Ionis_Paris--collaboration13.png",
+    },
+    collaboration14Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration14",
+        prod:
+            "https://2020.igem.org/wiki/images/f/f2/T--Ionis_Paris--collaboration14.png",
+    },
+    collaboration15Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration15",
+        prod:
+            "https://2020.igem.org/wiki/images/8/8a/T--Ionis_Paris--collaboration15.png",
+    },
+    collaboration16Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration16",
+        prod:
+            "https://2020.igem.org/wiki/images/9/9e/T--Ionis_Paris--collaboration16.png",
+    },
+    collaboration17Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration17",
+        prod:
+            "https://2020.igem.org/wiki/images/e/e5/T--Ionis_Paris--collaboration17.png",
+    },
+    collaboration18Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration18",
+        prod:
+            "https://2020.igem.org/wiki/images/1/1d/T--Ionis_Paris--collaboration18.png",
+    },
+    collaboration19Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration19",
+        prod:
+            "https://2020.igem.org/wiki/images/e/ea/T--Ionis_Paris--collaboration19.png",
+    },
+    collaboration20Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration20",
+        prod:
+            "https://2020.igem.org/wiki/images/f/f8/T--Ionis_Paris--collaboration20.png",
+    },
+    collaboration21Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration21",
+        prod:
+            "https://2020.igem.org/wiki/images/5/51/T--Ionis_Paris--collaboration21.png",
+    },
+    collaboration22Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration22",
+        prod:
+            "https://2020.igem.org/wiki/images/1/1d/T--Ionis_Paris--collaboration22.png",
+    },
+    collaboration23Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration23",
+        prod:
+            "https://2020.igem.org/wiki/images/b/b8/T--Ionis_Paris--collaboration23.png",
+    },
+    collaboration24Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration24",
+        prod:
+            "https://2020.igem.org/wiki/images/e/e3/T--Ionis_Paris--collaboration24.png",
+    },
+    collaboration25Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration25",
+        prod:
+            "https://2020.igem.org/wiki/images/b/b9/T--Ionis_Paris--collaboration25.png",
+    },
+    collaboration26Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration26",
+        prod:
+            "https://2020.igem.org/wiki/images/9/92/T--Ionis_Paris--collaboration26.png",
+    },
 }
 
 for (let link in links) {
@@ -318,6 +467,7 @@ for (let link in links) {
                 break
             case "svg":
             case "png":
+            case "jpg":
                 realUrl = links[link].prod
                 break
             default:

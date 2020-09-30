@@ -508,33 +508,11 @@
             }
         }
 
-        .inspirationPlanet > img {
-            height: 100px;
-            opacity: 1;
-        }
-
         .descriptionText2 {
             color: #8d1f24;
             font-size: 80px;
             text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
             animation: description2 2s;
-        }
-
-        @keyframes description1 {
-            0% {
-                position: relative;
-                left: 100px;
-                opacity: 0;
-            }
-
-            100% {
-                position: relative;
-                left: 0px;
-            }
-        }
-
-        .inspirationPlanet.active {
-            opacity: 1;
         }
 
         .descriptionText1 {
@@ -559,6 +537,28 @@
             text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
             font-size: 70px;
             animation: description1 1s;
+        }
+
+        .inspirationPlanet > img {
+            height: 100px;
+            opacity: 1;
+        }
+
+        @keyframes description1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        .inspirationPlanet.active {
+            opacity: 1;
         }
 
         /* See More */
