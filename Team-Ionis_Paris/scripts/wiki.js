@@ -210,6 +210,12 @@ const links = {
         path: "/pictures/glass",
         prod: "",
     },
+    microscopeDescription: {
+        ext: "png",
+        path: "/pictures/description/microscope",
+        prod:
+            "https://2020.igem.org/wiki/images/6/64/T--Ionis_Paris--Description-microscope.png",
+    },
 
     // Project Design
 

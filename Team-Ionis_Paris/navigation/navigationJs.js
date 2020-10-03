@@ -186,17 +186,17 @@ const initNav = async () => {
         },
         computed: {
             leftPos() {
-                return this.show ? "0px" : "-350px"
+                return this.show ? "0px" : "-310px"
             },
         },
         watch: {
             show(val) {
-                document.body.style.paddingLeft = val ? "390px" : "40px"
+                document.body.style.paddingLeft = val ? "350px" : "40px"
                 localStorage.setItem(localstorageMenu, val ? "true" : "false")
             },
         },
         mounted() {
-            document.body.style.paddingLeft = this.show ? "390px" : "40px"
+            document.body.style.paddingLeft = this.show ? "350px" : "40px"
         },
     })
 }
