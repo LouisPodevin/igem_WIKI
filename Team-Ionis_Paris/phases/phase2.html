@@ -9,57 +9,52 @@
 
     <body>
         <div class="navigation"></div>
-        <div
-            id="phase2"
-            x-data="{}"
-            :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'"
-        >
+        <div id="phase2" x-data="{}" :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'">
             <div class="container">
                 <h1>Bactails - IGEM IONIS</h1>
                 <div class="phase2Content">
                     <div class="phase2Text">
                         <div class="phase2Text1">Phase 2</div>
-                        <div class="phase2Text2">
-                            How to kill the target?
-                        </div>
+                        <div class="phase2Text2">How to kill the target?</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="seeMore" target-id="Introduction"></div>
-       
+
         <div id="Introduction">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-10">
                         <div class="IntroductionTextContainer">
                             <div class="headIntroduction">
                                 <div class="titleIntroduction">Introduction</div>
                             </div>
                             <div class="textIntroduction">
-                                Phase 2 is <b>killing the target</b> once the chassis has bound to it. 
-                                For this we looked into bacteriocins. Bacteriocins are <b>antimicrobial 
-                                peptides</b> (AMP) naturally synthetized by ribosomes and produced by bacteria 
-                                to help them survive in a highly competitive polymicrobial environment<sup>1</sup>. 
-                                Bacteriocins are mostly synthetized by Gram positive bacteria such as Lactic 
-                                Acid Bacteria but Gram negatives can also secrete some types of peptides. 
-                                The first bacteriocin was identified in 1925<sp>2</sup>. 
+                                Phase 2 is <b>killing the target</b> once the chassis has bound to it. For this we
+                                looked into bacteriocins. Bacteriocins are <b>antimicrobial peptides</b> (AMP) naturally
+                                synthetized by ribosomes and produced by bacteria to help them survive in a highly
+                                competitive polymicrobial environment<sup>1</sup>. Bacteriocins are mostly synthetized
+                                by Gram positive bacteria such as Lactic Acid Bacteria but Gram negatives can also
+                                secrete some types of peptides. The first bacteriocin was identified in
+                                1925<sup>2</sup>.
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-10">
                         <div class="IntroductionText2Container">
                             <div class="headIntroduction2">
                                 <i data-feather="shield"></i>
                                 <div class="titleIntroduction2">
                                     <p>
-                                        Interesting characteristics about bacteriocins that comforted our choice in using 
-                                        them for our project is that they are considered as <b>non-harmful for human</b> use as they 
-                                        are easily degraded by proteolytic enzymes and can target specific pathogens in contrary 
-                                        to antibiotics so they do not have an impact on the commensal flora, however there are 
-                                        some eventual exceptions<sup>1</sup>. 
+                                        Interesting characteristics about bacteriocins that comforted our choice in
+                                        using them for our project is that they are considered as
+                                        <b>non-harmful for human</b> use as they are easily degraded by proteolytic
+                                        enzymes and can target specific pathogens in contrary to antibiotics so they do
+                                        not have an impact on the commensal flora, however there are some eventual
+                                        exceptions<sup>1</sup>.
                                     </p>
                                 </div>
                             </div>
@@ -67,21 +62,22 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-10">
                         <div class="IntroductionTextContainer">
                             <div class="textIntroduction">
-                                Research on bacteriocins to fight against human pathogens exists but most of the time they are <b>combined 
-                                with drugs</b>. For example, the well-known antibiotic resistant-pathogenic <i>Pseudomonas aeruginosa</i> which, according 
-                                to the Centers for Disease Control and Prevention, was responsible for 2 700 in the USA in 2017, is sensitive to 
-                                the bacteriocin Nisin supplemented with Polymyxin E and Clarithromycin<sup>1</sup>. 
+                                Research on bacteriocins to fight against human pathogens exists but most of the time
+                                they are
+                                <b>combined with drugs</b>. For example, the well-known antibiotic resistant-pathogenic
+                                <i>Pseudomonas aeruginosa</i> which, according to the Centers for Disease Control and
+                                Prevention, was responsible for 2 700 in the USA in 2017, is sensitive to the
+                                bacteriocin Nisin supplemented with Polymyxin E and Clarithromycin<sup>1</sup>.
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
-        
-       
+        </div>
+
         <div id="#focus">
             <div class="container">
                 <div class="textFocus">
@@ -94,353 +90,423 @@
                 </div>
             </div>
         </div>
-        <div id='#phase2Animate'>
-        <div class="phase2Animation">
-            <div id="jk"></div>
-            <script type="module" defer>
-                const initAnim = async () => {
-                    const animLogoElm = document.getElementById("jk")
+        <div id="#phase2Animate">
+            <div class="phase2Animation">
+                <div id="jk"></div>
+                <script type="module" defer>
+                    const initAnim = async () => {
+                        const animLogoElm = document.getElementById("jk")
 
-                    while (!window.bodymovin) {
-                        await new Promise(res => setTimeout(res, 500))
-                    }
-
-                    const animation = bodymovin.loadAnimation({
-                        container: animLogoElm,
-                        renderer: "svg",
-                        autoplay: false,
-                        path: window.LINKS.phase2Animate.url,
-                        loop: false,
-                    })
-
-                    let animStarted = false
-
-                    const startAnim = () => {
-                        if (animStarted) {
-                            return
+                        while (!window.bodymovin) {
+                            await new Promise(res => setTimeout(res, 500))
                         }
 
-                        const elmPos = animLogoElm.getBoundingClientRect().top
-                        const posFromMiddle = elmPos - window.innerHeight / 2
+                        const animation = bodymovin.loadAnimation({
+                            container: animLogoElm,
+                            renderer: "svg",
+                            autoplay: false,
+                            path: window.LINKS.phase2Animate.url,
+                            loop: false,
+                        })
 
-                        if (posFromMiddle < 0) {
-                            animStarted = true
-                            animation.goToAndPlay(0)
+                        let animStarted = false
+
+                        const startAnim = () => {
+                            if (animStarted) {
+                                return
+                            }
+
+                            const elmPos = animLogoElm.getBoundingClientRect().top
+                            const posFromMiddle = elmPos - window.innerHeight / 2
+
+                            if (posFromMiddle < 0) {
+                                animStarted = true
+                                animation.goToAndPlay(0)
+                            }
                         }
+
+                        while (!window.rxjs) {
+                            await new Promise(res => setTimeout(res, 300))
+                        }
+
+                        const { Subject, interval } = rxjs
+                        const { throttle } = rxjs.operators
+
+                        window.scrollSource
+                            .pipe(
+                                throttle(() => interval(300), {
+                                    leading: true,
+                                    trailing: true,
+                                }),
+                            )
+                            .subscribe(startAnim)
+
+                        window.scrollSource.next()
                     }
 
-                    while (!window.rxjs) {
-                        await new Promise(res => setTimeout(res, 300))
-                    }
-
-                    const { Subject, interval } = rxjs
-                    const { throttle } = rxjs.operators
-
-                    window.scrollSource
-                        .pipe(
-                            throttle(() => interval(300), {
-                                leading: true,
-                                trailing: true,
-                            }),
-                        )
-                        .subscribe(startAnim)
-
-                    window.scrollSource.next()
-                }
-
-                initAnim()
-            </script>
+                    initAnim()
+                </script>
+            </div>
         </div>
-        </div>
-        
 
         <div id="#phase2Parts">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-10">
                         <div class="phase2TextContainer">
                             <div class="textphase2">
-                                As mentioned previously, the proof of concept is conducted using <i>E. coli</i> K-12 ΔOmpC as 
-                                the chassis and <i>E. coli</i> K-12 or B as the target strain. Meaning that for the proof of concept,
-                                we need to choose a bacteriocin that can <b>kill the target but not the host</b>. There are many different 
-                                types of bacteriocins with various activity spectrums. 
+                                As mentioned previously, the proof of concept is conducted using <i>E. coli</i> K-12
+                                ΔOmpC as the chassis and <i>E. coli</i> K-12 or B as the target strain. Meaning that for
+                                the proof of concept, we need to choose a bacteriocin that can
+                                <b>kill the target but not the host</b>. There are many different types of bacteriocins
+                                with various activity spectrums.
                             </div>
                         </div>
                         <div class="text1phase2 offset-xl-2">
                             <p>
-                                <b>Microcins</b> are very small types of bacteriocins whose <b>secretion is not lethal</b> to the <b>producing cell</b> in contrast to 
-                                colicins which are larger and cause membrane lysis of the producer strain<sup>1</sup>. Since our final goal is to target antibiotic 
-                                resistant bacteria, we looked into microcins originally produced by <b>Gram negative</b> bacteria that had already been shown to 
-                                have an effect on these pathogens while also on the <i>E. coli</i> target of our proof of concept<sup>1</sup>.
+                                <b>Microcins</b> are very small types of bacteriocins whose
+                                <b>secretion is not lethal</b> to the <b>producing cell</b> in contrast to colicins
+                                which are larger and cause membrane lysis of the producer strain<sup>1</sup>. Since our
+                                final goal is to target antibiotic resistant bacteria, we looked into microcins
+                                originally produced by <b>Gram negative</b> bacteria that had already been shown to have
+                                an effect on these pathogens while also on the <i>E. coli</i> target of our proof of
+                                concept<sup>1</sup>.
                             </p>
-                       </div>
-                       <div class="textBubble triggerMiddle fromRight">
-                        <div class="textBubble1">
-                          <div class="textBubbleIconWrapper">
-                              C,L & B17
-                          </div>
-                          <i>Largest antibacterial spectrum. Target E. coli, Shigella spp., <br>Salmonella spp., Klebsiella spp., Pseudomonas spp. 
-                        </i> 
                         </div>
-                      </div>
-                       <div class="textBubble triggerMiddle fromRight">
-                        <div class="textBubble1">
-                          <div class="textBubbleIconWrapper">
-                              E492
-                          </div>
-                          <i>Narrower spectrum and targets E. coli, <br>Klebsiella pneumoniae, Salmonella enteritidis.</i>
-                        </div>
-                      </div>
-                       <div class="textBubble   triggerMiddle fromRight">
-                        <div class="textBubble1">
-                          <div class="textBubbleIconWrapper">
-                              V
-                          </div>
-                          <i>Against E. coli, but all Gram-negative bacteria are resistant.</i> 
-                        </div>
-                      </div>
                         <div class="textBubble triggerMiddle fromRight">
-                          <div class="textBubble1">
-                            <div class="textBubbleIconWrapper">
-                                J25
+                            <div class="textBubble1">
+                                <div class="textBubbleIconWrapper">C,L & B17</div>
+                                <i
+                                    >Largest antibacterial spectrum. Target E. coli, Shigella spp., <br />Salmonella
+                                    spp., Klebsiella spp., Pseudomonas spp.
+                                </i>
                             </div>
-                            <i>Specifically against Salmonella and E. coli.</i>
-                          </div>
                         </div>
-                    <div class="textBubble triggerMiddle fromRight">
-                        <div class="textBubble1">
-                            <div class="textBubbleIconWrapper">
-                                S
+                        <div class="textBubble triggerMiddle fromRight">
+                            <div class="textBubble1">
+                                <div class="textBubbleIconWrapper">E492</div>
+                                <i
+                                    >Narrower spectrum and targets E. coli, <br />Klebsiella pneumoniae, Salmonella
+                                    enteritidis.</i
+                                >
                             </div>
-                            <i> Against P. aeruginosa and could inhibit <br>the adherence of enteropathogenic E. coli.</i>
+                        </div>
+                        <div class="textBubble triggerMiddle fromRight">
+                            <div class="textBubble1">
+                                <div class="textBubbleIconWrapper">V</div>
+                                <i>Against E. coli, but all Gram-negative bacteria are resistant.</i>
+                            </div>
+                        </div>
+                        <div class="textBubble triggerMiddle fromRight">
+                            <div class="textBubble1">
+                                <div class="textBubbleIconWrapper">J25</div>
+                                <i>Specifically against Salmonella and E. coli.</i>
+                            </div>
+                        </div>
+                        <div class="textBubble triggerMiddle fromRight">
+                            <div class="textBubble1">
+                                <div class="textBubbleIconWrapper">S</div>
+                                <i>
+                                    Against P. aeruginosa and could inhibit <br />the adherence of enteropathogenic E.
+                                    coli.</i
+                                >
+                            </div>
                         </div>
                     </div>
-                    </div>
-
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-10">
                         <div class="phase2Timeline">
                             <div class="phase2Line"></div>
                             <div class="phase2Content">
+                                <div class="itemTimeline">
+                                    <div class="dotTimelineContainer">
+                                        <div class="dotTimeline"></div>
+                                    </div>
+                                    <div class="GoalTextContainer">
+                                        <div class="headGoal">
+                                            <div class="titleGoal">Main goal(s)</div>
+                                        </div>
+                                        <div class="textGoalContainer">
+                                            <div class="headtextGoal">
+                                                <i data-feather="help-circle"></i>
+                                                <div class="titletextGoal">
+                                                    <p>
+                                                        The <b>initial goal</b> was to
+                                                        <b
+                                                            >link the physical binding of the LTF to the target with the
+                                                            secretion of AMP</b
+                                                        >. Meaning, the expression of the AMP would be induced once the
+                                                        bacteria bound. We looked into shear stress (since there could
+                                                        be a mechanical signal when the LTF was bound), reengineering
+                                                        two component systems etc. What was <b>difficult</b> was that
+                                                        the LTF was linked to the outer membrane via Lpp-OmpA and that
+                                                        nothing could be expressed upstream of the Lpp without affecting
+                                                        its outer membrane signaling function that we needed.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="textGoal">
+                                            After months of intense research and brainstorming on this concept we
+                                            concluded that with the remaining time we had, our initial objective could
+                                            not be completed: The expression of AMP had to be
+                                            <b>constitutive</b> and it had to be controlled in a way that it would only
+                                            affect the target strain once the chassis is nearby. With that in mind, we
+                                            found a microcin called <b>MccPDI</b> (Proximity Dependent Inhibition) which
+                                            was first identified in 2009<sup>3</sup>
+                                            and requires close
+                                            <b>physical proximity</b> between the producer and susceptible strains.
+                                            MccPDI has a <b>narrow spectrum</b> and can kill several strains of
+                                            <b><i>E. coli</i></b
+                                            >: multidrug resistant <i>E. coli</i>, enterotoxigenic
+                                            <i>E. coli</i> expressing F5 (K99) and F4 (K88) fimbriae, enterohemorrhagic
+                                            <i>E. coli</i> O157:H7 and O26, as well as commensal strains such as
+                                            <i>E. coli</i> K12<sup>3</sup>3<. It has also been shown that Shigella is
+                                            sensitive to MccPDI<sup>4</sup>. It recognizes specific Outer Membrane
+                                            Protein F motifs on the target and leads to <b>lethal membrane damage</b>.
+                                            The MccPDI gene cluster was initially identified in the strain
+                                            <i>E. coli</i> 25 plasmid<sup>4</sup>. It is a locus of approximately 4.8kb
+                                            and is composed of 5 genes which are each necessary for the appropriate
+                                            expression, activity and secretion of microcin PDI.
+                                        </div>
+                                        <div class="GoalDNA offset-xl-2 triggerMiddle fromRight" x-data="{}">
+                                            <img :src="window.LINKS.phase2DNA.url" alt="phase2DNA" class="phase2DNA" />
+                                        </div>
+                                        <div class="textGoal">
+                                            The fact that MccPDI targets pathogenic strains as well as Biosafety Level 1
+                                            lab strains of <i>E. coli</i> is <b>ideal for our proof of concept</b> as it
+                                            will allow us to test and validate its activity on <i>E. coli</i> K12 or B
+                                            without posing any safety risks.
+                                        </div>
+                                        <div class="phase2GoalContainer">
+                                            <div class="headphase2Goal">
+                                                <i data-feather="crosshair"></i>
+                                                <div class="titlephase2Goal">
+                                                    <p>
+                                                        Express the microcin PDI gene cluster in order to achieve
+                                                        secretion of microcin PDI by
+                                                        <i>E. coli</i> and show that its activity against the target
+                                                        cell is maintained.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemTimeline">
+                                    <div class="dotTimelineContainer">
+                                        <div class="dotTimeline"></div>
+                                    </div>
+                                    <div class="AchieveTextContainer">
+                                        <div class="headAchieve">
+                                            <div class="titleAchieve">How to achieve it?</div>
+                                        </div>
+                                        <div class="textAchieve">
+                                            The proximity dependent inhibition characteristic of the microcin we will be
+                                            using is still under investigation. Since it is currently thought that the
+                                            <b>inhibition is linked to a concentration</b>
+                                            of microcin, our goal is to try to respect the concentration initially
+                                            produced by the
+                                            <i>E. coli</i> 25 strain for this proof of concept. However, the MccPDI gene
+                                            cluster originally found in <i>E. coli</i> 25 is not constitutive and is
+                                            <b>controlled by the EnvZ/OmpR Two Component System</b>
+                                            (TCS). In fact, knockout mutants of the TCS did not show a PDI+
+                                            phenotype<sup>5</sup>. EnvZ is an osmotic sensor which upregulates the
+                                            phosphorylation of OmpR (a transcription factor) which binds to the promoter
+                                            region upstream of McpM, McpI and McpA. It was shown that the production of
+                                            <b>MccPDI was higher in M9 medium</b> compared to LB medium. Furthermore,
+                                            mcpD and mcpB are under the influence of another transcriptional regulation.
+                                        </div>
+                                        <div class="phase2AchieveContainer">
+                                            <div class="headphase2Achieve">
+                                                <i data-feather="edit"></i>
+                                                <div class="titlephase2Achieve">
+                                                    <p>
+                                                        For our proof of concept, we had
+                                                        <b>two options</b>:
+                                                    </p>
+                                                    <p>
+                                                        - Clone the whole MccPDI cluster as it initially exists with its
+                                                        transcriptional regulation properties
+                                                    </p>
+                                                    <p>
+                                                        - Only use the coding sequences of each one of the 5 genes and
+                                                        choose our own promoters, ribosome binding sites (RBS) and
+                                                        terminators
+                                                    </p>
 
-                            <div class="itemTimeline">
-                                <div class="dotTimelineContainer">
-                                    <div class="dotTimeline"></div>
+                                                    <p>
+                                                        Overall the available data on the non-coding sequences found in
+                                                        the original MccPDI gene cluster was not sufficient so we opted
+                                                        for
+                                                        <b>option number 2</b>.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="textAchieve">
+                                            We were lucky to have the opportunity to exchange with
+                                            <b>Dr. Douglas Call</b> (Regents Professor of Molecular Epidemiology,
+                                            Associate Director for Research and Graduate Education, Allen School), who
+                                            has previously published a few articles on MccPDI<sup>6</sup>. When
+                                            explaining our strategy to Dr. Call he suggested we should be careful to
+                                            <b>maintain molar equivalents</b> of McpM and McpI. This gave us the idea to
+                                            use the <b>Salis Lab RBS Calculator</b><sup>7</sup> to predict the
+                                            <b>Translation Initiation Rates</b> (TIRs) of the start codons of each of
+                                            the 5 genes contained in the native cluster.
+                                        </div>
+                                        <div class="AchieveBoard offset-xl-2 triggerMiddle fromRight" x-data="{}">
+                                            <img
+                                                :src="window.LINKS.phase2Board.url"
+                                                alt="phase2Board"
+                                                class="phase2Board"
+                                            />
+                                        </div>
+                                        <div class="textAchieve">
+                                            After this, the objective is to design our construct with the appropriate
+                                            promoters and RBS as to respect the native TIRs. We chose to maintain the
+                                            expression of
+                                            <i>mcpM</i>, <i>mcpI</i> and <i>mcpA</i> under the control of the same
+                                            promoter and <i>mcpD</i> and <i>mcpB</i> under the control of another one.
+                                        </div>
+                                        <div class="AchieveDNA offset-xl-2 triggerMiddle fromRight" x-data="{}">
+                                            <img
+                                                :src="window.LINKS.phase2DNA2.url"
+                                                alt="phase2DNA2"
+                                                class="phase2DNA2"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="GoalTextContainer">
-                                    <div class="headGoal">
-                                      <div class="titleGoal">Main goal(s)</div>
-                                    </div>
-                                    <div class="textGoalContainer">
-                                        <div class="headtextGoal">
-                                            <i data-feather="help-circle"></i>
-                                            <div class="titletextGoal">
-                                                <p>
-                                                    The <b>initial goal</b> was to <b>link the physical binding of the LTF to the target with 
-                                                    the secretion of AMP</b>. Meaning, the expression of the AMP would be induced once the 
-                                                    bacteria bound. We looked into shear stress (since there could be a mechanical signal 
-                                                    when the LTF was bound), reengineering two component systems etc. What was <b>difficult</b> was 
-                                                    that the LTF was linked to the outer membrane via Lpp-OmpA and that nothing could be expressed 
-                                                    upstream of the Lpp without affecting its outer membrane signaling function that we needed. 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="textGoal">
-                                        After months of intense research and brainstorming on this concept we concluded that with the remaining time we had, 
-                                        our initial objective could not be completed: The expression of AMP had to be <b>constitutive</b> and it had to be controlled 
-                                        in a way that it would only affect the target strain once the chassis is nearby. With that in mind, we found a microcin 
-                                        called <b>MccPDI</b> (Proximity Dependent Inhibition) which was first identified in 2009<sup>3</sup> and requires close <b>physical proximity</b> 
-                                        between the producer and susceptible strains. MccPDI has a <b>narrow spectrum</b> and can kill several strains of <b><i>E. coli</i></b>: multidrug 
-                                        resistant <i>E. coli</i>, enterotoxigenic <i>E. coli</i> expressing F5 (K99) and F4 (K88) fimbriae, enterohemorrhagic <i>E. coli</i> O157:H7 and O26, 
-                                        as well as commensal strains such as <i>E. coli</i> K12<sup>3</sup>3<. It has also been shown that Shigella is sensitive to MccPDI<sup>4</sup>. It recognizes 
-                                        specific Outer Membrane Protein F motifs on the target and leads to <b>lethal membrane damage</b>. The MccPDI gene cluster was initially 
-                                        identified in the strain <i>E. coli</i> 25 plasmid<sup>4</sup>. It is a locus of approximately 4.8kb and is composed of 5 genes which are each necessary 
-                                        for the appropriate expression, activity and secretion of microcin PDI. 
-                                     </div>
-                                     <div class="GoalDNA offset-xl-2 triggerMiddle fromRight" x-data="{}">
-                                        <img
-                                             :src="window.LINKS.phase2DNA.url"
-                                             alt="phase2DNA"
-                                             class="phase2DNA"
-                                        />
-                                    </div>
-                                    <div class="textGoal">
-                                        The fact that MccPDI targets pathogenic strains as well as Biosafety Level 1 lab strains of <i>E. coli</i> is <b>ideal for our proof of concept</b> as it will allow us to test and 
-                                        validate its activity on <i>E. coli</i> K12 or B without posing any safety risks.  
-                                     </div>
-                                     <div class="phase2GoalContainer">
-                                        <div class="headphase2Goal">
-                                            <i data-feather="crosshair"></i>
-                                            <div class="titlephase2Goal">
-                                                <p>
-                                                 Express the microcin PDI gene cluster in order to achieve secretion of microcin PDI by 
-                                                 <i>E. coli</i> and show that its activity against the target cell is maintained.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                     
-                                 </div>
-                            </div>
-                            <div class="itemTimeline">
-                                <div class="dotTimelineContainer">
-                                    <div class="dotTimeline"></div>
-                                </div>
-                                <div class="AchieveTextContainer">
-                                    <div class="headAchieve">
-                                      <div class="titleAchieve">How to achieve it?</div>
-                                    </div>
-                                    <div class="textAchieve">
-                                        The proximity dependent inhibition characteristic of the microcin we will be using is still under investigation. 
-                                        Since it is currently thought that the <b>inhibition is linked to a concentration</b> of microcin, our goal is to try to 
-                                        respect the concentration initially produced by the <i>E. coli</i> 25 strain for this proof of concept. However, the MccPDI 
-                                        gene cluster originally found in <i>E. coli</i> 25 is not constitutive and is <b>controlled by the EnvZ/OmpR Two Component System</b>
-                                        (TCS). In fact, knockout mutants of the TCS did not show a PDI+ phenotype<sup>5</sup>. EnvZ is an osmotic sensor which upregulates 
-                                        the phosphorylation of OmpR (a transcription factor) which binds to the promoter region upstream of McpM, McpI and McpA. 
-                                        It was shown that the production of <b>MccPDI was higher in M9 medium</b> compared to LB medium. Furthermore, mcpD and mcpB are 
-                                        under the influence of another transcriptional regulation.  
-                                     </div>
-                                     <div class="phase2AchieveContainer">
-                                        <div class="headphase2Achieve">
-                                            <i data-feather="edit"></i>
-                                            <div class="titlephase2Achieve">
-                                                <p>For our proof of concept, we had <b>two options</b>:</p>
-                                                <p>  -	Clone the whole MccPDI cluster as it initially exists with its transcriptional regulation properties</p>
-                                                <p>  -	Only use the coding sequences of each one of the 5 genes and choose our own promoters, ribosome binding 
-                                                        sites (RBS) and terminators</p>
-                                                    
-                                                <p>Overall the available data on the non-coding sequences found in the original MccPDI gene cluster was not sufficient so we opted for <b>option number 2</b>.</p>
-                                                    
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="textAchieve">
-                                        We were lucky to have the opportunity to exchange with <b>Dr. Douglas Call</b> (Regents Professor of Molecular Epidemiology, Associate Director for 
-                                        Research and Graduate Education, Allen School), who has previously published a few articles on MccPDI<sup>6</sup>. When explaining our strategy to Dr. Call 
-                                        he suggested we should be careful to <b>maintain molar equivalents</b> of McpM and McpI. This gave us the idea to use the <b>Salis Lab RBS Calculator</b><sup>7</sup> to 
-                                        predict the <b>Translation Initiation Rates</b> (TIRs) of the start codons of each of the 5 genes contained in the native cluster. 
-                                     </div>
-                                     <div class="AchieveBoard offset-xl-2 triggerMiddle fromRight" x-data="{}">
-                                        <img
-                                             :src="window.LINKS.phase2Board.url"
-                                             alt="phase2Board"
-                                             class="phase2Board"
-                                        />
-                                    </div>
-                                    <div class="textAchieve">
-                                        After this, the objective is to design our construct with the appropriate promoters and RBS as to respect the native TIRs. We chose to maintain the expression of 
-                                        <i>mcpM</i>, <i>mcpI</i> and <i>mcpA</i> under the control of the same promoter and <i>mcpD</i> and <i>mcpB</i> under the control of another one.  
-                                     </div>
-                                     <div class="AchieveDNA offset-xl-2 triggerMiddle fromRight" x-data="{}">
-                                        <img
-                                             :src="window.LINKS.phase2DNA2.url"
-                                             alt="phase2DNA2"
-                                             class="phase2DNA2"
-                                        />
-                                    </div>
-                                    </div>
-                                 </div>
-                                 <div class="itemTimeline">
+                                <div class="itemTimeline">
                                     <div class="dotTimelineContainer">
                                         <div class="dotTimeline"></div>
                                     </div>
                                     <div class="ResultsTextContainer">
                                         <div class="headResults">
-                                          <div class="titleResults">Results</div>
+                                            <div class="titleResults">Results</div>
                                         </div>
-                                        <div class="textResults">
-                                             Not yet 
-                                         </div>
+                                        <div class="textResults">Not yet</div>
+                                    </div>
+                                </div>
+                                <div class="itemTimeline">
+                                    <div class="dotTimelineContainer">
+                                        <div class="dotTimeline"></div>
+                                    </div>
+                                    <div class="PerspectivesTextContainer">
+                                        <div class="headPerspectives">
+                                            <div class="titlePerspectives">Perspectives</div>
                                         </div>
-                                     </div>
-                                     <div class="itemTimeline">
-                                        <div class="dotTimelineContainer">
-                                            <div class="dotTimeline"></div>
-                                        </div>
-                                        <div class="PerspectivesTextContainer">
-                                            <div class="headPerspectives">
-                                              <div class="titlePerspectives">Perspectives</div>
-                                            </div>
-                                            <div class="text2PerspectivesContainer">
-                                                <div class="headtext2Perspectives">
-                                                    <i data-feather="database"></i>
-                                                    <div class="titletext2Perspectives">
-                                                        <p>
-                                                            As mentioned in phase 1, we are developing a <b>softwar</b>e that will design the BioBrick with the key LTF gene part according to the target. Since the overall 
-                                                            project aims at killing the target, we could look into <b>integrating an AMP database</b> to the software as well if keep this killing method in the future. The 
-                                                            goal is to have a tailor-made system that can be easily modified according to the target bacterium. With this in mind, we came across an article published 
-                                                            by Geldart et al.<sup>8</sup> in 2016 containing preliminary data on a <b>microcin secretion system</b> which could be <b>universal</b>. This means that the secretion system would 
-                                                            always be the same (the microcin V system) and only the coding sequence of the AMP would have to be replaced. Furthermore, certain bacteriocins have been 
-                                                            identified to <b>fight against biofilms</b>. For example, <b>Microcin S</b> initially produced by probiotic strain <i>E. coli</i> G3/10 manages to inhibit the adherence of 
-                                                            enteropathogenic strains of <i>E. coli</i><sup>9</sup>. Since antibiotic strains tend to increase their resistance and survive by forming biofilms, it would be interesting to 
-                                                            <b>combine</b> the secretion of AMPs to this type of bacteriocin. A limit regarding bacteriocins is that some resistance can occur when there is a continuous exposure. 
-                                                            For example, it was shown that a degrading enzyme exists for one of the most famous bacteriocins called Nisin (nisinase). 
-   
-                                                        </p>
-                                                    </div>
+                                        <div class="text2PerspectivesContainer">
+                                            <div class="headtext2Perspectives">
+                                                <i data-feather="database"></i>
+                                                <div class="titletext2Perspectives">
+                                                    <p>
+                                                        As mentioned in phase 1, we are developing a <b>softwar</b>e
+                                                        that will design the BioBrick with the key LTF gene part
+                                                        according to the target. Since the overall project aims at
+                                                        killing the target, we could look into
+                                                        <b>integrating an AMP database</b>
+                                                        to the software as well if keep this killing method in the
+                                                        future. The goal is to have a tailor-made system that can be
+                                                        easily modified according to the target bacterium. With this in
+                                                        mind, we came across an article published by Geldart et al.<sup
+                                                            >8</sup
+                                                        >
+                                                        in 2016 containing preliminary data on a
+                                                        <b>microcin secretion system</b>
+                                                        which could be <b>universal</b>. This means that the secretion
+                                                        system would always be the same (the microcin V system) and only
+                                                        the coding sequence of the AMP would have to be replaced.
+                                                        Furthermore, certain bacteriocins have been identified to
+                                                        <b>fight against biofilms</b>. For example,
+                                                        <b>Microcin S</b> initially produced by probiotic strain
+                                                        <i>E. coli</i> G3/10 manages to inhibit the adherence of
+                                                        enteropathogenic strains of <i>E. coli</i><sup>9</sup>. Since
+                                                        antibiotic strains tend to increase their resistance and survive
+                                                        by forming biofilms, it would be interesting to
+                                                        <b>combine</b> the secretion of AMPs to this type of
+                                                        bacteriocin. A limit regarding bacteriocins is that some
+                                                        resistance can occur when there is a continuous exposure. For
+                                                        example, it was shown that a degrading enzyme exists for one of
+                                                        the most famous bacteriocins called Nisin (nisinase).
+                                                    </p>
                                                 </div>
                                             </div>
-                                            <div class="text2PerspectivesContainer">
-                                                <div class="headtext2Perspectives">
-                                                    <i data-feather="activity"></i>
-                                                    <div class="titletext2Perspectives">
-                                                        <p>
-                                                            This issue can be solved by <b>secreting a few AMPs at a time</b>. Indeed, we found a study showing that resistance to individual colicins occurs after 9 hours of treatment but when <b>5 colicins 
-                                                            are combined</b>, no resistance occurs<sup>10</sup>. Thus, the next step of this phase would be to manage to secrete at least 3 antimicrobial peptides at a time but maintain the specificity of our system. 
-                                                            As AMPs are very sensitive to proteolytic enzymes, <b>oral administration</b> often results in peptide degradation. It is necessary to find a way to administer the bacteria to the site of infection 
-                                                            which is most of the time found inside the <b>Gastrointestinal Tract</b>. This is the <b>fourth phase</b> of the project which will be discussed further on. 
-
-                                                        </p>
-                                                    </div>
+                                        </div>
+                                        <div class="text2PerspectivesContainer">
+                                            <div class="headtext2Perspectives">
+                                                <i data-feather="activity"></i>
+                                                <div class="titletext2Perspectives">
+                                                    <p>
+                                                        This issue can be solved by
+                                                        <b>secreting a few AMPs at a time</b>. Indeed, we found a study
+                                                        showing that resistance to individual colicins occurs after 9
+                                                        hours of treatment but when <b>5 colicins are combined</b>, no
+                                                        resistance occurs<sup>10</sup>. Thus, the next step of this
+                                                        phase would be to manage to secrete at least 3 antimicrobial
+                                                        peptides at a time but maintain the specificity of our system.
+                                                        As AMPs are very sensitive to proteolytic enzymes,
+                                                        <b>oral administration</b> often results in peptide degradation.
+                                                        It is necessary to find a way to administer the bacteria to the
+                                                        site of infection which is most of the time found inside the
+                                                        <b>Gastrointestinal Tract</b>. This is the
+                                                        <b>fourth phase</b> of the project which will be discussed
+                                                        further on.
+                                                    </p>
                                                 </div>
                                             </div>
-                                            
-                                           
-                                            </div>
-                                         </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-           </div>
-           <div id="reference">
-            <div class="container">
-                <hr style="margin-top: 80px" />
-                <div class="referenceText">
-                    [1] Simons, A., Alhanout, K., & Duval, R. E. (2020). Bacteriocins, antimicrobial peptides from bacterial origin: Overview of their biology and their impact 
-                    against multidrug-resistant bacteria. Microorganisms, 8(5). https://doi.org/10.3390/microorganisms8050639<br>
-                    [2] Gratia André. (1925). Sur un remarquable example d’antagonisme entre deux souches de colibacille. Compt. Rend. Soc. Biol, 93, 1040–1042. https://www.scirp.
-                    org/(S(i43dyn45teexjx455qlt3d2q))/reference/ReferencesPapers.aspx?ReferenceID=1925253<br>
-                    [3] Sawant, A. A., Casavant, N. C., Call, D. R., & Besser, T. E. (2011). Proximity-dependent inhibition in Escherichia coli isolates from cattle. Applied and 
-                    Environmental Microbiology, 77(7), 2345–2351. https://doi.org/10.1128/AEM.03150-09<br>
-                    [4] Eberhart, L. J., Deringer, J. R., Brayton, K. A., Sawant, A. A., Besser, T. E., & Call, D. R. (2012). Characterization of a novel microcin that kills enterohemorrhagic 
-                    escherichia coli O157:H7 and O26. Applied and Environmental Microbiology, 78(18), 6592–6599. https://doi.org/10.1128/AEM.01067-12<br>
-                    [5] Zhao, Z., Orfe, L. H., Liu, J., Lu, S. Y., Besser, T. E., & Call, D. R. (2017). Microcin PDI regulation and proteolytic cleavage are unique among known microcins. Scientific 
-                    Reports, 7(February), 1–14. https://doi.org/10.1038/srep42529<br>
-                    [6] Lu, S. Y., Graça, T., Avillan, J. J., Zhao, Z., & Call, D. R. (2019). Microcin PDI inhibits antibioticresistant strains of Escherichia coli and Shigella through a mechanism 
-                    of membrane disruption and protection by homotrimer self-immunity. Applied and Environmental Microbiology, 85(11), 1–18. https://doi.org/10.1128/AEM.00371-19<br>
-                    [7] Espah Borujeni, A., Channarasappa, A. S., & Salis, H. M. (2014). Translation rate is controlled by coupled trade-offs between site accessibility, selective RNA unfolding and 
-                    sliding at upstream standby sites. Nucleic Acids Research, 42(4), 2646–2659. https://doi.org/10.1093/nar/gkt1139<br>
-                    [8] Geldart, K., Forkus, B., McChesney, E., McCue, M., & Kaznessis, Y. N. (2016). pMPES: A modular peptide expression system for the delivery of antimicrobial peptides to the site of 
-                    gastrointestinal infections using probiotics. Pharmaceuticals, 9(4), 1–5. https://doi.org/10.3390/ph9040060<br>
-                    [9] Zschüttig, A., Zimmermann, K., Blom, J., Goesmann, A., Pöhlmann, C., & Gunzer, F. (2012). Identification and characterization of microcin S, a new antibacterial peptide produced by 
-                    probiotic Escherichia coli G3/10. PLoS ONE, 7(3), 1–9. https://doi.org/10.1371/journal.pone.0033351<br>
-                    [10] Budič, M., Rijavec, M., Petkovšek, Ž., & Žgur-Bertok, D. (2011). Escherichia coli Bacteriocins: Antimicrobial Efficacy and Prevalence among Isolates from Patients with Bacteraemia. 
-                    PLoS ONE, 6(12), e28769. https://doi.org/10.1371/journal.pone.0028769<br>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
+        <div id="reference">
+            <div class="container">
+                <hr style="margin-top: 80px" />
+                <div class="referenceText">
+                    [1] Simons, A., Alhanout, K., & Duval, R. E. (2020). Bacteriocins, antimicrobial peptides from
+                    bacterial origin: Overview of their biology and their impact against multidrug-resistant bacteria.
+                    Microorganisms, 8(5). https://doi.org/10.3390/microorganisms8050639<br />
+                    [2] Gratia André. (1925). Sur un remarquable example d’antagonisme entre deux souches de
+                    colibacille. Compt. Rend. Soc. Biol, 93, 1040–1042. https://www.scirp.
+                    org/(S(i43dyn45teexjx455qlt3d2q))/reference/ReferencesPapers.aspx?ReferenceID=1925253<br />
+                    [3] Sawant, A. A., Casavant, N. C., Call, D. R., & Besser, T. E. (2011). Proximity-dependent
+                    inhibition in Escherichia coli isolates from cattle. Applied and Environmental Microbiology, 77(7),
+                    2345–2351. https://doi.org/10.1128/AEM.03150-09<br />
+                    [4] Eberhart, L. J., Deringer, J. R., Brayton, K. A., Sawant, A. A., Besser, T. E., & Call, D. R.
+                    (2012). Characterization of a novel microcin that kills enterohemorrhagic escherichia coli O157:H7
+                    and O26. Applied and Environmental Microbiology, 78(18), 6592–6599.
+                    https://doi.org/10.1128/AEM.01067-12<br />
+                    [5] Zhao, Z., Orfe, L. H., Liu, J., Lu, S. Y., Besser, T. E., & Call, D. R. (2017). Microcin PDI
+                    regulation and proteolytic cleavage are unique among known microcins. Scientific Reports,
+                    7(February), 1–14. https://doi.org/10.1038/srep42529<br />
+                    [6] Lu, S. Y., Graça, T., Avillan, J. J., Zhao, Z., & Call, D. R. (2019). Microcin PDI inhibits
+                    antibioticresistant strains of Escherichia coli and Shigella through a mechanism of membrane
+                    disruption and protection by homotrimer self-immunity. Applied and Environmental Microbiology,
+                    85(11), 1–18. https://doi.org/10.1128/AEM.00371-19<br />
+                    [7] Espah Borujeni, A., Channarasappa, A. S., & Salis, H. M. (2014). Translation rate is controlled
+                    by coupled trade-offs between site accessibility, selective RNA unfolding and sliding at upstream
+                    standby sites. Nucleic Acids Research, 42(4), 2646–2659. https://doi.org/10.1093/nar/gkt1139<br />
+                    [8] Geldart, K., Forkus, B., McChesney, E., McCue, M., & Kaznessis, Y. N. (2016). pMPES: A modular
+                    peptide expression system for the delivery of antimicrobial peptides to the site of gastrointestinal
+                    infections using probiotics. Pharmaceuticals, 9(4), 1–5. https://doi.org/10.3390/ph9040060<br />
+                    [9] Zschüttig, A., Zimmermann, K., Blom, J., Goesmann, A., Pöhlmann, C., & Gunzer, F. (2012).
+                    Identification and characterization of microcin S, a new antibacterial peptide produced by probiotic
+                    Escherichia coli G3/10. PLoS ONE, 7(3), 1–9. https://doi.org/10.1371/journal.pone.0033351<br />
+                    [10] Budič, M., Rijavec, M., Petkovšek, Ž., & Žgur-Bertok, D. (2011). Escherichia coli Bacteriocins:
+                    Antimicrobial Efficacy and Prevalence among Isolates from Patients with Bacteraemia. PLoS ONE,
+                    6(12), e28769. https://doi.org/10.1371/journal.pone.0028769<br />
+                </div>
+            </div>
 
-
-       
             <footer></footer>
         </div>
     </body>
@@ -620,8 +686,6 @@
             color: #8d1f24;
         }
 
-        
-
         /* Introduction Part */
         #Introduction {
             margin-top: 200px;
@@ -634,9 +698,9 @@
             color: #8d1f24;
         }
 
-        .IntroductionTextContainer {
+        /* .IntroductionTextContainer {
             max-width: 700px;
-        }
+        } */
 
         .titleIntroduction {
             flex-grow: 1;
@@ -659,9 +723,8 @@
             color: #8d1f24;
         }
 
-        .IntroductionText2Container {
-            max-width: 700px;
-        }
+        /* .IntroductionText2Container {
+        } */
 
         .titleIntroduction2 {
             margin: 20px 20px 20px 0px;
@@ -671,12 +734,12 @@
         }
 
         /* Focus Part */
-        
+
         #focus {
             margin-top: 100px;
         }
 
-        .textFocus{
+        .textFocus {
             font-weight: 800;
             display: flex;
             flex-direction: column;
@@ -710,10 +773,10 @@
         #phase2Parts {
             margin-top: 5px;
         }
-
+        /* 
         .Phase2TextContainer {
             max-width: 700px;
-        }
+        } */
 
         .textphase2 {
             margin: 20px 20px 20px 0px;
@@ -732,18 +795,18 @@
             width: 100%;
             border-radius: 20px;
             margin-top: 50px;
-            margin-bottom:50px ;
+            margin-bottom: 50px;
         }
 
-        .text1phase2>p{
+        .text1phase2 > p {
             margin: 20px 20px 20px 0px;
             padding: 0 0 0 25px;
             font-size: 15px;
-            color:  #e73327;
+            color: #e73327;
         }
 
-        .textBubble{
-            margin:20px;
+        .textBubble {
+            margin: 20px;
             display: flex;
             line-height: 1;
             gap: 10px;
@@ -784,7 +847,6 @@
             padding: 0 0 0 25px;
             font-size: 15px;
             color: #8d1f24;
-            
         }
 
         .headtextGoal {
@@ -794,7 +856,7 @@
         }
 
         .textGoalContainer {
-            max-width: 700px;
+            /* max-width: 700px; */
             margin-top: 50px;
         }
 
@@ -804,10 +866,6 @@
             font-size: 15px;
             color: #8d1f24;
         }
-
-
-
-
 
         .phase2Timeline {
             display: flex;
@@ -860,8 +918,7 @@
             flex-direction: column;
             gap: 20px;
         }
-        
-        
+
         .headGoal {
             display: flex;
             gap: 20px;
@@ -869,9 +926,9 @@
             color: #8d1f24;
         }
 
-        .GoalTextContainer {
+        /* .GoalTextContainer {
             max-width: 700px;
-        }
+        } */
 
         .titleGoal {
             flex-grow: 1;
@@ -890,9 +947,8 @@
             margin-top: 50px;
             margin-bottom: 50px;
         }
-       
-        
-    .GoalDNA {
+
+        .GoalDNA {
             background-color: white;
 
             -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
@@ -906,12 +962,10 @@
             margin-top: 80px;
             margin-bottom: 80px;
         }
-        
-        .GoalDNA>img{
+
+        .GoalDNA > img {
             height: 300px;
         }
-
-        
 
         .headAchieve {
             display: flex;
@@ -958,9 +1012,8 @@
             padding: 0 0 0 25px;
             font-size: 15px;
             color: #8d1f24;
-            
         }
-       
+
         .AchieveBoard {
             background-color: white;
 
@@ -975,8 +1028,8 @@
             margin-top: 80px;
             margin-bottom: 80px;
         }
-        
-        .AchieveBoard>img{
+
+        .AchieveBoard > img {
             height: 250px;
         }
 
@@ -994,13 +1047,10 @@
             margin-top: 80px;
             margin-bottom: 80px;
         }
-        
-        .AchieveDNA>img{
+
+        .AchieveDNA > img {
             height: 300px;
         }
-        
-
-
 
         .headResults {
             display: flex;
@@ -1031,7 +1081,6 @@
             margin-bottom: 50px;
         }
 
-        
         .headPerspectives {
             display: flex;
             gap: 20px;
@@ -1051,7 +1100,7 @@
             font-size: 18px;
             margin-top: 2px;
         }
-       
+
         .headtext2Perspectives {
             gap: 20px;
             align-items: center;
@@ -1069,7 +1118,7 @@
             font-size: 15px;
             color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .text1Perspectives {
             background-color: white;
 
@@ -1080,14 +1129,14 @@
             width: 100%;
             border-radius: 20px;
             margin-top: 50px;
-            margin-bottom:50px ;
+            margin-bottom: 50px;
         }
 
-        .text1Perspectives>p{
+        .text1Perspectives > p {
             margin: 20px 20px 20px 0px;
             padding: 0 0 0 25px;
             font-size: 15px;
-            color:  #e73327;
+            color: #e73327;
         }
 
         .referenceText {
@@ -1097,7 +1146,7 @@
             color: rgba(0, 0, 0, 0.8);
         }
 
-        .phase2Animation > div >svg{
+        .phase2Animation > div > svg {
             max-height: 500px;
         }
     </style>
