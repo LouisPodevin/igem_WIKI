@@ -37,9 +37,7 @@ export const loadTriggerAction = async () => {
         sourceScroll.next()
     })
 
-    const eventsScroll = sourceScroll.pipe(
-        throttle(() => interval(300), { leading: true, trailing: true }),
-    )
+    const eventsScroll = sourceScroll.pipe(throttle(() => interval(300), { leading: true, trailing: true }))
     eventsScroll.subscribe(() => {
         const elementsMiddle = document.querySelectorAll(".triggerMiddle:not(.active)")
         const elementsBottom = document.querySelectorAll(".triggerBottom:not(.active)")
@@ -90,10 +88,7 @@ export const loadBootstrap = async () => {
     cssElm.setAttribute("href", window.LINKS.bootstrapCss.url)
     document.head.append(cssElm)
     await loadScript(window.LINKS.jquery.url, false, () => !!window.$),
-        await Promise.all([
-            loadScript(window.LINKS.popper.url),
-            loadScript(window.LINKS.bootstrapJs.url),
-        ])
+        await Promise.all([loadScript(window.LINKS.popper.url), loadScript(window.LINKS.bootstrapJs.url)])
 }
 
 export const loadFooter = async () => {
@@ -139,10 +134,22 @@ export const triggerSeeMore = async () => {
                 }
 
                 $("html, body").animate({
-                    scrollTop:
-                        targetElm.getBoundingClientRect().top + window.pageYOffset - 30,
+                    scrollTop: targetElm.getBoundingClientRect().top + window.pageYOffset - 30,
                 })
             })
         }
+    }
+}
+
+export const loadTitles = async () => {
+    const realTitle = document.querySelector("body title")?.text
+
+    if (!realTitle) {
+        return
+    }
+
+    const targetTitle = document.querySelector("title")
+    if (targetTitle) {
+        targetTitle.text = `Ionis Paris | ${realTitle}`
     }
 }

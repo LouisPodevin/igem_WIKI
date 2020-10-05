@@ -72,6 +72,11 @@ const menu = [
                 link: rootUrl + "/Phases/phase2",
                 match: `^${rootUrl}/Phases/phase2$`,
             },
+            {
+                title: "Phase 3",
+                link: rootUrl + "/Phases/phase3",
+                match: `^${rootUrl}/Phases/phase3$`,
+            },
         ],
     },
     {
@@ -165,9 +170,7 @@ const initNav = async () => {
         },
         methods: {
             toggleMenu(index) {
-                this.openedMenu = this.openedMenu.map((value, i) =>
-                    i === index ? !value : value,
-                )
+                this.openedMenu = this.openedMenu.map((value, i) => (i === index ? !value : value))
             },
 
             getRotation(index) {
