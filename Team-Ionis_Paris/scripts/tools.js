@@ -82,6 +82,16 @@ export const loadGlobalCss = async () => {
     document.head.append(cssElm)
 }
 
+export const loadTailwind = async () => {
+    if (document.querySelector(".tailwind")) {
+        const cssElm = document.createElement("link")
+        cssElm.setAttribute("rel", "stylesheet")
+        cssElm.setAttribute("href", window.LINKS.tailwind.url)
+        cssElm.setAttribute("type", "text/css")
+        document.head.append(cssElm)
+    }
+}
+
 export const loadBootstrap = async () => {
     const cssElm = document.createElement("link")
     cssElm.setAttribute("rel", "stylesheet")

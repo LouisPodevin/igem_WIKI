@@ -21,6 +21,10 @@ const links = {
         ext: "js",
         path: "/scripts/gen/alpine",
     },
+    tailwind: {
+        ext: "css",
+        path: "/scripts/gen/tailwind",
+    },
     wikiNav: {
         ext: "js",
         path: "/scripts/wiki-nav",
@@ -299,6 +303,43 @@ const links = {
         path: "/pictures/animate2/phase2Animate",
     },
 
+    // Phase 3
+    phase3Skull: {
+        ext: "svg",
+        path: "/pictures/phases/phase3/Skull",
+        prod: "",
+    },
+    phase3Schema2: {
+        ext: "png",
+        path: "/pictures/phases/phase3/schema2",
+        prod: "",
+    },
+    phase3Schema3: {
+        ext: "png",
+        path: "/pictures/phases/phase3/schema3",
+        prod: "",
+    },
+    phase3Schema4: {
+        ext: "png",
+        path: "/pictures/phases/phase3/schema4",
+        prod: "",
+    },
+    phase3Schema5: {
+        ext: "png",
+        path: "/pictures/phases/phase3/schema5",
+        prod: "",
+    },
+    phase3Schema6: {
+        ext: "png",
+        path: "/pictures/phases/phase3/schema6",
+        prod: "",
+    },
+    phase3perspective: {
+        ext: "svg",
+        path: "/pictures/phases/phase3/perspectiveTimeline",
+        prod: "",
+    },
+
     // Collaboration
     collaboration1Logo: {
         ext: "png",
@@ -480,6 +521,7 @@ const init = async () => {
         loadFooter,
         triggerSeeMore,
         loadTitles,
+        loadTailwind,
     } = await import(links.tools.url)
 
     await Promise.all([
@@ -490,6 +532,7 @@ const init = async () => {
         loadFooter(),
         triggerSeeMore(),
         loadTitles(),
+        loadTailwind(),
     ])
     feather.replace()
 

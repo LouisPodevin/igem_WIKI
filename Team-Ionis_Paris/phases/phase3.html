@@ -9,12 +9,971 @@
 
     <body>
         <div class="navigation"></div>
+        <div class="tailwind"></div>
+        <div id="phase3" x-data="{}" :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'">
+            <div class="container">
+                <h1>Bactails - IGEM IONIS</h1>
+                <div class="phase3Content">
+                    <div class="phase3Text">
+                        <div class="phase3Text1">Phase 3</div>
+                        <div class="phase3Text2">Kill switch</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore" target-id="introduction"></div>
+        <div id="introduction">
+            <div class="container">
+                <div class="lg:flex gap-16">
+                    <div class="hidden lg:flex flex-col items-center gap-2 mt-16">
+                        <div class="userProfileImage rounded-full flex items-center justify-center">
+                            <div
+                                class="userProfileImageSrc rounded-full"
+                                style="
+                                    background-image: url(https://cdn.mos.cms.futurecdn.net/Pt5VdLCdzSc35GTt75C4Cf.jpg);
+                                "
+                            ></div>
+                        </div>
+                        <div class="userProfileName">Elliot</div>
+                    </div>
+                    <div class="">
+                        <div class="introductionTitle">Introduction</div>
+                        <div class="mt-4 p-4 cardIntroduction">
+                            Over the last few decades, synthetic biology has made rapid progress.The use of genetically
+                            modified micro-organisms has continuously increased in a wide variety of fields. From
+                            agri-food, to the environment or health sector, the related research enabled breakthroughs
+                            previously judged as unreachable.
+                        </div>
+                        <div class="mt-4 p-4 cardIntroduction">
+                            Nevertheless, with these improvements, adequate safety measurements must be drawn to
+                            <span class="emphase">control the escape of new engineered bacteria</span> into the
+                            environment.
+                        </div>
+                        <div class="mt-4 p-4 cardIntroduction">
+                            Thus, while previous studies were focused on methods of cell survival, new
+                            ones are putting the spotlight on the different ways to prevent bacterial dissemination,
+                            <span class="emphase">kill-switches</span>. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="focus">
+                <div class="textFocus">
+                    <div class="textFocus1Goal">
+                        <div class="textFocus1GoalIconWrapper">
+                            <i data-feather="eye"></i>
+                        </div>
+                        Our Focus for Bactail
+                    </div>
+                </div>
+                <div class="flex text-center mt-16 mb-16 justify-start">
+                    <div class="targetText p-2 pl-4 pr-4">
+                        Problem: releasing transgenic bacteria from the lab
+                        <i data-feather="arrow-right" class="inline h-4"></i> UNCERTAINTY<br />
+                        Bacterial interaction with the environment cannot be perfectly predicted.
+                    </div>
+                </div>
+                <div class="focusContent textContent">
+                    <p>
+                        There are risks of unanticipated survival and reproduction in the environment, with negative
+                        ecological effects, but also uncontrolled transfers of genetically engineered DNA to other
+                        organisms<sup>1</sup>.
+                    </p>
+                    <p>
+                        To limit these risks, researchers have developed kill-switches<sup>2</sup>. They consist in
+                        genetic tools integrated into modified micro-organisms enabling to
+                        <span class="emphase">control their life cycles</span> through different mechanisms. The
+                        activation of these safeguards can be done through several artificial systems.
+                    </p>
+                    <p>
+                        For instance, a kill switch could render the survival, division, and growth of a bacteria
+                        directly dependent on the presence of certain chemicals or amino acids<sup>3</sup>. They would
+                        regulate gene expression through the action of an inducible promoter linked to a toxic gene
+                        product<sup>4</sup>. We looked at implementing our bacteria with an appropriate kill-switch
+                        system that could be activated following the lysis of the targeted pathogenic bacteria.
+                    </p>
+                </div>
+            </div>
+            <div id="goals">
+                <div class="titleGoal flex items-center gap-4">
+                    <div class="titleGoalIcon rounded-full flex items-center justify-center">
+                        <i data-feather="check-circle"></i>
+                    </div>
+                    <div class="titleGoalText">Main goal(s)</div>
+                </div>
+                <div class="mt-8 flex flex-start">
+                    <div class="textContent goalFocus p-3 pr-4 pl-4">
+                        <p>
+                            The final goal of BacTail is to create a therapeutic bacterium to fight against intestinal
+                            infections caused by antibiotic resistant bacteria. This means that the product would have
+                            to be orally administered to people suffering from infections.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4 mt-8 items-center textContent">
+                    <div class="iconGoalMission"><i data-feather="chevron-right"></i></div>
+                    <div class="">
+                        <p>
+                            Prevent the bacterium’s dissemination in the environment and the problems linked to it, a
+                            kill-switch system has to be inserted into the chassis to
+                            <span class="emphase">destroy it once its mission is fulfilled</span> (i.e. phase 2: killing
+                            the pathogen).
+                        </p>
+                    </div>
+                </div>
+                <div class="textContent mt-8 p-4">
+                    <p>
+                        The <span class="emphase">IISER Tirupati 2020 iGEM</span> Team was also working on issues linked
+                        to antimicrobial resistance. In a nutshell, their project consists in the destruction of
+                        antibiotics found in the feces of farming chicken. Following excretion, antibiotic residues as
+                        well as the induced resistant bacteria are transported into the environment. This occurs due to
+                        leakage, manure application, and airborne particulate matter and globally contributes to the
+                        aggregation of resistance in the environment<sup>5</sup>. This hazardous issue is frequently
+                        encountered in the poultry industry.
+                    </p>
+                </div>
+                <div class="textContent mt-8 p-4">
+                    <p>
+                        With the actual health crisis linked to COVID-19, the IISER Tirupati team did not have the
+                        chance to proceed to their experiments in the lab. Thus, a dialogue began about establishing a
+                        <span class="emphase">partnership</span>. This one relied on the design and shipment of the kill
+                        switch constructed by the IISER Tirupati team to our lab in France. Our team would then run the
+                        associated experiments, with results exploitable by both teams.
+                    </p>
+                </div>
+                <div class="mt-8">
+                    <div class="p-4">
+                        <p>The two main parameters that the IISER Tirupati Team had to determine:</p>
+                    </div>
+                    <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-stretch justify-center">
+                        <div class="goalsParameterCard shadow-sm flex flex-col">
+                            <div class="text-center p-8 goalsParameterCardTitle">The switch system</div>
+                            <div style="height: 200px" class="flex items-center justify-center">
+                                <div class="switch triggerMiddle">
+                                    <div class="switchBack"></div>
+                                    <div class="switchLine"></div>
+                                    <div class="switchButton shadow-sm">
+                                        <div class="switchButtonInside"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 goalsParameterCardText flex-grow">
+                                As their bacteria are planning on being added to tanks containing feces of chicken, they
+                                decided to look for an inducible promoter. This way, they could take control of the
+                                survival of their bacteria. Through their research, they intended to find an
+                                environment-friendly and cheap inducer. There, they took interest in the
+                                <span class="emphase">L-Arabinose operon</span>.
+                            </div>
+                        </div>
+                        <div class="goalsParameterCard shadow-sm flex flex-col">
+                            <div class="text-center p-8 goalsParameterCardTitle">The killing method</div>
+                            <div style="height: 200px" class="flex items-center justify-center">
+                                <img x-data="{}" class="goalsParameterImgSkull" :src="window.LINKS.phase3Skull.url" />
+                            </div>
+                            <div class="p-4 goalsParameterCardText flex-grow">
+                                The team decided to rely on the death inducing <span class="emphase">bpDNaseI</span>, an
+                                endonuclease capable of hydrolyzing double stranded DNA<sup>6</sup>. It was concluded
+                                that a modified version of the L-Arabinose operon would be used with the bpDNaseI gene
+                                instead of those normally expressed.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="achieve">
+            <div class="container">
+                <div class="titleAchieve flex items-center gap-4">
+                    <div class="titleAchieveIcon rounded-full flex items-center justify-center">
+                        <i data-feather="edit"></i>
+                    </div>
+                    <div class="titleAchieveText">How to achieve it?</div>
+                </div>
+                <img x-data="{}" :src="window.LINKS.phase3Schema2.url" class="schema2 shadow-sm mt-8" />
+                <div class="schema2anotation text-center italic p-6">
+                    Representation of the constructs expressing DNASE I for the kill-switch and mRFP for the analysis of
+                    the expression.
+                </div>
+                <div class="mt-6 textContent achieveText p-3">
+                    <p>
+                        The idea that the IISER Tirupati Team had was to replace the structural genes araB, araA and
+                        araD (coding for enzymes catalyzing Arabinose) by the bpDNaseI gene while simplifying the rest
+                        of the system. Thus, a minimal pBAD promoter was used<sup>7,8</sup>.
+                    </p>
+                    <p>
+                        Derived from the Escherichia coli L-arabinose operon, this version of pBAD contains each of the
+                        binding sites for the regulatory protein AraC. These regulatory regions, araI1, araI2, araO1 and
+                        araO2, enable the regulation of the expression of pBAD by AraC<sup>9</sup>. The AraC coding
+                        sequence (CDS) was added upstream to pBAD but in the opposite direction and under the control of
+                        a medium strength constitutive promoter. The pBAD also retains a catabolite gene activator
+                        protein (CAP) binding site where CAP-cAMP complex binds to enhance RNA polymerase binding to the
+                        adjacent promoter.
+                    </p>
+                    <p>
+                        The level of cyclic adenosine monophosphate (cAMP) is low when glucose is present and acts as
+                        the carbon source<sup>10</sup>. The inhibition of the cAMP-producing enzyme is a side-effect of
+                        the transport of glucose into the bacteria.
+                    </p>
+                    <p>
+                        Moreover, a 6xHis sequence has been added following the bpDNaseI gene for further investigation.
+                        And finally, the whole construct will be cloned into the vector the pSB1A3 high copy number
+                        plasmid.
+                    </p>
+                </div>
+                <div class="timeline mt-8">
+                    <div class="timelineLine"></div>
+                    <div class="timelineContent">
+                        <div class="timelineItem">
+                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
+                            <div class="timelineItemContent">
+                                <div class="timelineTitle">Absence of L-Arabinose / Presence of D-Glucose</div>
+                                <div class="timelineText textContent">
+                                    As glucose is present, the cAMP producing enzyme is inhibited. The level of cAMP,
+                                    and therefore of CAP-cAMP complex, is too low to facilitate the binding of the RNA
+                                    polymerase to pBAD. Also, in absence of L-Arabinose, the AraC dimer binds to
+                                    operator half-sites O2 and I1. The consequence is a transcription repression through
+                                    the formation of a DNA looping upstream of the pBAD promoter excluding the RNA
+                                    polymerase from binding to pBAD. Thus, there is no transcription of the DNASE I and
+                                    mRFP genes (Table. 1).
+                                </div>
+                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
+                                <div class="timelineDescriptionImg">
+                                    Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
+                                    presence of D-Glucose.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timelineItem">
+                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
+                            <div class="timelineItemContent">
+                                <div class="timelineTitle">Absence of L-Arabinose / Absence of D-Glucose</div>
+                                <div class="timelineText textContent">
+                                    As there is no glucose, the level of CAP-cAMP will be high enough to bind to the CAP
+                                    binding site in order to facilitate the RNA polymerase binding to pBAD. But, in
+                                    absence of L-Arabinose, the AraC dimer binds to operator half-sites O2 and I1. The
+                                    consequence is a transcription repression through the formation of a DNA looping
+                                    upstream of the pBAD promoter excluding the RNA polymerase and the CAP-cAMP complex
+                                    from binding to pBAD. Thus, there is no transcription of DNASE I and mRFP gene
+                                    (Table. 1).
+                                </div>
+                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
+                                <div class="timelineDescriptionImg">
+                                    Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
+                                    absence of D-Glucose..
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timelineItem">
+                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
+                            <div class="timelineItemContent">
+                                <div class="timelineTitle">Presence of L-Arabinose / Absence of D-Glucose</div>
+                                <div class="timelineText textContent">
+                                    The presence of L-Arabinose makes it binds to AraC, inducing a conformational
+                                    change. This enables the binding of the DNA-binding domains of the dimer to adjacent
+                                    I1 and I2 half-sites. This phenomenon finally gives access to the RNA polymerase to
+                                    bind pBAD. Additionally, as there is no glucose, the level of CAP-cAMP will be high
+                                    enough to bind to the CAP binding site in order to facilitate the RNA polymerase
+                                    binding to pBAD. Thus, the transcription of DNASE I and mRFP occurs (Table. 1).
+                                </div>
+                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
+                                <div class="timelineDescriptionImg">
+                                    Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
+                                    absence of D-Glucose.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timelineItem">
+                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
+                            <div class="timelineItemContent">
+                                <div class="timelineTitle">Presence of L-Arabinose / Presence of D-Glucose</div>
+                                <div class="timelineText textContent">
+                                    The presence of L-Arabinose makes it binds to AraC, inducing a conformational
+                                    change. This enables the binding of the DNA-binding domains of the dimer to adjacent
+                                    I1 and I2 half-sites. This phenomenon finally gives access for RNA polymerase to
+                                    bind pBAD. But, as glucose is present, the cAMP producing enzyme is inhibited. This
+                                    induces a level of cAMP, and therefore of CAP-cAMP complex, which is too low to
+                                    enhance the binding of the RNA polymerase to pBAD. At the end, the transcription of
+                                    the DNASE I and mRFP genes still occurs at a noticeable rate but lower than when
+                                    glucose is absent (Table. 1).
+                                </div>
+                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
+                                <div class="timelineDescriptionImg">
+                                    Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
+                                    presence of D-Glucose.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <table class="tableExpression">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Arabinose Absent</td>
+                                <td>Arabinose Present</td>
+                            </tr>
+                            <tr>
+                                <td>Glucose Absent</td>
+                                <td>No expression<sup>*</sup></td>
+                                <td>Expression</td>
+                            </tr>
+                            <tr>
+                                <td>Glucose Present</td>
+                                <td>No expression<sup>*</sup></td>
+                                <td>Expression at a lower rate</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mt-2 textContent p-2">* Promoter leakage can occur</div>
+                    <div class="mt-2 textContent italic text-center p-2">
+                        Table 1. Table of the expression of DNASE I and mRFP in function of the presence and absence of
+                        glucose and arabinose
+                    </div>
+                    <div class="mt-8 textContent p-2">
+                        An important point that will have to be kept in mind through the experiments and the analysis of
+                        the results is that <span class="emphase">promoter leakage</span> can occur. Promoter leakage
+                        means that the transcription efficiency at the promoter inactive state is much lower than when
+                        the promoter is in an active state. In fact, it has been experimentally verified that
+                        transcription takes place not only at the active state but also at the inactive state of the
+                        promoter <sup>11</sup>. This phenomenon is judged as meaningless for certain genes. But, as the
+                        associated proteins are endonucleases here, they could kill the host bacteria even if produced
+                        in a small amount.
+                    </div>
+                </div>
+                <div id="results">
+                    <div class="titleAchieve flex items-center gap-4">
+                        <div class="titleAchieveIcon rounded-full flex items-center justify-center">
+                            <i data-feather="edit"></i>
+                        </div>
+                        <div class="titleAchieveText">Results</div>
+                    </div>
+                    <div class="textContent p-2 mt-8">Not ready yet</div>
+                </div>
+                <div id="perspectives">
+                    <div class="titleAchieve flex items-center gap-4">
+                        <div class="titleAchieveIcon rounded-full flex items-center justify-center">
+                            <i data-feather="edit"></i>
+                        </div>
+                        <div class="titleAchieveText">Perspectives</div>
+                    </div>
+                    <div class="mt-8 textContent">
+                        According to the IISER Tirupati iGEM team kill-switch’s way of functioning, the applicability
+                        for the BacTail project was a major concern. This BioBrick suggests that after the ingestion of
+                        the therapeutic bacteria designed in the BacTail project, the patient should later, take
+                        L-arabinose to prevent the dissemination of the modified bacteria.
+                    </div>
+                    <img x-data="{}" :src="window.LINKS.phase3perspective.url" class="perspectiveImg mt-6" />
+                    <div class="mt-8 textContent">
+                        However, when ingested in its digestible form, L-arabinose is absorbed by the intestinal tract.
+                        The problem is that this monosaccharide selectively
+                        <span class="emphase">inhibits intestinal saccharase</span> activity in a noncompetitive
+                        manner<sup>12</sup>. Saccharase is essential for glucose absorption as it turns sucrose into
+                        glucose and fructose. Thus, its inhibition in the human gastrointestinal tract does not
+                        represent a viable solution.
+                    </div>
+                    <div class="mt-8 textContent">
+                        This partnership with the IISER Tirupati team allowed us to
+                        <span class="emphase">test a type of kill switch</span> that could be useful for our future
+                        system. As this consists in a proof of concept, further
+                        <span class="emphase">optimization will be needed</span> to adapt the kill switch to its use in
+                        the human body. The existing possibilities consist in changing the inducible promoter or using a
+                        repressor.
+                    </div>
+                    <div class="mt-8 flex gap-6 items-center">
+                        <i data-feather="sun" class="iconSun"></i>
+                        <div class="textContent">
+                            For example, we could <span class="emphase">design a promoter</span> which would be
+                            activated when the target has died and released certain intracellular elements that would be
+                            sensed by our engineered bacterium.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="references" class="mt-16">
+            <div class="container">
+                <hr />
+                <div class="mt-8 mb-8 textContent">
+                    [1] Ahrenholtz, I., Lorenz, M. G., & Wackernagel, W. (1994). A Conditional Suicide System in
+                    Escherichia coli Based on the Intracellular Degradation of DNA. Applied and Environmental
+                    Microbiology, 60, 3746–3751.<br />
+                    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC201882/pdf/aem00027-0276.pdf <br /><br />
+
+                    [2] Chan, C. T. Y., Lee, J. W., Ewen Cameron, D., Bashor, C. J., & Collins, J. J. (2016). “Deadman”
+                    and “Passcode” microbial kill switches for bacterial containment. Nature Chemical Biology volume,
+                    12(2), 82-86.<br />
+                    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4718764/ <br /><br />
+
+                    [3] Knight, H. (2015). “Kill switches” shut down engineered bacteria. MIT News.<br />
+                    https://news.mit.edu/2015/kill-switches-shut-down-engineered-bacteria-1211 <br /><br />
+
+                    [4] Stirling, F., Bitzan, L., O’Keefe, S., Redfield, E., Oliver, J. W. K., Way, J., & Silver, P. A.
+                    (2018). Rational Design of Evolutionarily Stable Microbial Kill Switches. Molecular Cell, 68(4),
+                    686-697. <br />
+                    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5812007/ <br /><br />
+
+                    [5] McEachran, A. D., Blackwell B. R., Hanson J. D., Wooten K.J., Mayer G..D, Cox S. B, & Smith, P.
+                    N. (2015). Antibiotics, bacteria, and antibiotic resistance genes: aerial transport from cattle feed
+                    yards via particulate matter. Environmental Health Perspectives, 123(4), 337.<br /><br />
+                    [6] Chen, C. Y., Shao-Chun, L., & Ta-Hsiu, L. (1998). Cloning, sequencing and expression of a cDNA
+                    encoding bovine pancreatic deoxyribonuclease I in Escherichia coli: purification and
+                    characterization of the recombinant enzyme. Gene, 206(2), 181-184.<br />
+                    https://www.sciencedirect.com/science/article/abs/pii/S0378111997005829<br /><br />
+                    [7] Brzozowska, N., & Gourlay, J. (2017). Part:BBa_K2442101. Minimal pBAD promoter. iGEM. Registry
+                    of Standard Biological Parts.<br />
+                    http://parts.igem.org/Part:BBa_K2442101<br /><br />
+                    [8] Analyze Sequence: pBAD33. AddGene.<br />
+                    https://www.addgene.org/browse/sequence_vdb/1848/ <br /><br />
+                    [9] Brzozowska, N., & Gourlay, J. (2017). Part:BBa_K2442103. E. coli AraC coding region. iGEM.
+                    Registry of Standard Biological Parts.<br />
+                    http://parts.igem.org/Part:BBa_K2442103<br /><br />
+                    [10] Ishizuka, H., Hanamura, A., Kunimura, T., & Hiroji, A. (1993). A lowered concentration of cAMP
+                    receptor protein caused by glucose is an important determinant for catabolite repression in
+                    Escherichia coli. Molecular Microbiology, 10(2), 341-350.<br />
+                    https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2958.1993.tb01960.x <br /><br />
+                    [11] Huang, L., Yuan, Z., Liu, P., & Zhou, T. (2015). Effects of promoter leakage on dynamics of
+                    gene expression. BMC Systems Biology, 9.<br />
+                    https://bmcsystbiol.biomedcentral.com/articles/10.1186/s12918-015-0157-z<br /><br />
+
+                    [12] Seri, K., Sanai, K., Matsuo, N., Kawakubo, K., Xue, C., & Inoue, S. (1996). L-arabinose
+                    selectively inhibits intestinal sucrase in an uncompetitive manner and suppresses glycemic response
+                    after sucrose ingestion in animals. Metabolism: clinical and experimental, 45(11), 1368-1374.
+                </div>
+            </div>
+        </div>
         <footer></footer>
     </body>
     <style>
         html,
         body {
             background-color: #fafafa !important;
+        }
+
+        #phase3 h1 {
+            display: none;
+        }
+
+        #phase3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: top -80px right -80px;
+            background-size: auto 100%;
+        }
+
+        .phase3Content {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .phase3Text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes phase3 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .phase3Text2 {
+            color: #8d1f24;
+            font-size: 30px;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            animation: phase3 2s;
+        }
+
+        @keyframes phase1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        .phase3Text1 {
+            color: #e73327;
+            text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
+            font-size: 70px;
+            animation: phase3 1s;
+        }
+
+        /* INTRODUCTION */
+
+        #introduction {
+            margin: 120px 0;
+        }
+
+        .userProfileImage {
+            background-color: rgba(0, 0, 0, 0.05);
+            height: 80px;
+            width: 80px;
+        }
+
+        .userProfileImageSrc {
+            background-color: rgb(255, 255, 255);
+            height: 60px;
+            width: 60px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .introductionTitle {
+            color: #8d1f24;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .cardIntroduction {
+            background-color: white;
+            font-size: 15px;
+            border-radius: 15px;
+            max-width: 800px;
+        }
+
+        .emphase {
+            color: #e73327;
+        }
+
+        .textContent {
+            max-width: 900px;
+            font-size: 15px;
+        }
+
+        /* FOCUS */
+
+        #focus {
+            margin-top: 100px;
+        }
+
+        .textFocus {
+            font-weight: 800;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .textFocus1Goal {
+            color: #8d1f24;
+            /* text-transform: uppercase; */
+            font-size: 30px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .textFocus1GoalIconWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(231, 52, 39, 0.2);
+            border-radius: 999px;
+        }
+
+        .targetText {
+            background-color: rgba(231, 52, 39, 0.1);
+            border-radius: 15px;
+        }
+
+        .focusContent {
+            margin-top: 40px;
+        }
+
+        .focusContent > p {
+            margin-bottom: 20px;
+        }
+
+        .focusContent > p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* GOALS */
+
+        #goals {
+            margin-top: 120px;
+        }
+
+        .titleGoal {
+            color: #8d1f24;
+        }
+
+        .titleGoalIcon {
+            background-color: rgba(231, 52, 39, 0.2);
+            height: 40px;
+            width: 40px;
+        }
+
+        .titleGoalText {
+            /* text-transform: uppercase; */
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        .goalFocus {
+            background-color: white;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+
+        .iconGoalMission > svg {
+            height: 100px;
+            width: 70px;
+        }
+
+        .goalsParameterCard {
+            background-color: white;
+            max-width: 380px;
+            flex-grow: 1;
+            border-radius: 15px;
+            font-size: 15px;
+            overflow: hidden;
+        }
+
+        .goalsParameterCardTitle {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .goalsParameterCardText {
+            background-color: #fcfcfc;
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        @keyframes switchLineAnim {
+            0% {
+                background-color: #d7d7d7;
+            }
+
+            100% {
+                background-color: #8d1f24;
+            }
+        }
+
+        @keyframes switchButtonAnim {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 25px;
+            }
+        }
+
+        @keyframes switchButtonInsideAnim {
+            0% {
+                background-color: #e9e9e9;
+            }
+
+            100% {
+                background-color: #e73327;
+            }
+        }
+
+        .switch {
+            position: relative;
+        }
+
+        .switch.active .switchLine {
+            background-color: #8d1f24;
+            animation: switchLineAnim 0.7s;
+        }
+
+        .switchLine {
+            width: 80px;
+            height: 14px;
+            background-color: #d7d7d7;
+            border-radius: 999px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .switch.active .switchButton {
+            left: 25px;
+            animation: switchButtonAnim 0.7s;
+        }
+
+        .switchButton {
+            height: 56px;
+            width: 56px;
+            background-color: white;
+            border-radius: 999px;
+            position: absolute;
+            top: -21px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            z-index: 3;
+        }
+
+        .switch.active .switchButtonInside {
+            background-color: #e73327;
+            animation: switchButtonInsideAnim 0.7s;
+        }
+
+        .switchButtonInside {
+            height: 21px;
+            width: 21px;
+            background-color: #e9e9e9;
+            border-radius: 999px;
+        }
+
+        @keyframes switchBackAnim {
+            0% {
+                height: 0px;
+                width: 0px;
+                opacity: 0.3;
+            }
+            50% {
+                height: 200px;
+                width: 200px;
+                opacity: 0;
+            }
+            100% {
+                height: 200px;
+                width: 200px;
+                opacity: 0;
+            }
+        }
+
+        .switchBack {
+            border-radius: 999px;
+            background-color: #8d1f24;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 300px;
+            width: 300px;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .switch.active .switchBack {
+            animation: switchBackAnim 4s infinite;
+        }
+
+        .goalsParameterImgSkull {
+            height: 100px;
+        }
+
+        /* ACHIEVE */
+
+        #achieve {
+            margin-top: 120px;
+        }
+
+        .titleAchieve {
+            color: #8d1f24;
+        }
+
+        .titleAchieveIcon {
+            background-color: rgba(231, 52, 39, 0.2);
+            height: 40px;
+            width: 40px;
+        }
+
+        .titleAchieveText {
+            /* text-transform: uppercase; */
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        .schema2 {
+            border-radius: 15px;
+            max-width: 900px;
+            padding: 0 50px;
+            background-color: white;
+            width: 100%;
+        }
+
+        .schema2anotation {
+            max-width: 900px;
+            font-size: 12px;
+        }
+
+        .achieveText > p {
+            margin-bottom: 20px;
+        }
+
+        .achieveText > p:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: stretch;
+        }
+
+        .timelineLine {
+            width: 4px;
+            border-radius: 999px;
+            background-color: #8d1f24;
+            flex-shrink: 0;
+        }
+
+        .timelineContent {
+            margin-left: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timelineItem {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 100px;
+        }
+
+        .timelineItem:first-child {
+            margin-top: 0px;
+        }
+
+        .timelineDot {
+            flex-shrink: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 999px;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -52px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .timelineDotDot {
+            height: 10px;
+            width: 10px;
+            border-radius: 999px;
+            background-color: #8d1f24;
+        }
+
+        .timelineItemContent {
+            margin-left: 40px;
+        }
+
+        .timelineTitle {
+            color: #8d1f24;
+            font-weight: 800;
+            font-size: 20px;
+            margin-top: -5px;
+        }
+
+        .timelineText {
+            margin-top: 40px;
+        }
+
+        .timelineImg {
+            max-width: 900px;
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 60px;
+        }
+
+        .timelineDescriptionImg {
+            font-size: 12px;
+            max-width: 900px;
+            text-align: center;
+            padding: 5px 15px;
+            font-style: italic;
+        }
+
+        /* TABLE */
+
+        .tableExpression {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .tableExpression td {
+            padding: 5px 10px;
+        }
+
+        .tableExpression tr:nth-child(1) td:not(:nth-child(1)),
+        .tableExpression tr:not(:nth-child(1)) td {
+            background-color: white;
+            border: 1px solid rgb(241, 241, 241);
+        }
+
+        .tableExpression tr:nth-child(1) td:nth-child(2),
+        .tableExpression tr:nth-child(1) td:nth-child(3),
+        .tableExpression tr:nth-child(2) {
+            border-top: 2px solid rgb(241, 241, 241) !important;
+        }
+
+        .tableExpression tr:not(:nth-child(1)) td:nth-child(1),
+        .tableExpression td:nth-child(2) {
+            border-left: 2px solid rgb(241, 241, 241) !important;
+        }
+
+        .tableExpression {
+            border-right: 2px solid rgb(241, 241, 241) !important;
+            border-bottom: 2px solid rgb(241, 241, 241) !important;
+        }
+
+        #results {
+            margin-top: 120px;
+        }
+
+        #perspectives {
+            margin-top: 120px;
+        }
+
+        .perspectiveImg {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .iconSun {
+            height: 50px;
+            width: 50px;
+        }
+
+        /* REFERENCES */
+
+        #references div {
+            font-size: 12px;
         }
     </style>
 </html>
