@@ -307,37 +307,37 @@ const links = {
     phase3Skull: {
         ext: "svg",
         path: "/pictures/phases/phase3/Skull",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/8/8c/T--Ionis_Paris--phase3-skull.svg",
     },
     phase3Schema2: {
         ext: "png",
         path: "/pictures/phases/phase3/schema2",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/5/5b/T--Ionis_Paris--phase3-schema2.png",
     },
     phase3Schema3: {
         ext: "png",
         path: "/pictures/phases/phase3/schema3",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/4/40/T--Ionis_Paris--phase3-schema3.png",
     },
     phase3Schema4: {
         ext: "png",
         path: "/pictures/phases/phase3/schema4",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/b/b7/T--Ionis_Paris--phase3-schema4.png",
     },
     phase3Schema5: {
         ext: "png",
         path: "/pictures/phases/phase3/schema5",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/7/7f/T--Ionis_Paris--phase3-schema5.png",
     },
     phase3Schema6: {
         ext: "png",
         path: "/pictures/phases/phase3/schema6",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/a/a3/T--Ionis_Paris--phase3-schema6.png",
     },
     phase3perspective: {
         ext: "svg",
         path: "/pictures/phases/phase3/perspectiveTimeline",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/1/19/T--Ionis_Paris--phase3-perspective.svg",
     },
 
     // Collaboration
