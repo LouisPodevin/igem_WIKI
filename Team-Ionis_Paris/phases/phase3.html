@@ -921,6 +921,27 @@
 
         /* TABLE */
 
+        #HQ_page td {
+            border: initial;
+            border-collapse: collapse;
+            vertical-align: text-top;
+        }
+
+        #HQ_page table {
+            border: none;
+            border-collapse: collapse;
+            margin-bottom: 0;
+            margin-top: 0;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        table {
+            font-size: 100%;
+            background: none;
+            color: black;
+        }
+
         .tableExpression {
             width: 100%;
             max-width: 900px;
@@ -933,7 +954,7 @@
         .tableExpression tr:nth-child(1) td:not(:nth-child(1)),
         .tableExpression tr:not(:nth-child(1)) td {
             background-color: white;
-            border: 1px solid rgb(241, 241, 241);
+            border: 1px solid rgb(241, 241, 241) !important;
         }
 
         .tableExpression tr:nth-child(1) td:nth-child(2),
