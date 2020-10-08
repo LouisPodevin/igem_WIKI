@@ -309,6 +309,11 @@ const links = {
         path: "/pictures/phases/phase3/Skull",
         prod: "https://2020.igem.org/wiki/images/8/8c/T--Ionis_Paris--phase3-skull.svg",
     },
+    phase3Schema1: {
+        ext: "png",
+        path: "/pictures/phases/phase3/schema1",
+        prod: "https://2020.igem.org/wiki/images/5/5a/T--Ionis_Paris--phase3-schema1.png",
+    },
     phase3Schema2: {
         ext: "png",
         path: "/pictures/phases/phase3/schema2",
