@@ -555,11 +555,11 @@ const initLoading = size => {
         background-color: #8d1f24;
         border-radius: 999px;
         flex-shrink: 0;
-        margin: 10px 15px 10px 20px;
+        margin: 30px 15px 10px 20px;
     }
 
     .loadingText {
-        margin: 10px 30px 10px 0;
+        margin: 30px 30px 10px 0;
         font-weight: 800;
         font-size: 15px;
     }
@@ -634,11 +634,8 @@ const init = async () => {
 
     const minimumPromise = Promise.all([
         withLoading(import(links.feather.url)),
-        withLoading(import(links.bodymovin.url)),
         withLoading(loadGlobalCss()),
         withLoading(initNavigation()),
-        withLoading(triggerSeeMore()),
-        withLoading(loadTitles()),
         withLoading(loadBootstrap()),
         withLoading(import(links.alpine.url)),
         withLoading(loadScript(links.rxjs.url, false, () => !!window.rxjs)),
@@ -654,6 +651,9 @@ const init = async () => {
         withLoading(loadFooter()),
         withLoading(loadTriggerAction()),
         withLoading(loadTailwind()),
+        withLoading(loadTitles()),
+        withLoading(triggerSeeMore()),
+        withLoading(import(links.bodymovin.url)),
     ])
 
     await backgroundPromise

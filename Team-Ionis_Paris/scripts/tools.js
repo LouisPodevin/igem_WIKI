@@ -91,6 +91,8 @@ export const loadTailwind = async () => {
         cssElm.setAttribute("href", cssUrl)
         cssElm.setAttribute("type", "text/css")
         document.head.append(cssElm)
+    } else {
+        fetch(window.LINKS.tailwind.url)
     }
 }
 
