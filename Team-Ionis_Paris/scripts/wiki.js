@@ -513,9 +513,112 @@ for (let link in links) {
 
 window.LINKS = links
 
+let loadingLength = 0
+let currentLoading = 0
+
+const initLoading = size => {
+    loadingLength = size
+    const loadingElm = document.createElement("div")
+    loadingElm.innerHTML = `<div id="loadingHidder"></div>
+    <div id="loading">
+        <div class="loadingDot"></div>
+        <div class="loadingText">Loading</div>
+        <div class="loadingLine"></div>
+    </div>`
+
+    document.body.append(loadingElm)
+
+    const stylesLoading = document.createElement("style")
+    stylesLoading.innerHTML = `#loading {
+        z-index: 7;
+        font-family: Poppins, Arial, Helvetica, sans-serif !important;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffffffb8;
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        align-items: center;
+        width: 300px;
+        overflow: hidden;
+        backdrop-filter: blur(8px) saturate(150%);
+        transition: top 1s;
+    }
+
+    .loadingDot {
+        height: 10px;
+        width: 10px;
+        background-color: #8d1f24;
+        border-radius: 999px;
+        flex-shrink: 0;
+        margin: 10px 15px 10px 20px;
+    }
+
+    .loadingText {
+        margin: 10px 30px 10px 0;
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .loadingLine {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #8d1f24;
+        border-radius: 99px;
+        height: 5px;
+        width: 0%;
+        transition: width 1s;
+    }
+
+    #loadingHidder {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        z-index: 6;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+`
+
+    document.body.append(stylesLoading)
+}
+
+const incrementLoading = () => {
+    currentLoading++
+
+    document.querySelector("#loading .loadingLine").style.width = `${(currentLoading * 100) / loadingLength}%`
+
+    if (currentLoading === loadingLength) {
+        document.getElementById("loading").style.top = "-100px"
+    }
+}
+
+const withLoading = async fnToApply => {
+    const returnValue = await fnToApply
+    incrementLoading()
+    return returnValue
+}
+
+const setMinimumReady = () => {
+    const loadingDiv = document.getElementById("loadingHidder")
+
+    loadingDiv.style.opacity = "0"
+    setTimeout(() => {
+        loadingDiv.style.display = "none"
+    }, 1000)
+}
+
 const init = async () => {
-    await import(links.feather.url)
-    const { initNavigation } = await import(links.wikiNav.url)
+    initLoading(15)
+    const { initNavigation } = await withLoading(import(links.wikiNav.url))
 
     const {
         loadScript,
@@ -527,25 +630,35 @@ const init = async () => {
         triggerSeeMore,
         loadTitles,
         loadTailwind,
-    } = await import(links.tools.url)
+    } = await withLoading(import(links.tools.url))
 
-    await Promise.all([
-        loadGlobalCss(),
-        initNavigation(),
-        loadFont(),
-        loadBootstrap(),
-        loadFooter(),
-        triggerSeeMore(),
-        loadTitles(),
-        loadTailwind(),
+    const minimumPromise = Promise.all([
+        withLoading(import(links.feather.url)),
+        withLoading(import(links.bodymovin.url)),
+        withLoading(loadGlobalCss()),
+        withLoading(initNavigation()),
+        withLoading(triggerSeeMore()),
+        withLoading(loadTitles()),
+        withLoading(loadBootstrap()),
+        withLoading(import(links.alpine.url)),
+        withLoading(loadScript(links.rxjs.url, false, () => !!window.rxjs)),
     ])
+
+    await minimumPromise
+
+    setMinimumReady()
     feather.replace()
 
-    await loadScript(links.rxjs.url, false, () => !!window.rxjs)
-    await import(links.alpine.url)
+    const backgroundPromise = Promise.all([
+        withLoading(loadFont()),
+        withLoading(loadFooter()),
+        withLoading(loadTriggerAction()),
+        withLoading(loadTailwind()),
+    ])
 
-    await Promise.all([loadTriggerAction()])
-    await import(links.bodymovin.url)
+    await backgroundPromise
+
+    feather.replace()
 }
 
 init()

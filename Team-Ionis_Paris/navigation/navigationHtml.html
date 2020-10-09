@@ -6,6 +6,7 @@
 <div
     id="navigation"
     :style="{left: leftPos, cursor: (show ? 'initial' : 'pointer')}"
+    style="opacity: 0"
     @click="triggerMenuFull"
 >
     <div class="headerMenu">
@@ -17,36 +18,23 @@
             <i data-feather="chevron-right"></i>
         </div>
         <a class="igemLogo" :href="window.ROOT_URL">
-            <img
-                :src="window.LINKS.logoTeamIonis.url"
-                alt="iGem Ionis Logo"
-                class="igemLogoImg"
-            />
+            <img :src="window.LINKS.logoTeamIonis.url" alt="iGem Ionis Logo" class="igemLogoImg" />
         </a>
     </div>
     <nav>
         <li v-for="(groupNav, index1) in menu" :key="groupNav.index" class="itemNav">
-            <a
-                v-if="groupNav.link"
-                :class="'navTextLink' + (active[index1] ? ' active' : '')"
-                :href="groupNav.link"
+            <a v-if="groupNav.link" :class="'navTextLink' + (active[index1] ? ' active' : '')" :href="groupNav.link"
                 >{{groupNav.title}}</a
             >
             <div v-else>
                 <div class="itemNavFlex" @click="toggleMenu(groupNav.index)">
                     <div class="itemNavText">{{groupNav.title}}</div>
-                    <div
-                        :style="getRotation(groupNav.index)"
-                        class="iconNavChevronContainer"
-                    >
+                    <div :style="getRotation(groupNav.index)" class="iconNavChevronContainer">
                         <i data-feather="chevron-down" class="iconNavChevron"></i>
                     </div>
                 </div>
 
-                <div
-                    v-if="openedMenu[groupNav.index] && groupNav.childrens"
-                    class="navContent"
-                >
+                <div v-if="openedMenu[groupNav.index] && groupNav.childrens" class="navContent">
                     <a
                         v-for="(subNavItem, index2) in groupNav.childrens"
                         :key="subNavItem.title"

@@ -200,6 +200,7 @@ const initNav = async () => {
         },
         mounted() {
             document.body.style.paddingLeft = this.show ? "350px" : "40px"
+            document.getElementById("navigation").style.opacity = "1"
         },
     })
 }

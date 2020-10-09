@@ -84,9 +84,11 @@ export const loadGlobalCss = async () => {
 
 export const loadTailwind = async () => {
     if (document.querySelector(".tailwind")) {
+        const cssTailwind = await (await fetch(window.LINKS.tailwind.url)).text()
+        const cssUrl = URL.createObjectURL(new Blob([cssTailwind], { type: "text/css" }))
         const cssElm = document.createElement("link")
         cssElm.setAttribute("rel", "stylesheet")
-        cssElm.setAttribute("href", window.LINKS.tailwind.url)
+        cssElm.setAttribute("href", cssUrl)
         cssElm.setAttribute("type", "text/css")
         document.head.append(cssElm)
     }
