@@ -160,3 +160,27 @@ p {
     font-size: 15px;
     color: #8d1f24;
 }
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.rounded-full {
+    border-radius: 999px;
+}

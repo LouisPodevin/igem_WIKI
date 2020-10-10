@@ -226,93 +226,104 @@
                         plasmid.
                     </p>
                 </div>
-                <div class="timeline mt-8">
-                    <div class="timelineLine"></div>
-                    <div class="timelineContent">
-                        <div class="timelineItem">
-                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
-                            <div class="timelineItemContent">
-                                <div class="timelineTitle">Absence of L-Arabinose / Presence of D-Glucose</div>
-                                <div class="timelineText textContent">
-                                    As glucose is present, the cAMP producing enzyme is inhibited. The level of cAMP,
-                                    and therefore of CAP-cAMP complex, is too low to facilitate the binding of the RNA
-                                    polymerase to pBAD. Also, in absence of L-Arabinose, the AraC dimer binds to
-                                    operator half-sites O2 and I1. The consequence is a transcription repression through
-                                    the formation of a DNA looping upstream of the pBAD promoter excluding the RNA
-                                    polymerase from binding to pBAD. Thus, there is no transcription of the DNASE I and
-                                    mRFP genes (Table. 1).
-                                </div>
-                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
-                                <div class="timelineDescriptionImg">
-                                    Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
-                                    presence of D-Glucose.
+                <div x-data="{arabinose: false, glucose: false }" id="interactive">
+                    <div class="clickInte">
+                        <div class="itemClickInte">
+                            <div class="itemClickInteTitle">L-Arabinose</div>
+                            <div
+                                :class="'itemClickInteButton' + (arabinose ? ' click' : '')"
+                                @click="arabinose = !arabinose"
+                            >
+                                <div>
+                                    <div class="itemClickInteTextClick" x-text="arabinose ? 'Present' : 'Absent'"></div>
+                                    <div class="itemClickInteTextIndicator">Click-me!</div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="timelineItem">
-                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
-                            <div class="timelineItemContent">
-                                <div class="timelineTitle">Absence of L-Arabinose / Absence of D-Glucose</div>
-                                <div class="timelineText textContent">
-                                    As there is no glucose, the level of CAP-cAMP will be high enough to bind to the CAP
-                                    binding site in order to facilitate the RNA polymerase binding to pBAD. But, in
-                                    absence of L-Arabinose, the AraC dimer binds to operator half-sites O2 and I1. The
-                                    consequence is a transcription repression through the formation of a DNA looping
-                                    upstream of the pBAD promoter excluding the RNA polymerase and the CAP-cAMP complex
-                                    from binding to pBAD. Thus, there is no transcription of DNASE I and mRFP gene
-                                    (Table. 1).
-                                </div>
-                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
-                                <div class="timelineDescriptionImg">
-                                    Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
-                                    absence of D-Glucose..
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timelineItem">
-                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
-                            <div class="timelineItemContent">
-                                <div class="timelineTitle">Presence of L-Arabinose / Absence of D-Glucose</div>
-                                <div class="timelineText textContent">
-                                    The presence of L-Arabinose makes it binds to AraC, inducing a conformational
-                                    change. This enables the binding of the DNA-binding domains of the dimer to adjacent
-                                    I1 and I2 half-sites. This phenomenon finally gives access to the RNA polymerase to
-                                    bind pBAD. Additionally, as there is no glucose, the level of CAP-cAMP will be high
-                                    enough to bind to the CAP binding site in order to facilitate the RNA polymerase
-                                    binding to pBAD. Thus, the transcription of DNASE I and mRFP occurs (Table. 1).
-                                </div>
-                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
-                                <div class="timelineDescriptionImg">
-                                    Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
-                                    absence of D-Glucose.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timelineItem">
-                            <div class="timelineDot"><div class="timelineDotDot"></div></div>
-                            <div class="timelineItemContent">
-                                <div class="timelineTitle">Presence of L-Arabinose / Presence of D-Glucose</div>
-                                <div class="timelineText textContent">
-                                    The presence of L-Arabinose makes it binds to AraC, inducing a conformational
-                                    change. This enables the binding of the DNA-binding domains of the dimer to adjacent
-                                    I1 and I2 half-sites. This phenomenon finally gives access for RNA polymerase to
-                                    bind pBAD. But, as glucose is present, the cAMP producing enzyme is inhibited. This
-                                    induces a level of cAMP, and therefore of CAP-cAMP complex, which is too low to
-                                    enhance the binding of the RNA polymerase to pBAD. At the end, the transcription of
-                                    the DNASE I and mRFP genes still occurs at a noticeable rate but lower than when
-                                    glucose is absent (Table. 1).
-                                </div>
-                                <img x-data="{}" :src="window.LINKS.phase3Schema3.url" class="timelineImg shadow-sm" />
-                                <div class="timelineDescriptionImg">
-                                    Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
-                                    presence of D-Glucose.
+                        <div class="itemClickInte">
+                            <div class="itemClickInteTitle">D-Glucose</div>
+                            <div :class="'itemClickInteButton' + (glucose ? ' click' : '')" @click="glucose = !glucose">
+                                <div>
+                                    <div class="itemClickInteTextClick" x-text="glucose ? 'Present' : 'Absent'"></div>
+                                    <div class="itemClickInteTextIndicator">Click-me!</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="interactiveContent">
+                        <div x-show="arabinose && glucose">
+                            <div class="interactiveTitle">Presence of L-Arabinose / Presence of D-Glucose</div>
+                            <div class="interactiveText textContent">
+                                The presence of L-Arabinose makes it binds to AraC, inducing a conformational change.
+                                This enables the binding of the DNA-binding domains of the dimer to adjacent I1 and I2
+                                half-sites. This phenomenon finally gives access for RNA polymerase to bind pBAD. But,
+                                as glucose is present, the cAMP producing enzyme is inhibited. This induces a level of
+                                cAMP, and therefore of CAP-cAMP complex, which is too low to enhance the binding of the
+                                RNA polymerase to pBAD. At the end, the transcription of the DNASE I and mRFP genes
+                                still occurs at a noticeable rate but lower than when glucose is absent (Table. 1).
+                            </div>
+
+                            <img :src="window.LINKS.phase3Schema6.url" class="interactiveImg shadow-sm" />
+                            <div class="interactiveLegend">
+                                Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
+                                presence of D-Glucose.
+                            </div>
+                        </div>
+                        <div x-show="!arabinose && glucose">
+                            <div class="interactiveTitle">Absence of L-Arabinose / Presence of D-Glucose</div>
+                            <div class="interactiveText textContent">
+                                As glucose is present, the cAMP producing enzyme is inhibited. The level of cAMP, and
+                                therefore of CAP-cAMP complex, is too low to facilitate the binding of the RNA
+                                polymerase to pBAD. Also, in absence of L-Arabinose, the AraC dimer binds to operator
+                                half-sites O2 and I1. The consequence is a transcription repression through the
+                                formation of a DNA looping upstream of the pBAD promoter excluding the RNA polymerase
+                                from binding to pBAD. Thus, there is no transcription of the DNASE I and mRFP genes
+                                (Table. 1).
+                            </div>
+
+                            <img :src="window.LINKS.phase3Schema3.url" class="interactiveImg shadow-sm" />
+                            <div class="interactiveLegend">
+                                Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
+                                presence of D-Glucose.
+                            </div>
+                        </div>
+                        <div x-show="arabinose && !glucose">
+                            <div class="interactiveTitle">Presence of L-Arabinose / Absence of D-Glucose</div>
+                            <div class="interactiveText textContent">
+                                The presence of L-Arabinose makes it binds to AraC, inducing a conformational change.
+                                This enables the binding of the DNA-binding domains of the dimer to adjacent I1 and I2
+                                half-sites. This phenomenon finally gives access to the RNA polymerase to bind pBAD.
+                                Additionally, as there is no glucose, the level of CAP-cAMP will be high enough to bind
+                                to the CAP binding site in order to facilitate the RNA polymerase binding to pBAD. Thus,
+                                the transcription of DNASE I and mRFP occurs (Table. 1).
+                            </div>
+
+                            <img :src="window.LINKS.phase3Schema5.url" class="interactiveImg shadow-sm" />
+                            <div class="interactiveLegend">
+                                Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
+                                absence of D-Glucose.
+                            </div>
+                        </div>
+                        <div x-show="!arabinose && !glucose">
+                            <div class="interactiveTitle">Absence of L-Arabinose / Absence of D-Glucose</div>
+                            <div class="interactiveText textContent">
+                                As there is no glucose, the level of CAP-cAMP will be high enough to bind to the CAP
+                                binding site in order to facilitate the RNA polymerase binding to pBAD. But, in absence
+                                of L-Arabinose, the AraC dimer binds to operator half-sites O2 and I1. The consequence
+                                is a transcription repression through the formation of a DNA looping upstream of the
+                                pBAD promoter excluding the RNA polymerase and the CAP-cAMP complex from binding to
+                                pBAD. Thus, there is no transcription of DNASE I and mRFP gene (Table. 1).
+                            </div>
+
+                            <img :src="window.LINKS.phase3Schema4.url" class="interactiveImg shadow-sm" />
+                            <div class="interactiveLegend">
+                                Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
+                                absence of D-Glucose..
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-16">
+                <div class="mt-4">
                     <table class="tableExpression">
                         <tbody>
                             <tr>
@@ -851,84 +862,81 @@
             margin-bottom: 0;
         }
 
-        .timeline {
-            display: flex;
-            justify-content: stretch;
+        #interactive {
+            margin: 200px 0 20px 0;
         }
 
-        .timelineLine {
-            width: 4px;
-            border-radius: 999px;
-            background-color: #8d1f24;
+        .clickInte {
+            display: flex;
+            justify-content: center;
+        }
+
+        .itemClickInte {
             flex-shrink: 0;
+            margin-right: 40px;
         }
 
-        .timelineContent {
-            margin-left: 40px;
-            display: flex;
-            flex-direction: column;
+        .itemClickInte:last-child {
+            margin-right: 0;
         }
 
-        .timelineItem {
-            display: flex;
-            align-items: flex-start;
-            margin-top: 100px;
+        .itemClickInteTitle {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: 800;
         }
 
-        .timelineItem:first-child {
-            margin-top: 0px;
-        }
-
-        .timelineDot {
-            flex-shrink: 0;
-            height: 20px;
-            width: 20px;
-            border-radius: 999px;
-            background-color: white;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+        .itemClickInteButton {
+            height: 130px;
+            width: 130px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #e1e1e1, #ffffff);
+            box-shadow: 22px 22px 45px #d5d5d5, -22px -22px 45px #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: -52px;
-            position: sticky;
-            top: 20px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
         }
 
-        .timelineDotDot {
-            height: 10px;
-            width: 10px;
-            border-radius: 999px;
-            background-color: #8d1f24;
+        .itemClickInteButton.click {
+            background: #fafafa;
+            box-shadow: inset 22px 22px 45px #d5d5d5, inset -22px -22px 45px #ffffff;
         }
 
-        .timelineItemContent {
-            margin-left: 40px;
+        .itemClickInteTextClick {
+            font-weight: 800;
+            font-size: 15px;
         }
 
-        .timelineTitle {
+        .itemClickInteTextIndicator {
+            font-size: 12px;
+        }
+
+        .interactiveTitle {
             color: #8d1f24;
             font-weight: 800;
             font-size: 20px;
-            margin-top: -5px;
+            margin: 80px 0 20px 0;
         }
 
-        .timelineText {
-            margin-top: 40px;
-        }
-
-        .timelineImg {
+        .interactiveImg {
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 30px 0 0 0;
             max-width: 900px;
             width: 100%;
-            border-radius: 15px;
-            margin-top: 60px;
         }
 
-        .timelineDescriptionImg {
-            font-size: 12px;
+        .interactiveLegend {
             max-width: 900px;
+            width: 100%;
             text-align: center;
-            padding: 5px 15px;
+            font-size: 12px;
             font-style: italic;
+            margin: 15px 0 0 0;
         }
 
         /* TABLE */
