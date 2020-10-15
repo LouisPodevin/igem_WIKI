@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Project Design</title>
+    </head>
+    <body>
+        <script src="./scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+        <div class="tailwind"></div>
+        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'">
+            <div class="container">
+                <h1>Partnership - IGEM IONIS</h1>
+                <div class="descriptionContent">
+                    <div class="descriptionText">
+                        <div class="descriptionText1">Partnership</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore" target-id="partnership"></div>
+
+        <div id="partnership">
+            <div class="container">
+                <div class="illustrationPartnership triggerMiddle fromBottom" x-data="{}">
+                    <div class="illustrationCard shadow-sm">
+                        <img class="illustrationImg" :src="window.LINKS.partnershipIgem.url" />
+                        <img class="illustrationImg" :src="window.LINKS.partnershipIonis.url" />
+                        <div class="illustrationText">Team IONIS Paris</div>
+                    </div>
+                    <div class="illustrationMiddle">
+                        <div class="illustrationLine"></div>
+                        <div class="illustrationRound">
+                            <div class="illustrationRoundInside"></div>
+                        </div>
+                    </div>
+                    <div class="illustrationCard shadow-sm">
+                        <img class="illustrationImg" :src="window.LINKS.partnershipIISER.url" />
+                        <img class="illustrationImg" :src="window.LINKS.partnershipColiKaze.url" />
+                        <div class="illustrationText">Team IISER Tirupati</div>
+                    </div>
+                </div>
+
+                <div class="classic">
+                    <div class="lg:flex lg:gap-16 items-center">
+                        <div class="classicLeft">
+                            <div class="classicHeader">
+                                <i data-feather="info" class="classicLogo"></i>
+                                <div class="classicTitle">Introduction</div>
+                            </div>
+                            <div class="classicText">
+                                <p>
+                                    In May, during the lockdown, the Indian team IISER Tirupati communicated on the fact
+                                    they were working on antimicrobial resistance (AMR).<br />
+                                    We contacted them to first, set up a conference call, talk about both of our
+                                    projects to see if a partnership could be possible.
+                                </p>
+                                <p>
+                                    The idea was to help each other out throughout the competition on a scientific point
+                                    of view (as we were both working on projects linked to AMR), and in any other way
+                                    possible (communicating on our projects, fundraising, advice etc.).
+                                </p>
+                                <p>
+                                    The IISER Tirupati team’s project called Coli Kaze, tackles AMR in a different way
+                                    compared to BacTail. Their aim is to engineer bacteria to render them capable of
+                                    degrading the antibiotics (Sulfonamides) found in the excreta of chicken and turkey.
+                                    Once the mission accomplished, the goal is to program the death of the chassis whose
+                                    lysis would be induced by arabinose.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="classicRight">
+                            <img x-data="{}" :src="window.LINKS.partnership1.url" class="classicImg" />
+                            <div class="classicLegend">
+                                The first conference call between iGEM IISER Tirupati and iGEM IONIS in May 202
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="classic">
+                    <div class="lg:flex lg:gap-16 items-center">
+                        <div class="classicLeft">
+                            <div class="classicHeader">
+                                <i data-feather="link" class="classicLogo"></i>
+                                <div class="classicTitle">Establishing our partnership</div>
+                            </div>
+                            <div class="classicText">
+                                <p>
+                                    Since April, The IISER Tirupati team had doubts about getting into the lab until the
+                                    end of the iGEM competition due to the Covid-19 pandemic.<br />
+                                    Thanks to our calls and project presentations, we were aware that part of their
+                                    project was to develop a kill switch in order to kill their chassis at the end of
+                                    the antibiotic degradation.
+                                </p>
+                                <p>
+                                    Since our team was also interested in using a kill switch that would be activated
+                                    when our chassis had accomplished its mission of killing the target pathogen (cf.
+                                    phase 3), we started talking about a potential partnership on this point
+                                    especially.<br />
+                                    We agreed on the following partnership: the IISER Tirupati team would design the
+                                    theoretical part of the kill switch (cf. BioBricks) and in exchange our team would
+                                    do the wet lab experiments for them.<br />
+                                    In order to accomplish this partnership, we had dozens of zoom calls with their team
+                                    to exchange on our projects.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="classicRight">
+                            <img x-data="{}" :src="window.LINKS.partnership2.url" class="classicImg" />
+                            <div class="classicLegend">
+                                Conference call between Omkar (IISER Tirupati), Charlotte (IONIS Paris) and Elliot
+                                (IONIS Paris) in regard to the kill switch
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="longText">
+                    <p>
+                        Numerous calls with Team IISER Tirupati were first dedicated to planning and preparing the
+                        implementation of their experiments in our lab. These were especially done with Omkar.
+                    </p>
+                    <p>
+                        To start, both of our teams had to agree on the experiments that should and could be run,
+                        considering the available equipment. Next, our lab team proceeded to writing up the protocols
+                        and listing of every single item and consumable needed:
+                    </p>
+                    <div class="longTextList">
+                        <div class="longTextListItem">
+                            - For the construct, the IISER TIRUPATI Team ordered fragments thanks to the IDT sponsorship
+                            and requested the shipment to be to our laboratory instead of theirs
+                        </div>
+                        <div class="longTextListItem">
+                            - For the experimental kits, enzymes and bacteria, IISER Tirupati ordered them as well
+                            thanks to the NEB sponsorship. The products were sent to our lab,
+                        </div>
+                        <div class="longTextListItem">
+                            - For the consumables, equipment and some other products already in our possession, our team
+                            provided them for this partnership.
+                        </div>
+                    </div>
+                    <p>
+                        We then began to run the experiments beginning of September, with daily calls to keep Team IISER
+                        Tirupati advised on the current status of the experiments but also exchange on the results,
+                        possible problems, trouble-shoot and get advice from them. In addition to that, weekly follow-up
+                        documents were written by us and sent to them so they could keep summaries of the workflow and
+                        track the progress.
+                    </p>
+                </div>
+
+                <div class="meeting">
+                    <div class="meetingHeader">
+                        <i data-feather="video" class="meetingHeaderIcon"></i>
+                        <div class="meettingTitle">Key Meetings in our Partnership in regard to the wet lab</div>
+                    </div>
+                    <div class="meetingTimeline">
+                        <!-- FAUT FAIRE GAFFE C'EST INVERSE ICI -->
+                        <div class="meetingTimelineItem">
+                            <div class="meetingTimelineDate">September 8<sup>th</sup> 2020</div>
+                            <div class="meetingTimelineLine">
+                                <div class="meetingTimelineRound"></div>
+                                <div class="meetingTimelineRound2"></div>
+                                <div class="meetingTimelineLineLine"></div>
+                            </div>
+                            <div class="meetingTimelineContent">
+                                <div>
+                                    Last check-up of the products needed, those already in our possession, those
+                                    furnished by NEB and IDT for free and those left to buy.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meetingTimelineItem">
+                            <div class="meetingTimelineDate">September 2<sup>nd</sup> 2020</div>
+                            <div class="meetingTimelineLine normal">
+                                <div class="meetingTimelineRound"></div>
+                                <div class="meetingTimelineRound2"></div>
+                                <div class="meetingTimelineLineLine"></div>
+                            </div>
+                            <div class="meetingTimelineContent">
+                                <div>
+                                    Additional information about the workflow + First check-up of the products needed,
+                                    those already in our possession, those furnished by NEB and IDT for free and those
+                                    left to buy.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meetingTimelineItem">
+                            <div class="meetingTimelineDate">September 1<sup>st</sup> 2020</div>
+                            <div class="meetingTimelineLine">
+                                <div class="meetingTimelineRound"></div>
+                                <div class="meetingTimelineRound2"></div>
+                                <div class="meetingTimelineLineLine"></div>
+                            </div>
+                            <div class="meetingTimelineContent">
+                                <div>Third check-up of the workflow for the experiments of the project.</div>
+                            </div>
+                        </div>
+                        <div class="meetingTimelineItem">
+                            <div class="meetingTimelineDate">August 26<sup>th</sup> 2020</div>
+                            <div class="meetingTimelineLine normal">
+                                <div class="meetingTimelineRound"></div>
+                                <div class="meetingTimelineRound2"></div>
+                                <div class="meetingTimelineLineLine"></div>
+                            </div>
+                            <div class="meetingTimelineContent">
+                                <div>Second check-up of the workflow for the experiments of the project.</div>
+                            </div>
+                        </div>
+                        <div class="meetingTimelineItem">
+                            <div class="meetingTimelineDate">August 4<sup>th</sup> 2020</div>
+                            <div class="meetingTimelineLine">
+                                <div class="meetingTimelineRound"></div>
+                                <div class="meetingTimelineRound2"></div>
+                                <div class="meetingTimelineLineLine"></div>
+                            </div>
+                            <div class="meetingTimelineContent">
+                                <div>First check-up of the workflow for the experiments of the project.</div>
+                            </div>
+                        </div>
+                        <div class="meetingTimelineItem">
+                            <div class="meetingTimelineDate">July 16<sup>th</sup> 2020</div>
+                            <div class="meetingTimelineLine normal">
+                                <div class="meetingTimelineRound"></div>
+                                <div class="meetingTimelineRound2"></div>
+                                <div class="meetingTimelineLineLine"></div>
+                            </div>
+                            <div class="meetingTimelineContent">
+                                <div>
+                                    Call between the laboratory members of each iGEM team to discuss about the
+                                    feasibility of this partnership concerning the experiments.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="design">
+                    <div class="designHeader">
+                        <i data-feather="shuffle" class="designHeaderIcon"></i>
+                        <div class="designHeaderTitle">Help on designing the tank for Coli Kaze</div>
+                    </div>
+                    <div class="designText1">
+                        A part of our team helped IISER Tirupati team to design a tank for their project. They wanted to
+                        make a tank that can be used to grow the cells and use them as antibiotic degrading machinery.
+                        In order to do the 3D modelling, fusion 360 software was used as it is free, easy to use and is
+                        cloud-based.
+                    </div>
+
+                    <div class="designCards">
+                        <div class="designCard shadow-sm">
+                            <img x-data="{}" :src="window.LINKS.partnership3.url" />
+                            <div class="designCardText">
+                                The basic design of the tank had three components: two chambers and one dome. We
+                                modelled a 2D circle that we extruded to form a 3D cylinder. Then, we obtained a dome by
+                                designing a 2D semicircle and revolving it by 180°. This completed the top chamber.
+                                Another chamber was made in the same way below that except that it had two holes, one
+                                for inlet and one for the outlet.
+                            </div>
+                            <div class="designCardLine"></div>
+                        </div>
+                        <div class="designCard shadow-sm">
+                            <img x-data="{}" :src="window.LINKS.partnership4.url" />
+                            <div class="designCardText">
+                                A separation plate with two holes punched was added in between. Two small curved pipes
+                                of appropriate lengths were joined to the separation plate where the holes were punched
+                                to facilitate the movement of fluid from the top chamber to the bottom chamber. A rotor
+                                was added to both the chambers so that homogeneity is maintained throughout.
+                            </div>
+                            <div class="designCardLine"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conclusion shadow-sm">
+                    <div class="conclusionContainIcon">
+                        <i data-feather="heart" class="conclusionIcon"></i>
+                    </div>
+                    <div class="conclusionText">
+                        All in all, we keep an amazing memory of this partnership. The joy coming from succeeded
+                        experiments, following several fails, was two times more important because the satisfaction was
+                        shared between both our teams. We are so grateful that we worked on such a partnership as it
+                        allowed us to learn new things, exchange on our projects and meet incredible iGEMers. If
+                        COVID-19 had never existed, it would have been such a pleasure to meet the IISER Tirupati team
+                        in real life at the Giant Jamboree in Boston! Maybe one day we will be able to meet for real...
+                    </div>
+                </div>
+                <div class="wikiLink">
+                    <div class="wikiLinkText">We invite you to go check out team IISER Tirupati’s wiki!</div>
+                    <a
+                        class="wikiLinkLink shadow-sm"
+                        href="https://2020.igem.org/Team:IISER-Tirupati_India"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i data-feather="link" class="wikiLinkLinkIcon"></i>
+                        <div class="wikiLinkLinkText">https://2020.igem.org/Team:IISER-Tirupati_India</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        /* Description */
+
+        #description h1 {
+            display: none;
+        }
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: top -80px right -80px;
+            background-size: auto 100%;
+        }
+
+        .descriptionContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .descriptionText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes description2 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .descriptionText2 {
+            color: #8d1f24;
+            font-size: 50px;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            animation: description2 2s;
+        }
+
+        .descriptionText1 {
+            color: #8d1f24;
+            text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
+            font-size: 50px;
+            animation: description1 1s;
+        }
+
+        @keyframes descriptionLogo {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes description1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        #partnership {
+            margin: 120px 0 0px 0;
+        }
+
+        /* ILLUSTRATION PARTNERSHIP */
+
+        .illustrationPartnership {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .illustrationCard {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            max-width: 300px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .illustrationImg {
+            max-width: 150px;
+            margin-bottom: 40px;
+            flex-grow: 1;
+            object-fit: contain;
+        }
+
+        .illustrationText {
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .illustrationMiddle {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .illustrationLine {
+            width: 120px;
+            height: 10px;
+            background-color: rgb(45, 45, 45);
+        }
+
+        .illustrationRound {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background-color: rgb(45, 45, 45);
+            border-radius: 999px;
+        }
+
+        .illustrationRoundInside {
+            background-color: #fafafa;
+            border-radius: 999px;
+            height: 30px;
+            width: 30px;
+        }
+
+        /* INTRODUCTION */
+
+        .classic {
+            margin: 120px 0 0 0;
+        }
+
+        .classicHeader {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .classicLeft,
+        .classicRight {
+            flex-grow: 1;
+            flex-basis: 0;
+            flex-shrink: 0;
+            margin-bottom: 30px;
+        }
+
+        .classicLogo {
+            height: 50px;
+            width: 50px;
+            margin-right: 20px;
+            color: #8d1f24;
+        }
+
+        .classicTitle {
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .classicText {
+            font-size: 15px;
+            margin-left: 70px;
+        }
+
+        .classicRight {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .classicImg {
+            border-radius: 20px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .classicLegend {
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 15px;
+        }
+
+        .classicText > p {
+            margin-bottom: 10px;
+        }
+
+        .classicText > p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* LONGTEXT */
+
+        .longText {
+            margin: 120px 0 0 0;
+            padding-left: 70px;
+        }
+
+        .longText > p {
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .longText > p:last-child {
+            margin-bottom: 0px;
+        }
+
+        .longTextList {
+            margin-bottom: 20px;
+        }
+
+        .longTextListItem {
+            margin-bottom: 10px;
+            max-width: 800px;
+            margin-left: 20px;
+        }
+
+        .longTextListItem:last-child {
+            margin-bottom: 0;
+        }
+
+        /* MEETINGS */
+
+        .meeting {
+            margin: 120px 0 0 0;
+        }
+
+        .meetingHeader {
+            display: flex;
+            align-items: center;
+        }
+        .meetingHeaderIcon {
+            height: 50px;
+            width: 50px;
+            margin-right: 20px;
+            color: #8d1f24;
+        }
+
+        .meettingTitle {
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .meetingTimeline {
+            margin: 60px 0 0 0;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .meetingTimelineItem {
+            display: flex;
+            align-items: stretch;
+            margin-top: -35px;
+            position: relative;
+        }
+
+        .meetingTimelineItem:last-child {
+            margin-top: 0;
+        }
+
+        .meetingTimelineDate {
+            font-size: 17px;
+            font-weight: 800;
+            flex-shrink: 0;
+            width: 180px;
+            text-align: right;
+            padding-top: 8px;
+        }
+
+        .meetingTimelineLine {
+            margin: 0 40px;
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 40px;
+        }
+
+        .meetingTimelineContent {
+            max-width: 600px;
+            font-size: 15px;
+            flex-grow: 1;
+            padding: 0 0 20px 0;
+            min-height: 200px;
+        }
+
+        .meetingTimelineContent > div {
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .meetingTimelineRound {
+            width: 40px;
+            height: 40px;
+            border-radius: 99px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .meetingTimelineRound2 {
+            width: 30px;
+            height: 30px;
+            border-radius: 99px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .meetingTimelineLineLine {
+            height: 100%;
+            width: 5px;
+            border-radius: 999px;
+        }
+
+        .meetingTimelineLine > div {
+            background-color: #e73327;
+        }
+
+        .meetingTimelineLine.normal > div {
+            background-color: #8d1f24;
+        }
+
+        /* DESIGN */
+
+        .design {
+            margin: 120px 0 0 0;
+        }
+
+        .designHeader {
+            display: flex;
+            align-items: center;
+        }
+
+        .designHeaderIcon {
+            height: 50px;
+            width: 50px;
+            color: #8d1f24;
+            margin-right: 20px;
+        }
+
+        .designHeaderTitle {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .designText1 {
+            margin: 40px 0 0 70px;
+            max-width: 900px;
+        }
+
+        .designCards {
+            display: flex;
+            margin: 60px 0;
+            align-items: stretch;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .designCard {
+            background-color: white;
+            margin: 0 30px 30px 30px;
+            max-width: 380px;
+            min-width: 300px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .designCardText {
+            padding: 40px 30px;
+            max-width: 350px;
+            font-size: 15px;
+            flex-grow: 1;
+        }
+
+        .designCardLine {
+            height: 12px;
+            background-color: #8d1f24;
+            width: 100%;
+        }
+
+        /* CONCLUSION */
+
+        .conclusion {
+            margin: 120px 0 0 0;
+            display: flex;
+            align-items: stretch;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .conclusionContainIcon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 30px;
+            background-color: rgba(141, 31, 37, 0.1);
+            color: #8d1f24;
+        }
+
+        .conclusionIcon {
+            height: 40px;
+            width: 40px;
+        }
+
+        .conclusionText {
+            padding: 20px 40px;
+            font-size: 15px;
+        }
+
+        .wikiLink {
+            margin: 120px 0;
+        }
+
+        .wikiLinkLink {
+            display: inline-flex;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .wikiLinkLinkIcon {
+            margin-right: 20px;
+            color: #8d1f24;
+        }
+    </style>
+</html>

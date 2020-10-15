@@ -92,6 +92,12 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/8/87/T--Ionis_Paris--Logo_Ionis.png",
     },
 
+    logoBactails: {
+        ext: "png",
+        path: "/pictures/T--Ionis_Paris--Logo_Bactail",
+        prod: "https://2020.igem.org/wiki/images/3/39/T--Ionis_Paris--Logo_Bactail.png",
+    },
+
     // HOME
     logoAnimationHome: {
         ext: "json",
@@ -475,6 +481,49 @@ const links = {
         ext: "png",
         path: "/pictures/collaborations/collaboration26",
         prod: "https://2020.igem.org/wiki/images/9/92/T--Ionis_Paris--collaboration26.png",
+    },
+
+    // PARTNERSHIP
+
+    partnershipIgem: {
+        ext: "png",
+        path: "/pictures/T--Ionis_Paris--Logo_Ionis",
+        prod: "https://2020.igem.org/wiki/images/8/87/T--Ionis_Paris--Logo_Ionis.png",
+    },
+    partnershipIonis: {
+        ext: "png",
+        path: "/pictures/T--Ionis_Paris--Logo_Bactail",
+        prod: "https://2020.igem.org/wiki/images/3/39/T--Ionis_Paris--Logo_Bactail.png",
+    },
+    partnershipIISER: {
+        ext: "png",
+        path: "/pictures/partnership/iGem_IISER_TIRUPATI",
+        prod: "",
+    },
+    partnershipColiKaze: {
+        ext: "png",
+        path: "/pictures/partnership/ColiKazeLogo",
+        prod: "",
+    },
+    partnership1: {
+        ext: "png",
+        path: "/pictures/partnership/partnership_1",
+        prod: "",
+    },
+    partnership2: {
+        ext: "png",
+        path: "/pictures/partnership/partnership_2",
+        prod: "",
+    },
+    partnership3: {
+        ext: "png",
+        path: "/pictures/partnership/partnership_3",
+        prod: "",
+    },
+    partnership4: {
+        ext: "png",
+        path: "/pictures/partnership/partnership_4",
+        prod: "",
     },
 }
 
