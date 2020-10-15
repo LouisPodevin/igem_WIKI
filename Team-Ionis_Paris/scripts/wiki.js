@@ -498,32 +498,32 @@ const links = {
     partnershipIISER: {
         ext: "png",
         path: "/pictures/partnership/iGem_IISER_TIRUPATI",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/3/3b/T--Ionis_Paris--IISER_TIRUPATI.png",
     },
     partnershipColiKaze: {
         ext: "png",
         path: "/pictures/partnership/ColiKazeLogo",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/1/13/T--Ionis_Paris--ColiKaze.png",
     },
     partnership1: {
         ext: "png",
         path: "/pictures/partnership/partnership_1",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/9/9b/T--Ionis_Paris--partnership_1.png",
     },
     partnership2: {
         ext: "png",
         path: "/pictures/partnership/partnership_2",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/e/e7/T--Ionis_Paris--partnership_2.png",
     },
     partnership3: {
         ext: "png",
         path: "/pictures/partnership/partnership_3",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/7/7b/T--Ionis_Paris--partnership_3.png",
     },
     partnership4: {
         ext: "png",
         path: "/pictures/partnership/partnership_4",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--partnership_4.png",
     },
 }
 
