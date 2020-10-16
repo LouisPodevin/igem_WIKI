@@ -525,6 +525,98 @@ const links = {
         path: "/pictures/partnership/partnership_4",
         prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--partnership_4.png",
     },
+
+    // Attributions
+    attributionsSponsor1: {
+        ext: "png",
+        path: "/pictures/attributions/LOGO-SUPBIOTECH-2019-VERT",
+        prod: "https://2020.igem.org/wiki/images/1/11/T--Ionis_Paris--LOGO-SUPBIOTECH-2019-VERT.png",
+    },
+    attributionsSponsor2: {
+        ext: "jpg",
+        path: "/pictures/attributions/esme",
+        prod: "https://2020.igem.org/wiki/images/0/02/T--Ionis_Paris--esme.png",
+    },
+    attributionsSponsor3: {
+        ext: "png",
+        path: "/pictures/attributions/biorender-logo",
+        prod: "https://2020.igem.org/wiki/images/2/2c/T--Ionis_Paris--biorender-logo.png",
+    },
+    attributionsSponsor4: {
+        ext: "png",
+        path: "/pictures/attributions/Integrated-DNA-Technologies-logo-1100x319",
+        prod: "https://2020.igem.org/wiki/images/6/64/T--Ionis_Paris--Integrated-DNA-Technologies-logo-1100x319.png",
+    },
+    attributionsSponsor5: {
+        ext: "png",
+        path: "/pictures/attributions/labiotech_eu_square",
+        prod: "https://2020.igem.org/wiki/images/8/8c/T--Ionis_Paris--labiotech_eu_square.png",
+    },
+    attributionsSponsor6: {
+        ext: "png",
+        path: "/pictures/attributions/Logo_Benchling",
+        prod: "https://2020.igem.org/wiki/images/5/59/T--Ionis_Paris--Logo_Benchling.png",
+    },
+    attributionsSponsor7: {
+        ext: "png",
+        path: "/pictures/attributions/Logo_Geneious",
+        prod: "https://2020.igem.org/wiki/images/b/ba/T--Ionis_Paris--Logo_Geneious.png",
+    },
+    attributionsSponsor8: {
+        ext: "png",
+        path: "/pictures/attributions/Logo_Mathworks",
+        prod: "https://2020.igem.org/wiki/images/d/d0/T--Ionis_Paris--Logo_Mathworks.png",
+    },
+    attributionsSponsor9: {
+        ext: "jpg",
+        path: "/pictures/attributions/Logo_Phage_T4",
+        prod: "https://2020.igem.org/wiki/images/8/87/T--Ionis_Paris--Logo_Phage_T4.jpg",
+    },
+    attributionsSponsor10: {
+        ext: "png",
+        path: "/pictures/attributions/Logo_SnapGene",
+        prod: "https://2020.igem.org/wiki/images/8/88/T--Ionis_Paris--Logo_SnapGene.png",
+    },
+    attributionsSponsor11: {
+        ext: "png",
+        path: "/pictures/attributions/Logo-Gembloux-Agro-Bio-Tech-ULg",
+        prod: "https://2020.igem.org/wiki/images/b/b7/T--Ionis_Paris--Logo-Gembloux-Agro-Bio-Tech-ULg.png",
+    },
+    attributionsSponsor12: {
+        ext: "png",
+        path: "/pictures/attributions/Sarstedt",
+        prod: "https://2020.igem.org/wiki/images/2/21/T--Ionis_Paris--Sarstedt.png",
+    },
+    attributionsSponsor13: {
+        ext: "png",
+        path: "/pictures/attributions/Socorex",
+        prod: "https://2020.igem.org/wiki/images/8/8b/T--Ionis_Paris--Socorex.png",
+    },
+    attributionsSponsor14: {
+        ext: "svg",
+        path: "/pictures/attributions/Sponsor_twist",
+        prod: "https://2020.igem.org/wiki/images/5/52/T--Ionis_Paris--Sponsor_twist.svg",
+    },
+    attributionsSponsor15: {
+        ext: "png",
+        path: "/pictures/attributions/Tebu-bio",
+        prod: "https://2020.igem.org/wiki/images/2/20/T--Ionis_Paris--Tebu-bio.png",
+    },
+    attributionsSponsor16: {
+        ext: "png",
+        path: "/pictures/attributions/Thermo_Fisher_Scientific",
+        prod: "https://2020.igem.org/wiki/images/7/7d/T--Ionis_Paris--Thermo_Fisher_Scientific.png",
+    },
+    attributionsSponsor17: {
+        ext: "png",
+        path: "/pictures/attributions/walker_logo",
+        prod: "https://2020.igem.org/wiki/images/b/bd/T--Ionis_Paris--walker_logo.png",
+    },
+    attributionsSponsor18: {
+        ext: "png",
+        path: "/pictures/attributions/wsu-logo",
+        prod: "https://2020.igem.org/wiki/images/8/85/T--Ionis_Paris--wsu-logo.png",
+    },
 }
 
 for (let link in links) {
