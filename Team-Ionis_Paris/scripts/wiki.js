@@ -287,6 +287,16 @@ const links = {
         ext: "json",
         path: "/pictures/animate1/phase1Animate",
     },
+    phase1PromoterStrong: {
+        ext: "png",
+        path: "/pictures/phases/phase1/phase1PromoterStrong",
+        prod: "",
+    },
+    phase1Immunoflurescence: {
+        ext: "png",
+        path: "/pictures/phases/phase1/phase1Immunoflurescence",
+        prod: "",
+    },
 
     //Phase 2
     phase2DNA: {
@@ -307,6 +317,11 @@ const links = {
     phase2Animate: {
         ext: "json",
         path: "/pictures/animate2/phase2Animate",
+    },
+    phase2AgarDiffusion: {
+        ext: "png",
+        path: "/pictures/phases/phase2/AgarDiffusion",
+        prod: "",
     },
 
     // Phase 3

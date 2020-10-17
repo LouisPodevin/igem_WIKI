@@ -283,14 +283,19 @@
                                         </div>
                                         <div class="phase2GoalContainer">
                                             <div class="headphase2Goal">
-                                                <i data-feather="crosshair"></i>
-                                                <div class="titlephase2Goal">
-                                                    <p>
-                                                        Express the microcin PDI gene cluster in order to achieve
-                                                        secretion of microcin PDI by
-                                                        <i>E. coli</i> and show that its activity against the target
-                                                        cell is maintained.
-                                                    </p>
+                                                <div class="phase2GoalIcon">
+                                                    <i data-feather="crosshair"></i>
+                                                </div>
+                                                <div class="phase2GoalContent">
+                                                    <div class="titlePhase2Goal">Goal for phase 2</div>
+                                                    <div class="textPhase2Goal">
+                                                        <p>
+                                                            Express the microcin PDI gene cluster in order to achieve
+                                                            secretion of microcin PDI by
+                                                            <i>E. coli</i> and show that its activity against the target
+                                                            cell is maintained.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -378,6 +383,54 @@
                                                 alt="phase2DNA2"
                                                 class="phase2DNA2"
                                             />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemTimeline">
+                                    <div class="dotTimelineContainer">
+                                        <div class="dotTimeline"></div>
+                                    </div>
+                                    <div class="AchieveTextContainer">
+                                        <div class="headAchieve">
+                                            <div class="titleAchieve">How to validate our system?</div>
+                                        </div>
+                                        <div class="textAchieve">
+                                            In order to validate our system, we will perform an Agar Diffusion Assay.
+                                            This will confirm the proper secretion of McpM as well as its lytic activity
+                                            on the target. For this, a sensitive strain is plated (<i>E. coli</i> DH5α
+                                            or BL21) and disks are inoculated with different bacterial cultures. The
+                                            positive control is <i>E. coli</i> DH10B containing the native and
+                                            functional MccPDI gene cluster in a plasmid, kindly provided by Mr. Call. We
+                                            should see a zone of inhibition around the disk as the microcin is secreted
+                                            and kills the surrounding cells. This control will be compared to our
+                                            engineered bacteria: <i>E. coli</i> DH5α containing the reconstructed MccPDI
+                                            cluster. The negative control is plating the dish with <i>E. coli</i> ΔOmpF
+                                            which is known to resist against the Microcin’s action thanks to its
+                                            mutation.
+                                        </div>
+
+                                        <div class="AchieveBoard triggerMiddle fromRight noMarginBottom" x-data="{}">
+                                            <img
+                                                :src="window.LINKS.phase2AgarDiffusion.url"
+                                                alt="phase2Board"
+                                                class="phase2Board"
+                                            />
+                                        </div>
+                                        <div class="figureAnnotation">
+                                            Figure. 4: Agar Diffusion Assay to validate the proper secretion and
+                                            activity of Microcin PDI
+                                            <div class="figureAnnotationText">
+                                                On the left is the positive control, where the plated bacteria are
+                                                sensitive to Microcin PDI. On the right is the negative control, where
+                                                the bacteria have a mutation in OmpF and are not affected but Microcin
+                                                PDI. Figure created with BioRender.com.
+                                            </div>
+                                        </div>
+                                        <div class="textAchieve">
+                                            To go further in the possible validation methods, we could combine phase 1
+                                            and 2 dans see the different inhibition patterns according to the presence
+                                            or absence of the LTF which allows to localize the engineered bacteria in
+                                            proximity of its target.
                                         </div>
                                     </div>
                                 </div>
@@ -773,7 +826,7 @@
         #phase2Parts {
             margin-top: 5px;
         }
-        /* 
+        /*
         .Phase2TextContainer {
             max-width: 700px;
         } */
@@ -831,18 +884,45 @@
             border-radius: 999px;
         }
 
-        .headphase2Goal {
+        /* .headphase2Goal {
             gap: 20px;
             align-items: center;
             color: #8d1f24;
-        }
+        } */
 
         .phase2GoalContainer {
             max-width: 700px;
             margin-top: 50px;
         }
 
-        .titlephase2Goal {
+        .headphase2Goal {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .phase2GoalIcon {
+            height: 25px;
+            width: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: #8d1f24;
+        }
+
+        .titlePhase2Goal {
+            color: #8d1f24;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .textPhase2Goal {
+            margin-top: 10px;
+            color: #8d1f24;
+            font-size: 15px;
+        }
+
+        /* .titlephase2Goal {
             margin: 20px 20px 20px 0px;
             padding: 0 0 0 25px;
             font-size: 15px;
@@ -856,9 +936,9 @@
         }
 
         .textGoalContainer {
-            /* max-width: 700px; */
+            max-width: 700px;
             margin-top: 50px;
-        }
+        } */
 
         .titletextGoal {
             margin: 20px 20px 20px 0px;
@@ -1014,6 +1094,18 @@
             color: #8d1f24;
         }
 
+        .figureAnnotation {
+            margin: 20px 0 80px 0;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .figureAnnotationText {
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.6);
+            text-align: left;
+        }
+
         .AchieveBoard {
             background-color: white;
 
@@ -1030,7 +1122,8 @@
         }
 
         .AchieveBoard > img {
-            height: 250px;
+            max-height: 250px;
+            max-width: 100%;
         }
 
         .AchieveDNA {
@@ -1148,6 +1241,10 @@
 
         .phase2Animation > div > svg {
             max-height: 500px;
+        }
+
+        .noMarginBottom {
+            margin-bottom: 0;
         }
     </style>
 </html>
