@@ -60,16 +60,6 @@ const menu = [
         ],
     },
     {
-        title: "Safety",
-        childrens: [
-            { title: "Test1", link: "jjj" },
-            {
-                title: "sdmlqk",
-                link: "djqisdj",
-            },
-        ],
-    },
-    {
         title: "Phases",
         childrens: [
             {
@@ -102,6 +92,11 @@ const menu = [
             { title: "Test1", link: "jjj" },
             { title: "sdmlqk", link: "djqisdj" },
         ],
+    },
+    {
+        title: "Safety",
+        link: rootUrl + "/Safety",
+        match: `^${rootUrl}/Safety$`,
     },
     {
         title: "Judging form",

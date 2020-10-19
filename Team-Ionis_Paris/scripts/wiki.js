@@ -632,6 +632,23 @@ const links = {
         path: "/pictures/attributions/wsu-logo",
         prod: "https://2020.igem.org/wiki/images/8/85/T--Ionis_Paris--wsu-logo.png",
     },
+
+    // SAFETY
+    safetyHexa1: {
+        ext: "svg",
+        path: "/pictures/safety/Safety1",
+        prod: "https://2020.igem.org/wiki/images/a/a8/T--Ionis_Paris--Safety-1.svg",
+    },
+    safetyHexa2: {
+        ext: "svg",
+        path: "/pictures/safety/Safety2",
+        prod: "https://2020.igem.org/wiki/images/3/34/T--Ionis_Paris--Safety-2.svg",
+    },
+    safetyHexa3: {
+        ext: "svg",
+        path: "/pictures/safety/Safety3",
+        prod: "https://2020.igem.org/wiki/images/3/3f/T--Ionis_Paris--Safety-3.svg",
+    },
 }
 
 for (let link in links) {
