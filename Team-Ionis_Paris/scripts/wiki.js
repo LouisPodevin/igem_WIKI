@@ -129,12 +129,12 @@ const links = {
     step2Home: {
         ext: "svg",
         path: "/pictures/step2Home",
-        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step1Index.svg",
+        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step2Home.svg",
     },
     step3Home: {
         ext: "svg",
         path: "/pictures/step3Home",
-        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step1Index.svg",
+        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step3Index.svg",
     },
     // Sponsors
     benchlingSponsor: {
