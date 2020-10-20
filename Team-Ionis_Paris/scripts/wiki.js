@@ -649,6 +649,128 @@ const links = {
         path: "/pictures/safety/Safety3",
         prod: "https://2020.igem.org/wiki/images/3/3f/T--Ionis_Paris--Safety-3.svg",
     },
+
+    // HUMAN PRATICES
+    humanPratices1: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP1",
+        prod: "",
+    },
+    humanPratices2: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP2",
+        prod: "",
+    },
+    humanPratices3: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP3",
+        prod: "",
+    },
+    humanPratices4: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP4",
+        prod: "",
+    },
+    humanPratices5: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP5",
+        prod: "",
+    },
+    humanPratices6: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP6",
+        prod: "",
+    },
+    humanPratices7: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP7",
+        prod: "",
+    },
+    humanPratices8: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP8",
+        prod: "",
+    },
+    humanPratices9: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP9",
+        prod: "",
+    },
+    humanPratices10: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP10",
+        prod: "",
+    },
+    humanPratices11: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP11",
+        prod: "",
+    },
+    humanPratices12: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP12",
+        prod: "",
+    },
+    humanPratices13: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP13",
+        prod: "",
+    },
+    humanPratices14: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP14",
+        prod: "",
+    },
+    humanPratices15: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP15",
+        prod: "",
+    },
+    humanPratices16: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP16",
+        prod: "",
+    },
+    humanPratices17: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP17",
+        prod: "",
+    },
+    humanPratices18: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP18",
+        prod: "",
+    },
+    humanPratices19: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP19",
+        prod: "",
+    },
+    humanPratices20: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP20",
+        prod: "",
+    },
+    humanPratices21: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP21",
+        prod: "",
+    },
+    humanPratices22: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP22",
+        prod: "",
+    },
+    humanPratices23: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP23",
+        prod: "",
+    },
+    humanPratices24: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP24",
+        prod: "",
+    },
 }
 
 for (let link in links) {

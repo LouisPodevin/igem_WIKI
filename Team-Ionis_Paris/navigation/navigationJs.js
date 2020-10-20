@@ -89,8 +89,8 @@ const menu = [
     {
         title: "Human practices",
         childrens: [
-            { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
+            { title: "Human Practices", link: rootUrl + "/Human_Practices", match: `^${rootUrl}/Human_Practices$` },
+            { title: "Public Engagement", link: "djqisdj" },
         ],
     },
     {
