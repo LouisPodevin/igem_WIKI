@@ -383,9 +383,9 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/a/ad/T--Ionis_Paris--collaboration3.png",
     },
     collaboration4Logo: {
-        ext: "png",
+        ext: "jpg",
         path: "/pictures/collaborations/collaboration4",
-        prod: "https://2020.igem.org/wiki/images/9/9b/T--Ionis_Paris--collaboration4.png",
+        prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--collaboration4.jpg",
     },
     collaboration5Logo: {
         ext: "png",
