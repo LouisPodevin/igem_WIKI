@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xl-6">
                 <div class="Ionis">
-                    <div class="IonisTitle">Igem Ionis</div>
+                    <div class="IonisTitle">IONIS Paris Team</div>
                     <div class="IonisText">
                         We're a group of six different schools from the IONIS Education Group. For this competition we
                         wanted to take advantage of the multiple schools and fields of activity given by the IONIS
@@ -17,18 +17,20 @@
             </div>
             <div class="col-xl-6">
                 <div class="Sponsors">
-                    <div class="SponsorsTitle">Sponsors</div>
-                    <div class="SponsorsList" x-data="{}">
-                        <!-- Real path picture are loaded from tools.js -->
+                    <div
+                        class="SponsorsList"
+                        x-data="{items: new Array(18).fill(1).map((_, i) => i + 1).filter(i => [1, 2].indexOf(i) === -1)}"
+                    >
+                        <template x-for="elm in items" :key="elm">
+                            <div :class="'__sponsorImgContent ' + ([17].indexOf(elm) !== -1 ? 'colored' : '')">
+                                <img class="__sponsorImg" :src="window.LINKS['attributionsSponsor' + elm].url" />
+                            </div>
+                        </template>
+                    </div>
+                    <!-- Real path picture are loaded from tools.js -->
+                    <div class="schools" x-data="{}">
                         <img class="__sponsorImg big" :src="window.LINKS.supbiotechSponsor.url" />
                         <img class="__sponsorImg big" :src="window.LINKS.esmeSudriaSponsor.url" />
-                        <img class="__sponsorImg big" :src="window.LINKS.geneiousSponsor.url" />
-                        <img class="__sponsorImg" :src="window.LINKS.idtSponsor.url" />
-                        <img class="__sponsorImg" :src="window.LINKS.mathworksSponsor.url" />
-                        <img class="__sponsorImg" :src="window.LINKS.snapgeneSponsor.url" />
-                        <img class="__sponsorImg" :src="window.LINKS.benchlingSponsor.url" />
-                        <img class="__sponsorImg" :src="window.LINKS.phagesSponsor.url" />
-                        <img class="__sponsorImg" :src="window.LINKS.labiotechSponsor.url" />
                     </div>
                 </div>
             </div>

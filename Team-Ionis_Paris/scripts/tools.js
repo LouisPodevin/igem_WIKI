@@ -124,33 +124,39 @@ export const loadFooter = async () => {
 export const triggerSeeMore = async () => {
     const seeMoreElms = document.getElementsByClassName("seeMore")
 
-    for (let seeMoreElm of seeMoreElms) {
+    const handleScroller = (divElm, targetElm) => {
+        divElm.addEventListener("click", async e => {
+            e.preventDefault()
+
+            while (!window.$) {
+                await new Promise(res => setTimeout(res, 200))
+            }
+
+            $("html, body").animate({
+                scrollTop: targetElm.getBoundingClientRect().top + window.pageYOffset - 30,
+            })
+        })
+    }
+
+    for (const seeMoreElm of seeMoreElms) {
         seeMoreElm.innerHTML = `<button class="container seeMoreContainer">
                                     <div class="seeMoreLogoContainer">
                                         <i class="seeMoreLogo" data-feather="chevron-down"></i>
                                     </div>
                                     <div class="seeMoreText">Click here to see more</div>
                                 </button>`
-        const targetId = seeMoreElm.getAttribute("target-id")
+    }
+
+    const handleScrollDivs = document.querySelectorAll("[target-id]")
+
+    for (const handleScrollDiv of handleScrollDivs) {
+        const targetId = handleScrollDiv.getAttribute("target-id")
 
         if (targetId) {
             const targetElm = document.getElementById(targetId)
-
-            if (!targetElm) {
-                return
+            if (targetId) {
+                handleScroller(handleScrollDiv, targetElm)
             }
-
-            seeMoreElm.addEventListener("click", async e => {
-                e.preventDefault()
-
-                while (!window.$) {
-                    await new Promise(res => setTimeout(res, 200))
-                }
-
-                $("html, body").animate({
-                    scrollTop: targetElm.getBoundingClientRect().top + window.pageYOffset - 30,
-                })
-            })
         }
     }
 }

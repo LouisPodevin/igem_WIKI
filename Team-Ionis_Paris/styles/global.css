@@ -184,3 +184,7 @@ p {
 .rounded-full {
     border-radius: 999px;
 }
+
+img {
+    border-style: none !important;
+}

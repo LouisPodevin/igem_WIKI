@@ -32,6 +32,11 @@ const menu = [
                 link: rootUrl + "/Collaborations",
                 match: `^${rootUrl}/Collaborations$`,
             },
+            {
+                title: "Partnership",
+                link: rootUrl + "/Partnership",
+                match: `^${rootUrl}/Partnership$`,
+            },
         ],
     },
     {
@@ -47,15 +52,10 @@ const menu = [
                 link: rootUrl + "/Design",
                 match: `^${rootUrl}/Design$`,
             },
-        ],
-    },
-    {
-        title: "Safety",
-        childrens: [
-            { title: "Test1", link: "jjj" },
             {
-                title: "sdmlqk",
-                link: "djqisdj",
+                title: "Attributions",
+                link: rootUrl + "/Attributions",
+                match: `^${rootUrl}/Attributions$`,
             },
         ],
     },
@@ -92,6 +92,11 @@ const menu = [
             { title: "Test1", link: "jjj" },
             { title: "sdmlqk", link: "djqisdj" },
         ],
+    },
+    {
+        title: "Safety",
+        link: rootUrl + "/Safety",
+        match: `^${rootUrl}/Safety$`,
     },
     {
         title: "Judging form",

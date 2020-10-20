@@ -33,7 +33,12 @@
 }
 
 #footer .SponsorsList {
-    margin: 30px 0 0 0;
+    margin: 0 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #footer .SponsorsTitle {
@@ -43,19 +48,37 @@
     font-size: 18px;
 }
 
-#footer .SponsorsList {
+#footer .SponsorsList .__sponsorImgContent {
+    padding: 10px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: center;
+    border-radius: 5px;
 }
 
-#footer .SponsorsList img {
-    height: 50px;
+#footer .SponsorsList .__sponsorImgContent.colored {
+    background-color: #8d1f24;
+}
+
+#footer .SponsorsList .__sponsorImg {
+    max-height: 50px;
+    max-width: 180px;
     padding: 10px;
 }
 
 #footer .SponsorsList img.big {
     height: 80px;
+}
+
+#footer .schools {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+#footer .schools .__sponsorImg {
+    max-height: 100px;
+    max-width: 150px;
 }
