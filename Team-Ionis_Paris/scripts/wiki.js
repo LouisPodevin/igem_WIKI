@@ -655,7 +655,7 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/3/3f/T--Ionis_Paris--Safety-3.svg",
     },
 
-    // HUMAN PRATICES
+    // HUMAN PRACTICES
     humanPratices1: {
         ext: "svg",
         path: "/pictures/humanPratices/HP1",
