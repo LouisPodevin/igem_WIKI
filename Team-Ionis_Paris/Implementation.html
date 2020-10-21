@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Human Practices</title>
+    </head>
+    <body>
+        <script src="./scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'">
+            <div class="container">
+                <h1>Proposed implementation - IGEM IONIS</h1>
+                <div class="descriptionContent">
+                    <div class="descriptionText">
+                        <div class="descriptionText1">Proposed</div>
+                        <div class="descriptionText2">Implementation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore" target-id="implementation"></div>
+        <div id="implementation" class="part">
+            <div class="container">
+                <div class="textContent">
+                    <p>
+                        Antimicrobial resistance is an urgent healthcare issue. There is an anthropological need
+                        embedded in the use of genetically engineered machines.
+                    </p>
+                    <p>
+                        The difficulty in assessing the impacts of Genetically Modified Organisms (GMO) considers the
+                        context in which they are used and the possible alternatives to provide the same solutions by
+                        other means.
+                    </p>
+                </div>
+            </div>
+            <div class="emphaseContent mt-8">
+                <div class="container">
+                    <div class="textContent font-bold">
+                        <p>Our aim is to help face a major healthcare problem: antibiotic resistance. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="questionPart mt-16">
+                <div class="container">
+                    <h2>How are GMOs being used in the pharmaceutical industry?</h2>
+                    <div class="textContent mt-6">
+                        <p>
+                            Currently, GMOs are used as producer organisms for therapeutic molecules of interest. In
+                            France, the commercialization of GMOs directly in food for human consumption has not been
+                            authorized.
+                        </p>
+                    </div>
+                    <img x-data="{}" :src="window.LINKS.implementation1.url" class="imageContent mt-8" />
+                    <div class="textContent mt-6">
+                        <p>GMOs used as such as drugs are not authorized. However, some examples in research exist.</p>
+                    </div>
+                    <div class="gmoList mt-8">
+                        <div class="gmoItem">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    <b>Modified lactic acid bacteria</b> have been administered to rats and successfully
+                                    shown major health benefits as they deliver active molecules to the gastrointestinal
+                                    tract<sup>1</sup>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    In April 2019, ZBiotics, a San Francisco-based start-up launched the world’s first
+                                    GMO probiotic. They modified a strain of Bacillus subtilis to make it
+                                    <b>produce acetaldehyde dehydrogenase</b> in order to break down acetate.
+                                    Interestingly, it is regulated as a food and not a drug.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mt-16">How are GMOs regulated?</h2>
+                    <div class="textContent mt-6">
+                        <p>
+                            As our project is in synthetic biology, it is
+                            <b>directly inspired from living organisms.</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="emphaseContent font-bold mt-8">
+                    <div class="container">
+                        <div class="textContent font-bold">
+                            <p>GMOs: strict, specific, country-based regulations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="textContent mt-8">
+                        <p>
+                            GMOs are only allowed to be manipulated under restricted conditions and are under the
+                            responsibility of the researcher. The latter must ensure that no GMO escapes the strictly
+                            regulated domain of application and use. Something that will be controlled if the project is
+                            only happening in the laboratory.
+                        </p>
+                    </div>
+                    <div class="flex items-center mt-8">
+                        <div class="flex-shrink-0">
+                            <i data-feather="globe" style="height: 40px; width: 40px"></i>
+                        </div>
+                        <div class="flex-grow ml-6">
+                            <div class="textContent">
+                                <p>
+                                    In Europe, the main legal frame regarding GMOs is given by the
+                                    <b>European Union</b> (EU). According to the <b>Directive 2001/18/EC</b> and
+                                    <b>Regulation 1829/2003</b>, it is
+                                    <b>prohibited to use or manufacture a GMO without prior specific authorization.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textContent mt-6">
+                        <p>Applications for authorization of GMOs fall into three main categories<sup>2</sup>:</p>
+                    </div>
+                    <div class="categoryList flex flex-col gap-4 mt-8">
+                        <div class="categoryItem flex items-center">
+                            <div class="categoryOne flex-shrink-0">Contained use</div>
+                            <i data-feather="arrow-right" class="categoryTwo flex-shrink-0 ml-6"></i>
+                            <div class="categoryThree flex-grow ml-6">
+                                <p class="mb-0">
+                                    allows GMOs to be used for industrial production or research purposes
+                                </p>
+                            </div>
+                        </div>
+                        <div class="categoryItem flex items-center">
+                            <div class="categoryOne flex-shrink-0">Use in deliberate release</div>
+                            <i data-feather="arrow-right" class="categoryTwo flex-shrink-0 ml-6"></i>
+                            <div class="categoryThree flex-grow ml-6">
+                                <p class="mb-0">
+                                    in the framework of a marketing authorization (feed or food products, GMO seeds and
+                                    plants, veterinary medicinal products, gene therapy products, or non-food products
+                                    such as flowers)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="categoryItem flex items-center">
+                            <div class="categoryOne flex-shrink-0">Deliberate release</div>
+                            <i data-feather="arrow-right" class="categoryTwo flex-shrink-0 ml-6"></i>
+                            <div class="categoryThree flex-grow ml-6">
+                                <p class="mb-0">
+                                    without placing the product on the market, in the context of experiments such as
+                                    field trials or biomedical or veterinary research
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-16 flex items-center">
+                        <div class="france flex-shrink-0 flex items-stretch">
+                            <div class="france1"></div>
+                            <div class="france2"></div>
+                            <div class="france3"></div>
+                        </div>
+                        <div class="ml-6">
+                            <div class="textContent">
+                                <p class="mb-0">
+                                    In <b>France</b>, authorizations for the use of GMOs need to be issued by specific
+                                    authorities depending on the application domain (Agriculture, Consumption, Health,
+                                    Research). However, the
+                                    <b>Ministry of Ecological and Solidarity Transition</b> (MTES) is always consulted.
+                                    Additionally, no matter thef application, an assessment of the potential risks to
+                                    human health and the environment is carried out by the
+                                    <b>High Council for Biotechnology.</b> This council issues an opinion and/or a
+                                    recommendation, depending on the application<sup>3</sup>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mt-16">Safety aspects to consider</h2>
+                    <div class="textContent">
+                        <p>Risks to consider in regards to our therapeutic probiotic<sup>6</sup>:</p>
+                    </div>
+                    <div class="flex flex-col riskList mt-6">
+                        <div class="riskItem flex items-center">
+                            <div class="riskItem1" style="background-color: rgb(173, 11, 43)">1</div>
+                            <div class="riskItem2">Must not impact the commensal flora.</div>
+                        </div>
+                        <div class="riskItem flex items-center">
+                            <div class="riskItem1" style="background-color: rgb(173, 87, 11)">2</div>
+                            <div class="riskItem2">
+                                Make sure that not toxic for human cells (intestinal epithelial cell model).
+                            </div>
+                        </div>
+                        <div class="riskItem flex items-center">
+                            <div class="riskItem1" style="background-color: rgb(249, 202, 59)">3</div>
+                            <div class="riskItem2">
+                                Modification of the intestinal flora: unexpected interactions with bacteria, favor other
+                                pathogenic bacteria.
+                            </div>
+                        </div>
+                        <div class="riskItem flex items-center">
+                            <div class="riskItem1" style="background-color: rgb(14, 185, 122)">4</div>
+                            <div class="riskItem2">Alteration of metabolic functions in the intestinal flora.</div>
+                        </div>
+                        <div class="riskItem flex items-center">
+                            <div class="riskItem1" style="background-color: rgb(14, 162, 185)">5</div>
+                            <div class="riskItem2">
+                                The survival in the environment and the consequences for public health: the modified
+                                bacteria could impact the microbiological environmental equilibrium as well as public
+                                health if the soil or animals are contaminated.
+                            </div>
+                        </div>
+                        <div class="riskItem flex items-center">
+                            <div class="riskItem1" style="background-color: rgb(62, 14, 185)">6</div>
+                            <div class="riskItem2">Potential allergies.</div>
+                        </div>
+                    </div>
+                    <div class="textContent mt-16">
+                        <p>How to limit these risks:</p>
+                    </div>
+                    <div class="gmoList mt-8">
+                        <div class="gmoItem">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    Bacterium should not contain an antibiotic resistance selection marker.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    Genes should be inserted in the genomic chromosome and not contained on a plasmid.
+                                    The location of the genes should be precisely known.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Correct analysis of benefit to risk ratio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="emphaseContent mt-16">
+                    <div class="container">
+                        <div class="textContent">
+                            The design of BacTail was carefully thought through for the outside world.
+                            <b>The kill switch is one of the most important parameters in our system</b> as the modified
+                            bacteria must be precisely controlled to avoid their dissemination in the environment (<a
+                                x-data="{}"
+                                :href="window.ROOT_URL + '/Phases/phase3'"
+                                >cf. phase 3</a
+                            >).
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2 class="mt-16">To whom is our product dedicated?</h2>
+                    <div class="textContent mt-8">
+                        <p> Antibiotic resistance affects society.</p>
+                    </div>
+                    <div class="gmoList mt-6">
+                        <div class="gmoItem">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">People suffering with these untreatable bacterial infections</p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    Healthcare professionals who are powerless and try to cure their patients
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Researchers trying to find urgent innovative solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="emphaseContent mt-8">
+                    <div class="container">
+                        <div class="textContent">
+                            Our product would not be sold in pharmacies but be directly prescribed by doctors in a
+                            hospital setting
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="textContent mt-8">
+                        <p>
+                            After talking with Dr. Blanc-Gruyelle for our Human Practices, we concluded that since our
+                            product is tailor-made and would be used in emergency situations, it could not be produced
+                            at an industrial scale at first.
+                        </p>
+                    </div>
+
+                    <img x-data="{}" :src="window.LINKS.implementation2.url" class="mt-6 implementationPathway" />
+                    <div class="figureAnnotation mt-2">Figure 1: BacTail and The Patient Pathway</div>
+                    <div class="textContent mt-6">
+                        <p>
+                            After meeting with veterinarians and animal breeders, we also concluded that our product
+                            <b>could be administered to animals who are affected by antibiotic resistant infections.</b>
+                            In this case, our therapeutic bacteria would be prescribed by veterinarians.
+                        </p>
+                    </div>
+
+                    <h2 class="mt-16">How would we administer our engineered bacteria to their site of action?</h2>
+
+                    <div class="textContent mt-8">
+                        <p>
+                            The final goal of our project is to treat bacterial infections caused by antibiotic
+                            resistant bacteria.
+                        </p>
+                        <p>
+                            We believe it was important to <b>look at the perspectives of the proof of concept</b> (POC)
+                            we were conducting in the lab. That is why, when studying different <b>galenic forms</b>, we
+                            opted for a
+                            <b>probiotic as an ideal way to reach the lower parts of the gastrointestinal tract</b>,
+                            which would usually require sophisticated galenic forms.
+                        </p>
+                        <p>
+                            However, for a product to be qualified as a probiotic, it must conform to several
+                            conditions:
+                        </p>
+                    </div>
+                    <img x-data="{}" :src="window.LINKS.implementation3.url" class="mt-6 implementationPathway" />
+                    <div class="textContent mt-6">
+                        <p>
+                            Phase 4 of our project contains all the information regarding the mode of administration for
+                            our engineered bacteria (<a x-data="{}" :href="window.ROOT_URL + '/Phases/phase4'"
+                                >cf. phase 4</a
+                            >).
+                        </p>
+                    </div>
+                    <h2 class="mt-16">BacTail: Proof of Concept and next steps</h2>
+                    <div class="textContent font-bold mt-6">
+                        <p>
+                            POC: conducted on class 1 organisms at first, for safety reasons, with E. coli as our model
+                            organism
+                        </p>
+                    </div>
+                    <div class="gmoList mt-6">
+                        <div class="gmoItem">
+                            <div class="dotContent font-bold">1</div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    Target and bind <i>E. coli</i> K12 using the LTF of the T4 bacteriophage 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent font-bold">2</div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Kill <i>E. coli</i> K12 by secreting antimicrobial peptides</p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent font-bold">3</div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Induce the death of our chassis once its mission accomplished</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="emphaseContent mt-6">
+                    <div class="container">The POC is dedicated to showing that the principle of our system works.</div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <i data-feather="arrow-down" style="height: 50px; width: 50px"></i>
+                </div>
+                <div class="container">
+                    <div class="textContent mt-6">
+                        <p>
+                            Further <b>system optimization to increase the precision</b> of the therapeutic bacteria’s
+                            action.<br />
+                            <b>Fully characterize each step</b> of the POC in the lab (minimal concentration of
+                            engineered bacteria needed etc.)
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <i data-feather="arrow-down" style="height: 50px; width: 50px"></i>
+                </div>
+                <div class="emphaseContent mt-6">
+                    <div class="container">Next POC using pathogenic bacteria as our target.</div>
+                </div>
+                <div class="container">
+                    <div class="textContent mt-8">
+                        <p>
+                            We have already found in literature that the
+                            <b
+                                >PP01 bacteriophage is specific to the shiga-toxin producing strain
+                                <i>E. coli</i> O157:H7.</b
+                            ><br />
+                            <!-- TODO: Add link -->
+                            That the distal part of the LTF (gp38) is sufficient to specifically bind the pathogenic
+                            bacterium and no other ones<sup>4</sup> (<a href="#">cf. phase 1 perspectives</a>).
+                        </p>
+                        <p>
+                            The idea would be to
+                            <b>express the gp38 of the PP01 phage at the surface of our chassis</b> to target the shiga
+                            toxin producing strain and kill it by secreting the antimicrobial peptides we have used in
+                            our project (MccPDI).
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <i data-feather="arrow-down" style="height: 50px; width: 50px"></i>
+                </div>
+                <div class="container">
+                    <div class="textContent mt-6">
+                         Test the toxicity in vitro on human cell lines, using <b>intestinal epithelial cell models.</b>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <i data-feather="arrow-down" style="height: 50px; width: 50px"></i>
+                </div>
+                <div class="emphaseContent mt-6">
+                    <div class="container"> In vivo testing on animals (mice, rats)</div>
+                </div>
+                <div class="container">
+                    <div class="textContent mt-6">
+                        Inspired from an article published by Geldart et al. 2018<sup>5</sup>
+                    </div>
+                    <div class="gmoList mt-6">
+                        <div class="gmoItem">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Probiotic must not impact the commensal flora.</p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Check for side-effects.</p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Test the action of our probiotic in the gastrointestinal tract.</p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Evaluate pharmacokinetics.</p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">Test the kill switch reliability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img x-data="{}" :src="window.LINKS.implementation4.url" class="implementationPathway mt-8" />
+                    <div class="figureAnnotation mt-6">
+                        Figure 2: In vivo testing process on mice<br />
+                        Created with BioRender.com
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <i data-feather="arrow-down" style="height: 50px; width: 50px"></i>
+                </div>
+                <div class="emphaseContent mt-6">
+                    <div class="container">
+                        Our system would be commercialized as a drug so we would have to follow the traditional standard
+                        clinical evaluation phases (patent the system prior to the trails)
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="categoryList flex flex-col gap-4 mt-8">
+                        <div class="categoryItem flex items-center">
+                            <div class="categoryOneBis flex-shrink-0">Phase 1</div>
+                            <i data-feather="arrow-right" class="categoryTwo flex-shrink-0 ml-6"></i>
+                            <div class="categoryThree flex-grow ml-6">
+                                <p class="mb-0">
+                                    "Is it safe? Is it tolerable?"<br />
+                                    escalating dose response studies on 10-20 healthy volunteers
+                                </p>
+                            </div>
+                        </div>
+                        <div class="categoryItem flex items-center">
+                            <div class="categoryOneBis flex-shrink-0">Phase 2</div>
+                            <i data-feather="arrow-right" class="categoryTwo flex-shrink-0 ml-6"></i>
+                            <div class="categoryThree flex-grow ml-6">
+                                <p class="mb-0">
+                                    "Does it work?"<br />
+                                    evaluation of drug effectiveness in 100+ patients with the bacterial infection
+                                </p>
+                            </div>
+                        </div>
+                        <div class="categoryItem flex items-center">
+                            <div class="categoryOneBis flex-shrink-0">Phase 3</div>
+                            <i data-feather="arrow-right" class="categoryTwo flex-shrink-0 ml-6"></i>
+                            <div class="categoryThree flex-grow ml-6">
+                                <p class="mb-0">
+                                    "How well does it work? Common side effects?"<br />
+                                    evaluation on 1000+ patients
+                                </p>
+                            </div>
+                        </div>
+                        <div class="categoryItem flex items-center">
+                            <div class="categoryOneBis flex-shrink-0">Phase 4</div>
+                            <i data-feather="arrow-right" class="categoryTwo flex-shrink-0 ml-6"></i>
+                            <div class="categoryThree flex-grow ml-6">
+                                <p class="mb-0">
+                                    Application request for market approval, surveillance for drug adverse effects over
+                                    the years.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <i data-feather="arrow-down" style="height: 50px; width: 50px"></i>
+                </div>
+
+                <div class="emphaseContent mt-6">
+                    <div class="container">
+                        However, as mentioned by Dr. Chardon during our Human Practices discussions,
+                        <b
+                            >we could apply for an emergency use authorization if our preliminary results are
+                            promising.</b
+                        >
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="textContent mt-6">
+                        <p>
+                            Since our project offers a last resort solution to untreatable bacterial infections which
+                            are urgent healthcare issues, it could definitely opt for these types of
+                            authorizations<sup>6</sup>.
+                        </p>
+                    </div>
+                    <div class="gmoList mt-6">
+                        <div class="gmoItem">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    <b>Fast Track</b>: "facilitate the development, and expedite the review of drugs to
+                                    treat serious conditions and fill an unmet medical need"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gmoItem mt-6">
+                            <div class="dotContent"><div class="dotElm"></div></div>
+                            <div class="gmoContent">
+                                <p class="mb-0">
+                                    <b>Breakthrough Therapy</b>: "expedite the development and review of drugs which may
+                                    demonstrate substantial improvement over available therapy"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textContent mt-6">
+                        <p>
+                            Since BacTail is tailor made, meaning the bacterium is modified according to the target
+                            pathogen, we would have to <b>approve each of the different engineered bacteria.</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="emphaseContent mt-6">
+                    <div class="container">
+                        <div class="textContent">
+                            <!-- TODO: Fix link -->
+                            Furthermore, <b>updates on our software tool</b> (<a href="#">cf. software</a>) would have
+                            to be done along the years as more and more bacteriophages are being discovered and their
+                            specificity properties are being characterized.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="references">
+            <div class="container">
+                <hr />
+                <div class="referencesContent">
+                    <div class="textContent">
+                        <p>
+                            [1] Daniel, C. (2016, July). ONE STEP AHEAD: GENETICALLY MODIFIED PROBIOTICS. In Journal of
+                            Pediatric Gastroenterology and Nutrition (Vol. 63, No. 1S, p. S42). LWW.
+                        </p>
+                        <p>
+                            [2] Ministère de la Transition écologique. (2019, March). Les organismes génétiquement
+                            modifiés (OGM).
+                            <a
+                                href="https://www.ecologie.gouv.fr/organismes-genetiquement-modifies-ogm-0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >https://www.ecologie.gouv.fr/organismes-genetiquement-modifies-ogm-0</a
+                            >
+                            Accessed on 18/11/2020.
+                        </p>
+                        <p>
+                            [3]
+                            <a
+                                href="http://www.hautconseildesbiotechnologies.fr/fr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >http://www.hautconseildesbiotechnologies.fr/fr</a
+                            >
+                        </p>
+                        <p>
+                            [4] Yoichi, M., Abe, M., Miyanaga, K., Unno, H., & Tanji, Y. (2005). Alteration of tail
+                            fiber protein gp38 enables T2 phage to infect Escherichia coli O157:H7. Journal of
+                            Biotechnology, 115(1), 101–107.
+                            <a
+                                href="https://doi.org/10.1016/j.jbiotec.2004.08.003"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >https://doi.org/10.1016/j.jbiotec.2004.08.003</a
+                            >
+                        </p>
+                        <p>
+                            [5] Geldart, K. G., Kommineni, S., Forbes, M., Hayward, M., Dunny, G. M., Salzman, N. H., &
+                            Kaznessis, Y. N. (2018). Engineered E. coli Nissle 1917 for the reduction of
+                            vancomycin‐resistant Enterococcus in the intestinal tract. Bioengineering & translational
+                            medicine, 3(3), 197-208.
+                        </p>
+                        <p>
+                            [6] US Food & Drug Administration. (2018). Fast Track, Breakthrough Therapy, Accelerated
+                            Approval, Priority Review.
+                        </p>
+                        <p>
+                            [7] Aumaitre, L. A., Besançon, P., Branchard, M., Branlard, G., Corthier, G., Guillemain,
+                            J., ... & Paris, A. (2004). OGM et alimentation: peut-on identifier et évaluer des bénéfices
+                            pour la santé. Editions de AFSSA, France.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        /* Description */
+
+        #description h1 {
+            display: none;
+        }
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: top -80px right -80px;
+            background-size: auto 100%;
+        }
+
+        .descriptionContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .descriptionText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes description2 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .descriptionText2 {
+            color: #8d1f24;
+            font-size: 50px;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            animation: description2 2s;
+        }
+
+        .descriptionText1 {
+            color: #e73327;
+            text-shadow: 0px 10px 20px rgba(231, 52, 39, 0.2);
+            font-size: 50px;
+            animation: description1 1s;
+        }
+
+        @keyframes descriptionLogo {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes description1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        /* CONTENT */
+
+        .part {
+            margin: 120px 0 40px 0;
+        }
+
+        .textContent {
+            max-width: 900px;
+            font-size: 15px;
+        }
+
+        .textContent p {
+            margin-bottom: 24px;
+            font-size: 17px;
+        }
+
+        .textContent p:last-child {
+            margin-bottom: 0;
+        }
+
+        .emphaseContent {
+            background-color: rgba(141, 31, 37, 0.1);
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #8d1f24;
+            font-weight: 800;
+        }
+
+        .imageContent {
+            max-width: 900px;
+        }
+
+        .gmoList {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            align-items: stretch;
+        }
+
+        .gmoItem {
+            border-radius: 10px;
+            display: flex;
+            align-items: stretch;
+            background-color: rgba(0, 0, 0, 0.01);
+        }
+
+        .dotContent {
+            display: flex;
+            padding: 20px 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dotElm {
+            height: 8px;
+            width: 8px;
+            background-color: black;
+            border-radius: 99px;
+        }
+
+        .gmoItem:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .gmoContent {
+            padding: 20px 10px;
+        }
+
+        .categoryItem {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 10px;
+            max-width: 900px;
+        }
+
+        .categoryItem:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .categoryOne {
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            width: 240px;
+            text-align: center;
+        }
+
+        /* FRANCE */
+
+        .france1,
+        .france2,
+        .france3 {
+            width: 30px;
+            height: 60px;
+        }
+
+        .france1 {
+            background-color: #dcdcdc;
+        }
+
+        .france2 {
+            background-color: #e8e8e8;
+        }
+
+        .france3 {
+            background-color: #dcdcdc;
+        }
+
+        .textContent a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        /* RISKS */
+
+        .riskList {
+            align-items: flex-start;
+        }
+
+        .riskItem {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .riskItem1 {
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        /* IMPLEMENTATION PATHWAY */
+        .implementationPathway {
+            max-width: 900px;
+            border-radius: 10px;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .figureAnnotation {
+            max-width: 900px;
+            text-align: center;
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        .categoryOneBis {
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            width: 110px;
+            text-align: center;
+        }
+
+        .referencesContent {
+            padding: 20px 0;
+        }
+
+        .referencesContent .textContent {
+            font-size: 13px;
+        }
+    </style>
+</html>

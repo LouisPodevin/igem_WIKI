@@ -77,6 +77,16 @@ const menu = [
                 link: rootUrl + "/Phases/phase3",
                 match: `^${rootUrl}/Phases/phase3$`,
             },
+            {
+                title: "Phase 4",
+                link: rootUrl + "/Phases/phase4",
+                match: `^${rootUrl}/Phases/phase4$`,
+            },
+            {
+                title: "Implementation",
+                link: rootUrl + "/Implementation",
+                match: `^${rootUrl}/Implementation$`,
+            },
         ],
     },
     {

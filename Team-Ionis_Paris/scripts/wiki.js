@@ -776,6 +776,28 @@ const links = {
         path: "/pictures/humanPratices/HP24",
         prod: "https://2020.igem.org/wiki/images/4/4d/T--Ionis_Paris--HP24.png",
     },
+
+    // IMPLEMENTATION
+    implementation1: {
+        ext: "svg",
+        path: "/pictures/implementation/implementation1",
+        prod: "https://2020.igem.org/wiki/images/f/f6/T--Ionis_Paris--Implementation1.svg",
+    },
+    implementation2: {
+        ext: "png",
+        path: "/pictures/implementation/implementation2",
+        prod: "https://2020.igem.org/wiki/images/2/27/T--Ionis_Paris--Implementation2.png",
+    },
+    implementation3: {
+        ext: "png",
+        path: "/pictures/implementation/implementation3",
+        prod: "https://2020.igem.org/wiki/images/7/7f/T--Ionis_Paris--Implementation3.png",
+    },
+    implementation4: {
+        ext: "png",
+        path: "/pictures/implementation/implementation4",
+        prod: "https://2020.igem.org/wiki/images/0/02/T--Ionis_Paris--Implementation4.png",
+    },
 }
 
 for (let link in links) {
