@@ -135,12 +135,12 @@ const links = {
     step2Home: {
         ext: "svg",
         path: "/pictures/step2Home",
-        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step2Home.svg",
+        prod: "https://2020.igem.org/wiki/images/e/eb/T--Ionis_Paris--step2Home.svg",
     },
     step3Home: {
         ext: "svg",
         path: "/pictures/step3Home",
-        prod: "https://2020.igem.org/wiki/images/0/07/T--Ionis_Paris--step3Index.svg",
+        prod: "https://2020.igem.org/wiki/images/7/7c/T--Ionis_Paris--step3Index.svg",
     },
     // Sponsors
     benchlingSponsor: {
@@ -216,7 +216,7 @@ const links = {
     glassDescription: {
         ext: "svg",
         path: "/pictures/glass",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/8/82/T--Ionis_Paris--glass.svg",
     },
     microscopeDescription: {
         ext: "png",
@@ -239,17 +239,17 @@ const links = {
     designProjectPhase1: {
         ext: "svg",
         path: "/pictures/project/design/phase1",
-        prod: "https://2020.igem.org/wiki/images/a/ac/T--Ionis_Paris--Design-Phase-1.svg",
+        prod: "https://2020.igem.org/wiki/images/8/83/T--Ionis_Paris--Design-phase1-11.svg",
     },
     designProjectPhase2: {
         ext: "svg",
         path: "/pictures/project/design/phase2",
-        prod: "https://2020.igem.org/wiki/images/2/2d/T--Ionis_Paris--Design-Phase-2.svg",
+        prod: "https://2020.igem.org/wiki/images/2/23/T--Ionis_Paris--Design-phase-22.svg",
     },
     designProjectPhase3: {
         ext: "svg",
         path: "/pictures/project/design/phase3",
-        prod: "https://2020.igem.org/wiki/images/e/eb/T--Ionis_Paris--Design-Phase-3.svg",
+        prod: "https://2020.igem.org/wiki/images/1/19/T--Ionis_Paris--Design-phase-33.svg",
     },
     designProjectPhase4: {
         ext: "svg",
@@ -259,29 +259,29 @@ const links = {
 
     // Phase 1
     phase1Bacteriophage: {
-        ext: "svg",
-        path: "/pictures/phase1Bacteriophage",
+        ext: "png",
+        path: "/pictures/phases/phase1/phase1Bacteriophage",
         prod: "https://2020.igem.org/wiki/images/8/80/T--Ionis_Paris--phase1Bacteriophage.svg",
     },
     phase1Board: {
         ext: "svg",
-        path: "/pictures/phase1Board",
+        path: "/pictures/phases/phase1/phase1Board",
         prod: "https://2020.igem.org/wiki/images/3/39/T--Ionis_Paris--phase1Board.svg",
     },
-    phase1Bacteriophage2: {
-        ext: "svg",
-        path: "/pictures/phase1Bacteriophage2",
-        prod: "",
+    phase1LongTailFiber: {
+        ext: "png",
+        path: "/pictures/phases/phase1/phase1LongTailFiberGp",
+        prod: "https://2020.igem.org/wiki/images/c/c1/T--Ionis_Paris--phase1LongTailFiberGp.png",
     },
-    phase1DNA: {
-        ext: "svg",
-        path: "/pictures/phase1DNA",
-        prod: "",
+    phase1Chassis: {
+        ext: "png",
+        path: "/pictures/phases/phase1/phase1SurfaceChassis",
+        prod: "https://2020.igem.org/wiki/images/f/fe/T--Ionis_Paris--phase1Chassis.png",
     },
-    phase1DNA2: {
-        ext: "svg",
-        path: "/pictures/phase1DNA2",
-        prod: "",
+    phase1BioBrick: {
+        ext: "png",
+        path: "/pictures/phases/phase1/phase1BioBrick1",
+        prod: "https://2020.igem.org/wiki/images/b/b0/T--Ionis_Paris--phase1BioBrick.png",
     },
     phase1Animate: {
         ext: "json",
@@ -290,12 +290,12 @@ const links = {
     phase1PromoterStrong: {
         ext: "png",
         path: "/pictures/phases/phase1/phase1PromoterStrong",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/9/97/T--Ionis_Paris--Promoter.png",
     },
     phase1Immunoflurescence: {
         ext: "png",
         path: "/pictures/phases/phase1/phase1Immunoflurescence",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/0/05/T--Ionis_Paris--Immuno.png",
     },
 
     //Phase 2
