@@ -77,6 +77,16 @@ const menu = [
                 link: rootUrl + "/Phases/phase3",
                 match: `^${rootUrl}/Phases/phase3$`,
             },
+            {
+                title: "Phase 4",
+                link: rootUrl + "/Phases/phase4",
+                match: `^${rootUrl}/Phases/phase4$`,
+            },
+            {
+                title: "Implementation",
+                link: rootUrl + "/Implementation",
+                match: `^${rootUrl}/Implementation$`,
+            },
         ],
     },
     {
@@ -89,8 +99,8 @@ const menu = [
     {
         title: "Human practices",
         childrens: [
-            { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
+            { title: "Human Practices", link: rootUrl + "/Human_Practices", match: `^${rootUrl}/Human_Practices$` },
+            { title: "Public Engagement", link: "djqisdj" },
         ],
     },
     {

@@ -383,9 +383,9 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/a/ad/T--Ionis_Paris--collaboration3.png",
     },
     collaboration4Logo: {
-        ext: "png",
+        ext: "jpg",
         path: "/pictures/collaborations/collaboration4",
-        prod: "https://2020.igem.org/wiki/images/9/9b/T--Ionis_Paris--collaboration4.png",
+        prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--collaboration4.jpg",
     },
     collaboration5Logo: {
         ext: "png",
@@ -632,6 +632,11 @@ const links = {
         path: "/pictures/attributions/wsu-logo",
         prod: "https://2020.igem.org/wiki/images/8/85/T--Ionis_Paris--wsu-logo.png",
     },
+    attributionsSponsor19: {
+        ext: "png",
+        path: "/pictures/attributions/esme-sudria-association-aiesme-logo",
+        prod: "https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--esme-sudria-association-aiesme-logo.png",
+    },
 
     // SAFETY
     safetyHexa1: {
@@ -648,6 +653,150 @@ const links = {
         ext: "svg",
         path: "/pictures/safety/Safety3",
         prod: "https://2020.igem.org/wiki/images/3/3f/T--Ionis_Paris--Safety-3.svg",
+    },
+
+    // HUMAN PRACTICES
+    humanPratices1: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP1",
+        prod: "https://2020.igem.org/wiki/images/5/5b/T--Ionis_Paris--HP1.svg",
+    },
+    humanPratices2: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP2",
+        prod: "https://2020.igem.org/wiki/images/a/a7/T--Ionis_Paris--HP2.svg",
+    },
+    humanPratices3: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP3",
+        prod: "https://2020.igem.org/wiki/images/4/4f/T--Ionis_Paris--HP3.svg",
+    },
+    humanPratices4: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP4",
+        prod: "https://2020.igem.org/wiki/images/a/ac/T--Ionis_Paris--HP4.svg",
+    },
+    humanPratices5: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP5",
+        prod: "https://2020.igem.org/wiki/images/9/9d/T--Ionis_Paris--HP5.svg",
+    },
+    humanPratices6: {
+        ext: "svg",
+        path: "/pictures/humanPratices/HP6",
+        prod: "https://2020.igem.org/wiki/images/c/c5/T--Ionis_Paris--HP6.svg",
+    },
+    humanPratices7: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP7",
+        prod: "https://2020.igem.org/wiki/images/4/40/T--Ionis_Paris--HP7.png",
+    },
+    humanPratices8: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP8",
+        prod: "https://2020.igem.org/wiki/images/0/00/T--Ionis_Paris--HP8.png",
+    },
+    humanPratices9: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP9",
+        prod: "https://2020.igem.org/wiki/images/0/04/T--Ionis_Paris--HP9.png",
+    },
+    humanPratices10: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP10",
+        prod: "https://2020.igem.org/wiki/images/b/b4/T--Ionis_Paris--HP10.png",
+    },
+    humanPratices11: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP11",
+        prod: "https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--HP11.png",
+    },
+    humanPratices12: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP12",
+        prod: "https://2020.igem.org/wiki/images/c/ce/T--Ionis_Paris--HP12.png",
+    },
+    humanPratices13: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP13",
+        prod: "https://2020.igem.org/wiki/images/a/a6/T--Ionis_Paris--HP13.png",
+    },
+    humanPratices14: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP14",
+        prod: "https://2020.igem.org/wiki/images/a/ae/T--Ionis_Paris--HP14.png",
+    },
+    humanPratices15: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP15",
+        prod: "https://2020.igem.org/wiki/images/a/a6/T--Ionis_Paris--HP15.png",
+    },
+    humanPratices16: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP16",
+        prod: "https://2020.igem.org/wiki/images/4/42/T--Ionis_Paris--HP16.png",
+    },
+    humanPratices17: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP17",
+        prod: "https://2020.igem.org/wiki/images/d/d6/T--Ionis_Paris--HP17.png",
+    },
+    humanPratices18: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP18",
+        prod: "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--HP18.png",
+    },
+    humanPratices19: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP19",
+        prod: "https://2020.igem.org/wiki/images/5/52/T--Ionis_Paris--HP19.png",
+    },
+    humanPratices20: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP20",
+        prod: "https://2020.igem.org/wiki/images/c/c7/T--Ionis_Paris--HP20.png",
+    },
+    humanPratices21: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP21",
+        prod: "https://2020.igem.org/wiki/images/6/61/T--Ionis_Paris--HP21.png",
+    },
+    humanPratices22: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP22",
+        prod: "https://2020.igem.org/wiki/images/4/4b/T--Ionis_Paris--HP22.png",
+    },
+    humanPratices23: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP23",
+        prod: "https://2020.igem.org/wiki/images/2/2f/T--Ionis_Paris--HP23.png",
+    },
+    humanPratices24: {
+        ext: "png",
+        path: "/pictures/humanPratices/HP24",
+        prod: "https://2020.igem.org/wiki/images/4/4d/T--Ionis_Paris--HP24.png",
+    },
+
+    // IMPLEMENTATION
+    implementation1: {
+        ext: "svg",
+        path: "/pictures/implementation/implementation1",
+        prod: "https://2020.igem.org/wiki/images/f/f6/T--Ionis_Paris--Implementation1.svg",
+    },
+    implementation2: {
+        ext: "png",
+        path: "/pictures/implementation/implementation2",
+        prod: "https://2020.igem.org/wiki/images/2/27/T--Ionis_Paris--Implementation2.png",
+    },
+    implementation3: {
+        ext: "png",
+        path: "/pictures/implementation/implementation3",
+        prod: "https://2020.igem.org/wiki/images/7/7f/T--Ionis_Paris--Implementation3.png",
+    },
+    implementation4: {
+        ext: "png",
+        path: "/pictures/implementation/implementation4",
+        prod: "https://2020.igem.org/wiki/images/0/02/T--Ionis_Paris--Implementation4.png",
     },
 }
 
