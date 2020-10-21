@@ -13,9 +13,10 @@
             <h1>Bactails - IGEM IONIS</h1>
             <div class="welcomeContent">
                 <div class="welcomeText">
-                    <div class="welcomeText1">Handle</div>
-                    <div class="welcomeText2">Antibiotics</div>
-                    <div class="welcomeText3">With care !</div>
+                    <div class="welcomeText1">Target</div>
+                    <div class="welcomeText2">Kill</div>
+                    <div class="welcomeText3">Self-destroy</div>
+                    <div class="welcomeSubText">An innovative way to fight against antimicrobial resistance</div>
                 </div>
                 <div class="welcomeLogo">
                     <div id="bm"></div>
@@ -323,7 +324,6 @@
             color: #e73327;
             text-shadow: 0px 10px 20px rgba(251, 31, 29, 0.2);
         }
-
         @keyframes welcome2 {
             0% {
                 position: relative;
@@ -397,6 +397,33 @@
 
         .welcomeLogo > img {
             height: 300px;
+        }
+
+        @keyframes welcomeSubTextAnim {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            75% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+                opacity: 1;
+            }
+        }
+
+        .welcomeSubText {
+            margin-top: 10px;
+            font-size: 15px;
+            text-transform: capitalize;
+            animation: welcomeSubTextAnim 4s;
         }
 
         /* See More */
