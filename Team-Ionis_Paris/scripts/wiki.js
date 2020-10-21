@@ -632,6 +632,11 @@ const links = {
         path: "/pictures/attributions/wsu-logo",
         prod: "https://2020.igem.org/wiki/images/8/85/T--Ionis_Paris--wsu-logo.png",
     },
+    attributionsSponsor19: {
+        ext: "png",
+        path: "/pictures/attributions/esme-sudria-association-aiesme-logo",
+        prod: "https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--esme-sudria-association-aiesme-logo.png",
+    },
 
     // SAFETY
     safetyHexa1: {
