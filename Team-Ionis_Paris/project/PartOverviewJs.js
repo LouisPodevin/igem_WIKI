@@ -60,10 +60,10 @@ const phase2 = {
     basic: [
         { name: "BBa_J23111", type: "Promoter", description: "Constitutive Promoter region", length: 35 },
         { name: "BBa_J23118", type: "Promoter", description: "Constitutive Promoter region", length: 35 },
-        { name: "BBa_J61127", type: "Ribosome", description: "Binding Site	RBS region", length: 12 },
-        { name: "BBa_J61130", type: "Ribosome", description: "Binding Site	RBS region", length: 12 },
-        { name: "BBa_J61118", type: "Ribosome", description: "Binding Site	RBS region", length: 12 },
-        { name: "BBa_J61109", type: "Ribosome", description: "Binding Site	RBS region", length: 12 },
+        { name: "BBa_J61127", type: "Ribosome Binding Site", description: "RBS region", length: 12 },
+        { name: "BBa_J61130", type: "Ribosome Binding Site", description: "RBS region", length: 12 },
+        { name: "BBa_J61118", type: "Ribosome Binding Site", description: "RBS region", length: 12 },
+        { name: "BBa_J61109", type: "Ribosome Binding Site", description: "RBS region", length: 12 },
         {
             name: "BBa_K3409003",
             type: "Coding",
@@ -108,7 +108,7 @@ const phase3 = {
     basic: [
         { name: "BBa_K2442101", type: "Promoter", description: "Minimagl araBAD promoter", length: 303 },
         { name: "BBa_J23118", type: "Promoter", description: "Promoter medium", length: 35 },
-        { name: "BBa_B0034", type: "Ribosome", description: "Binding Site	Strong RBS", length: 12 },
+        { name: "BBa_B0034", type: "Ribosome Binding Site", description: "Strong RBS", length: 12 },
         { name: "BBa_K2442103", type: "Coding", description: "E. coli AraC coding region", length: 879 },
         { name: "BBa_E1010", type: "Coding", description: "mRFP", length: 706 },
         { name: "BBa_K3519004", type: "Coding", description: "DNASE I (+ Poly His Tag)", length: 867 },
@@ -127,7 +127,7 @@ const phase3 = {
     ],
 }
 
-const links = {
+const linksTable = {
     BBa_J23104: "http://parts.igem.org/Part:BBa_J23104",
     BBa_B0030: "http://parts.igem.org/Part:BBa_B0030",
     BBa_K1694002: "http://parts.igem.org/Part:BBa_K1694002",
@@ -170,4 +170,29 @@ const links = {
     BBa_K3519010: "http://parts.igem.org/Part:BBa_K3519010",
     BBa_K3519011: "http://parts.igem.org/Part:BBa_K3519011",
     BBa_K3519012: "http://parts.igem.org/Part:BBa_K3519012",
+}
+
+const initTable = sourceNb => {
+    let phase = phase3
+
+    switch (sourceNb) {
+        case 1:
+            phase = phase1
+            break
+        case 2:
+            phase = phase2
+            break
+        case 3:
+            phase = phase3
+            break
+    }
+
+    return {
+        phase,
+        links: linksTable,
+        mapName: name =>
+            linksTable[name]
+                ? `<a href="${linksTable[name]}" target="_blank" rel="noopener noreferrer">${name}</a>`
+                : name,
+    }
 }
