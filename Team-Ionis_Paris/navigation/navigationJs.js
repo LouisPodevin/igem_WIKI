@@ -64,8 +64,8 @@ const menu = [
         childrens: [
             {
                 title: "Phase 1",
-                link: rootUrl + "/Phases/phase1Bis",
-                match: `^${rootUrl}/Phases/phase1Bis$`,
+                link: rootUrl + "/Phases/phase1",
+                match: `^${rootUrl}/Phases/phase1$`,
             },
             {
                 title: "Phase 2",

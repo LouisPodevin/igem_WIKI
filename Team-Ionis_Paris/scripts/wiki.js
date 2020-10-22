@@ -261,7 +261,7 @@ const links = {
     phase1Bacteriophage: {
         ext: "png",
         path: "/pictures/phases/phase1/phase1Bacteriophage",
-        prod: "https://2020.igem.org/wiki/images/8/80/T--Ionis_Paris--phase1Bacteriophage.svg",
+        prod: "https://2020.igem.org/wiki/images/c/cf/T--Ionis_Paris--BAC1.png",
     },
     phase1Board: {
         ext: "svg",
