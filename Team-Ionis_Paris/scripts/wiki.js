@@ -336,9 +336,9 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/5/5a/T--Ionis_Paris--phase3-schema1.png",
     },
     phase3Schema2: {
-        ext: "png",
+        ext: "jpg",
         path: "/pictures/phases/phase3/schema2",
-        prod: "https://2020.igem.org/wiki/images/5/5b/T--Ionis_Paris--phase3-schema2.png",
+        prod: "https://2020.igem.org/wiki/images/c/c5/T--Ionis_Paris--phase3-schema2.jpg",
     },
     phase3Schema3: {
         ext: "png",
