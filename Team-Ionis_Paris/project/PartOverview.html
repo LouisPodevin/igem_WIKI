@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Human Practices</title>
+    </head>
+    <body>
+        <script src="../scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <script src="./PartOverviewJs.js"></script>
+        <!-- <script src="https://2020.igem.org/Template:Ionis_Paris/project/PartOverviewJs?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'">
+            <div class="container">
+                <h1>Proposed implementation - IGEM IONIS</h1>
+                <div class="descriptionContent">
+                    <div class="descriptionText">
+                        <div class="descriptionText1">Part overview</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore" target-id="partOverview"></div>
+
+        <div class="part" id="partOverview">
+            <div class="container">
+                <div class="textContent">
+                    <p>
+                        To insert our genes of interest in our bacteria, we worked with three different plasmids: pSB1A3
+                        (high copy number), pSB4A5 (low copy number) and pSB4K5 (low copy number).<br />
+                        They contain the resistance gene of ampicillin and kanamycin, respectively.
+                    </p>
+                </div>
+                <img x-data="{}" :src="window.LINKS.partOverview1.url" class="imageContent mt-6" />
+                <div class="textContent mt-6">
+                    <p>
+                        All BioBricks are inserted between the prefix and suffix region of the mentioned plasmids
+                        according to the BioBrick RFC[10] assembly standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="part" id="phase1">
+            <div class="table container">
+                <h2>Phase 1</h2>
+                <table x-data="initTable(1)">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Length</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subHeader">
+                            <td colspan="4">Basic Parts</td>
+                        </tr>
+                        <template x-for="item in phase.basic" :key="item.name"
+                            ><tr>
+                                <td x-html="mapName(item.name)"></td>
+                                <td x-text="item.type"></td>
+                                <td x-text="item.description"></td>
+                                <td x-text="item.length"></td>
+                            </tr>
+                        </template>
+                        <tr class="subHeader">
+                            <td colspan="4">Composite Parts</td>
+                        </tr>
+                        <template x-for="item in phase.composite" :key="item.name"
+                            ><tr>
+                                <td x-html="mapName(item.name)"></td>
+                                <td x-text="item.type"></td>
+                                <td x-text="item.description"></td>
+                                <td x-text="item.length"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container">
+                <div class="textContent mt-16 colored font-bold">
+                    <p>Phase 1 - First version of BioBrick 1</p>
+                </div>
+                <img x-data="{}" :src="window.LINKS.partOverview2.url" class="mt-8 imageContent" />
+                <div class="textContent text-center mt-6 note">
+                    Figure 2: Our constructs for the expression and localization of the T4 bacteriophage gp37 to the
+                    outer membrane of our chassis
+                </div>
+                <div class="textContent mt-6">
+                    <p>
+                        The BioBrick BBa_K3409008 is coding for the expression of the gene product 37 of then T4
+                        bacteriophage LTF. Thanks to the co-expressed <i>Lpp-OmpA</i> genes, the gp37 will be directed
+                        on the external surface of <i>Escherichia coli</i>. A His-Tag and a RFP have been added to
+                        validate the BioBrick.<br />
+                        Additionally, to ensure the proper folding of the gp37, our BioBrick includes the coding
+                        sequence for two chaperone proteins gp38 and gp57a.
+                    </p>
+                    <p class="mt-16 colored font-bold">Phase 1 - Optimized version of BioBrick 1</p>
+                </div>
+                <img x-data="{}" :src="window.LINKS.partOverview3.url" class="mt-8 imageContent" />
+                <div class="textContent text-center mt-6 note">
+                    Figure 3: Our constructs for the expression and localization of the T4 bacteriophage gp37 to the
+                    outer membrane of our chassis
+                </div>
+                <div class="textContent mt-6">
+                    <p>
+                        The BioBrick BBa_K3409009 is an optimization of BioBrick BBa_K3409008.The only difference is
+                        that the coding sequence for the RFP has been removed to improve the detection via the His-Tag
+                        using immunofluorescence.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="part" id="phase2">
+            <div class="table container">
+                <h2>Phase 2</h2>
+                <table x-data="initTable(2)">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Length</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subHeader">
+                            <td colspan="4">Basic Parts</td>
+                        </tr>
+                        <template x-for="item in phase.basic" :key="item.name"
+                            ><tr>
+                                <td x-html="mapName(item.name)"></td>
+                                <td x-text="item.type"></td>
+                                <td x-text="item.description"></td>
+                                <td x-text="item.length"></td>
+                            </tr>
+                        </template>
+                        <tr class="subHeader">
+                            <td colspan="4">Composite Parts</td>
+                        </tr>
+                        <template x-for="item in phase.composite" :key="item.name"
+                            ><tr>
+                                <td x-html="mapName(item.name)"></td>
+                                <td x-text="item.type"></td>
+                                <td x-text="item.description"></td>
+                                <td x-text="item.length"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container">
+                <div class="textContent mt-8">
+                    <p>
+                        The BioBrick BBa_K3409010 contains the gene <i>mcpM</i> which when expressed, will lead microcin
+                        PDI. This microcin has two N-Ter signal peptides which are cleaved when secreted.
+                    </p>
+                    <p>
+                        The gene <i>mcpA</i> also present in this BioBrick encodes for an activator of McpM and contains
+                        a CaaX protease domain. Finally, the gene <i>mcpI</i> encodes for the immunity protein of McpM
+                        for the producing strain.
+                    </p>
+                </div>
+                <img x-data="{}" :src="window.LINKS.partOverview4.url" class="mt-8 imageContent" />
+                <div class="textContent mt-6 note text-center">
+                    Figure 4: Our constructs for the expression and secretion of McpM
+                </div>
+                <div class="textContent mt-8">
+                    <p>
+                        The BioBrick BBa_K3409011 is coding for the McpD protein which acts as a membrane fusion protein
+                        creating a channel through the periplasm and connects to TolC.
+                    </p>
+                    <p>
+                        The BioBrick BBa_K3409012 is coding for the McpB protein which contains transmembrane domains as
+                        well as nucleotide binding domains which have highly conserved motifs characteristic of the ABC
+                        transporter superfamily of proteins.
+                    </p>
+                </div>
+                <img x-data="{}" :src="window.LINKS.partOverview5.url" class="mt-8 imageContent" />
+                <div class="mt-6 textContent text-center note">
+                    Figure 5: Our constructs for the expression and secretion of McpM
+                </div>
+            </div>
+        </div>
+        <div class="part" id="phase3">
+            <div class="table container">
+                <h2>Phase 3</h2>
+                <table x-data="initTable(3)">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Length</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subHeader">
+                            <td colspan="4">Basic Parts</td>
+                        </tr>
+                        <template x-for="item in phase.basic" :key="item.name"
+                            ><tr>
+                                <td x-html="mapName(item.name)"></td>
+                                <td x-text="item.type"></td>
+                                <td x-text="item.description"></td>
+                                <td x-text="item.length"></td>
+                            </tr>
+                        </template>
+                        <tr class="subHeader">
+                            <td colspan="4">Composite Parts</td>
+                        </tr>
+                        <template x-for="item in phase.composite" :key="item.name"
+                            ><tr>
+                                <td x-html="mapName(item.name)"></td>
+                                <td x-text="item.type"></td>
+                                <td x-text="item.description"></td>
+                                <td x-text="item.length"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container">
+                <div class="textContent">
+                    <p>
+                        The BioBrick BBa_K3519012 contains in its sequence the gene coding for AraC (BBa_K2442103). This
+                        regulatory protein acts differently in function of the absence or presence of L-Arabinose.
+                    </p>
+                    <p>
+                        In absence of arabinose, it binds to two specific half-sites found in the minimal pBAD promoter
+                        (BBa_K2442101), inducing a DNA loop that excludes the RNA polymerase from binding to pBAD. This
+                        prevents the expression of <i>DNASE I</i> (BBa_K3519004), a gene whose product is an
+                        endonuclease cleaving DNA.
+                    </p>
+                    <p>
+                        On the contrary, when L-Arabinose is present, it binds to AraC to induce conformational changes.
+                        AraC will then bind to other half-sites, giving access for RNA polymerase to bind pBAD. This
+                        leads to the production of the endonuclease bpDNaseI, leading to the destruction of our bacteria
+                        and preventing its dissemination in the environment.
+                    </p>
+                </div>
+                <img x-data="{}" :src="window.LINKS.partOverview6.url" class="mt-8 imageContent" />
+                <div class="mt-6 textContent text-center note">
+                    Figure 6: The IISER TIRUPATI Team constructs for the expression and secretion of DNASE I
+                </div>
+                <div class="textContent">
+                    <p>
+                        The BioBrick BBa_K3519011 also contains in its sequence the gene coding for AraC (BBa_K2442103).
+                    </p>
+                    <p>
+                        Thus, in absence of arabinose, the DNA loop will exclude the RNA polymerase from binding to
+                        pBAD, preventing the expression of <i>mRFP</i> (BBa_E1010), a gene whose product is the Red
+                        FLuorescent Protein.
+                    </p>
+                    <p>
+                        On the contrary, when L-Arabinose is present, RNA polymerase will have a free-access to pBAD,
+                        leading to RFP production.
+                    </p>
+                    <p>
+                        By replacing <i>DNASE I</i> by mRFP, the expression of the gene following pBAD can be easily
+                        detected through fluorescence assays. Furthermore, its quantification will enable the validation
+                        of our construct.
+                    </p>
+                </div>
+                <img x-data="{}" :src="window.LINKS.partOverview7.url" class="mt-8 imageContent" />
+                <div class="mt-6 textContent text-center note">
+                    Figure 7: The IISER TIRUPATI Team constructs for the expression and secretion of mRFP
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+        /* Description */
+
+        #description h1 {
+            display: none;
+        }
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: top -80px right -80px;
+            background-size: auto 100%;
+        }
+
+        .descriptionContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .descriptionText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes description2 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .descriptionText2 {
+            color: #8d1f24;
+            font-size: 50px;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            animation: description2 2s;
+        }
+
+        .descriptionText1 {
+            color: #8d1f24;
+            text-shadow: 0px 10px 20px rgba(231, 52, 39, 0.2);
+            font-size: 50px;
+            animation: description1 1s;
+        }
+
+        @keyframes descriptionLogo {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes description1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        h2 {
+            font-style: 22px;
+            color: #8d1f24;
+            font-weight: 800;
+        }
+
+        /* PARTS */
+
+        .part {
+            margin: 120px 0 40px 0;
+        }
+
+        .textContent {
+            max-width: 900px;
+            font-size: 15x;
+        }
+
+        .textContent p {
+            margin-bottom: 24px;
+            font-size: 17px;
+        }
+
+        .textContent p:last-child {
+            margin-bottom: 0;
+        }
+
+        .imageContent {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .table table {
+            border: none !important;
+            margin: 0 !important;
+        }
+
+        .table thead tr {
+            border: none;
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .table thead th {
+            font-weight: 800;
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 1) !important;
+            border: none;
+            height: 64px;
+            padding: 16px 10px !important;
+            border: none !important;
+        }
+
+        .table .subHeader {
+            text-align: center;
+        }
+
+        .table td {
+            border: none !important;
+        }
+
+        .table tr:nth-child(2n) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .table tr:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .table tr.subHeader {
+            background: none;
+        }
+
+        .table .subHeader td {
+            border: none;
+            position: sticky;
+            top: 64px;
+            background-color: rgba(141, 31, 37, 0.1);
+            color: #8d1f24;
+            backdrop-filter: blur(15px);
+        }
+
+        .table td a {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .note {
+            font-size: 13px;
+            font-style: italic;
+        }
+    </style>
+</html>

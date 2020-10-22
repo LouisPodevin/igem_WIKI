@@ -336,9 +336,9 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/5/5a/T--Ionis_Paris--phase3-schema1.png",
     },
     phase3Schema2: {
-        ext: "png",
+        ext: "jpg",
         path: "/pictures/phases/phase3/schema2",
-        prod: "https://2020.igem.org/wiki/images/5/5b/T--Ionis_Paris--phase3-schema2.png",
+        prod: "https://2020.igem.org/wiki/images/c/c5/T--Ionis_Paris--phase3-schema2.jpg",
     },
     phase3Schema3: {
         ext: "png",
@@ -797,6 +797,43 @@ const links = {
         ext: "png",
         path: "/pictures/implementation/implementation4",
         prod: "https://2020.igem.org/wiki/images/0/02/T--Ionis_Paris--Implementation4.png",
+    },
+
+    // PART OVERVIEW
+    partOverview1: {
+        ext: "png",
+        path: "/pictures/project/partOverview/part-overview1",
+        prod: "https://2020.igem.org/wiki/images/1/1a/T--Ionis_Paris--part-overview1.png",
+    },
+    partOverview2: {
+        ext: "png",
+        path: "/pictures/project/partOverview/part-overview2",
+        prod: "https://2020.igem.org/wiki/images/a/ab/T--Ionis_Paris--part-overview2.png",
+    },
+    partOverview3: {
+        ext: "png",
+        path: "/pictures/project/partOverview/part-overview3",
+        prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--part-overview3.png",
+    },
+    partOverview4: {
+        ext: "png",
+        path: "/pictures/project/partOverview/part-overview4",
+        prod: "https://2020.igem.org/wiki/images/2/25/T--Ionis_Paris--part-overview4.png",
+    },
+    partOverview5: {
+        ext: "png",
+        path: "/pictures/project/partOverview/part-overview5",
+        prod: "https://2020.igem.org/wiki/images/d/d1/T--Ionis_Paris--part-overview5.png",
+    },
+    partOverview6: {
+        ext: "png",
+        path: "/pictures/project/partOverview/part-overview6",
+        prod: "https://2020.igem.org/wiki/images/1/12/T--Ionis_Paris--part-overview6.png",
+    },
+    partOverview7: {
+        ext: "png",
+        path: "/pictures/project/partOverview/part-overview7",
+        prod: "https://2020.igem.org/wiki/images/7/70/T--Ionis_Paris--part-overview7.png",
     },
 }
 

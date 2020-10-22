@@ -225,30 +225,35 @@
                     </p>
                 </div>
                 <div x-data="{arabinose: false, glucose: false }" id="interactive">
-                    <div class="clickInte">
-                        <div class="itemClickInte">
-                            <div class="itemClickInteTitle">L-Arabinose</div>
-                            <div
-                                :class="'itemClickInteButton' + (arabinose ? ' click' : '')"
-                                @click="arabinose = !arabinose"
-                            >
-                                <div>
-                                    <div class="itemClickInteTextClick" x-text="arabinose ? 'Present' : 'Absent'"></div>
-                                    <div class="itemClickInteTextIndicator">Click-me!</div>
-                                </div>
-                            </div>
+                    <div class="textContent">
+                        <div class="text-center font-bold">
+                            Choose a condition to learn about the expression of our constructs!
                         </div>
-                        <div class="itemClickInte">
-                            <div class="itemClickInteTitle">D-Glucose</div>
-                            <div :class="'itemClickInteButton' + (glucose ? ' click' : '')" @click="glucose = !glucose">
-                                <div>
-                                    <div class="itemClickInteTextClick" x-text="glucose ? 'Present' : 'Absent'"></div>
-                                    <div class="itemClickInteTextIndicator">Click-me!</div>
+                        <div class="clickInte mt-6">
+                            <div class="clickInteLine">
+                                <div class="clickInteLeft">Arabinose Absent</div>
+                                <div
+                                    :class="'clickInteButton' + (arabinose ? ' active' : '')"
+                                    @click="arabinose = !arabinose"
+                                >
+                                    <div class="clickInteButtonInside"></div>
                                 </div>
+                                <div class="clickInteRight">Arabinose Present</div>
+                            </div>
+                            <div class="clickInteLine mt-6">
+                                <div class="clickInteLeft">Glucose Absent</div>
+                                <div
+                                    :class="'clickInteButton' + (glucose ? ' active' : '')"
+                                    @click="glucose = !glucose"
+                                >
+                                    <div class="clickInteButtonInside"></div>
+                                </div>
+                                <div class="clickInteRight">Glucose Present</div>
                             </div>
                         </div>
                     </div>
                     <div class="interactiveContent">
+                        <!-- ARABINOSE AND GLUCOSE -->
                         <div x-show="arabinose && glucose">
                             <div class="interactiveTitle">Presence of L-Arabinose / Presence of D-Glucose</div>
                             <div class="interactiveText textContent">
@@ -267,6 +272,8 @@
                                 presence of D-Glucose.
                             </div>
                         </div>
+
+                        <!-- NOT ARABINOSE AND GLUCOSE -->
                         <div x-show="!arabinose && glucose">
                             <div class="interactiveTitle">Absence of L-Arabinose / Presence of D-Glucose</div>
                             <div class="interactiveText textContent">
@@ -285,6 +292,8 @@
                                 presence of D-Glucose.
                             </div>
                         </div>
+
+                        <!-- ARABINOSE AND NOT GLUCOSE -->
                         <div x-show="arabinose && !glucose">
                             <div class="interactiveTitle">Presence of L-Arabinose / Absence of D-Glucose</div>
                             <div class="interactiveText textContent">
@@ -302,6 +311,8 @@
                                 absence of D-Glucose.
                             </div>
                         </div>
+
+                        <!-- NOT ARABINOSE AND NOT GLUCOSE -->
                         <div x-show="!arabinose && !glucose">
                             <div class="interactiveTitle">Absence of L-Arabinose / Absence of D-Glucose</div>
                             <div class="interactiveText textContent">
@@ -343,8 +354,8 @@
                     </table>
                     <div class="mt-2 textContent p-2">* Promoter leakage can occur</div>
                     <div class="mt-2 textContent italic text-center p-2">
-                        Table 1. Table of the expression of DNASE I and mRFP in function of the presence and absence of
-                        glucose and arabinose
+                        Table 1. Summary table of the expression of DNASE I and mRFP in function of the presence and
+                        absence of glucose and arabinose
                     </div>
                     <div class="mt-8 textContent p-2">
                         An important point that will have to be kept in mind through the experiments and the analysis of
@@ -857,57 +868,66 @@
             margin-bottom: 0;
         }
 
+        /* CLICK */
+
         #interactive {
-            margin: 200px 0 20px 0;
+            margin: 60px 0 20px 0;
         }
 
         .clickInte {
             display: flex;
-            justify-content: center;
-        }
-
-        .itemClickInte {
-            flex-shrink: 0;
-            margin-right: 40px;
-        }
-
-        .itemClickInte:last-child {
-            margin-right: 0;
-        }
-
-        .itemClickInteTitle {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 15px;
-            font-weight: 800;
-        }
-
-        .itemClickInteButton {
-            height: 130px;
-            width: 130px;
-            border-radius: 30px;
-            background: linear-gradient(145deg, #e1e1e1, #ffffff);
-            box-shadow: 22px 22px 45px #d5d5d5, -22px -22px 45px #ffffff;
-            display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            text-align: center;
+        }
+
+        .clickInteLine {
+            display: flex;
+            align-items: center;
+        }
+
+        .clickInteLine > div {
+            flex-shrink: 0;
+        }
+
+        .clickInteLeft {
+            width: 200px;
+            text-align: right;
+        }
+
+        .clickInteRight {
+            width: 200px;
+            text-align: left;
+        }
+
+        .clickInteButton {
+            margin: 0 50px;
+            width: 80px;
+            height: 40px;
+            border-radius: 99px;
+            background-color: rgb(229, 229, 229);
+            position: relative;
             cursor: pointer;
-            user-select: none;
+            transition: background-color 0.3s;
         }
 
-        .itemClickInteButton.click {
-            background: #fafafa;
-            box-shadow: inset 22px 22px 45px #d5d5d5, inset -22px -22px 45px #ffffff;
+        .clickInteButtonInside {
+            height: 34px;
+            width: 34px;
+            border-radius: 999px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 3px;
+            transition: left 0.3s;
         }
 
-        .itemClickInteTextClick {
-            font-weight: 800;
-            font-size: 15px;
+        .clickInteButton.active {
+            background-color: #8d1f24;
         }
 
-        .itemClickInteTextIndicator {
-            font-size: 12px;
+        .clickInteButton.active .clickInteButtonInside {
+            left: 43px;
         }
 
         .interactiveTitle {
@@ -964,6 +984,7 @@
 
         .tableExpression td {
             padding: 5px 10px;
+            text-align: center;
         }
 
         .tableExpression tr:nth-child(1) td:not(:nth-child(1)),
