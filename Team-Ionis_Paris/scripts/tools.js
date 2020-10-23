@@ -124,12 +124,17 @@ export const loadFooter = async () => {
 export const triggerSeeMore = async () => {
     const seeMoreElms = document.getElementsByClassName("seeMore")
 
-    const handleScroller = (divElm, targetElm) => {
+    const handleScroller = (divElm, targetId) => {
         divElm.addEventListener("click", async e => {
             e.preventDefault()
 
             while (!window.$) {
                 await new Promise(res => setTimeout(res, 200))
+            }
+
+            const targetElm = document.getElementById(targetId)
+            if (!targetElm) {
+                return
             }
 
             $("html, body").animate({
@@ -153,9 +158,8 @@ export const triggerSeeMore = async () => {
         const targetId = handleScrollDiv.getAttribute("target-id")
 
         if (targetId) {
-            const targetElm = document.getElementById(targetId)
             if (targetId) {
-                handleScroller(handleScrollDiv, targetElm)
+                handleScroller(handleScrollDiv, targetId)
             }
         }
     }
