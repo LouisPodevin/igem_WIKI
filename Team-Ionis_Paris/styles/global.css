@@ -272,3 +272,11 @@ img {
 .colored {
     color: #8d1f24;
 }
+
+.no-scroll {
+    scrollbar-width: none;
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
