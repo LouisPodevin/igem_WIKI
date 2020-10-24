@@ -939,6 +939,108 @@ const links = {
         path: "/pictures/team/teamMembers/Thomas",
         prod: "https://2020.igem.org/wiki/images/e/ef/T--Ionis_Paris--teamMembersThomas.jpeg",
     },
+
+    // PHASE 4
+    phase4Img1: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-1",
+        prod: "https://2020.igem.org/wiki/images/4/4d/T--Ionis_Paris--phase4-1.svg",
+    },
+    phase4Img2: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-2",
+        prod: "https://2020.igem.org/wiki/images/f/f7/T--Ionis_Paris--phase4-2.svg",
+    },
+    phase4Img3: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-3",
+        prod: "https://2020.igem.org/wiki/images/3/36/T--Ionis_Paris--phase4-3.svg",
+    },
+    phase4Img4: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-4",
+        prod: "https://2020.igem.org/wiki/images/7/72/T--Ionis_Paris--phase4-4.svg",
+    },
+    phase4Img5: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-5",
+        prod: "https://2020.igem.org/wiki/images/9/94/T--Ionis_Paris--phase4-5.svg",
+    },
+    phase4Img6: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-6",
+        prod: "https://2020.igem.org/wiki/images/0/0e/T--Ionis_Paris--phase4-6.svg",
+    },
+    phase4Img7: {
+        ext: "png",
+        path: "/pictures/phases/phase4/phase4-7",
+        prod: "https://2020.igem.org/wiki/images/8/80/T--Ionis_Paris--phase4-7.png",
+    },
+    phase4Img8: {
+        ext: "png",
+        path: "/pictures/phases/phase4/phase4-8",
+        prod: "https://2020.igem.org/wiki/images/3/33/T--Ionis_Paris--phase4-8.png",
+    },
+    phase4Img9: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-9",
+        prod: "https://2020.igem.org/wiki/images/b/be/T--Ionis_Paris--phase4-9.svg",
+    },
+    phase4Img10: {
+        ext: "png",
+        path: "/pictures/phases/phase4/phase4-10",
+        prod: "https://2020.igem.org/wiki/images/d/d4/T--Ionis_Paris--phase4-10.png",
+    },
+    phase4Img11: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-11",
+        prod: "https://2020.igem.org/wiki/images/8/80/T--Ionis_Paris--phase4-11.svg",
+    },
+    phase4Img12: {
+        ext: "png",
+        path: "/pictures/phases/phase4/phase4-12",
+        prod: "https://2020.igem.org/wiki/images/7/75/T--Ionis_Paris--phase4-12.png",
+    },
+    phase4Img13: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-13",
+        prod: "https://2020.igem.org/wiki/images/8/82/T--Ionis_Paris--phase4-13.svg",
+    },
+    phase4Img14: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-14",
+        prod: "https://2020.igem.org/wiki/images/9/90/T--Ionis_Paris--phase4-14.svg",
+    },
+    phase4Img15: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-15",
+        prod: "https://2020.igem.org/wiki/images/8/80/T--Ionis_Paris--phase4-15.svg",
+    },
+    phase4Img16: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-16",
+        prod: "https://2020.igem.org/wiki/images/d/d3/T--Ionis_Paris--phase4-16.svg",
+    },
+    phase4Img17: {
+        ext: "png",
+        path: "/pictures/phases/phase4/phase4-17",
+        prod: "https://2020.igem.org/wiki/images/5/57/T--Ionis_Paris--phase4-17.png",
+    },
+    phase4Img18: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-18",
+        prod: "https://2020.igem.org/wiki/images/9/98/T--Ionis_Paris--phase4-18.svg",
+    },
+    phase4Img19: {
+        ext: "svg",
+        path: "/pictures/phases/phase4/phase4-19",
+        prod: "https://2020.igem.org/wiki/images/3/35/T--Ionis_Paris--phase4-19.svg",
+    },
+    phase4Img20: {
+        ext: "png",
+        path: "/pictures/phases/phase4/phase4-20",
+        prod: "https://2020.igem.org/wiki/images/3/3b/T--Ionis_Paris--phase4-20.png",
+    },
 }
 
 for (let link in links) {
@@ -1080,6 +1182,8 @@ const setMinimumReady = () => {
     }, 1000)
 }
 
+window.isDOMLoaded = false
+
 const init = async () => {
     initLoading(15)
     const { initNavigation } = await withLoading(import(links.wikiNav.url))
@@ -1109,6 +1213,25 @@ const init = async () => {
 
     setMinimumReady()
     feather.replace()
+
+    const { Subject } = rxjs
+
+    const domLoadedSource = new Subject()
+    window.domLoadedSource = domLoadedSource
+
+    const sendEventLoaded = () => {
+        window.isDOMLoaded = true
+        domLoadedSource.next()
+    }
+
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        sendEventLoaded()
+    } else {
+        window.addEventListener("DOMContentLoaded", () => {
+            console.debug("Send DOM loaded event")
+            sendEventLoaded()
+        })
+    }
 
     const backgroundPromise = Promise.all([
         withLoading(loadFont()),

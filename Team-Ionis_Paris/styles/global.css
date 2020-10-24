@@ -179,6 +179,10 @@ p {
     flex-grow: 1;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .flex-shrink-0 {
     flex-shrink: 0;
 }
@@ -279,4 +283,18 @@ img {
 
 .no-scroll::-webkit-scrollbar {
     display: none;
+}
+
+.shadowed {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Poppins, Arial, Helvetica, sans-serif !important;
 }
