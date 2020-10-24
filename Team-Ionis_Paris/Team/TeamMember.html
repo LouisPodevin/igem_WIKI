@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Team Members</title>
+    </head>
+    <body>
+        <script src="../scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <script defer src="./TeamMemberJs.js"></script>
+        <!-- <script defer src="https://2020.igem.org/Template:Ionis_Paris/Team/TeamMemberJs?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'">
+            <div class="container">
+                <h1>Team Members - IGEM IONIS</h1>
+                <div class="descriptionContent">
+                    <div class="descriptionText">
+                        <div class="descriptionText1">Team Members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore" target-id="team"></div>
+
+        <div class="part" id="team" x-data="initTeam()">
+            <div class="container">
+                <div class="teamPresentation">
+                    <img x-data="{}" :src="window.LINKS.teamMembers1.url" class="imageTeam flex-grow" />
+                    <div class="teamPresentationRight">
+                        <img x-data="{}" :src="window.LINKS.logoTeamIonis.url" class="teamLogo" />
+                        <div class="teamPresentationText">
+                            We are more than happy to introduce the IONIS Paris 2020 team members who each contributed
+                            to develop the BacTail project. Our journey began in February 2020 when we were 4th year
+                            engineering students ready to live the great iGEM adventure. When it ended in November 2020
+                            we were all proud to say that each of us had learned more than we had imagined. All 10 of
+                            us, together, learned to lead a project from beginning to end.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h2 class="colored mt-16">Meet the team</h2>
+                <div class="teamContainer mt-8">
+                    <div class="teamList">
+                        <template x-for="(member, index) in members" :key="member.name">
+                            <div class="memberContainer" @click="setFocusIndex(index)">
+                                <div class="memberPicture" :style="'background-image: url(' + member.picture + ')'">
+                                    <div class="memberName" x-text="member.name"></div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="teamFocus no-scroll">
+                        <template x-if="focusIndex === -1">
+                            <div>
+                                <div class="teamFocusHeader">Team information</div>
+                                <div class="teamFocusNotice">Select one member to show information</div>
+                            </div>
+                        </template>
+                        <template x-if="focusIndex !== -1">
+                            <div>
+                                <div x-text="members[focusIndex].name" class="teamFocusHeader"></div>
+                                <div class="nickname" x-text="members[focusIndex].nickname"></div>
+                                <div></div>
+                                <div class="focusHeaderSection">Role in the team</div>
+                                <div class="focusHeaderSectionText" x-text="members[focusIndex].role"></div>
+                                <div class="focusHeaderSection">Field of study</div>
+                                <div class="focusHeaderSectionText" x-text="members[focusIndex].field"></div>
+                                <div class="focusHeaderSection">Best memory from the iGEM competition</div>
+                                <div class="focusHeaderSectionText" x-text="members[focusIndex].best"></div>
+                                <div
+                                    class="focusHeaderSection"
+                                    x-text="members[focusIndex].isWorth ? 'Worst memory' : 'Funny story'"
+                                ></div>
+                                <div class="focusHeaderSectionText" x-text="members[focusIndex].memory"></div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        /* Description */
+
+        #description h1 {
+            display: none;
+        }
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: top -80px right -80px;
+            background-size: auto 100%;
+        }
+
+        .descriptionContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .descriptionText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes description2 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .descriptionText2 {
+            color: #8d1f24;
+            font-size: 50px;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            animation: description2 2s;
+        }
+
+        .descriptionText1 {
+            color: #8d1f24;
+            text-shadow: 0px 10px 20px rgba(231, 52, 39, 0.2);
+            font-size: 50px;
+            animation: description1 1s;
+        }
+
+        @keyframes descriptionLogo {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes description1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        /* CONTENT */
+
+        .part {
+            margin: 120px 0 40px 0;
+        }
+
+        .textContent {
+            max-width: 900px;
+            font-size: 15px;
+        }
+
+        .textContent p {
+            margin-bottom: 24px;
+            font-size: 17px;
+        }
+
+        .textContent p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TEAM PRESENTATION */
+
+        .teamPresentation {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .imageTeam {
+            max-width: 500px;
+            max-height: 700px;
+            border-radius: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .teamLogo {
+            max-width: 100px;
+        }
+
+        .teamPresentationRight {
+            margin-left: 20px;
+        }
+
+        .teamPresentationText {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+
+        h2 {
+            font-style: 20px;
+        }
+
+        /* TEAM LIST */
+
+        .teamContainer {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .teamList {
+            flex-grow: 1;
+        }
+
+        .teamFocus {
+            flex-shrink: 0;
+            background-color: white;
+            border-radius: 20px;
+            width: 350px;
+            height: 500px;
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 60px;
+            overflow-x: scroll;
+        }
+
+        .teamFocusHeader {
+            color: #8d1f24;
+            padding: 30px 20px 0px 20px;
+            font-size: 18px;
+        }
+        .teamFocusNotice {
+            padding: 20px 20px 0 20px;
+        }
+
+        .teamList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .memberContainer {
+            background-color: white;
+            height: 170px;
+            width: 170px;
+            border-radius: 999px;
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .memberPicture {
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            border-radius: 999px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .memberName {
+            color: white;
+            height: 150px;
+            width: 150px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-weight: 800;
+            text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .memberName:hover {
+            opacity: 1;
+        }
+
+        .nickname {
+            display: inline-block;
+            padding: 3px 10px;
+            background-color: rgba(141, 31, 37, 0.1);
+            color: #8d1f24;
+            margin: 5px 20px 0 20px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .focusHeaderSection {
+            margin: 20px 20px 0 20px;
+            font-size: 17px;
+            color: #8d1f24;
+        }
+
+        .focusHeaderSectionText {
+            margin: 0px 20px 0 20px;
+            font-size: 15px;
+            color: #434343;
+        }
+
+        .focusHeaderSectionText:last-child {
+            margin: 0px 20px 20px 20px;
+        }
+    </style>
+</html>

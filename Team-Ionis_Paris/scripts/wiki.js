@@ -840,6 +840,7 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/7/70/T--Ionis_Paris--part-overview7.png",
     },
 
+<<<<<<< HEAD
     //SOFTWARE
     softwareIonis: {
         ext: "png",
@@ -882,6 +883,65 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/4/46/T--Ionis_Paris--css6.png",
     },
     
+=======
+    // TEAM MEMBERS
+
+    teamMembers1: {
+        ext: "png",
+        path: "/pictures/team/teamMembers/teamMembers1",
+        prod: "https://2020.igem.org/wiki/images/1/1d/T--Ionis_Paris--teamMembers1.png",
+    },
+    teamMembersAlbane: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Albane",
+        prod: "https://2020.igem.org/wiki/images/3/3e/T--Ionis_Paris--teamMembersAlbane.jpeg",
+    },
+    teamMembersCharlotte: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Charlotte",
+        prod: "https://2020.igem.org/wiki/images/2/2a/T--Ionis_Paris--teamMembersCharlotte.jpeg",
+    },
+    teamMembersDavid: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/David",
+        prod: "https://2020.igem.org/wiki/images/d/d5/T--Ionis_Paris--teamMembersDavid.jpeg",
+    },
+    teamMembersElliot: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Elliot",
+        prod: "https://2020.igem.org/wiki/images/6/6b/T--Ionis_Paris--teamMembersElliot.jpeg",
+    },
+    teamMembersGiulia: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Giulia",
+        prod: "https://2020.igem.org/wiki/images/3/37/T--Ionis_Paris--teamMembersGiulia.jpeg",
+    },
+    teamMembersLouis: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Louis",
+        prod: "https://2020.igem.org/wiki/images/6/6c/T--Ionis_Paris--teamMembersLouis.jpeg",
+    },
+    teamMembersLucie: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Lucie",
+        prod: "https://2020.igem.org/wiki/images/c/ca/T--Ionis_Paris--teamMembersLucie.jpeg",
+    },
+    teamMembersRenaud: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Renaud",
+        prod: "https://2020.igem.org/wiki/images/c/c0/T--Ionis_Paris--teamMembersRenaud.jpeg",
+    },
+    teamMembersTam: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Tam",
+        prod: "https://2020.igem.org/wiki/images/b/b3/T--Ionis_Paris--teamMembersTam.jpeg",
+    },
+    teamMembersThomas: {
+        ext: "jpeg",
+        path: "/pictures/team/teamMembers/Thomas",
+        prod: "https://2020.igem.org/wiki/images/e/ef/T--Ionis_Paris--teamMembersThomas.jpeg",
+    },
+>>>>>>> b4b05107246a4672bf22c8a2bd4385727929a80d
 }
 
 for (let link in links) {
@@ -904,6 +964,7 @@ for (let link in links) {
             case "svg":
             case "png":
             case "jpg":
+            case "jpeg":
                 realUrl = links[link].prod
                 break
             default:
