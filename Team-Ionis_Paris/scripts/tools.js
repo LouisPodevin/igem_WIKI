@@ -1,3 +1,13 @@
+const waitDOMLoaded = async () => {
+    if (window.isDOMLoaded) {
+        return
+    }
+
+    const { first } = rxjs.operators
+
+    await window.domLoadedSource.pipe(first()).toPromise()
+}
+
 /**
  * Load js file
  * @param {string} url The url
@@ -106,6 +116,8 @@ export const loadBootstrap = async () => {
 }
 
 export const loadFooter = async () => {
+    await waitDOMLoaded()
+
     const footerElm = document.getElementsByTagName("footer")[0]
 
     if (!footerElm) {
@@ -142,6 +154,8 @@ export const triggerSeeMore = async () => {
             })
         })
     }
+
+    await waitDOMLoaded()
 
     for (const seeMoreElm of seeMoreElms) {
         seeMoreElm.innerHTML = `<button class="container seeMoreContainer">

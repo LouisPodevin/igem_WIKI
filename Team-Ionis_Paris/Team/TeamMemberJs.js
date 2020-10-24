@@ -96,7 +96,7 @@ const members = [
     },
     {
         name: "David Padrino",
-        nickname: "El Español",
+        nickname: "The Paella Maker",
         role: "Software Developer",
         field: "General Engineering",
         best: "Partnerships with teams from across the World.",
