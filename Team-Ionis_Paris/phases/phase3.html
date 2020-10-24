@@ -67,6 +67,64 @@
                         Our Focus for Bactail
                     </div>
                 </div>
+                <div id="#phase3Animate">
+                    <div class="phase3Animation">
+                        <div id="jk"></div>
+                        <script type="module" defer>
+                            const initAnim = async () => {
+                                const animLogoElm = document.getElementById("jk")
+        
+                                while (!window.bodymovin) {
+                                    await new Promise(res => setTimeout(res, 500))
+                                }
+        
+                                const animation = bodymovin.loadAnimation({
+                                    container: animLogoElm,
+                                    renderer: "svg",
+                                    autoplay: false,
+                                    path: window.LINKS.phase3Animate.url,
+                                    loop: false,
+                                })
+        
+                                let animStarted = false
+        
+                                const startAnim = () => {
+                                    if (animStarted) {
+                                        return
+                                    }
+        
+                                    const elmPos = animLogoElm.getBoundingClientRect().top
+                                    const posFromMiddle = elmPos - window.innerHeight / 2
+        
+                                    if (posFromMiddle < 0) {
+                                        animStarted = true
+                                        animation.goToAndPlay(0)
+                                    }
+                                }
+        
+                                while (!window.rxjs) {
+                                    await new Promise(res => setTimeout(res, 300))
+                                }
+        
+                                const { Subject, interval } = rxjs
+                                const { throttle } = rxjs.operators
+        
+                                window.scrollSource
+                                    .pipe(
+                                        throttle(() => interval(300), {
+                                            leading: true,
+                                            trailing: true,
+                                        }),
+                                    )
+                                    .subscribe(startAnim)
+        
+                                window.scrollSource.next()
+                            }
+        
+                            initAnim()
+                        </script>
+                    </div>
+                
                 <div class="flex text-center mt-16 mb-16 justify-start">
                     <div class="targetText p-2 pl-4 pr-4">
                         Problem: releasing transgenic bacteria from the lab

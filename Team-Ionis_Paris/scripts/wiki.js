@@ -299,20 +299,20 @@ const links = {
     },
 
     //Phase 2
-    phase2DNA: {
-        ext: "svg",
-        path: "/pictures/phase2DNA",
-        prod: "",
+    phase2BioBrick: {
+        ext: "png",
+        path: "/pictures/phases/phase2/phase2BioBrick",
+        prod: "https://2020.igem.org/wiki/images/6/6d/T--Ionis_Paris--phase2BioBrick.png",
     },
     phase2Board: {
-        ext: "svg",
-        path: "/pictures/phase2Board",
-        prod: "",
+        ext: "png",
+        path: "/pictures/phases/phase2/phase2Board",
+        prod: "https://2020.igem.org/wiki/images/6/66/T--Ionis_Paris--phase2Board.png",
     },
-    phase2DNA2: {
-        ext: "svg",
-        path: "/pictures/phase2DNA2",
-        prod: "",
+    phase2BioBrick2: {
+        ext: "png",
+        path: "/pictures/phases/phase2/phase2BioBrick2",
+        prod: "https://2020.igem.org/wiki/images/d/dd/T--Ionis_Paris--phase2BioBrick2.png",
     },
     phase2Animate: {
         ext: "json",
@@ -321,7 +321,7 @@ const links = {
     phase2AgarDiffusion: {
         ext: "png",
         path: "/pictures/phases/phase2/AgarDiffusion",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/2/21/T--Ionis_Paris--phase2Agar.png",
     },
 
     // Phase 3
@@ -364,6 +364,10 @@ const links = {
         ext: "svg",
         path: "/pictures/phases/phase3/perspectiveTimeline",
         prod: "https://2020.igem.org/wiki/images/1/19/T--Ionis_Paris--phase3-perspective.svg",
+    },
+    phase3Animate: {
+        ext: "json",
+        path: "/pictures/animate3/phase3Animate",
     },
 
     // Collaboration
@@ -835,6 +839,49 @@ const links = {
         path: "/pictures/project/partOverview/part-overview7",
         prod: "https://2020.igem.org/wiki/images/7/70/T--Ionis_Paris--part-overview7.png",
     },
+
+    //SOFTWARE
+    softwareIonis: {
+        ext: "png",
+        path: "/pictures/software/logoIonis",
+        prod: "https://2020.igem.org/File:T--Ionis_Paris--Logo_IONIS.png",
+    },
+    softwareTool: {
+        ext: "png",
+        path: "/pictures/software/tool",
+        prod: "https://2020.igem.org/wiki/images/e/ef/T--Ionis_Paris--tool.png",
+    },
+    softwareCss: {
+        ext: "png",
+        path: "/pictures/software/css",
+        prod: "https://2020.igem.org/wiki/images/d/d1/T--Ionis_Paris--css.png",
+    },
+    softwareCss2: {
+        ext: "png",
+        path: "/pictures/software/css2",
+        prod: "https://2020.igem.org/wiki/images/7/7c/T--Ionis_Paris--css2.png",
+    },
+    softwareCss3: {
+        ext: "png",
+        path: "/pictures/software/css3",
+        prod: "https://2020.igem.org/wiki/images/6/6b/T--Ionis_Paris--css3.png",
+    },
+    softwareCss4: {
+        ext: "png",
+        path: "/pictures/software/css4",
+        prod: "https://2020.igem.org/wiki/images/5/58/T--Ionis_Paris--css4.png",
+    },
+    softwareCss5: {
+        ext: "png",
+        path: "/pictures/software/css5",
+        prod: "https://2020.igem.org/wiki/images/d/d2/T--Ionis_Paris--css5.png",
+    },
+    softwareCss6: {
+        ext: "png",
+        path: "/pictures/software/css6",
+        prod: "https://2020.igem.org/wiki/images/4/46/T--Ionis_Paris--css6.png",
+    },
+    
 }
 
 for (let link in links) {

@@ -37,6 +37,11 @@ const menu = [
                 link: rootUrl + "/Partnership",
                 match: `^${rootUrl}/Partnership$`,
             },
+            {
+                title: "Attributions",
+                link: rootUrl + "/Attributions",
+                match: `^${rootUrl}/Attributions$`,
+            },
         ],
     },
     {
@@ -51,11 +56,6 @@ const menu = [
                 title: "Design",
                 link: rootUrl + "/Design",
                 match: `^${rootUrl}/Design$`,
-            },
-            {
-                title: "Attributions",
-                link: rootUrl + "/Attributions",
-                match: `^${rootUrl}/Attributions$`,
             },
             {
                 title: "Part overview",
@@ -96,10 +96,8 @@ const menu = [
     },
     {
         title: "Software",
-        childrens: [
-            { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
-        ],
+        link: rootUrl + "/Software",
+        match: `^${rootUrl}/Software$`,
     },
     {
         title: "Human practices",
