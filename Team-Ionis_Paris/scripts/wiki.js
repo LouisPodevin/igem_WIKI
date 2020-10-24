@@ -840,7 +840,6 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/7/70/T--Ionis_Paris--part-overview7.png",
     },
 
-<<<<<<< HEAD
     //SOFTWARE
     softwareIonis: {
         ext: "png",
@@ -883,7 +882,6 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/4/46/T--Ionis_Paris--css6.png",
     },
     
-=======
     // TEAM MEMBERS
 
     teamMembers1: {
@@ -941,7 +939,6 @@ const links = {
         path: "/pictures/team/teamMembers/Thomas",
         prod: "https://2020.igem.org/wiki/images/e/ef/T--Ionis_Paris--teamMembersThomas.jpeg",
     },
->>>>>>> b4b05107246a4672bf22c8a2bd4385727929a80d
 }
 
 for (let link in links) {
