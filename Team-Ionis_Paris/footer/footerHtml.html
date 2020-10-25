@@ -19,7 +19,7 @@
                 <div class="Sponsors">
                     <div
                         class="SponsorsList"
-                        x-data="{items: new Array(19).fill(1).map((_, i) => i + 1).filter(i => [1, 2].indexOf(i) === -1)}"
+                        x-data="{items: new Array(20).fill(1).map((_, i) => i + 1).filter(i => [1, 2, 20].indexOf(i) === -1)}"
                     >
                         <template x-for="elm in items" :key="elm">
                             <div :class="'__sponsorImgContent ' + ([17].indexOf(elm) !== -1 ? 'colored' : '')">
@@ -31,6 +31,7 @@
                     <div class="schools" x-data="{}">
                         <img class="__sponsorImg big" :src="window.LINKS.supbiotechSponsor.url" />
                         <img class="__sponsorImg big" :src="window.LINKS.esmeSudriaSponsor.url" />
+                        <img class="__sponsorImg big" :src="window.LINKS.attributionsSponsor20.url" />
                     </div>
                 </div>
             </div>

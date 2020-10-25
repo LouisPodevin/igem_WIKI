@@ -646,6 +646,11 @@ const links = {
         path: "/pictures/attributions/esme-sudria-association-aiesme-logo",
         prod: "https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--esme-sudria-association-aiesme-logo.png",
     },
+    attributionsSponsor20: {
+        ext: "jpg",
+        path: "/pictures/attributions/EPITA_LOGO",
+        prod: "https://2020.igem.org/wiki/images/2/2b/T--Ionis_Paris--EPITA-logo.jpg",
+    },
 
     // SAFETY
     safetyHexa1: {
