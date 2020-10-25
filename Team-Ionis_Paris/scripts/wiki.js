@@ -229,7 +229,7 @@ const links = {
     designLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Design-logo",
-        prod: "https://2020.igem.org/wiki/images/c/cd/T--Ionis_Paris--DesignLogo.png",
+        prod: "https://2020.igem.org/wiki/images/b/ba/T--Ionis_Paris--design-logo.png",
     },
     designProjectIntesting: {
         ext: "png",
