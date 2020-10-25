@@ -670,6 +670,11 @@ const links = {
         path: "/pictures/attributions/esme-sudria-association-aiesme-logo",
         prod: "https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--esme-sudria-association-aiesme-logo.png",
     },
+    attributionsSponsor20: {
+        ext: "jpg",
+        path: "/pictures/attributions/EPITA_LOGO",
+        prod: "https://2020.igem.org/wiki/images/2/2b/T--Ionis_Paris--EPITA-logo.jpg",
+    },
 
     // SAFETY
     safetyHexa1: {
@@ -930,7 +935,7 @@ const links = {
         path: "/pictures/software/css6",
         prod: "https://2020.igem.org/wiki/images/4/46/T--Ionis_Paris--css6.png",
     },
-    
+
     // TEAM MEMBERS
     teamLogo:{
         ext: "png",
@@ -1098,6 +1103,108 @@ const links = {
         ext: "png",
         path: "/pictures/phases/phase4/phase4-20",
         prod: "https://2020.igem.org/wiki/images/3/3b/T--Ionis_Paris--phase4-20.png",
+    },
+
+    // ENGINEERING
+    engineering1: {
+        ext: "svg",
+        path: "/pictures/project/engineering/engineering1",
+        prod: "https://2020.igem.org/wiki/images/3/3d/T--Ionis_Paris--engineering1.svg",
+    },
+    engineering2: {
+        ext: "svg",
+        path: "/pictures/project/engineering/engineering2",
+        prod: "https://2020.igem.org/wiki/images/f/fb/T--Ionis_Paris--engineering2.svg",
+    },
+    engineering3: {
+        ext: "svg",
+        path: "/pictures/project/engineering/engineering3",
+        prod: "https://2020.igem.org/wiki/images/d/d9/T--Ionis_Paris--engineering3.svg",
+    },
+    engineering4: {
+        ext: "svg",
+        path: "/pictures/project/engineering/engineering4",
+        prod: "https://2020.igem.org/wiki/images/4/49/T--Ionis_Paris--engineering4.svg",
+    },
+    engineering5: {
+        ext: "svg",
+        path: "/pictures/project/engineering/engineering5",
+        prod: "https://2020.igem.org/wiki/images/c/c8/T--Ionis_Paris--engineering5.svg",
+    },
+    engineering6: {
+        ext: "svg",
+        path: "/pictures/project/engineering/engineering6",
+        prod: "https://2020.igem.org/wiki/images/b/b8/T--Ionis_Paris--engineering6.svg",
+    },
+    engineering7: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering7",
+        prod: "https://2020.igem.org/wiki/images/5/5d/T--Ionis_Paris--engineering7.png",
+    },
+    engineering8: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering8",
+        prod: "https://2020.igem.org/wiki/images/4/47/T--Ionis_Paris--engineering8.png",
+    },
+    engineering9: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering9",
+        prod: "https://2020.igem.org/wiki/images/1/16/T--Ionis_Paris--engineering9.png",
+    },
+    engineering10: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering10",
+        prod: "https://2020.igem.org/wiki/images/9/92/T--Ionis_Paris--engineering10.png",
+    },
+    engineering11: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering11",
+        prod: "https://2020.igem.org/wiki/images/4/4d/T--Ionis_Paris--engineering11.png",
+    },
+    engineering12: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering12",
+        prod: "https://2020.igem.org/wiki/images/7/75/T--Ionis_Paris--engineering12.png",
+    },
+    engineering13: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering13",
+        prod: "https://2020.igem.org/wiki/images/0/0e/T--Ionis_Paris--engineering13.png",
+    },
+    engineering14: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering14",
+        prod: "https://2020.igem.org/wiki/images/4/4f/T--Ionis_Paris--engineering14.png",
+    },
+    engineering15: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering15",
+        prod: "https://2020.igem.org/wiki/images/2/26/T--Ionis_Paris--engineering15.png",
+    },
+    engineering16: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering16",
+        prod: "https://2020.igem.org/wiki/images/2/20/T--Ionis_Paris--engineering16.png",
+    },
+    engineering17: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering17",
+        prod: "https://2020.igem.org/wiki/images/3/37/T--Ionis_Paris--engineering17.png",
+    },
+    engineering18: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering18",
+        prod: "https://2020.igem.org/wiki/images/f/f6/T--Ionis_Paris--engineering18.png",
+    },
+    engineering19: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering19",
+        prod: "https://2020.igem.org/wiki/images/1/18/T--Ionis_Paris--engineering19.png",
+    },
+    engineering20: {
+        ext: "png",
+        path: "/pictures/project/engineering/engineering20",
+        prod: "https://2020.igem.org/wiki/images/4/40/T--Ionis_Paris--engineering20.png",
     },
 }
 
