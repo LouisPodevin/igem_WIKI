@@ -40,8 +40,40 @@
                         <a class="buttonLink" href="https://github.com/igemsoftwareadmin/Ionis_Paris/releases/tag/1.0.0">Link for Release Repository</a>
                     </div>
                 </div>
+                <div class="punchline2 mt-16">
+                    Introduction
+                </div>
+                <div class="textContent mt-16 addPadding">
+                    <p>
+                        <b>Thanks to the sequencing revolution, a vast amount of data is now available worldwide on different databases.</b><br><br>
+                        As an example, the GenBank number of bases has doubled approximately every 18 months from 1985 to 2020<sup>1</sup>.<br><br>
+                        This is a <b>great opportunity</b> for all the science community to easily get data but there is a <b>major problem</b> to this breakthrough, 
+                        the <b>annotation of sequenced genomes</b>. Today, most annotations are done <b>automatically</b> thanks to different programs, but errors are 
+                        still prevalent<sup>2</sup>. To correct these errors, manual curation is the only way to correct them, but it is <b>time consuming</b>, not standardized 
+                        and subjective to the person doing the procedure<sup>3</sup>. 
+                    </p>
+                </div>
                 
             </div>
+            <div class="emphaseContent mt-16">
+                <div class="container">
+                    <div class="textContent addPadding">
+                        <p>
+                            There is a global effort to find a better way to annotate this vast and growing amount of data but still, <b>researchers struggle to find the right database for their needs<sup>4</sup></b>. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-16">
+                <div class="textContent mt-16 addPadding">
+                    <p>
+                        That is why our team has created an <b>open source software</b> where <b>future iGEM Teams</b> and <b>researchers</b> can find annotated sequences 
+                        of different phages which could be used to create therapeutic bacteria. This database is also a <b>collaborative work to continue 
+                        throughout the years</b> as new data can be added to increase the database.  
+                    </p>
+                </div>
+            </div>
+            
             <div class="emphaseContent mt-16">
                 <div class="container">
                     <div class="textContent addPadding">
@@ -54,7 +86,7 @@
             <div class="container mt-16">
                 <div class="row">
                     <div class="col text-center mt-8">
-                        <a class="buttonLink" href="#">Link for the Project Design</a>
+                        <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Design'">Link for the Project Design</a>
                     </div>
                 </div>
                 <div class="addPadding textContent mt-16">
@@ -359,17 +391,38 @@
                     <div class="container">
                         <hr />
                         <div class="referencesText mb-6">
-                            [1 ]This software is an open source project; you can try it at this link http://51.68.227.225:8080/home.php 
-                            or check out the source code and all the files on our gitHUB : https://github.com/igemsoftwareadmin/Ionis_Paris<br><br>
-                        
-                            We decided to go for a web page as the support of our software tool. This allows you to use it without 
-                            downloading anything. The software has been provided with different database from previous IGEM research. 
-                            You can find more info on the data we use with these links: <br><br>
-                            
-                            [2] Ribosome :https://parts.igem.org/Ribosome_Binding_Sites/Prokaryotic/Constitutive/Anderson<br><br>
-                            [3] Promoter : http://parts.igem.org/Promoters/Catalog/Anderson<br><br>
-                            [4] Terminator : http://parts.igem.org/Terminators/Catalog<br><br>
-                            
+                            [1] N/A, NCBI, GenBank and WGS Statistics<br>
+                            https://www.ncbi.nlm.nih.gov/genbank/statistics/<br><br>
+
+                            [2] Salzberg, S. L. (2019). Next-generation genome annotation: we still struggle to get it right. Genome Biology, 20(1), 92.<br> 
+                            https://doi.org/10.1186/s13059-019-1715-2<br><br>
+
+                            [3] Salisbury, A., & Tsourkas, P. K. (2019). A Method for Improving the Accuracy and Efficiency of Bacteriophage Genome Annotation. 
+                            International Journal of Molecular Sciences, 20(14), 3391.<br> 
+                            https://doi.org/10.3390/ijms20143391<br><br>
+
+                            [4] Lathe, W., Williams, J., Mangan, M. & Karolchik, D. (2008) Genomic Data Resources: Challenges and Promises. Nature Education 
+                            1(3):2<br>
+                            https://www.nature.com/scitable/topicpage/genomic-data-resources-challenges-and-promises-743721/<br><br>
+
+
+                            [5 ]This software is an open source project; you can try it at this link: http://51.68.227.225:8080/home.php or check out the source code 
+                            and all the files on our gitHUB :https://github.com/igemsoftwareadmin/Ionis_Paris<br><br>
+
+                            We decided to go for a web page as the support of our software tool. This allows you to use it without downloading anything. The software has 
+                            been provided with different database from previous IGEM research. You can find more info on the data we use with these links:<br><br>
+
+                            [6] Promoter : http://parts.igem.org/Promoters/Catalog/Anderson<br><br>
+
+                            [7] Ribosome :https://parts.igem.org/Ribosome_Binding_Sites/Prokaryotic/Constitutive/Anderson<br><br>
+
+                            [8] Terminator : http://parts.igem.org/Terminators/Catalog<br><br>
+  
+                             References for database:<br>
+                             - phage T4 : https://www.ncbi.nlm.nih.gov/nuccore/29366675<br>
+                             - Salmonella phage S16 : https://www.ncbi.nlm.nih.gov/nuccore/456351087<br>
+                             - Aeromonas phage 25 : https://www.uniprot.org/uniprot/?query=database%3A%28type%3Aembl+DQ529280%29&format=fasta<br>
+                             - Acinetobacter phage 133 : https://www.uniprot.org/uniprot/?query=database%3A%28type%3Aembl+HM114315%29&format=fasta<br>           
                         </div>
                     </div>
                 </div>
