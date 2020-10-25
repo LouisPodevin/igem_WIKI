@@ -302,7 +302,9 @@
                                     </p>
                                 </div>
                                 <!-- TODO : LINK TO IMPLEMENTATION -->
-                                <a class="buttonLink" href="#">Check implementation</a>
+                                <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Implementation'"
+                                                >Check proposed implementation</a
+                                            >
                             </div>
                         </div>
                     </div>
@@ -594,7 +596,7 @@
                                                 bacteriophages.
                                             </p>
                                             <!-- TOTO: Include software link -->
-                                            <a x-data="{}" class="buttonLink" :href="'#'">Check Software</a>
+                                            <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Software'">Check Software</a>
                                         </div>
                                     </div>
                                 </div>
@@ -937,7 +939,7 @@
                                             </p>
 
                                             <!-- TOTO: Add soft link-->
-                                            <a x-data="{}" class="buttonLink" :href="'#'">Check software</a>
+                                            <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Software'">Check software</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1025,7 +1027,7 @@
                                             </p>
 
                                             <!-- TOTO: Add proposed implementation link-->
-                                            <a x-data="{}" class="buttonLink" :href="'#'"
+                                            <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Implementation'"
                                                 >Check proposed implementation</a
                                             >
                                         </div>
@@ -2001,20 +2003,20 @@
         }
 
         .buttonLink {
-            background-color: rgba(0, 0, 0, 0.02);
+            background-color: rgba(0, 0, 0, 0.02) !important;
             border-radius: 5px;
             display: inline-block;
             padding: 10px 20px;
             border: 1px solid rgba(0, 0, 0, 0.03);
             cursor: pointer;
-            color: black;
+            color: black !important;
             text-decoration: none;
             margin-top: 20px;
         }
 
         .buttonLink:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-            color: black;
+            background-color: rgba(0, 0, 0, 0.05) !important;
+            color: black !important;
             text-decoration: none;
         }
 

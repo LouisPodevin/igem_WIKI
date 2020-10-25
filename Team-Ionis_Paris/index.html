@@ -71,9 +71,9 @@
                                 </div>
                             </div>
                             <div class="fact1Text">
-                                Antibiotics managed to <b>increase our life expectancy</b> by several decades<sup>1</sup>. <b>However, the overuse 
+                                Antibiotics managed to <b>increase our life expectancy</b> by several decades. <b>However, the overuse 
                                 or misuse of certain antibiotics</b> conducted to a phenomenon called <b>antimicrobial resistance</b>, 
-                                meaning that the antibiotic loses its ability to treat the bacterial infection.
+                                meaning that the antibiotic loses its ability to treat the bacterial infection.<sup>1</sup>
 
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="factText">
                                 <b>10 million death</b> could occur annually by <b>2050</b> if effective intervention
-                                methods against antimicrobial resistance are not made
+                                methods against antimicrobial resistance are not made.<sup>2</sup>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                                 <div class="factHeaderSub">ANTIMICROBIAL RESISTANCE</div>
                             </div>
                             <div class="factText">
-                                <b>“a serious threat [that] is no longer a prediction for the future, it is happening right now in every region of the world….”</b>.
+                                <b>“a serious threat [that] is no longer a prediction for the future, it is happening right now in every region of the world….”</b>.<sup>3</sup>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                                 In hospital, for example, this resistance leads to an increase in
                                 <b>nosocomial infections</b> due to particularly resistant germs such as Escherichia
                                 coli.According to Health Minister, nosocomial infections cause
-                                <b>3 500 to 9000 deaths per year</b> in France<sup>3</sup>.
+                                <b>3 500 to 9000 deaths per year</b> in France.<sup>4</sup>
                             </div>
                         </div>
                     </div>
@@ -181,6 +181,9 @@
 
                                 initAnim()
                             </script>
+                            <div class="note">
+                                Data for France from 2001 to September 2017<sup>5</sup>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -272,6 +275,30 @@
                         <img :src="window.LINKS.softwareHome.url" />
                         <div class="wikiLinkCardText softwareCard">The Software</div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="references" class="mt-16">
+            <div class="container">
+                <hr />
+                <div class="mt-8 mb-8 textContent">
+                    [1] Shrivastava, S. R., Shrivastava, P. S., & Ramasamy, J. (2018). World health organization 
+                    releases global priority list of antibiotic-resistant bacteria to guide research, discovery, and 
+                    development of new antibiotics. JMS - Journal of Medical Society, 32(1), 76–77.<br>
+                    https://doi.org/10.4103/jms.jms_25_17<br><br>
+
+                    [2] de Kraker, M. E. A., Stewardson, A. J., & Harbarth, S. (2016). Will 10 Million People Die a Year 
+                    due to Antimicrobial Resistance by 2050? PLoS Medicine, 13(11), 1002184.<br>
+                    https://doi.org/10.1371/ journal.pmed.1002184<br><br>
+
+                    [3] WHO. (2014). WHO’s first global report on antibiotic resistance reveals serious, 
+                    worldwide threat to public health. WHO.<br><br>
+
+                    [4] Deniau et al. (2020). DÉCÈS LIÉS AUX INFECTIONS NOSOCOMIALES : BILAN 2008-2017 DES SIGNALEMENTS 
+                    EXTERNES EN FRANCE – FOCUS SUR LES BACTÉRIÉMIES À STAPHYLOCOCCUS AUREUS. Santé publique France, Saint-Maurice, France.<br>
+                    https://www.santepubliquefrance.fr/content/download/259192/2637737<br><br>
+
+                    [5] Bulletin épidémiologique hebdomadaire, santé publique France<br>
                 </div>
             </div>
         </div>
@@ -967,6 +994,16 @@
         .wikiLinkCard.active {
             opacity: 1;
             animation: triggerBottomAnim 1s;
+        }
+
+        .note {
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 15px;
+        }
+
+        #references div {
+            font-size: 10px;
         }
     </style>
 </html>

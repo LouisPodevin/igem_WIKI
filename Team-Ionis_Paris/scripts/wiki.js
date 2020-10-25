@@ -544,6 +544,11 @@ const links = {
         path: "/pictures/partnership/partnership_4",
         prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--partnership_4.png",
     },
+    partnership5: {
+        ext: "png",
+        path: "/pictures/partnership/partnership_5",
+        prod: "https://2020.igem.org/wiki/images/9/9f/T--Ionis_Paris--partnership5.png",
+    },
 
     // Attributions
     attributionsSponsor1: {
@@ -844,7 +849,7 @@ const links = {
     softwareIonis: {
         ext: "png",
         path: "/pictures/software/logoIonis",
-        prod: "https://2020.igem.org/File:T--Ionis_Paris--Logo_IONIS.png",
+        prod: "https://2020.igem.org/wiki/images/8/87/T--Ionis_Paris--Logo_Ionis.png",
     },
     softwareTool: {
         ext: "png",

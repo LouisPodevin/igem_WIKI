@@ -375,7 +375,9 @@
                         </div>
                         <div class="titleAchieveText">Results</div>
                     </div>
-                    <div class="textContent p-2 mt-8">Not ready yet</div>
+                    <div class="flex gap-4 mt-8 items-center textContent">
+                        <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Results'">Check Results</a>
+                    </div>
                 </div>
                 <div id="perspectives">
                     <div class="titleAchieve flex items-center gap-4">
@@ -978,6 +980,25 @@
             font-size: 13px;
             color: rgba(0, 0, 0, 0.6);
             text-align: left;
+        }
+
+        .buttonLink {
+            background-color: rgba(0, 0, 0, 0.02) !important;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            cursor: pointer;
+            color: black !important;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+        .buttonLink:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+            color: black !important;
+            text-decoration: none;
         }
     </style>
 </html>
