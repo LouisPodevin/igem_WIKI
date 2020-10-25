@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Notebook</title>
+    </head>
+    <body>
+        <script src="../scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <script defer src="./NotebookJs.js"></script>
+        <!-- <script defer src="https://2020.igem.org/Template:Ionis_Paris/project/NotebookJs?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+
+        <div class="container">
+            <h1 class="mt-16">Notebook</h1>
+            <div x-data="initViewer()" x-init="$watch('currentPath', () => handleRefreshFeather())" class="mt-16">
+                <div class="fileList">
+                    <template x-for="[month, content] in Object.entries(getList())" :key="month">
+                        <div class="month">
+                            <div class="monthTitle" x-text="month"></div>
+                            <div class="dayList">
+                                <template x-for="[day, contentFile] in Object.entries(getList()[month])" :key="day">
+                                    <a
+                                        class="day"
+                                        x-text="day"
+                                        :href="contentFile"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    ></a>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        h1 {
+            color: #8d1f24;
+            font-style: 30px;
+            font-weight: 800;
+        }
+
+        .header button {
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.05);
+            border: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+
+        .fileList {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+        .month {
+            margin-bottom: 40px;
+        }
+
+        .monthTitle {
+            font-size: 30px;
+            color: #8d1f24;
+        }
+
+        .dayList {
+            margin: 10px 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .day {
+            height: 150px;
+            width: 150px;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.6) !important;
+            cursor: pointer;
+        }
+
+        .day:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+            text-decoration: none !important;
+        }
+    </style>
+</html>
