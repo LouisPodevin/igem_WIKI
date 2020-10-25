@@ -70,7 +70,7 @@ const members = [
         role: "Web Designer",
         field: "General Engineering",
         best: "All our Team building and it’s not over !",
-        memory: "Make Tam think I broke the wiki every week ! He didn’t laugh too much...",
+        memory: "Make Tâm-Tanguy think I broke the wiki every week ! He didn’t laugh too much...",
         isWorth: false,
         picture: window.LINKS.teamMembersLouis.url,
     },
