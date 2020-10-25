@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Protocols</title>
+    </head>
+    <body>
+        <script src="../scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <script defer src="./ProtocolsJs.js"></script>
+        <!-- <script defer src="https://2020.igem.org/Template:Ionis_Paris/project/ProtocolsJs?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+
+        <div class="container">
+            <h1 class="mt-16">Protocols</h1>
+            <div x-data="initViewer()" x-init="$watch('currentPath', () => handleRefreshFeather())" class="mt-16">
+                <div class="header">
+                    <button :disabled="isRoot()" @click="back()">
+                        <i data-feather="arrow-left" class="arrow"></i>
+                        <div class="ml-6">Back</div>
+                    </button>
+                </div>
+                <div class="fileList">
+                    <template x-for="[filename, content] in Object.entries(getList())" :key="filename">
+                        <div class="item no-scroll">
+                            <template x-if="isFile(content)">
+                                <a class="itemContent" :href="content" target="_blank" ref="noopener noreferrer">
+                                    <i data-feather="file" class="featherLogo"> </i>
+                                    <div x-text="filename"></div>
+                                </a>
+                            </template>
+                            <template x-if="!isFile(content)">
+                                <div class="itemContent" @click="cd(filename)">
+                                    <i data-feather="folder" class="featherLogo"></i>
+                                    <div x-text="filename"></div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        h1 {
+            color: #8d1f24;
+            font-style: 30px;
+            font-weight: 800;
+        }
+
+        .header button {
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.05);
+            border: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+
+        .fileList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 40px;
+        }
+
+        .item {
+            flex-shrink: 0;
+            width: 170px;
+            height: 170px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.02);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            cursor: pointer;
+            overflow-y: scroll;
+        }
+
+        .item:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .itemContent {
+            padding: 10px;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            word-wrap: break-word;
+            color: black !important;
+        }
+
+        .itemContent:hover {
+            color: black !important;
+        }
+
+        .featherLogo {
+            width: 40px;
+            height: 40px;
+            color: rgba(141, 31, 37, 0.7);
+            margin-bottom: 10px;
+        }
+    </style>
+</html>
