@@ -258,7 +258,7 @@ const links = {
     },
 
     // Phase 1
-    phase1Logo:{
+    phase1Logo: {
         ext: "png",
         path: "/pictures/LogoIntro/Phase1-logo",
         prod: "https://2020.igem.org/wiki/images/c/ce/T--Ionis_Paris--Phase1-logo.png",
@@ -304,7 +304,7 @@ const links = {
     },
 
     //Phase 2
-    phase2Logo:{
+    phase2Logo: {
         ext: "png",
         path: "/pictures/LogoIntro/Phase2-logo",
         prod: "https://2020.igem.org/wiki/images/7/79/T--Ionis_Paris--Phase2-logo.png",
@@ -335,7 +335,7 @@ const links = {
     },
 
     // Phase 3
-    phase3Logo:{
+    phase3Logo: {
         ext: "png",
         path: "/pictures/LogoIntro/Phase3-logo",
         prod: "https://2020.igem.org/wiki/images/5/51/T--Ionis_Paris--Phase3-logo.png",
@@ -386,10 +386,15 @@ const links = {
     },
 
     // Collaboration
-    collaborationLogo:{
+    collaborationLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Contribution-logo",
         prod: "https://2020.igem.org/wiki/images/6/6a/T--Ionis_Paris--Collaboration-logo.png",
+    },
+    collaboration1Logo: {
+        ext: "png",
+        path: "/pictures/collaborations/collaboration1",
+        prod: "https://2020.igem.org/wiki/images/1/1e/T--Ionis_Paris--collaboration1.png",
     },
     collaboration2Logo: {
         ext: "png",
@@ -518,7 +523,7 @@ const links = {
     },
 
     // PARTNERSHIP
-    partnershipLogo:{
+    partnershipLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Partnership-logo",
         prod: "https://2020.igem.org/wiki/images/8/82/T--Ionis_Paris--Partnership.png",
@@ -570,7 +575,7 @@ const links = {
     },
 
     // Attributions
-    attributionsLogo:{
+    attributionsLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Attributions-logo",
         prod: "https://2020.igem.org/wiki/images/a/a9/T--Ionis_Paris--Attributions-logo.png",
@@ -694,7 +699,7 @@ const links = {
     },
 
     // HUMAN PRACTICES
-    HPLogo:{
+    HPLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/HP-logo",
         prod: "https://2020.igem.org/wiki/images/1/1e/T--Ionis_Paris--HP-logo.png",
@@ -821,7 +826,7 @@ const links = {
     },
 
     // IMPLEMENTATION
-    implementationLogo:{
+    implementationLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Implementation-logo",
         prod: "https://2020.igem.org/wiki/images/f/ff/T--Ionis_Paris--Implementation-logo.png",
@@ -848,7 +853,7 @@ const links = {
     },
 
     // PART OVERVIEW
-    overviewLogo:{
+    overviewLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Overview-logo",
         prod: "https://2020.igem.org/wiki/images/b/b2/T--Ionis_Paris--Overview-logo.png",
@@ -890,7 +895,7 @@ const links = {
     },
 
     //SOFTWARE
-    softwareLogo:{
+    softwareLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Software-logo",
         prod: "https://2020.igem.org/wiki/images/7/74/T--Ionis_Paris--Software-logo.png",
@@ -937,7 +942,7 @@ const links = {
     },
 
     // TEAM MEMBERS
-    teamLogo:{
+    teamLogo: {
         ext: "png",
         path: "/pictures/LogoIntro/Team-logo",
         prod: "https://2020.igem.org/wiki/images/2/2e/T--Ionis_Paris--Team-logo.png",
@@ -999,7 +1004,7 @@ const links = {
     },
 
     // PHASE 4
-    phase4Logo:{
+    phase4Logo: {
         ext: "png",
         path: "/pictures/LogoIntro/Phase4-logo",
         prod: "https://2020.igem.org/wiki/images/c/c2/T--Ionis_Paris--Phase4-logo.png",
