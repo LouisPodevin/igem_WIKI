@@ -73,11 +73,11 @@
                         <script type="module" defer>
                             const initAnim = async () => {
                                 const animLogoElm = document.getElementById("jk")
-        
+
                                 while (!window.bodymovin) {
                                     await new Promise(res => setTimeout(res, 500))
                                 }
-        
+
                                 const animation = bodymovin.loadAnimation({
                                     container: animLogoElm,
                                     renderer: "svg",
@@ -85,30 +85,30 @@
                                     path: window.LINKS.phase3Animate.url,
                                     loop: false,
                                 })
-        
+
                                 let animStarted = false
-        
+
                                 const startAnim = () => {
                                     if (animStarted) {
                                         return
                                     }
-        
+
                                     const elmPos = animLogoElm.getBoundingClientRect().top
                                     const posFromMiddle = elmPos - window.innerHeight / 2
-        
+
                                     if (posFromMiddle < 0) {
                                         animStarted = true
                                         animation.goToAndPlay(0)
                                     }
                                 }
-        
+
                                 while (!window.rxjs) {
                                     await new Promise(res => setTimeout(res, 300))
                                 }
-        
+
                                 const { Subject, interval } = rxjs
                                 const { throttle } = rxjs.operators
-        
+
                                 window.scrollSource
                                     .pipe(
                                         throttle(() => interval(300), {
@@ -117,219 +117,226 @@
                                         }),
                                     )
                                     .subscribe(startAnim)
-        
+
                                 window.scrollSource.next()
                             }
-        
+
                             initAnim()
                         </script>
                     </div>
-                
-                <div class="flex text-center mt-16 mb-16 justify-start">
-                    <div class="targetText p-2 pl-4 pr-4">
-                        Problem: releasing transgenic bacteria from the lab
-                        <i data-feather="arrow-right" class="inline h-4"></i> UNCERTAINTY<br />
-                        Bacterial interaction with the environment cannot be perfectly predicted.
+
+                    <div class="flex text-center mt-16 mb-16 justify-start">
+                        <div class="targetText p-2 pl-4 pr-4">
+                            Problem: releasing transgenic bacteria from the lab
+                            <i data-feather="arrow-right" class="inline h-4"></i> UNCERTAINTY<br />
+                            Bacterial interaction with the environment cannot be perfectly predicted.
+                        </div>
                     </div>
-                </div>
-                <div class="focusContent textContent">
-                    <p>
-                        There are risks of unanticipated survival and reproduction in the environment, with negative
-                        ecological effects, but also uncontrolled transfers of genetically engineered DNA to other
-                        organisms<sup>1</sup>.
-                    </p>
-                    <p>
-                        To limit these risks, researchers have developed kill-switches<sup>2</sup>. They consist in
-                        genetic tools integrated into modified micro-organisms enabling to
-                        <b>control their life cycles</b> through different mechanisms. The activation of these
-                        safeguards can be done through several artificial systems.
-                    </p>
-                    <p>
-                        For instance, a kill switch could render the survival, division, and growth of a bacteria
-                        directly dependent on the presence of certain chemicals or amino acids<sup>3</sup>. They would
-                        regulate gene expression through the action of an inducible promoter linked to a toxic gene
-                        product<sup>4</sup>. We looked at implementing our bacteria with an appropriate kill-switch
-                        system that could be activated following the lysis of the targeted pathogenic bacteria.
-                    </p>
-                </div>
-            </div>
-            <div id="goals">
-                <div class="titleGoal flex items-center gap-4">
-                    <div class="titleGoalIcon rounded-full flex items-center justify-center">
-                        <i data-feather="check-circle"></i>
-                    </div>
-                    <div class="titleGoalText">Main goal(s)</div>
-                </div>
-                <div class="mt-8 flex flex-start">
-                    <div class="textContent goalFocus p-3 pr-4 pl-4">
+                    <div class="focusContent textContent">
                         <p>
-                            The final goal of BacTail is to create a therapeutic bacterium to fight against intestinal
-                            infections caused by antibiotic resistant bacteria. This means that the product would have
-                            to be orally administered to people suffering from infections.
+                            There are risks of unanticipated survival and reproduction in the environment, with negative
+                            ecological effects, but also uncontrolled transfers of genetically engineered DNA to other
+                            organisms<sup>1</sup>.
+                        </p>
+                        <p>
+                            To limit these risks, researchers have developed kill-switches<sup>2</sup>. They consist in
+                            genetic tools integrated into modified micro-organisms enabling to
+                            <b>control their life cycles</b> through different mechanisms. The activation of these
+                            safeguards can be done through several artificial systems.
+                        </p>
+                        <p>
+                            For instance, a kill switch could render the survival, division, and growth of a bacteria
+                            directly dependent on the presence of certain chemicals or amino acids<sup>3</sup>. They
+                            would regulate gene expression through the action of an inducible promoter linked to a toxic
+                            gene product<sup>4</sup>. We looked at implementing our bacteria with an appropriate
+                            kill-switch system that could be activated following the lysis of the targeted pathogenic
+                            bacteria.
                         </p>
                     </div>
                 </div>
-                <div class="flex gap-4 mt-8 items-center textContent">
-                    <div class="iconGoalMission"><i data-feather="chevron-right"></i></div>
-                    <div class="">
+                <div id="goals">
+                    <div class="titleGoal flex items-center gap-4">
+                        <div class="titleGoalIcon rounded-full flex items-center justify-center">
+                            <i data-feather="check-circle"></i>
+                        </div>
+                        <div class="titleGoalText">Main goal(s)</div>
+                    </div>
+                    <div class="mt-8 flex flex-start">
+                        <div class="textContent goalFocus p-3 pr-4 pl-4">
+                            <p>
+                                The final goal of BacTail is to create a therapeutic bacterium to fight against
+                                intestinal infections caused by antibiotic resistant bacteria. This means that the
+                                product would have to be orally administered to people suffering from infections.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-8 items-center textContent">
+                        <div class="iconGoalMission"><i data-feather="chevron-right"></i></div>
+                        <div class="">
+                            <p>
+                                Prevent the bacterium’s dissemination in the environment and the problems linked to it,
+                                a kill-switch system has to be inserted into the chassis to
+                                <b>destroy it once its mission is fulfilled</b> (i.e. phase 2: killing the pathogen).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="textContent mt-8 p-4">
                         <p>
-                            Prevent the bacterium’s dissemination in the environment and the problems linked to it, a
-                            kill-switch system has to be inserted into the chassis to
-                            <b>destroy it once its mission is fulfilled</b> (i.e. phase 2: killing the pathogen).
+                            The <b>IISER Tirupati 2020 iGEM</b> Team was also working on issues linked to antimicrobial
+                            resistance. In a nutshell, their project consists in the destruction of antibiotics found in
+                            the feces of farming chicken. Following excretion, antibiotic residues as well as the
+                            induced resistant bacteria are transported into the environment. This occurs due to leakage,
+                            manure application, and airborne particulate matter and globally contributes to the
+                            aggregation of resistance in the environment<sup>5</sup>. This hazardous issue is frequently
+                            encountered in the poultry industry.
                         </p>
                     </div>
-                </div>
-                <div class="textContent mt-8 p-4">
-                    <p>
-                        The <b>IISER Tirupati 2020 iGEM</b> Team was also working on issues linked to antimicrobial
-                        resistance. In a nutshell, their project consists in the destruction of antibiotics found in the
-                        feces of farming chicken. Following excretion, antibiotic residues as well as the induced
-                        resistant bacteria are transported into the environment. This occurs due to leakage, manure
-                        application, and airborne particulate matter and globally contributes to the aggregation of
-                        resistance in the environment<sup>5</sup>. This hazardous issue is frequently encountered in the
-                        poultry industry.
-                    </p>
-                </div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase3Schema1.url" />
-                <div class="legendColiKaze textContent text-center italic mt-2">
-                    Figure1: Schematic representation of Team IISER Tirupati’s Coli Kaze project
-                </div>
-                <div class="textContent mt-8 p-4">
-                    <p>
-                        With the actual health crisis linked to COVID-19, the IISER Tirupati team did not have the
-                        chance to proceed to their experiments in the lab. Thus, a dialogue began about establishing a
-                        <b>partnership</b>. This one relied on the design and shipment of the kill switch constructed by
-                        the IISER Tirupati team to our lab in France. Our team would then run the associated
-                        experiments, with results exploitable by both teams.
-                    </p>
-                </div>
-                <div class="mt-8">
-                    <div class="p-4">
-                        <p>The two main parameters that the IISER Tirupati Team had to determine:</p>
+                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase3Schema1.url" />
+                    <div class="legendColiKaze textContent text-center italic mt-2">
+                        Figure1: Schematic representation of Team IISER Tirupati’s Coli Kaze project
                     </div>
-                    <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-stretch justify-center">
-                        <div class="goalsParameterCard shadow-sm flex flex-col">
-                            <div class="text-center p-8 goalsParameterCardTitle">The switch system</div>
-                            <div style="height: 200px" class="flex items-center justify-center">
-                                <div class="switch triggerMiddle">
-                                    <div class="switchBack"></div>
-                                    <div class="switchLine"></div>
-                                    <div class="switchButton shadow-sm">
-                                        <div class="switchButtonInside"></div>
+                    <div class="textContent mt-8 p-4">
+                        <p>
+                            With the actual health crisis linked to COVID-19, the IISER Tirupati team did not have the
+                            chance to proceed to their experiments in the lab. Thus, a dialogue began about establishing
+                            a
+                            <b>partnership</b>. This one relied on the design and shipment of the kill switch
+                            constructed by the IISER Tirupati team to our lab in France. Our team would then run the
+                            associated experiments, with results exploitable by both teams.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <div class="p-4">
+                            <p>The two main parameters that the IISER Tirupati Team had to determine:</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-stretch justify-center">
+                            <div class="goalsParameterCard shadow-sm flex flex-col">
+                                <div class="text-center p-8 goalsParameterCardTitle">The switch system</div>
+                                <div style="height: 200px" class="flex items-center justify-center">
+                                    <div class="switch triggerMiddle">
+                                        <div class="switchBack"></div>
+                                        <div class="switchLine"></div>
+                                        <div class="switchButton shadow-sm">
+                                            <div class="switchButtonInside"></div>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="p-4 goalsParameterCardText flex-grow">
+                                    As their bacteria are planning on being added to tanks containing feces of chicken,
+                                    they decided to look for an inducible promoter. This way, they could take control of
+                                    the survival of their bacteria. Through their research, they intended to find an
+                                    environment-friendly and cheap inducer. There, they took interest in the
+                                    <b>L-Arabinose operon</b>.
+                                </div>
                             </div>
-                            <div class="p-4 goalsParameterCardText flex-grow">
-                                As their bacteria are planning on being added to tanks containing feces of chicken, they
-                                decided to look for an inducible promoter. This way, they could take control of the
-                                survival of their bacteria. Through their research, they intended to find an
-                                environment-friendly and cheap inducer. There, they took interest in the
-                                <b>L-Arabinose operon</b>.
-                            </div>
-                        </div>
-                        <div class="goalsParameterCard shadow-sm flex flex-col">
-                            <div class="text-center p-8 goalsParameterCardTitle">The killing method</div>
-                            <div style="height: 200px" class="flex items-center justify-center">
-                                <img x-data="{}" class="goalsParameterImgSkull" :src="window.LINKS.phase3Skull.url" />
-                            </div>
-                            <div class="p-4 goalsParameterCardText flex-grow">
-                                The team decided to rely on the death inducing <b>bpDNaseI</b>, an endonuclease capable
-                                of hydrolyzing double stranded DNA<sup>6</sup>. It was concluded that a modified version
-                                of the L-Arabinose operon would be used with the bpDNaseI gene instead of those normally
-                                expressed.
+                            <div class="goalsParameterCard shadow-sm flex flex-col">
+                                <div class="text-center p-8 goalsParameterCardTitle">The killing method</div>
+                                <div style="height: 200px" class="flex items-center justify-center">
+                                    <img
+                                        x-data="{}"
+                                        class="goalsParameterImgSkull"
+                                        :src="window.LINKS.phase3Skull.url"
+                                    />
+                                </div>
+                                <div class="p-4 goalsParameterCardText flex-grow">
+                                    The team decided to rely on the death inducing <b>bpDNaseI</b>, an endonuclease
+                                    capable of hydrolyzing double stranded DNA<sup>6</sup>. It was concluded that a
+                                    modified version of the L-Arabinose operon would be used with the bpDNaseI gene
+                                    instead of those normally expressed.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="achieve">
-            <div class="container">
-                <div class="titleAchieve flex items-center gap-4">
-                    <div class="titleAchieveIcon rounded-full flex items-center justify-center">
-                        <i data-feather="edit"></i>
-                    </div>
-                    <div class="titleAchieveText">How to achieve it?</div>
-                </div>
-                <img x-data="{}" :src="window.LINKS.phase3Schema2.url" class="schema2 shadow-sm mt-8" />
-                <div class="schema2anotation text-center italic p-6">
-                    Figure2: Representation of the constructs expressing DNASE I for the kill-switch and mRFP for the analysis of
-                    the expression.
-                </div>
-                <div class="mt-6 textContent achieveText p-3">
-                    <p>
-                        The idea that the IISER Tirupati Team had was to replace the structural genes araB, araA and
-                        araD (coding for enzymes catalyzing Arabinose) by the bpDNaseI gene while simplifying the rest
-                        of the system. Thus, a minimal pBAD promoter was used<sup>7,8</sup>.
-                    </p>
-                    <p>
-                        Derived from the Escherichia coli L-arabinose operon, this version of pBAD contains each of the
-                        binding sites for the regulatory protein AraC. These regulatory regions, araI1, araI2, araO1 and
-                        araO2, enable the regulation of the expression of pBAD by AraC<sup>9</sup>. The AraC coding
-                        sequence (CDS) was added upstream to pBAD but in the opposite direction and under the control of
-                        a medium strength constitutive promoter. The pBAD also retains a catabolite gene activator
-                        protein (CAP) binding site where CAP-cAMP complex binds to enhance RNA polymerase binding to the
-                        adjacent promoter.
-                    </p>
-                    <p>
-                        The level of cyclic adenosine monophosphate (cAMP) is low when glucose is present and acts as
-                        the carbon source<sup>10</sup>. The inhibition of the cAMP-producing enzyme is a side-effect of
-                        the transport of glucose into the bacteria.
-                    </p>
-                    <p>
-                        Moreover, a 6xHis sequence has been added following the bpDNaseI gene for further investigation.
-                        And finally, the whole construct will be cloned into the vector the pSB1A3 high copy number
-                        plasmid.
-                    </p>
-                </div>
-                <div x-data="{arabinose: false, glucose: false }" id="interactive">
-                    <div class="textContent">
-                        <div class="text-center font-bold">
-                            Choose a condition to learn about the expression of our constructs!
+            <div id="achieve">
+                <div class="container">
+                    <div class="titleAchieve flex items-center gap-4">
+                        <div class="titleAchieveIcon rounded-full flex items-center justify-center">
+                            <i data-feather="edit"></i>
                         </div>
-                        <div class="clickInte mt-6">
-                            <div class="clickInteLine">
-                                <div class="clickInteLeft">Arabinose Absent</div>
-                                <div
-                                    :class="'clickInteButton' + (arabinose ? ' active' : '')"
-                                    @click="arabinose = !arabinose"
-                                >
-                                    <div class="clickInteButtonInside"></div>
-                                </div>
-                                <div class="clickInteRight">Arabinose Present</div>
+                        <div class="titleAchieveText">How to achieve it?</div>
+                    </div>
+                    <img x-data="{}" :src="window.LINKS.phase3Schema2.url" class="schema2 shadow-sm mt-8" />
+                    <div class="schema2anotation text-center italic p-6">
+                        Figure2: Representation of the constructs expressing DNASE I for the kill-switch and mRFP for
+                        the analysis of the expression.
+                    </div>
+                    <div class="mt-6 textContent achieveText p-3">
+                        <p>
+                            The idea that the IISER Tirupati Team had was to replace the structural genes araB, araA and
+                            araD (coding for enzymes catalyzing Arabinose) by the bpDNaseI gene while simplifying the
+                            rest of the system. Thus, a minimal pBAD promoter was used<sup>7,8</sup>.
+                        </p>
+                        <p>
+                            Derived from the Escherichia coli L-arabinose operon, this version of pBAD contains each of
+                            the binding sites for the regulatory protein AraC. These regulatory regions, araI1, araI2,
+                            araO1 and araO2, enable the regulation of the expression of pBAD by AraC<sup>9</sup>. The
+                            AraC coding sequence (CDS) was added upstream to pBAD but in the opposite direction and
+                            under the control of a medium strength constitutive promoter. The pBAD also retains a
+                            catabolite gene activator protein (CAP) binding site where CAP-cAMP complex binds to enhance
+                            RNA polymerase binding to the adjacent promoter.
+                        </p>
+                        <p>
+                            The level of cyclic adenosine monophosphate (cAMP) is low when glucose is present and acts
+                            as the carbon source<sup>10</sup>. The inhibition of the cAMP-producing enzyme is a
+                            side-effect of the transport of glucose into the bacteria.
+                        </p>
+                        <p>
+                            Moreover, a 6xHis sequence has been added following the bpDNaseI gene for further
+                            investigation. And finally, the whole construct will be cloned into the vector the pSB1A3
+                            high copy number plasmid.
+                        </p>
+                    </div>
+                    <div x-data="{arabinose: false, glucose: false }" id="interactive">
+                        <div class="textContent">
+                            <div class="text-center font-bold">
+                                Choose a condition to learn about the expression of our constructs!
                             </div>
-                            <div class="clickInteLine mt-6">
-                                <div class="clickInteLeft">Glucose Absent</div>
-                                <div
-                                    :class="'clickInteButton' + (glucose ? ' active' : '')"
-                                    @click="glucose = !glucose"
-                                >
-                                    <div class="clickInteButtonInside"></div>
+                            <div class="clickInte mt-6">
+                                <div class="clickInteLine">
+                                    <div class="clickInteLeft">Arabinose Absent</div>
+                                    <div
+                                        :class="'clickInteButton' + (arabinose ? ' active' : '')"
+                                        @click="arabinose = !arabinose"
+                                    >
+                                        <div class="clickInteButtonInside"></div>
+                                    </div>
+                                    <div class="clickInteRight">Arabinose Present</div>
                                 </div>
-                                <div class="clickInteRight">Glucose Present</div>
+                                <div class="clickInteLine mt-6">
+                                    <div class="clickInteLeft">Glucose Absent</div>
+                                    <div
+                                        :class="'clickInteButton' + (glucose ? ' active' : '')"
+                                        @click="glucose = !glucose"
+                                    >
+                                        <div class="clickInteButtonInside"></div>
+                                    </div>
+                                    <div class="clickInteRight">Glucose Present</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="interactiveContent">
-                        <!-- ARABINOSE AND GLUCOSE -->
-                        <div x-show="arabinose && glucose">
-                            <div class="interactiveTitle">Presence of L-Arabinose / Presence of D-Glucose</div>
-                            <div class="interactiveText textContent">
-                                The presence of L-Arabinose makes it binds to AraC, inducing a conformational change.
-                                This enables the binding of the DNA-binding domains of the dimer to adjacent I1 and I2
-                                half-sites. This phenomenon finally gives access for RNA polymerase to bind pBAD. But,
-                                as glucose is present, the cAMP producing enzyme is inhibited. This induces a level of
-                                cAMP, and therefore of CAP-cAMP complex, which is too low to enhance the binding of the
-                                RNA polymerase to pBAD. At the end, the transcription of the DNASE I and mRFP genes
-                                still occurs at a noticeable rate but lower than when glucose is absent (Table. 1).
-                            </div>
+                        <div class="interactiveContent">
+                            <!-- ARABINOSE AND GLUCOSE -->
+                            <div x-show="arabinose && glucose">
+                                <div class="interactiveTitle">Presence of L-Arabinose / Presence of D-Glucose</div>
+                                <div class="interactiveText textContent">
+                                    The presence of L-Arabinose makes it binds to AraC, inducing a conformational
+                                    change. This enables the binding of the DNA-binding domains of the dimer to adjacent
+                                    I1 and I2 half-sites. This phenomenon finally gives access for RNA polymerase to
+                                    bind pBAD. But, as glucose is present, the cAMP producing enzyme is inhibited. This
+                                    induces a level of cAMP, and therefore of CAP-cAMP complex, which is too low to
+                                    enhance the binding of the RNA polymerase to pBAD. At the end, the transcription of
+                                    the DNASE I and mRFP genes still occurs at a noticeable rate but lower than when
+                                    glucose is absent (Table. 1).
+                                </div>
 
-                            <img :src="window.LINKS.phase3Schema6.url" class="interactiveImg shadow-sm" />
-                            <div class="interactiveLegend">
-                                Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
-                                presence of D-Glucose.
-                            </div>
-                            <div id="video">
+                                <img :src="window.LINKS.phase3Schema6.url" class="interactiveImg shadow-sm" />
+                                <div class="interactiveLegend">
+                                    Summary scheme of the regulation of the expression of DNASE I and mRFP in presence
+                                    of L-Arabinose and in presence of D-Glucose.
+                                </div>
+                                <div id="video">
                                     <div class="video shadow-sm">
                                         <video controls muted>
                                             <source
@@ -338,231 +345,252 @@
                                             />
                                         </video>
                                     </div>
-                            </div>
-                        </div>
-
-                        <!-- NOT ARABINOSE AND GLUCOSE -->
-                        <div x-show="!arabinose && glucose">
-                            <div class="interactiveTitle">Absence of L-Arabinose / Presence of D-Glucose</div>
-                            <div class="interactiveText textContent">
-                                As glucose is present, the cAMP producing enzyme is inhibited. The level of cAMP, and
-                                therefore of CAP-cAMP complex, is too low to facilitate the binding of the RNA
-                                polymerase to pBAD. Also, in absence of L-Arabinose, the AraC dimer binds to operator
-                                half-sites O2 and I1. The consequence is a transcription repression through the
-                                formation of a DNA looping upstream of the pBAD promoter excluding the RNA polymerase
-                                from binding to pBAD. Thus, there is no transcription of the DNASE I and mRFP genes
-                                (Table. 1).
-                            </div>
-
-                            <img :src="window.LINKS.phase3Schema3.url" class="interactiveImg shadow-sm" />
-                            <div class="interactiveLegend">
-                                Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
-                                presence of D-Glucose.
-                            </div>
-                            <div id="video">
-                                <div class="video shadow-sm">
-                                    <video controls muted>
-                                        <source
-                                            src="https://2020.igem.org/wiki/images/6/6f/T--Ionis_Paris--video3Phase3.mp4"
-                                            type="video/mp4"   
-                                        />
-                                    </video>
                                 </div>
-                        </div>
-                        </div>
-
-                        <!-- ARABINOSE AND NOT GLUCOSE -->
-                        <div x-show="arabinose && !glucose">
-                            <div class="interactiveTitle">Presence of L-Arabinose / Absence of D-Glucose</div>
-                            <div class="interactiveText textContent">
-                                The presence of L-Arabinose makes it binds to AraC, inducing a conformational change.
-                                This enables the binding of the DNA-binding domains of the dimer to adjacent I1 and I2
-                                half-sites. This phenomenon finally gives access to the RNA polymerase to bind pBAD.
-                                Additionally, as there is no glucose, the level of CAP-cAMP will be high enough to bind
-                                to the CAP binding site in order to facilitate the RNA polymerase binding to pBAD. Thus,
-                                the transcription of DNASE I and mRFP occurs (Table. 1).
-                            </div>
-
-                            <img :src="window.LINKS.phase3Schema5.url" class="interactiveImg shadow-sm" />
-                            <div class="interactiveLegend">
-                                Regulation of the expression of DNASE I and mRFP in presence of L-Arabinose and in
-                                absence of D-Glucose.
-                            </div>
-                            <div id="video">
-                                <div class="video shadow-sm">
-                                    <video controls muted>
-                                        <source
-                                            src="https://2020.igem.org/wiki/images/d/d0/T--Ionis_Paris--video2Phase3.mp4"
-                                            type="video/mp4"
-                                        />
-                                    </video>
+                                <div class="interactiveLegend">
+                                    Summary video of the regulation of the expression of DNASE I and mRFP in presence of
+                                    L-Arabinose and in presence of D-Glucose.
                                 </div>
-                        </div>
-                        </div>
-
-                        <!-- NOT ARABINOSE AND NOT GLUCOSE -->
-                        <div x-show="!arabinose && !glucose">
-                            <div class="interactiveTitle">Absence of L-Arabinose / Absence of D-Glucose</div>
-                            <div class="interactiveText textContent">
-                                As there is no glucose, the level of CAP-cAMP will be high enough to bind to the CAP
-                                binding site in order to facilitate the RNA polymerase binding to pBAD. But, in absence
-                                of L-Arabinose, the AraC dimer binds to operator half-sites O2 and I1. The consequence
-                                is a transcription repression through the formation of a DNA looping upstream of the
-                                pBAD promoter excluding the RNA polymerase and the CAP-cAMP complex from binding to
-                                pBAD. Thus, there is no transcription of DNASE I and mRFP gene (Table. 1).
                             </div>
 
-                            <img :src="window.LINKS.phase3Schema4.url" class="interactiveImg shadow-sm" />
-                            <div class="interactiveLegend">
-                                Figure3: Regulation of the expression of DNASE I and mRFP in absence of L-Arabinose and in
-                                absence of D-Glucose..
-                            </div>
-                            <div id="video">
-                                <div class="video shadow-sm">
-                                    <video controls muted>
-                                        <source
-                                            src="https://2020.igem.org/wiki/images/7/76/T--Ionis_Paris--video4Phase3.mp4"
-                                            type="video/mp4"
-                                        />
-                                    </video>
+                            <!-- NOT ARABINOSE AND GLUCOSE -->
+                            <div x-show="!arabinose && glucose">
+                                <div class="interactiveTitle">Absence of L-Arabinose / Presence of D-Glucose</div>
+                                <div class="interactiveText textContent">
+                                    As glucose is present, the cAMP producing enzyme is inhibited. The level of cAMP,
+                                    and therefore of CAP-cAMP complex, is too low to facilitate the binding of the RNA
+                                    polymerase to pBAD. Also, in absence of L-Arabinose, the AraC dimer binds to
+                                    operator half-sites O2 and I1. The consequence is a transcription repression through
+                                    the formation of a DNA looping upstream of the pBAD promoter excluding the RNA
+                                    polymerase from binding to pBAD. Thus, there is no transcription of the DNASE I and
+                                    mRFP genes (Table. 1).
                                 </div>
+
+                                <img :src="window.LINKS.phase3Schema3.url" class="interactiveImg shadow-sm" />
+                                <div class="interactiveLegend">
+                                    Summary scheme of the regulation of the expression of DNASE I and mRFP in absence of
+                                    L-Arabinose and in presence of D-Glucose.
+                                </div>
+                                <div id="video">
+                                    <div class="video shadow-sm">
+                                        <video controls muted>
+                                            <source
+                                                src="https://2020.igem.org/wiki/images/6/6f/T--Ionis_Paris--video3Phase3.mp4"
+                                                type="video/mp4"
+                                            />
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="interactiveLegend">
+                                    Summary video of the regulation of the expression of DNASE I and mRFP in absence of
+                                    L-Arabinose and in presence of D-Glucose.
+                                </div>
+                            </div>
+
+                            <!-- ARABINOSE AND NOT GLUCOSE -->
+                            <div x-show="arabinose && !glucose">
+                                <div class="interactiveTitle">Presence of L-Arabinose / Absence of D-Glucose</div>
+                                <div class="interactiveText textContent">
+                                    The presence of L-Arabinose makes it binds to AraC, inducing a conformational
+                                    change. This enables the binding of the DNA-binding domains of the dimer to adjacent
+                                    I1 and I2 half-sites. This phenomenon finally gives access to the RNA polymerase to
+                                    bind pBAD. Additionally, as there is no glucose, the level of CAP-cAMP will be high
+                                    enough to bind to the CAP binding site in order to facilitate the RNA polymerase
+                                    binding to pBAD. Thus, the transcription of DNASE I and mRFP occurs (Table. 1).
+                                </div>
+
+                                <img :src="window.LINKS.phase3Schema5.url" class="interactiveImg shadow-sm" />
+                                <div class="interactiveLegend">
+                                    Summary scheme of the regulation of the expression of DNASE I and mRFP in presence
+                                    of L-Arabinose and in absence of D-Glucose.
+                                </div>
+                                <div id="video">
+                                    <div class="video shadow-sm">
+                                        <video controls muted>
+                                            <source
+                                                src="https://2020.igem.org/wiki/images/d/d0/T--Ionis_Paris--video2Phase3.mp4"
+                                                type="video/mp4"
+                                            />
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="interactiveLegend">
+                                    Summary video of the regulation of the expression of DNASE I and mRFP in presence of
+                                    L-Arabinose and in absence of D-Glucose.
+                                </div>
+                            </div>
+
+                            <!-- NOT ARABINOSE AND NOT GLUCOSE -->
+                            <div x-show="!arabinose && !glucose">
+                                <div class="interactiveTitle">Absence of L-Arabinose / Absence of D-Glucose</div>
+                                <div class="interactiveText textContent">
+                                    As there is no glucose, the level of CAP-cAMP will be high enough to bind to the CAP
+                                    binding site in order to facilitate the RNA polymerase binding to pBAD. But, in
+                                    absence of L-Arabinose, the AraC dimer binds to operator half-sites O2 and I1. The
+                                    consequence is a transcription repression through the formation of a DNA looping
+                                    upstream of the pBAD promoter excluding the RNA polymerase and the CAP-cAMP complex
+                                    from binding to pBAD. Thus, there is no transcription of DNASE I and mRFP gene
+                                    (Table. 1).
+                                </div>
+
+                                <img :src="window.LINKS.phase3Schema4.url" class="interactiveImg shadow-sm" />
+                                <div class="interactiveLegend">
+                                    Summary scheme of the regulation of the expression of DNASE I and mRFP in absence of
+                                    L-Arabinose and in absence of D-Glucose..
+                                </div>
+                                <div id="video">
+                                    <div class="video shadow-sm">
+                                        <video controls muted>
+                                            <source
+                                                src="https://2020.igem.org/wiki/images/7/76/T--Ionis_Paris--video4Phase3.mp4"
+                                                type="video/mp4"
+                                            />
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="interactiveLegend">
+                                    Summary video of the regulation of the expression of DNASE I and mRFP in absence of
+                                    L-Arabinose and in absence of D-Glucose..
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="mt-4">
+                        <table class="tableExpression">
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Arabinose Absent</td>
+                                    <td>Arabinose Present</td>
+                                </tr>
+                                <tr>
+                                    <td>Glucose Absent</td>
+                                    <td>No expression<sup>*</sup></td>
+                                    <td>Expression</td>
+                                </tr>
+                                <tr>
+                                    <td>Glucose Present</td>
+                                    <td>No expression<sup>*</sup></td>
+                                    <td>Expression at a lower rate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-2 textContent p-2">* Promoter leakage can occur</div>
+                        <div class="mt-2 textContent italic text-center p-2">
+                            Table 1. Summary table of the expression of DNASE I and mRFP in function of the presence and
+                            absence of glucose and arabinose
+                        </div>
+                        <div class="mt-8 textContent p-2">
+                            An important point that will have to be kept in mind through the experiments and the
+                            analysis of the results is that <b>promoter leakage</b> can occur. Promoter leakage means
+                            that the transcription efficiency at the promoter inactive state is much lower than when the
+                            promoter is in an active state. In fact, it has been experimentally verified that
+                            transcription takes place not only at the active state but also at the inactive state of the
+                            promoter <sup>11</sup>. This phenomenon is judged as meaningless for certain genes. But, as
+                            the associated proteins are endonucleases here, they could kill the host bacteria even if
+                            produced in a small amount.
                         </div>
                     </div>
-                </div>
-                <div class="mt-4">
-                    <table class="tableExpression">
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td>Arabinose Absent</td>
-                                <td>Arabinose Present</td>
-                            </tr>
-                            <tr>
-                                <td>Glucose Absent</td>
-                                <td>No expression<sup>*</sup></td>
-                                <td>Expression</td>
-                            </tr>
-                            <tr>
-                                <td>Glucose Present</td>
-                                <td>No expression<sup>*</sup></td>
-                                <td>Expression at a lower rate</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="mt-2 textContent p-2">* Promoter leakage can occur</div>
-                    <div class="mt-2 textContent italic text-center p-2">
-                        Table 1. Summary table of the expression of DNASE I and mRFP in function of the presence and
-                        absence of glucose and arabinose
-                    </div>
-                    <div class="mt-8 textContent p-2">
-                        An important point that will have to be kept in mind through the experiments and the analysis of
-                        the results is that <b>promoter leakage</b> can occur. Promoter leakage means that the
-                        transcription efficiency at the promoter inactive state is much lower than when the promoter is
-                        in an active state. In fact, it has been experimentally verified that transcription takes place
-                        not only at the active state but also at the inactive state of the promoter <sup>11</sup>. This
-                        phenomenon is judged as meaningless for certain genes. But, as the associated proteins are
-                        endonucleases here, they could kill the host bacteria even if produced in a small amount.
-                    </div>
-                </div>
-                <div id="results">
-                    <div class="titleAchieve flex items-center gap-4">
-                        <div class="titleAchieveIcon rounded-full flex items-center justify-center">
-                            <i data-feather="edit"></i>
+                    <div id="results">
+                        <div class="titleAchieve flex items-center gap-4">
+                            <div class="titleAchieveIcon rounded-full flex items-center justify-center">
+                                <i data-feather="edit"></i>
+                            </div>
+                            <div class="titleAchieveText">Results</div>
                         </div>
-                        <div class="titleAchieveText">Results</div>
-                    </div>
-                    <div class="flex gap-4 mt-8 items-center textContent">
-                        <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Results'">Check Results</a>
-                    </div>
-                </div>
-                <div id="perspectives">
-                    <div class="titleAchieve flex items-center gap-4">
-                        <div class="titleAchieveIcon rounded-full flex items-center justify-center">
-                            <i data-feather="edit"></i>
+                        <div class="flex gap-4 mt-8 items-center textContent">
+                            <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Results'">Check Results</a>
                         </div>
-                        <div class="titleAchieveText">Perspectives</div>
                     </div>
-                    <div class="mt-8 textContent">
-                        According to the IISER Tirupati iGEM team kill-switch’s way of functioning, the applicability
-                        for the BacTail project was a major concern. This BioBrick suggests that after the ingestion of
-                        the therapeutic bacteria designed in the BacTail project, the patient should later, take
-                        L-arabinose to prevent the dissemination of the modified bacteria.
-                    </div>
-                    <img x-data="{}" :src="window.LINKS.phase3perspective.url" class="perspectiveImg mt-6" />
-                    <div class="mt-8 textContent">
-                        However, when ingested in its digestible form, L-arabinose is absorbed by the intestinal tract.
-                        The problem is that this monosaccharide selectively
-                        <b>inhibits intestinal saccharase</b> activity in a noncompetitive manner<sup>12</sup>.
-                        Saccharase is essential for glucose absorption as it turns sucrose into glucose and fructose.
-                        Thus, its inhibition in the human gastrointestinal tract does not represent a viable solution.
-                    </div>
-                    <div class="mt-8 textContent">
-                        This partnership with the IISER Tirupati team allowed us to
-                        <b>test a type of kill switch</b> that could be useful for our future system. As this consists
-                        in a proof of concept, further <b>optimization will be needed</b> to adapt the kill switch to
-                        its use in the human body. The existing possibilities consist in changing the inducible promoter
-                        or using a repressor.
-                    </div>
-                    <div class="mt-8 flex gap-6 items-center">
-                        <i data-feather="sun" class="iconSun"></i>
-                        <div class="textContent">
-                            For example, we could <b>design a promoter</b> which would be activated when the target has
-                            died and released certain intracellular elements that would be sensed by our engineered
-                            bacterium.
+                    <div id="perspectives">
+                        <div class="titleAchieve flex items-center gap-4">
+                            <div class="titleAchieveIcon rounded-full flex items-center justify-center">
+                                <i data-feather="edit"></i>
+                            </div>
+                            <div class="titleAchieveText">Perspectives</div>
+                        </div>
+                        <div class="mt-8 textContent">
+                            According to the IISER Tirupati iGEM team kill-switch’s way of functioning, the
+                            applicability for the BacTail project was a major concern. This BioBrick suggests that after
+                            the ingestion of the therapeutic bacteria designed in the BacTail project, the patient
+                            should later, take L-arabinose to prevent the dissemination of the modified bacteria.
+                        </div>
+                        <img x-data="{}" :src="window.LINKS.phase3perspective.url" class="perspectiveImg mt-6" />
+                        <div class="mt-8 textContent">
+                            However, when ingested in its digestible form, L-arabinose is absorbed by the intestinal
+                            tract. The problem is that this monosaccharide selectively
+                            <b>inhibits intestinal saccharase</b> activity in a noncompetitive manner<sup>12</sup>.
+                            Saccharase is essential for glucose absorption as it turns sucrose into glucose and
+                            fructose. Thus, its inhibition in the human gastrointestinal tract does not represent a
+                            viable solution.
+                        </div>
+                        <div class="mt-8 textContent">
+                            This partnership with the IISER Tirupati team allowed us to
+                            <b>test a type of kill switch</b> that could be useful for our future system. As this
+                            consists in a proof of concept, further <b>optimization will be needed</b> to adapt the kill
+                            switch to its use in the human body. The existing possibilities consist in changing the
+                            inducible promoter or using a repressor.
+                        </div>
+                        <div class="mt-8 flex gap-6 items-center">
+                            <i data-feather="sun" class="iconSun"></i>
+                            <div class="textContent">
+                                For example, we could <b>design a promoter</b> which would be activated when the target
+                                has died and released certain intracellular elements that would be sensed by our
+                                engineered bacterium.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="references" class="mt-16">
-            <div class="container">
-                <hr />
-                <div class="mt-8 mb-8 textContent">
-                    [1] Ahrenholtz, I., Lorenz, M. G., & Wackernagel, W. (1994). A Conditional Suicide System in
-                    Escherichia coli Based on the Intracellular Degradation of DNA. Applied and Environmental
-                    Microbiology, 60, 3746–3751.<br />
-                    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC201882/pdf/aem00027-0276.pdf <br /><br />
+            <div id="references" class="mt-16">
+                <div class="container">
+                    <hr />
+                    <div class="mt-8 mb-8 textContent">
+                        [1] Ahrenholtz, I., Lorenz, M. G., & Wackernagel, W. (1994). A Conditional Suicide System in
+                        Escherichia coli Based on the Intracellular Degradation of DNA. Applied and Environmental
+                        Microbiology, 60, 3746–3751.<br />
+                        https://www.ncbi.nlm.nih.gov/pmc/articles/PMC201882/pdf/aem00027-0276.pdf <br /><br />
 
-                    [2] Chan, C. T. Y., Lee, J. W., Ewen Cameron, D., Bashor, C. J., & Collins, J. J. (2016). “Deadman”
-                    and “Passcode” microbial kill switches for bacterial containment. Nature Chemical Biology volume,
-                    12(2), 82-86.<br />
-                    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4718764/ <br /><br />
+                        [2] Chan, C. T. Y., Lee, J. W., Ewen Cameron, D., Bashor, C. J., & Collins, J. J. (2016).
+                        “Deadman” and “Passcode” microbial kill switches for bacterial containment. Nature Chemical
+                        Biology volume, 12(2), 82-86.<br />
+                        https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4718764/ <br /><br />
 
-                    [3] Knight, H. (2015). “Kill switches” shut down engineered bacteria. MIT News.<br />
-                    https://news.mit.edu/2015/kill-switches-shut-down-engineered-bacteria-1211 <br /><br />
+                        [3] Knight, H. (2015). “Kill switches” shut down engineered bacteria. MIT News.<br />
+                        https://news.mit.edu/2015/kill-switches-shut-down-engineered-bacteria-1211 <br /><br />
 
-                    [4] Stirling, F., Bitzan, L., O’Keefe, S., Redfield, E., Oliver, J. W. K., Way, J., & Silver, P. A.
-                    (2018). Rational Design of Evolutionarily Stable Microbial Kill Switches. Molecular Cell, 68(4),
-                    686-697. <br />
-                    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5812007/ <br /><br />
+                        [4] Stirling, F., Bitzan, L., O’Keefe, S., Redfield, E., Oliver, J. W. K., Way, J., & Silver, P.
+                        A. (2018). Rational Design of Evolutionarily Stable Microbial Kill Switches. Molecular Cell,
+                        68(4), 686-697. <br />
+                        https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5812007/ <br /><br />
 
-                    [5] McEachran, A. D., Blackwell B. R., Hanson J. D., Wooten K.J., Mayer G..D, Cox S. B, & Smith, P.
-                    N. (2015). Antibiotics, bacteria, and antibiotic resistance genes: aerial transport from cattle feed
-                    yards via particulate matter. Environmental Health Perspectives, 123(4), 337.<br /><br />
-                    [6] Chen, C. Y., Shao-Chun, L., & Ta-Hsiu, L. (1998). Cloning, sequencing and expression of a cDNA
-                    encoding bovine pancreatic deoxyribonuclease I in Escherichia coli: purification and
-                    characterization of the recombinant enzyme. Gene, 206(2), 181-184.<br />
-                    https://www.sciencedirect.com/science/article/abs/pii/S0378111997005829<br /><br />
-                    [7] Brzozowska, N., & Gourlay, J. (2017). Part:BBa_K2442101. Minimal pBAD promoter. iGEM. Registry
-                    of Standard Biological Parts.<br />
-                    http://parts.igem.org/Part:BBa_K2442101<br /><br />
-                    [8] Analyze Sequence: pBAD33. AddGene.<br />
-                    https://www.addgene.org/browse/sequence_vdb/1848/ <br /><br />
-                    [9] Brzozowska, N., & Gourlay, J. (2017). Part:BBa_K2442103. E. coli AraC coding region. iGEM.
-                    Registry of Standard Biological Parts.<br />
-                    http://parts.igem.org/Part:BBa_K2442103<br /><br />
-                    [10] Ishizuka, H., Hanamura, A., Kunimura, T., & Hiroji, A. (1993). A lowered concentration of cAMP
-                    receptor protein caused by glucose is an important determinant for catabolite repression in
-                    Escherichia coli. Molecular Microbiology, 10(2), 341-350.<br />
-                    https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2958.1993.tb01960.x <br /><br />
-                    [11] Huang, L., Yuan, Z., Liu, P., & Zhou, T. (2015). Effects of promoter leakage on dynamics of
-                    gene expression. BMC Systems Biology, 9.<br />
-                    https://bmcsystbiol.biomedcentral.com/articles/10.1186/s12918-015-0157-z<br /><br />
+                        [5] McEachran, A. D., Blackwell B. R., Hanson J. D., Wooten K.J., Mayer G..D, Cox S. B, & Smith,
+                        P. N. (2015). Antibiotics, bacteria, and antibiotic resistance genes: aerial transport from
+                        cattle feed yards via particulate matter. Environmental Health Perspectives, 123(4), 337.<br /><br />
+                        [6] Chen, C. Y., Shao-Chun, L., & Ta-Hsiu, L. (1998). Cloning, sequencing and expression of a
+                        cDNA encoding bovine pancreatic deoxyribonuclease I in Escherichia coli: purification and
+                        characterization of the recombinant enzyme. Gene, 206(2), 181-184.<br />
+                        https://www.sciencedirect.com/science/article/abs/pii/S0378111997005829<br /><br />
+                        [7] Brzozowska, N., & Gourlay, J. (2017). Part:BBa_K2442101. Minimal pBAD promoter. iGEM.
+                        Registry of Standard Biological Parts.<br />
+                        http://parts.igem.org/Part:BBa_K2442101<br /><br />
+                        [8] Analyze Sequence: pBAD33. AddGene.<br />
+                        https://www.addgene.org/browse/sequence_vdb/1848/ <br /><br />
+                        [9] Brzozowska, N., & Gourlay, J. (2017). Part:BBa_K2442103. E. coli AraC coding region. iGEM.
+                        Registry of Standard Biological Parts.<br />
+                        http://parts.igem.org/Part:BBa_K2442103<br /><br />
+                        [10] Ishizuka, H., Hanamura, A., Kunimura, T., & Hiroji, A. (1993). A lowered concentration of
+                        cAMP receptor protein caused by glucose is an important determinant for catabolite repression in
+                        Escherichia coli. Molecular Microbiology, 10(2), 341-350.<br />
+                        https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2958.1993.tb01960.x <br /><br />
+                        [11] Huang, L., Yuan, Z., Liu, P., & Zhou, T. (2015). Effects of promoter leakage on dynamics of
+                        gene expression. BMC Systems Biology, 9.<br />
+                        https://bmcsystbiol.biomedcentral.com/articles/10.1186/s12918-015-0157-z<br /><br />
 
-                    [12] Seri, K., Sanai, K., Matsuo, N., Kawakubo, K., Xue, C., & Inoue, S. (1996). L-arabinose
-                    selectively inhibits intestinal sucrase in an uncompetitive manner and suppresses glycemic response
-                    after sucrose ingestion in animals. Metabolism: clinical and experimental, 45(11), 1368-1374.
+                        [12] Seri, K., Sanai, K., Matsuo, N., Kawakubo, K., Xue, C., & Inoue, S. (1996). L-arabinose
+                        selectively inhibits intestinal sucrase in an uncompetitive manner and suppresses glycemic
+                        response after sucrose ingestion in animals. Metabolism: clinical and experimental, 45(11),
+                        1368-1374.
+                    </div>
                 </div>
             </div>
         </div>
@@ -1155,7 +1183,7 @@
         }
 
         .video {
-            background-color:white;
+            background-color: white;
             border-radius: 20px;
             width: 100%;
             max-width: 900px;
