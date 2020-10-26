@@ -1657,7 +1657,6 @@ const init = async () => {
     const minimumPromise = Promise.all([
         withLoading(import(links.feather.url)),
         withLoading(loadGlobalCss()),
-        withLoading(initNavigation()),
         withLoading(loadBootstrap()),
         withLoading(import(links.alpine.url)),
         withLoading(loadScript(links.rxjs.url, false, () => !!window.rxjs)),
@@ -1688,6 +1687,7 @@ const init = async () => {
     }
 
     const backgroundPromise = Promise.all([
+        withLoading(initNavigation()),
         withLoading(loadFont()),
         withLoading(loadFooter()),
         withLoading(loadTriggerAction()),

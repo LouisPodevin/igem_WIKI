@@ -29,8 +29,8 @@ const menu = [
         childrens: [
             {
                 title: "Team Members",
-                link: rootUrl + "/Team/TeamMember",
-                match: `^${rootUrl}/Team/TeamMember$`,
+                link: rootUrl + "/Team",
+                match: `^${rootUrl}/Team$`,
             },
             {
                 title: "Collaborations",
@@ -74,8 +74,8 @@ const menu = [
             },
             {
                 title: "Notebook",
-                link: rootUrl + "/project/Notebook",
-                match: `^${rootUrl}/project/Notebook$`,
+                link: rootUrl + "/Notebook",
+                match: `^${rootUrl}/Notebook$`,
             },
             {
                 title: "Protocols",
