@@ -1234,6 +1234,44 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/7/7a/T--Ionis_Paris--contribution2.svg",
     },
 
+    // RESULTS
+    results1: {
+        ext: "png",
+        path: "/pictures/results/results1",
+        prod: "https://2020.igem.org/wiki/images/e/e5/T--Ionis_Paris--results1.png",
+    },
+    results2: {
+        ext: "png",
+        path: "/pictures/results/results2",
+        prod: "https://2020.igem.org/wiki/images/4/49/T--Ionis_Paris--results2.png",
+    },
+    results3: {
+        ext: "png",
+        path: "/pictures/results/results3",
+        prod: "https://2020.igem.org/wiki/images/f/f0/T--Ionis_Paris--results3.png",
+    },
+    results4: {
+        ext: "png",
+        path: "/pictures/results/results4",
+        prod: "https://2020.igem.org/wiki/images/9/98/T--Ionis_Paris--results4.png",
+    },
+    results5: {
+        ext: "png",
+        path: "/pictures/results/results5",
+        prod: "https://2020.igem.org/wiki/images/1/11/T--Ionis_Paris--results5.png",
+    },
+    results6: {
+        ext: "png",
+        path: "/pictures/results/results6",
+        prod: "https://2020.igem.org/wiki/images/a/ae/T--Ionis_Paris--results6.png",
+    },
+    results7: {
+        ext: "png",
+        path: "/pictures/results/results7",
+        prod: "https://2020.igem.org/wiki/images/5/5d/T--Ionis_Paris--results7.png",
+    },
+
+
 }
 
 for (let link in links) {

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Results</title>
+    </head>
+    <body>
+        <script src="./scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+        <div class="firstView">
+            <div class="container firstViewTitle">Results</div>  
+        </div>
+        <div></div>
+        <div class="container">
+                <div class="textContent mt-16 addPadding">
+                    <p>
+                        The aim of our project BacTail is to create tailor-made and engineered bacteria to specifically recognize, 
+                        bind and lyse  pathogenic bacteria, then self-destroy, using the powerful tools of synthetic biology. For 
+                        the experimental approach, we divided our project into 3 distinct axes for for the laboratory: 
+                    </p>
+                </div>
+                <div class="containerCard" x-data="{}">
+                    <div class="Card" target-id="phase1">
+                        <img :src="window.LINKS.designProjectPhase1.url" class="imgCard" />
+                        <div class="textCard1 projectCard"><b>Phase 1</b><br>
+                            Target and bind to the target bacteria
+                            </div>
+                    </div>
+                    <div class="Card" target-id="phase2">
+                        <img :src="window.LINKS.designProjectPhase2.url" class="imgCard" />
+                        <div class="textCard2 projectCard"><b>Phase 2</b><br>
+                            Lyse the target bacteria using antimicrobial peptides
+                        </div>
+
+                    </div>
+                    <div class="Card" target-id="phase3">
+                        <img :src="window.LINKS.designProjectPhase3.url" class="imgCard" />
+                        <div class="textCard2 projectCard"><b>Phase 3</b><br>
+                            Incorporate of a Kill-switch system in our chassis to induce its self-destruction
+                        </div>
+
+                    </div>
+                </div>
+                <div class="check mt-16">
+                    <i class="checkIcon" data-feather="check-circle"></i>
+                    <div>
+                        <b>The properties of our experimental approach are as follows:</b>
+                    </div>
+                </div>
+                <div class="textContent mt-4 ml-16 addPadding">
+                    <p>
+                        All the steps cited above have been developed as one unique system adapted to our project – yet, 
+                        these steps can be used individually and eventually be re-adapted for other application areas.
+                    </p>
+                </div>
+                <div class="textContent mt-4 ml-16 addPadding">
+                    <p>
+                        All our phases are designed for <b><i>Escherichia coli K12</i></b> since we are working under <b>Class 1 Biosafety level</b>. Yet, 
+                        the ultimate goal is to create a template of this system that can be specifically applied against different 
+                        bacterial strains. Specific bacteriophages have already been identified to target pathogenic bacteria such as 
+                        <b><i>Salmonella</i></b>, <b><i>Listeria</i></b>, <b><i>Mycobacterium tuberculosis</i></b>, <b><i>Pseudomonas</i></b> or <b><i>Escherichia coli</i></b>. For example, the PP01 phage 
+                        was shown to target the shiga-toxin producing <b><i>E. coli</i></b> strain<sup>1</sup>.
+
+                    </p>
+                </div>  
+                <div class="textContent mt-4 ml-16 addPadding">
+                    <p>
+                        Therefore, we created a software to specifically select and customize a BioBrick to recognize 
+                        the desired target bacteria for phase 1.
+                    </p>
+                </div> 
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        Further detail on our experimental procedures and protocols can be found here: Procedures and Protocols.
+
+                    </p>
+                </div>
+                <div class="resultTitle mt-16" id="phase1">
+                    Phase 1 | Targeting and binding to the target bacteria
+                </div> 
+                <div class="resultTitle1 mt-16">
+                    BioBrick and primer design of the fragments for phase 1
+                </div>
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        The gene product 37 (gp37) is a critical component for the phase I of the project BacTail. To find out more about the 
+                        scientific background and design of Phase I click here (mettre lien vers Phase I Design).<br><br>
+
+                        The aim for the first phase is to express the gp37 on the surface of our chassis Escherichia coli  (<i>E.coli</i>) K12 thanks 
+                        to the co-expressed genes Lpp-OmpA. The following BioBrick (<b>Figure 1</b>) was created and divided into 4 different fragments 
+                        to ease the assembly step with the plasmid – for clarity, the fragments are summarized in <b>Figure 2B</b>.             
+                    </p>
+                </div>
+                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results1.url" />
+                <div class="textContent text-center mt-6 note">
+                    Figure 1: DNA sequence of BioBrick 1 of phase 1 | All the parts to express gp37 on the surface of 
+                    our chassis: Promoter (BBa_J23104), Ribosome binding site (RBS - BBa_B0030),  Co-expressed lipoprotein 
+                    with the outer membrane protein A (Lpp-OmpA - BBa_K1694002), Short linker (Gly-Gly-Ser-Gly) to  fuse the 
+                    proteins (BBa_K243004), TEV cleavage site (BBa_J18918), 10xHis-tag (BBa_K844000), Red fluorescent protein 
+                    (RFP - BBa_E1010), Gene product (gp) 37 (BBa_K3409000), Double-terminator (BBa_B0015), Promoter medium 
+                    (BBa_J23107), Ribosome binding site (RBS - BBa_B0032), chaperone protein gp38 (BBa_K3409001), chaperone 
+                    protein 57A (BBa_K3409002), Terminator (BBa_B1005) | Created with Benchling.
+
+                </div>     
+                 <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results2.url" />
+                 <div class="textContent text-center mt-6 note">
+                    Figure 2: Our constructs for the expression and localization of the T4 bacteriophage gp37 to the
+                    outer membrane of our chassis
+                </div>
+                <div class="resultTitle1 mt-16">
+                    Polymer chain reaction (PCR) & gel migrations
+                </div>
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        Once received, the synthetized fragments are resuspended and amplified via polymerase chain reaction (PCR) to 
+                        obtain a higher quantity of DNA. Every PCR sample is verified by gel electrophoresis to analyze the PCR results. 
+                        The first time PCR has been performed (<b>Figure 3A</b>) for Fragment (Frag.) 1, Frag. 2, Frag. 3 and Frag. 4, no bands 
+                        are observable. After some troubleshooting and verifications, new primers need to be ordered to amplify 
+                        Fragments 1, 2, 3, and 4 again (<b>Figure 3B</b>). However, Fragment 1 required to be amplified in two steps 
+                        (<b>Figure 3B</b> – Frag.1 & Frag. 1 Bis). Due to its complexity, Fragment 1 is synthetized again. Eventually, with 
+                        the new version of Fragment 1 and the optimized primers the appropriate bands for Frag. 1 (1218 bp), Frag. 2 
+                        (1541 bp), Frag. 3 (1669 bp) and Frag. 4 (845 bp) are at the expected size (<b>Figure 3C</b>).
+            
+                    </p>
+                </div>
+                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results3.url" />
+                 <div class="textContent text-center mt-6 note">
+                    Figure 3: Gel migration results of Fragment 1,2,3, and 4 with optimization | A. 1kb+ DNA ladder was used for our 
+                    gels A. First PCR amplification of Fragment 1,2,3 and 4. B. Second round of PCR amplification of Fragment 1,2,3, and 4 C. 
+                    Third and last round with optimized conditions of PCR amplification of Fragment 1,2,3, and 4 D. Expected results 
+                    generated after PCR simulation with SnapGene.
+                </div>
+                <div class="resultTitle1 mt-16">
+                    Assembly step
+                </div>
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        The four fragments purified in the previous step (see above) sequences have been were assembled into the plasmid 
+                        pSB1A3 using the NEBuilder Hifi Dna Assembly Master Mix. This technique is a molecular cloning method used to join 
+                        multiple DNA fragments in a single, isothermal reaction2. The fragments were designed in such a way that adjacent 
+                        fragments have identical sequences on the ends, called overhangs, see <b>Figure 4</b>. Overhangs are added during the synthesis 
+                        of the different fragments. However, overhang sequences can be added via PCR with primers containing a 5‘ end identical to 
+                        the adjacent fragment and a 3‘ end that anneals to the target sequence. In our case, the primers are 30 base pairs (bp) 
+                        long, where the first 15 bp match the end of the adjacent fragment and the last 15 bp annealed to the target sequence. 
+                    </p>
+                </div>
+                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results4.url" />
+                 <div class="textContent text-center mt-6 note">
+                    Figure 4: Schema of the HiFi Assembly reaction | Created with BioRender.com
+
+                </div>
+                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results5.url" />
+                 <div class="textContent text-center mt-6 note">
+                    Figure 5: Expected results of the Hifi Assembly of the 4 fragments and the plasmid pSB1A3 | A. 
+                    The expected assembled plasmid with Fragments 1,2,3,4 and the backbone | created with SnapGene
+                </div>
+                <div class="resultTitle1 mt-16">
+                    Conclusion
+                </div>
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        Due to difficulties encountered during the experimental procedures and time limitation, we decided to change 
+                        our verification technique and ordered a new DNA fragment. More information on this in Engineering Success.
+                    </p>
+                </div>
+                <div class="resultTitle1 mt-16">
+                    New BioBrick – Version 2: without RFP
+                </div>
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        Due to difficulties encountered during the experimental procedures and time limitation, we decided to change 
+                        our verification technique and ordered a new DNA fragment. More information on this in Engineering Success.
+                    </p>
+                </div>
+                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results6.url" />
+                 <div class="textContent text-center mt-6 note">
+                    Figure 6: New  DNA sequence of BioBrick 1 version 2 (V2) of phase 1 | All the parts to express gp37 on the surface of 
+                    our chassis: Promoter (BBa_J23104), Ribosome binding site (RBS - BBa_B0030),  Co-expressed lipoprotein with the outer 
+                    membrane protein A (Lpp-OmpA - BBa_K1694002), Short linker (Gly-Gly-Ser-Gly) to  fuse the proteins (BBa_K243004), 
+                    TEV cleavage site (BBa_J18918), 10xHis-tag (BBa_K844000), Gene product (gp) 37 (BBa_K3409000), Double-terminator 
+                    (BBa_B0015),Promoter medium (BBa_J23107), Ribosome binding site (RBS - BBa_B0032), chaperone protein gp38 (BBa_K3409001),
+                     chaperone protein 57A (BBa_K3409002), Terminator (BBa_B1005) | Created with Benchling.
+                </div>
+                <div class="resultTitle1 mt-16">
+                    Revelation of the presence of gp37 via immunofluorescence labelling
+                </div>
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        The aim was to detect the receptor binding protein gp37 expressed and directed to the membrane thanks to the co-expressed 
+                        Lpp-OmpA genes. This is achieved using fused His-tag placed after the OmpA and before the gp37. Thus, the His-tag  was 
+                        targeted with a primary monoclonal anti-his antibody conjugated to a fluorescence marker, fluorescein isothiocyanate (FITC), 
+                        which has excitation and emission spectrum peak wavelengths of approximately 495 nm/519 nm6, detectable with a fluorescence 
+                        spectrophotometer. 
+                    </p>
+                </div>
+                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results7.url" />
+                 <div class="textContent text-center mt-6 note">
+                    Figure 7: Expected results of the immunofluorescence labelling | 1st possibility: In the case of binding of the monoclonal anti-his 
+                    antibody to the his-tag, a signal is detected at 519 nm. 2nd  possibility: No attachment of the antibody and therefore no signal is 
+                    detected at 519 nm | Created with BioRender.com
+
+                </div>
+                <div class="resultTitle1 mt-16">
+                    Experimental perspectives Phase 1 | Targeting and binding to the target bacteria
+                </div>
+                <div class="textContent mt-4 addPadding">
+                    <p>
+                        - The immunolabelling experiments should be repeated to validate or not the presence of gp37 on the surface of our chassis.<br><br>
+
+                        - Perform the experiment with the TEV protease and proceed with the protein purification with the Ni2+ chromatography columns specific to the his-tag.<br><br>
+
+                        - Validate experiments with confocal microscopy to have the possibility to see any signal at the surface of the chassis.<br><br>
+
+                        - Validate the binding of the chassis to the target.
+
+                    </p>
+                </div>    
+                <div class="resultTitle mt-16" id="phase2">
+                    Phase 2 | Lysis of the target bacteria
+                </div>
+        </div>
+        <div class="references">
+            <div class="container">
+                <hr />
+                <div class="referencesText mb-6">
+
+                    PHASE1<br><br>
+                    [1] Yoichi, M., Abe, M., Miyanaga, K., Unno, H., & Tanji, Y. (2005). Alteration of tail fiberprotein gp38 enables T2 phage to 
+                    infect Escherichia coli O157: H7. Journal ofbiotechnology, 115(1), 101-107.<br><br>
+
+                    [2] Cas, S. DNA Assembly & Synthetic Biology.<br>
+                    https://cdn-api.swapcard.com/public/files/2326aec54f1043499e31fdfc78562e2d.pdf<br><br>
+
+                    [3] Waugh D. S. (2011). An overview of enzymatic reagents for the removal of affinity tags. Protein 
+                    expression and purification, 80(2), 283–293.<br>
+                    https://doi.org/10.1016/j.pep.2011.08.005<br><br>
+
+                    [4] Francisco, J. A., Campbell, R., Iverson, B. L., & Georgiou, G. (1993). Production and fluorescence-activated 
+                    cell sorting of Escherichia coli expressing a functional antibody fragment on the external surface. 
+                    Proceedings of the National Academy of Sciences of the United States of America, 90(22), 10444–10448.<br> 
+                    https://doi.org/10.1073/pnas.90.22.10444<br><br>
+
+                    [5] Nie, D., Hu, Y., Chen, Z. et al. Outer membrane protein A (OmpA) as a potential therapeutic target 
+                    for Acinetobacter baumannii infection. J Biomed Sci 27, 26 (2020).<br>
+                    https://doi.org/10.1186/s12929-020-0617-7<br><br>
+
+                    [6] The, T. H., & Feltkamp, T. E. (1970). Conjugation of fluorescein isothiocyanate to antibodies. I. 
+                    Experiments on the conditions of conjugation. Immunology, 18(6), 865–873.<br><br>
+
+                    
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        .firstViewTitle {
+            color: #8d1f24;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 800;
+            height: 150px;
+            display: flex;
+            align-items: flex-end;
+        }
+        
+        .textContent {
+            max-width: 900px;
+            font-size: 15px;
+            display: flex;
+        }
+
+        .textContent p {
+            margin-bottom: 5px;
+        }
+
+        .textContent p:last-child {
+            margin-bottom: 0;
+        }
+
+        .containerCard {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .Card {
+            background-color: white;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            height: 300px;
+            max-width: 250px;
+            flex-grow: 1;
+            opacity: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1);
+        }
+
+        .textCard1 {
+            position: absolute;
+            bottom: 30px;
+            margin:10px;
+            text-align: center;
+            color: #8d1f24;
+            
+        }
+
+        .textCard2 {
+            position: absolute;
+            bottom: 5px;
+            margin:10px;
+            text-align: center;
+            color: #8d1f24;
+            
+        }
+
+        .imgCard{
+            position: absolute;
+            bottom: 120px;
+            height: 150px;
+        }
+
+        .Card:hover{
+            transform: scale(1.1);
+        }
+
+        .check {
+            display: flex;
+            align-items: center;
+            color: #8d1f24;
+            
+        }
+
+        .checkIcon {
+            height: 40px;
+            width: 40px;
+            margin-right: 30px;
+            color: #8d1f24;
+            
+        }
+
+        .resultTitle {
+            color: #8d1f24;
+            background-color: rgba(141, 31, 37, 0.1);
+            display: inline-block;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 1;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 80px;
+        }
+        
+        .resultTitle1 {
+            color: #8d1f24;
+            font-size: 15px;
+            font-weight: 800;
+        }
+       
+        .imgColiKaze {
+            max-width: 900px;
+            width: 100%;
+            background-color: white;
+            border-radius: 15px;
+            padding: 10px 10px;
+        }
+
+        .note {
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        .references {
+            margin-top: 60px;
+        }
+
+        .referencesText {
+            margin-top: 10px;
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</html>
