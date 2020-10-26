@@ -1273,6 +1273,11 @@ const links = {
 
 
     // EDUCATION
+    educationLogo: {
+        ext: "png",
+        path: "/pictures/LogoIntro/Public-logo",
+        prod: "https://2020.igem.org/wiki/images/6/6c/T--Ionis_Paris--publicLogo.png",
+    },
     education1: {
         ext: "svg",
         path: "/pictures/education/education1",
