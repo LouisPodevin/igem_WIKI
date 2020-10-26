@@ -1885,7 +1885,14 @@
                             <a :href="window.ROOT_URL + '/Phases/phase3'" target="_blank" rel="noopener noreferrer"
                                 >Desgin Phase 3</a
                             >
-                            and <a x-data="{}" :href="window.ROOT_URL + '/Results'" target="_blank" rel="noopener noreferrer">Results</a>.
+                            and
+                            <a
+                                x-data="{}"
+                                :href="window.ROOT_URL + '/Results'"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Results</a
+                            >.
                         </p>
                     </div>
                 </div>
@@ -1987,7 +1994,7 @@
                                     Picture of Albane (Ionis Paris Team Leader) with the first draft of the initial idea
                                     of BacTail
                                 </div>
-                                <div>Idea came end of April 2020 (Picture was taken after the lock-down)</div>
+                                <div>Idea came end of April 2020 (Picture was taken after the lock-down in France)</div>
                             </div>
                         </div>
                         <div class="textContent mt-8">
@@ -2035,8 +2042,15 @@
                             <h4>How do we export the receptor binding protein at the the surface of our chassis?</h4>
 
                             <p>
-                                For the exportation system, we found the part BBa_K1694002 designed by
-                                iGEM15_NCTU-Formosa and encoding for the Lpp-OmpA expression system<sup>3</sup>.
+                                For the exportation system, we found the part
+                                <a
+                                    href="http://parts.igem.org/Part:BBa_K1694002"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >BBa_K1694002</a
+                                >
+                                designed by iGEM15_NCTU-Formosa and encoding for the Lpp-OmpA expression
+                                system<sup>3</sup>.
                             </p>
                             <h4>Seeking the appropriate chassis</h4>
                             <p>
@@ -2051,8 +2065,9 @@
                             <p>
                                 For the target, we first needed to evaluate the already characterized bacteriophages in
                                 literature. Many host-associated receptors targeted by bacteriophages have been
-                                researched<sup>4,5,6,7,8,9</sup>. In Bertozzi <i>et al.10</i>, several tables compiles
-                                the receptors that have been identified for Gram-positive and –negative bacteria.
+                                researched<sup>4,5,6,7,8,9</sup>. In Bertozzi <i>et al.<sup>10</sup></i
+                                >, several tables compiles the receptors that have been identified for Gram-positive and
+                                –negative bacteria.
                             </p>
                             <div class="mt-8 text-center">
                                 Link table 1 | Gram-positive bacteria:
@@ -2195,11 +2210,16 @@
                                     the outer membrane of our chassis</b
                                 ><br />
                                 First line: Promoter (BBa_J23104), Ribosome binding site (RBS - BBa_B0030), Co-expressed
-                                lipoprotein with the outer membrane protein A (Lpp-OmpA - BBa_K1694002), Short linker
-                                (Gly-Gly-Ser-Gly) to fuse the proteins (BBa_K243004), TEV cleavage site (BBa_J18918),
-                                10xHis-tag (BBa_K844000), Red fluorescent protein (RFP - BBa_E1010), Gene product (gp)
-                                37 (BBa_K3409000), Double-terminator (BBa_B0015) | Second line: Promoter medium
-                                (BBa_J23107), Ribosome binding site (RBS - BBa_B0032), chaperone protein gp38
+                                lipoprotein with the outer membrane protein A (Lpp-OmpA -
+                                <a
+                                    href="http://parts.igem.org/Part:BBa_K1694002"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >BBa_K1694002</a
+                                >), Short linker (Gly-Gly-Ser-Gly) to fuse the proteins (BBa_K243004), TEV cleavage site
+                                (BBa_J18918), 10xHis-tag (BBa_K844000), Red fluorescent protein (RFP - BBa_E1010), Gene
+                                product (gp) 37 (BBa_K3409000), Double-terminator (BBa_B0015) | Second line: Promoter
+                                medium (BBa_J23107), Ribosome binding site (RBS - BBa_B0032), chaperone protein gp38
                                 (BBa_K3409001), chaperone protein 57A (BBa_K3409002), Terminator (BBa_B1005).
                             </div>
                         </div>
@@ -2218,8 +2238,13 @@
                             <p>
                                 Once our fragments arrived, we tried to assemble them via Hifi Assembly technique to
                                 obtain the BioBrick 1 as depictured in <b>Figure 5</b>, more information on this on the
-                                <a x-data="{}" :href="window.ROOT_URL + '/Results'" target="_blank" rel="noopener noreferrer">Phase 1 Results page</a>. However,
-                                with this BioBrick design we faced different issues.
+                                <a
+                                    x-data="{}"
+                                    :href="window.ROOT_URL + '/Results'"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Phase 1 Results page</a
+                                >. However, with this BioBrick design we faced different issues.
                             </p>
                             <h4>Problem 1 - Our plasmid backbones</h4>
                             <p>
@@ -2283,9 +2308,9 @@
                                 <b
                                     >Figure 7: Picture of plates with colonies transformed with circular pSB4A5 treated
                                     with and without alkaline phosphatase</b
-                                ><br />
-                                <b>1st plate</b>: The plate is full of red and white colonies; these bacteria were
-                                transformed with plamsids that have not been treated with alkaline phosphatase.<br />
+                                >
+                                | <b>1st plate</b>: The plate is full of red and white colonies; these bacteria were
+                                transformed with plamsids that have not been treated with alkaline phosphatase. |
                                 <b>2nd plate</b>: The plate contains few colonies and these bacteria have been
                                 transformed with the plasmid that has been treated with alkaline phosphatase
                             </div>
@@ -2394,10 +2419,15 @@
                                     bacteriophage gp37 to the outer membrane of our chassis</b
                                 ><br />
                                 First line: Promoter (BBa_J23104), Ribosome binding site (RBS - BBa_B0030), Co-expressed
-                                lipoprotein with the outer membrane protein A (Lpp-OmpA - BBa_K1694002), Short linker
-                                (Gly-Gly-Ser-Gly) to fuse the proteins (BBa_K243004), TEV cleavage site (BBa_J18918),
-                                10xHis-tag (BBa_K844000), Gene product (gp) 37 (BBa_K3409000), Double-terminator
-                                (BBa_B0015)<br />
+                                lipoprotein with the outer membrane protein A (Lpp-OmpA -
+                                <a
+                                    href="http://parts.igem.org/Part:BBa_K1694002"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >BBa_K1694002</a
+                                >), Short linker (Gly-Gly-Ser-Gly) to fuse the proteins (BBa_K243004), TEV cleavage site
+                                (BBa_J18918), 10xHis-tag (BBa_K844000), Gene product (gp) 37 (BBa_K3409000),
+                                Double-terminator (BBa_B0015)<br />
                                 Second line: Promoter medium (BBa_J23107), Ribosome binding site (RBS - BBa_B0032),
                                 chaperone protein gp38 (BBa_K3409001), chaperone protein 57A (BBa_K3409002), Terminator
                                 (BBa_B1005).
@@ -2431,13 +2461,12 @@
                         <img x-data="{}" :src="window.LINKS.engineering20.url" class="imageContent mt-6" />
                         <div class="textContent">
                             <div class="imageAnnotation2">
-                                <b>Figure 11: Immunofluorescence labelling</b><br />
-                                <b>A.</b> Schematic representation of the expected results after immunofluorescence
-                                labelling of our transformed bacteria with the receptor binding protein gp37, created
-                                with BioRender.com<br />
-                                <b>B. FITC spectra</b>: Green dotes line correspond to the excitation spectrum (peak at
-                                498 nm) for FITC and the green area correspond to the emission spectrum (peak at 517 nm)
-                                of FITC. Source: Spectra Viewer of Thermo Fisher Scientific.
+                                <b>Figure 11: Immunofluorescence labelling</b> | <b>A.</b> Schematic representation of
+                                the expected results after immunofluorescence labelling of our transformed bacteria with
+                                the receptor binding protein gp37, created with BioRender.com | <b>B. FITC spectra</b>:
+                                Green dotes line correspond to the excitation spectrum (peak at 498 nm) for FITC and the
+                                green area correspond to the emission spectrum (peak at 517 nm) of FITC. Source: Spectra
+                                Viewer of Thermo Fisher Scientific.
                             </div>
                         </div>
                     </div>
@@ -2689,13 +2718,13 @@
             justify-content: center;
         }
 
-        a {
-            color: inherit !important;
-            text-decoration: underline !important;
+        .container a {
+            color: #8d1f24 !important;
+            text-decoration: none !important;
         }
 
-        a:hover {
-            color: inherit !important;
+        .container a:hover {
+            color: #8d1f24 !important;
             text-decoration: underline !important;
         }
 
@@ -2864,7 +2893,5 @@
         #references .textContent {
             font-size: 13px;
         }
-
-        
     </style>
 </html>
