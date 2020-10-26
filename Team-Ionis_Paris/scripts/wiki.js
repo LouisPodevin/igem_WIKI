@@ -1234,7 +1234,6 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/7/7a/T--Ionis_Paris--contribution2.svg",
     },
 
-<<<<<<< HEAD
     // RESULTS
     results1: {
         ext: "png",
@@ -1273,7 +1272,6 @@ const links = {
     },
 
 
-=======
     // EDUCATION
     education1: {
         ext: "svg",
@@ -1535,7 +1533,6 @@ const links = {
         path: "/pictures/education/education52",
         prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--education52.png",
     },
->>>>>>> 8563ef3b834c455ef6bc5caf5c5bbd628e69a931
 }
 
 for (let link in links) {
