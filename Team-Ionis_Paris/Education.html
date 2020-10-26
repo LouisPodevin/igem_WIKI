@@ -21,6 +21,10 @@
         </div>
         <div class="seeMore" target-id="introduction"></div>
 
+        <div class="scrollToTop shadowed" target-id="allPartsChoice">
+            <i data-feather="chevron-up"></i>
+        </div>
+
         <div class="part" id="introduction">
             <div class="container">
                 <div class="textContent font-bold">
@@ -89,7 +93,7 @@
                         >.
                     </p>
                 </div>
-                <div class="partList mt-16" id="summary" x-data="{}">
+                <div id="allPartsChoice" class="partList mt-16" id="summary" x-data="{}">
                     <div class="partListItem shadowed" target-id="presentation">
                         <img :src="window.LINKS.education1.url" />
                         <div>Presentations</div>
@@ -1338,6 +1342,22 @@
                 position: relative;
                 left: 0px;
             }
+        }
+
+        .scrollToTop {
+            cursor: pointer;
+            z-index: 20;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            height: 50px;
+            width: 50px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
         }
 
         /* CONTENT */

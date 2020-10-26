@@ -21,6 +21,11 @@
             </div>
         </div>
         <div class="seeMore" target-id="overview"></div>
+
+        <div class="scrollToTop shadowed" target-id="listClic">
+            <i data-feather="chevron-up"></i>
+        </div>
+
         <div class="mt-16" id="overview">
             <div class="container">
                 <div class="punchline triggerMiddle fromBottom">
@@ -120,7 +125,7 @@
                 </div>
                 <div class="notice text-center mt-6">(click on each icon to learn more!)</div>
 
-                <div class="listClic mt-16" x-data="{}">
+                <div id="listClic" class="listClic mt-16" x-data="{}">
                     <div class="listClicItem" target-id="government">
                         <div class="listClicItemLeft">
                             <div class="listClicItemLeftContainer">
@@ -1651,6 +1656,22 @@
                 position: relative;
                 left: 0px;
             }
+        }
+
+        .scrollToTop {
+            cursor: pointer;
+            z-index: 20;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            height: 50px;
+            width: 50px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
         }
 
         /* ALL */
