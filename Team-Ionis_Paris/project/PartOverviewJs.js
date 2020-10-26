@@ -170,6 +170,7 @@ const linksTable = {
     BBa_K3519010: "http://parts.igem.org/Part:BBa_K3519010",
     BBa_K3519011: "http://parts.igem.org/Part:BBa_K3519011",
     BBa_K3519012: "http://parts.igem.org/Part:BBa_K3519012",
+    BBa_K3409013: "http://parts.igem.org/Part:BBa_K3409013",
 }
 
 const initTable = sourceNb => {

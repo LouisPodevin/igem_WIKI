@@ -1234,6 +1234,267 @@ const links = {
         prod: "https://2020.igem.org/wiki/images/7/7a/T--Ionis_Paris--contribution2.svg",
     },
 
+    // EDUCATION
+    education1: {
+        ext: "svg",
+        path: "/pictures/education/education1",
+        prod: "https://2020.igem.org/wiki/images/7/73/T--Ionis_Paris--education1.svg",
+    },
+    education2: {
+        ext: "svg",
+        path: "/pictures/education/education2",
+        prod: "https://2020.igem.org/wiki/images/3/33/T--Ionis_Paris--education2.svg",
+    },
+    education3: {
+        ext: "svg",
+        path: "/pictures/education/education3",
+        prod: "https://2020.igem.org/wiki/images/5/55/T--Ionis_Paris--education3.svg",
+    },
+    education4: {
+        ext: "svg",
+        path: "/pictures/education/education4",
+        prod: "https://2020.igem.org/wiki/images/1/1d/T--Ionis_Paris--education4.svg",
+    },
+    education5: {
+        ext: "svg",
+        path: "/pictures/education/education5",
+        prod: "https://2020.igem.org/wiki/images/8/8e/T--Ionis_Paris--education5.svg",
+    },
+    education6: {
+        ext: "png",
+        path: "/pictures/education/education6",
+        prod: "https://2020.igem.org/wiki/images/3/3c/T--Ionis_Paris--education6.png",
+    },
+    education7: {
+        ext: "png",
+        path: "/pictures/education/education7",
+        prod: "https://2020.igem.org/wiki/images/6/65/T--Ionis_Paris--education7.png",
+    },
+    education8: {
+        ext: "svg",
+        path: "/pictures/education/education8",
+        prod: "https://2020.igem.org/wiki/images/f/f1/T--Ionis_Paris--education8.svg",
+    },
+    education9: {
+        ext: "png",
+        path: "/pictures/education/education9",
+        prod: "https://2020.igem.org/wiki/images/7/7b/T--Ionis_Paris--education9.png",
+    },
+    education10: {
+        ext: "png",
+        path: "/pictures/education/education10",
+        prod: "https://2020.igem.org/wiki/images/0/0b/T--Ionis_Paris--education10.png",
+    },
+    education11: {
+        ext: "png",
+        path: "/pictures/education/education11",
+        prod: "https://2020.igem.org/wiki/images/d/d3/T--Ionis_Paris--education11.png",
+    },
+    education12: {
+        ext: "png",
+        path: "/pictures/education/education12",
+        prod: "https://2020.igem.org/wiki/images/3/31/T--Ionis_Paris--education12.png",
+    },
+    education13: {
+        ext: "png",
+        path: "/pictures/education/education13",
+        prod: "https://2020.igem.org/wiki/images/9/9f/T--Ionis_Paris--education13.png",
+    },
+    education14: {
+        ext: "png",
+        path: "/pictures/education/education14",
+        prod: "https://2020.igem.org/wiki/images/9/90/T--Ionis_Paris--education14.png",
+    },
+    education15: {
+        ext: "png",
+        path: "/pictures/education/education15",
+        prod: "https://2020.igem.org/wiki/images/c/c5/T--Ionis_Paris--education15.png",
+    },
+    education16: {
+        ext: "png",
+        path: "/pictures/education/education16",
+        prod: "https://2020.igem.org/wiki/images/6/6a/T--Ionis_Paris--education16.png",
+    },
+    education17: {
+        ext: "png",
+        path: "/pictures/education/education17",
+        prod: "https://2020.igem.org/wiki/images/0/0f/T--Ionis_Paris--education17.png",
+    },
+    education18: {
+        ext: "png",
+        path: "/pictures/education/education18",
+        prod: "https://2020.igem.org/wiki/images/1/1e/T--Ionis_Paris--education18.png",
+    },
+    education19: {
+        ext: "png",
+        path: "/pictures/education/education19",
+        prod: "https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--education19.png",
+    },
+    education20: {
+        ext: "png",
+        path: "/pictures/education/education20",
+        prod: "https://2020.igem.org/wiki/images/2/27/T--Ionis_Paris--education20.png",
+    },
+    education21: {
+        ext: "png",
+        path: "/pictures/education/education21",
+        prod: "https://2020.igem.org/wiki/images/5/55/T--Ionis_Paris--education21.png",
+    },
+    education22: {
+        ext: "png",
+        path: "/pictures/education/education22",
+        prod: "https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--education22.png",
+    },
+    education23: {
+        ext: "png",
+        path: "/pictures/education/education23",
+        prod: "https://2020.igem.org/wiki/images/3/30/T--Ionis_Paris--education23.png",
+    },
+    education24: {
+        ext: "png",
+        path: "/pictures/education/education24",
+        prod: "https://2020.igem.org/wiki/images/a/ad/T--Ionis_Paris--education24.png",
+    },
+    education25: {
+        ext: "png",
+        path: "/pictures/education/education25",
+        prod: "https://2020.igem.org/wiki/images/e/e8/T--Ionis_Paris--education25.png",
+    },
+    education26: {
+        ext: "png",
+        path: "/pictures/education/education26",
+        prod: "https://2020.igem.org/wiki/images/3/39/T--Ionis_Paris--education26.png",
+    },
+    education27: {
+        ext: "png",
+        path: "/pictures/education/education27",
+        prod: "https://2020.igem.org/wiki/images/b/bd/T--Ionis_Paris--education27.png",
+    },
+    education28: {
+        ext: "png",
+        path: "/pictures/education/education28",
+        prod: "https://2020.igem.org/wiki/images/5/5a/T--Ionis_Paris--education28.png",
+    },
+    education29: {
+        ext: "png",
+        path: "/pictures/education/education29",
+        prod: "https://2020.igem.org/wiki/images/5/5c/T--Ionis_Paris--education29.png",
+    },
+    education30: {
+        ext: "png",
+        path: "/pictures/education/education30",
+        prod: "https://2020.igem.org/wiki/images/b/bb/T--Ionis_Paris--education30.png",
+    },
+    education31: {
+        ext: "png",
+        path: "/pictures/education/education31",
+        prod: "https://2020.igem.org/wiki/images/c/c4/T--Ionis_Paris--education31.png",
+    },
+    education32: {
+        ext: "png",
+        path: "/pictures/education/education32",
+        prod: "https://2020.igem.org/wiki/images/b/b8/T--Ionis_Paris--education32.png",
+    },
+    education33: {
+        ext: "png",
+        path: "/pictures/education/education33",
+        prod: "https://2020.igem.org/wiki/images/7/74/T--Ionis_Paris--education33.png",
+    },
+    education34: {
+        ext: "png",
+        path: "/pictures/education/education34",
+        prod: "https://2020.igem.org/wiki/images/a/a2/T--Ionis_Paris--education34.png",
+    },
+    education35: {
+        ext: "png",
+        path: "/pictures/education/education35",
+        prod: "https://2020.igem.org/wiki/images/2/2a/T--Ionis_Paris--education35.png",
+    },
+    education36: {
+        ext: "png",
+        path: "/pictures/education/education36",
+        prod: "https://2020.igem.org/wiki/images/a/a4/T--Ionis_Paris--education36.png",
+    },
+    education37: {
+        ext: "png",
+        path: "/pictures/education/education37",
+        prod: "https://2020.igem.org/wiki/images/f/f9/T--Ionis_Paris--education37.png",
+    },
+    education38: {
+        ext: "png",
+        path: "/pictures/education/education38",
+        prod: "https://2020.igem.org/wiki/images/e/e2/T--Ionis_Paris--education38.png",
+    },
+    education39: {
+        ext: "png",
+        path: "/pictures/education/education39",
+        prod: "https://2020.igem.org/wiki/images/2/25/T--Ionis_Paris--education39.png",
+    },
+    education40: {
+        ext: "png",
+        path: "/pictures/education/education40",
+        prod: "https://2020.igem.org/wiki/images/0/0a/T--Ionis_Paris--education40.png",
+    },
+    education41: {
+        ext: "png",
+        path: "/pictures/education/education41",
+        prod: "https://2020.igem.org/wiki/images/9/9c/T--Ionis_Paris--education41.png",
+    },
+    education42: {
+        ext: "png",
+        path: "/pictures/education/education42",
+        prod: "https://2020.igem.org/wiki/images/c/c0/T--Ionis_Paris--education42.png",
+    },
+    education43: {
+        ext: "png",
+        path: "/pictures/education/education43",
+        prod: "https://2020.igem.org/wiki/images/7/71/T--Ionis_Paris--education43.png",
+    },
+    education44: {
+        ext: "png",
+        path: "/pictures/education/education44",
+        prod: "https://2020.igem.org/wiki/images/0/0e/T--Ionis_Paris--education44.png",
+    },
+    education45: {
+        ext: "png",
+        path: "/pictures/education/education45",
+        prod: "https://2020.igem.org/wiki/images/3/36/T--Ionis_Paris--education45.png",
+    },
+    education46: {
+        ext: "png",
+        path: "/pictures/education/education46",
+        prod: "https://2020.igem.org/wiki/images/1/1c/T--Ionis_Paris--education46.png",
+    },
+    education47: {
+        ext: "png",
+        path: "/pictures/education/education47",
+        prod: "https://2020.igem.org/wiki/images/0/08/T--Ionis_Paris--education47.png",
+    },
+    education48: {
+        ext: "png",
+        path: "/pictures/education/education48",
+        prod: "https://2020.igem.org/wiki/images/e/e7/T--Ionis_Paris--education48.png",
+    },
+    education49: {
+        ext: "png",
+        path: "/pictures/education/education49",
+        prod: "https://2020.igem.org/wiki/images/4/4c/T--Ionis_Paris--education49.png",
+    },
+    education50: {
+        ext: "png",
+        path: "/pictures/education/education50",
+        prod: "https://2020.igem.org/wiki/images/8/8a/T--Ionis_Paris--education50.png",
+    },
+    education51: {
+        ext: "png",
+        path: "/pictures/education/education51",
+        prod: "https://2020.igem.org/wiki/images/b/b5/T--Ionis_Paris--education51.png",
+    },
+    education52: {
+        ext: "png",
+        path: "/pictures/education/education52",
+        prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--education52.png",
+    },
 }
 
 for (let link in links) {

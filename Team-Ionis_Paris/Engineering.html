@@ -1885,7 +1885,14 @@
                             <a :href="window.ROOT_URL + '/Phases/phase3'" target="_blank" rel="noopener noreferrer"
                                 >Desgin Phase 3</a
                             >
-                            and <a x-data="{}" :href="window.ROOT_URL + '/Results'" target="_blank" rel="noopener noreferrer">Results</a>.
+                            and
+                            <a
+                                x-data="{}"
+                                :href="window.ROOT_URL + '/Results'"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Results</a
+                            >.
                         </p>
                     </div>
                 </div>
@@ -2218,8 +2225,13 @@
                             <p>
                                 Once our fragments arrived, we tried to assemble them via Hifi Assembly technique to
                                 obtain the BioBrick 1 as depictured in <b>Figure 5</b>, more information on this on the
-                                <a x-data="{}" :href="window.ROOT_URL + '/Results'" target="_blank" rel="noopener noreferrer">Phase 1 Results page</a>. However,
-                                with this BioBrick design we faced different issues.
+                                <a
+                                    x-data="{}"
+                                    :href="window.ROOT_URL + '/Results'"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Phase 1 Results page</a
+                                >. However, with this BioBrick design we faced different issues.
                             </p>
                             <h4>Problem 1 - Our plasmid backbones</h4>
                             <p>
@@ -2689,13 +2701,13 @@
             justify-content: center;
         }
 
-        a {
-            color: inherit !important;
-            text-decoration: underline !important;
+        .container a {
+            color: #8d1f24 !important;
+            text-decoration: none !important;
         }
 
-        a:hover {
-            color: inherit !important;
+        .container a:hover {
+            color: #8d1f24 !important;
             text-decoration: underline !important;
         }
 
@@ -2864,7 +2876,5 @@
         #references .textContent {
             font-size: 13px;
         }
-
-        
     </style>
 </html>
