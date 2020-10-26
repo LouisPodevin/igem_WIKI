@@ -9,7 +9,7 @@
         <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
 
         <div class="navigation"></div>
-        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.descriptionLogo.url + ')'">
+        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.engineeringLogo.url + ')'">
             <div class="container">
                 <h1>Engineering success - IGEM IONIS</h1>
                 <div class="descriptionContent">
@@ -1885,7 +1885,7 @@
                             <a :href="window.ROOT_URL + '/Phases/phase3'" target="_blank" rel="noopener noreferrer"
                                 >Desgin Phase 3</a
                             >
-                            and <a href="#" target="_blank" rel="noopener noreferrer">Results</a>.
+                            and <a x-data="{}" :href="window.ROOT_URL + '/Results'" target="_blank" rel="noopener noreferrer">Results</a>.
                         </p>
                     </div>
                 </div>
@@ -2218,7 +2218,7 @@
                             <p>
                                 Once our fragments arrived, we tried to assemble them via Hifi Assembly technique to
                                 obtain the BioBrick 1 as depictured in <b>Figure 5</b>, more information on this on the
-                                <a href="#" target="_blank" rel="noopener noreferrer">Phase 1 Results page</a>. However,
+                                <a x-data="{}" :href="window.ROOT_URL + '/Results'" target="_blank" rel="noopener noreferrer">Phase 1 Results page</a>. However,
                                 with this BioBrick design we faced different issues.
                             </p>
                             <h4>Problem 1 - Our plasmid backbones</h4>
@@ -2690,12 +2690,13 @@
         }
 
         a {
-            color: inherit;
+            color: inherit !important;
+            text-decoration: underline !important;
         }
 
         a:hover {
-            color: inherit;
-            text-decoration: underline;
+            color: inherit !important;
+            text-decoration: underline !important;
         }
 
         h2 {
@@ -2863,5 +2864,7 @@
         #references .textContent {
             font-size: 13px;
         }
+
+        
     </style>
 </html>

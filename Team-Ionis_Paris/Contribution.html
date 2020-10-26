@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>Software</title>
+        <title>Contribution</title>
     </head>
     <body>
         <script src="./scripts/wiki.js"></script>
@@ -10,25 +10,31 @@
 
         <div class="navigation"></div>
         <div class="tailwind"></div>
-        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.softwareLogo.url + ')'">
-            <div class="container">
-                <h1>Software - IGEM IONIS</h1>
-                <div class="descriptionContent">
-                    <div class="descriptionText">
-                        <div class="descriptionText1">Software Tool</div>
+        <div class="firstView">
+            <div class="container firstViewTitle">Contribution</div>
+            <div class="firstViewMiddle">
+                <div class="listFirstView" x-data="{}">
+                    <div class="elmFirstView">
+                        <img :src="window.LINKS.contributionHexa1.url" target-id="software" />
+                        <div>Software Tool</div>
                     </div>
+                    <div class="elmFirstView">
+                        <img :src="window.LINKS.contributionHexa2.url" target-id="documenting" />
+                        <div>Part Documenting</div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-        <div class="seeMore" target-id="overview"></div>
-        <div class="mt-16" id="overview">
+        
+        
+        <div class="part" id="software">
             <div class="container">
                 <div></div>
-                <div class="textContent mt-16 addPadding">
-                    <p>
-                        This page is duplicated on our wiki as it is also present in the “Contribution” Nav Bar Tab.
-                    </p>
-                </div>
+                <div class="Title">Software Tool</div>
+                <div class="punchline2 mt-16">
+                    Documenting and Creating a software tool useful for future iGEM Teams  
+                   </div>
                 <div class="row ">
                     <div class="col text-center mt-8">
                         <a class="buttonLink" href="http://51.68.227.225:8080/home.php">Link for Software Tool</a>
@@ -383,14 +389,41 @@
                         We hope that in the following years the data base will with new characterized sequences! 
 
                     </div>
+                </div>          
                 </div>
                 
-                           
+                <div class="part" id="documenting">
+                    <div class="container">
+                        <div></div>
+                        <div class="Title">Part Documenting</div>
+                        <div class="subProfile1 mt-8">
+                            <i class="subProfileIcon1" data-feather="alert-circle"></i>
+                            <div>Our project, <b>BacTail, aims at fighting against antimicrobial resistance</b> using an engineered bacterium 
+                                which will be able to bind to target bacteria and lyse them using specific antimicrobial peptides. 
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="textContent addPadding">
+                            When searching the registry for documented parts on antimicrobial peptides (AMP), we found <a class="link" href="http://parts.igem.org/Part:BBa_K1931014">BBa_K1931014</a>, 
+                            <b>containing the coding sequence for Microcin E492</b>, which did not contain much information. Surprisingly, we had also found 
+                            this AMP while doing the initial literature work on our project. <b>Our team believes in the power of antimicrobial peptides 
+                            and so, we decided it was our duty to add as much information as possible learnt from the literature, to this part</b>. 
+
+                    </div>
+                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.microcin.url" />
+                       <div class="legendColiKaze textContent  italic mt-2">
+                        Microcin E492 has a narrow spectrum, it targets Escherichia <br>coli, Klebsiella pneumoniae, Salmonella enteritidis<sup>1</sup>.
+                       </div>
+                        
+                    </div>
+
                 </div>
                 <div class="references">
                     <div class="container">
                         <hr />
                         <div class="referencesText mb-6">
+
+                            SOFTWARE TOOL<br><br>
                             [1] N/A, NCBI, GenBank and WGS Statistics<br>
                             https://www.ncbi.nlm.nih.gov/genbank/statistics/<br><br>
 
@@ -422,7 +455,12 @@
                              - phage T4 : https://www.ncbi.nlm.nih.gov/nuccore/29366675<br>
                              - Salmonella phage S16 : https://www.ncbi.nlm.nih.gov/nuccore/456351087<br>
                              - Aeromonas phage 25 : https://www.uniprot.org/uniprot/?query=database%3A%28type%3Aembl+DQ529280%29&format=fasta<br>
-                             - Acinetobacter phage 133 : https://www.uniprot.org/uniprot/?query=database%3A%28type%3Aembl+HM114315%29&format=fasta<br>           
+                             - Acinetobacter phage 133 : https://www.uniprot.org/uniprot/?query=database%3A%28type%3Aembl+HM114315%29&format=fasta<br><br>
+                             
+                             PART DOCUMENTING<br><br>
+                             [1] Simons, A., Alhanout, K., & Duval, R. E. (2020). Bacteriocins, Antimicrobial Peptides from Bacterial Origin: Overview of Their 
+                             Biology and Their Impact against Multidrug-Resistant Bacteria. Microorganisms, 8(5), 639<br>
+
                         </div>
                     </div>
                 </div>
@@ -1071,6 +1109,75 @@
             margin-left: 120px;
         }
 
+        .firstViewMiddle {
+            display: flex;
+            min-height: calc(100vh - 150px);
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .listFirstView {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .elmFirstView {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .elmFirstView > img {
+            height: 400px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+
+        .elmFirstView > img:hover {
+            transform: scale(1.2);
+        }
+
+        .elmFirstView > div {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .firstViewTitle {
+            color: #8d1f24;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 800;
+            height: 150px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .part {
+            margin-top: 200px;
+        }
+
+        .Title {
+            color: #8d1f24;
+            background-color: rgba(141, 31, 37, 0.1);
+            display: inline-block;
+            font-weight: 800;
+            font-size: 35px;
+            line-height: 1;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .link{
+            color: inherit !important;
+            text-decoration: underline;
+        }
         
     </style>
 </html>

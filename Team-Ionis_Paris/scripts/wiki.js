@@ -1111,6 +1111,11 @@ const links = {
     },
 
     // ENGINEERING
+    engineeringLogo: {
+        ext: "png",
+        path: "/pictures/LogoIntro/Success-logo",
+        prod: "https://2020.igem.org/wiki/images/c/c1/T--Ionis_Paris--Success-logo.png",
+    },
     engineering1: {
         ext: "svg",
         path: "/pictures/project/engineering/engineering1",
@@ -1211,6 +1216,24 @@ const links = {
         path: "/pictures/project/engineering/engineering20",
         prod: "https://2020.igem.org/wiki/images/4/40/T--Ionis_Paris--engineering20.png",
     },
+
+    // CONTRIBUTION
+    microcin: {
+        ext: "png",
+        path: "/pictures/Contribution/microcin",
+        prod: "https://2020.igem.org/wiki/images/5/5c/T--Ionis_Paris--microcin.png",
+    },
+    contributionHexa1: {
+        ext: "svg",
+        path: "/pictures/Contribution/contribution1",
+        prod: "https://2020.igem.org/wiki/images/c/c8/T--Ionis_Paris--contribution1.svg",
+    },
+    contributionHexa2: {
+        ext: "svg",
+        path: "/pictures/Contribution/contribution2",
+        prod: "https://2020.igem.org/wiki/images/7/7a/T--Ionis_Paris--contribution2.svg",
+    },
+
 }
 
 for (let link in links) {
