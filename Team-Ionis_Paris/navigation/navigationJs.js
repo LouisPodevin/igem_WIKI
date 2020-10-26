@@ -128,7 +128,7 @@ const menu = [
         title: "Human practices",
         childrens: [
             { title: "Human Practices", link: rootUrl + "/Human_Practices", match: `^${rootUrl}/Human_Practices$` },
-            { title: "Public Engagement and Education", link: "djqisdj" },
+            { title: "Public Engagement and Education", link: rootUrl + "/Education", match: `^${rootUrl}/Education$` },
         ],
     },
     {
@@ -138,10 +138,7 @@ const menu = [
     },
     {
         title: "Judging form",
-        childrens: [
-            { title: "Test1", link: "jjj" },
-            { title: "sdmlqk", link: "djqisdj" },
-        ],
+        link: "https://igem.org/2020_Judging_Form?team=Ionis_Paris",
     },
 ]
 
