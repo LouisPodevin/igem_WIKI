@@ -92,6 +92,11 @@ const menu = [
                 link: rootUrl + "/Engineering",
                 match: `^${rootUrl}/Engineering$`,
             },
+            {
+                title: "Proof of Concept",
+                link: rootUrl + "/Proof_Of_Concept",
+                match: `^${rootUrl}/Proof_Of_Concept`,
+            },
         ],
     },
     {

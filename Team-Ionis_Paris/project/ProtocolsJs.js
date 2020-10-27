@@ -53,6 +53,7 @@ const files = {
             "https://2020.igem.org/wiki/images/f/fe/T--Ionis_Paris--Bacterial_Immunofluorescence.pdf",
         "Agar diffusion assay": "https://2020.igem.org/wiki/images/a/a6/T--Ionis_Paris--Agar_diffusion.pdf",
         "Cleavage with TEV protease": "https://2020.igem.org/wiki/images/f/f8/T--Ionis_Paris--Cleavage_with_TEV.pdf",
+        "DNASE I Activation Protocol": "https://2020.igem.org/wiki/images/4/4b/T--Ionis_Paris--protocol-dnase-2.pdf",
     },
 
     "Shelf Life Determination": {
