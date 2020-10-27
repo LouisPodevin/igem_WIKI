@@ -16,7 +16,7 @@ const members = [
         role: "Lab Head",
         field: "Engineering in Biotechnology",
         best: "To still be able to laugh with my teammates in the lab when things took an unexpected form.",
-        memory: "Not being able to see each other during the lock-down and work really hard",
+        memory: "Not being able to see each other during the lock-down and work really hard.",
         isWorth: true,
         picture: window.LINKS.teamMembersCharlotte.url,
     },
