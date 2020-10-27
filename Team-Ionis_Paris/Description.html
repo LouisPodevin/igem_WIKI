@@ -269,9 +269,9 @@
                                 </div>
                                 The project: Bactail
                             </div>
-                            <div class="titleBactailProject">
-                                THUS, THE IGEM IONIS PARIS TEAM IS PROUD TO PRESENT BACTAIL, A MODULABLE, INNOVATIVE AND
-                                CONTROLLED SYSTEM TO FIGHT AGAINST AMR.
+                            <div class="titleBactailProject mt-8">
+                                Thus, the iGem Ionis Paris Team is proud to present bactail, a modulable, innovative and
+                                controlled system to fight against AMR.
                             </div>
                         </div>
                         <div class="bactailCard triggerMiddle fromRight">
@@ -311,6 +311,10 @@
                                 our chassis, <i>Escherichia coli</i>, for it to specifically recognize and bind to the
                                 target.
                             </div>
+                            <a x-data="{}" :href="window.ROOT_URL + '/Phases/phase1'" class="phaseCardButton"
+                                ><div>Link</div>
+                                <i data-feather="arrow-right"></i
+                            ></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -331,6 +335,10 @@
                                 environments<sup>7</sup>. The goal is to express an antimicrobial peptide which will be
                                 secreted by <i>E. coli</i> and act on the pathogenic target, thus leading to its lysis.
                             </div>
+                            <a x-data="{}" :href="window.ROOT_URL + '/Phases/phase2'" class="phaseCardButton"
+                                ><div>Link</div>
+                                <i data-feather="arrow-right"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
@@ -352,6 +360,10 @@
                                 proceed to their experiments. Through the production of a <b>DNA degrading enzyme</b>,
                                 called bpDNaseI, induced by arabinose, the destruction of the chassis is ensured.
                             </div>
+                            <a x-data="{}" :href="window.ROOT_URL + '/Phases/phase3'" class="phaseCardButton"
+                                ><div>Link</div>
+                                <i data-feather="arrow-right"></i
+                            ></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -371,6 +383,10 @@
                                 be to freeze-dry our engineered bacteria so it can be stored in plant-based hard-shell
                                 capsules.
                             </div>
+                            <a x-data="{}" :href="window.ROOT_URL + '/Phases/phase4'" class="phaseCardButton"
+                                ><div>Link</div>
+                                <i data-feather="arrow-right"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
@@ -854,9 +870,8 @@
         }
 
         .titleBactailProject {
-            color: #e73327;
-            /* text-transform: uppercase; */
-            font-size: 40px;
+            color: #3b3b3b;
+            font-size: 20px;
             max-width: 700px;
         }
 
@@ -915,7 +930,25 @@
 
         .phase1Text {
             font-size: 15px;
-            padding: 20px 25px;
+            padding: 10px 25px;
+        }
+
+        .phaseCardButton {
+            margin: 10px 25px;
+            padding: 10px 30px;
+            color: #8d1f24 !important;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.03);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .phaseCardButton > div {
+            margin-right: 10px;
+        }
+
+        .phaseCardButton:hover {
+            background-color: rgba(0, 0, 0, 0.05);
         }
 
         .phaseCard {
