@@ -1310,6 +1310,11 @@ const links = {
         path: "/pictures/results/results15",
         prod: "",
     },
+    results16: {
+        ext: "png",
+        path: "/pictures/results/results16",
+        prod: "",
+    },
     results17: {
         ext: "png",
         path: "/pictures/results/results17",
