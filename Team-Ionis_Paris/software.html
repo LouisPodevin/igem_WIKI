@@ -27,23 +27,33 @@
                 <div class="textContent mt-16 addPadding">
                     <p>This page is duplicated on our wiki as it is also present in the “Contribution” Nav Bar Tab.</p>
                 </div>
-                <div class="row">
-                    <div class="col text-center mt-8">
-                        <a class="buttonLink" href="http://51.68.227.225:8080/home.php">Link for Software Tool</a>
-                    </div>
-                    <div class="col text-center mt-8">
-                        <a class="buttonLink" href="https://github.com/igemsoftwareadmin/Ionis_Paris"
-                            >Link for Github Repository</a
-                        >
-                    </div>
-                    <div class="col text-center mt-8">
-                        <a class="buttonLink" href="https://github.com/igemsoftwareadmin/Ionis_Paris/releases/tag/1.0.0"
-                            >Link for Release Repository</a
-                        >
-                    </div>
+                <div class="linksSoft mt-16">
+                    <a
+                        class="buttonLink primaryBtn"
+                        href="https://github.com/igemsoftwareadmin/Ionis_Paris/releases/tag/1.0.0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i data-feather="github"></i>
+                        <div>Link for Release Repository</div>
+                    </a>
+                    <a
+                        class="buttonLink"
+                        href="http://51.68.227.225:8080/home.php"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Link for Software Tool</a
+                    >
+                    <a
+                        class="buttonLink"
+                        href="https://github.com/igemsoftwareadmin/Ionis_Paris"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Link for Github Repository</a
+                    >
                 </div>
                 <div class="punchline2 mt-16">Introduction</div>
-                <div class="textContent mt-16 addPadding">
+                <div class="textContent mt-8">
                     <p>
                         <b
                             >Thanks to the sequencing revolution, a vast amount of data is now available worldwide on
@@ -79,12 +89,11 @@
                 </div>
             </div>
             <div class="container mt-16">
-                <div class="row">
-                    <div class="col text-center mt-8">
-                        <a x-data="{}" class="buttonLink" :href="window.ROOT_URL + '/Design'"
-                            >Link for the Project Design</a
-                        >
-                    </div>
+                <div class="mt-8 flex">
+                    <a x-data="{}" class="buttonLink secondaryBtn" :href="window.ROOT_URL + '/Design'">
+                        <i data-feather="link"></i>
+                        <div>Link for the Project Design</div></a
+                    >
                 </div>
                 <div class="addPadding textContent mt-16">
                     <p>
@@ -93,13 +102,14 @@
                         which are target receptor binding proteins, on the surface of our bacterium. This will provide
                         to the chassis <b>the same specific recognition abilities as bacteriophages</b>.
                     </p>
-                    <br />
                     <p>
                         <b
                             >The process of creating the plasmid will vary depending on the bacterial strain that we aim
-                            to target.</b
-                        ><br />
-                        <a x-data="{}" class="buttonLink1" :href="window.ROOT_URL + '/Phases/phase1'">Check phase 1</a>
+                            to target. ></b
+                        >
+                        <a x-data="{}" class="buttonLink mt-8" :href="window.ROOT_URL + '/Phases/phase1'"
+                            >Check phase 1</a
+                        >
                     </p>
                 </div>
                 <div class="subProfile mt-8">
@@ -131,24 +141,24 @@
                 <div class="timelineMultItem timelineMultItemMiddle">
                     <i class="timelineMultItemArrow" data-feather="monitor"></i>
                 </div>
-                <div class="timelineMultItem timelineMultItemMiddle">
+                <div class="timelineMultItem timelineMultArrrow">
                     <i class="timelineMultItemArrow" data-feather="arrow-right"></i>
                 </div>
-                <div class="timelineMultItem">
+                <div class="timelineMultItem timelineMultItemMiddle">
                     <div class="timelineMultItemText">Contain several referenced LTF DNA sequences</div>
                 </div>
-                <div class="timelineMultItem timelineMultItemMiddle">
+                <div class="timelineMultItem timelineMultArrrow">
                     <i class="timelineMultItemArrow" data-feather="arrow-right"></i>
                 </div>
-                <div class="timelineMultItem">
+                <div class="timelineMultItem timelineMultItemMiddle">
                     <div class="timelineMultItemText">
                         Innovative tool enabling the selection and customization of the desired BioBrick
                     </div>
                 </div>
-                <div class="timelineMultItem timelineMultItemMiddle">
+                <div class="timelineMultItem timelineMultArrrow">
                     <i class="timelineMultItemArrow" data-feather="arrow-right"></i>
                 </div>
-                <div class="timelineMultItem">
+                <div class="timelineMultItem timelineMultItemMiddle">
                     <div class="timelineMultItemText1">Specifically recognize a targeted bacterium</div>
                 </div>
             </div>
@@ -231,15 +241,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="addPadding textContent mt-8">
+                <div class="addPadding textContent mt-16">
                     For the software programming, we used secure
                     <b>sql requests with mySqli to find the appropriate DNA sequences from the database</b>. Then, they
                     are concatenated to form a fully formed BioBrick sequence.
                 </div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.softwareTool.url" />
-                <div class="legendColiKaze textContent italic mt-2">
-                    Figure 1: Principle of the BacTail project Software Tool
-                </div>
+                <img
+                    x-data="{}"
+                    class="mt-8 shadow-sm imageContent"
+                    :src="window.LINKS.softwareTool.url"
+                    style="max-height: 400px"
+                />
+                <div class="imageAnnotation italic mt-2">Figure 1: Principle of the BacTail project Software Tool</div>
             </div>
             <div class="emphaseContent mt-16">
                 <div class="container">
@@ -257,19 +270,19 @@
                 </div>
                 <div class="arrowRightPrevious mt-8">CSS<i data-feather="arrow-right"></i>used for its simplicity</div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">Important part for any well-developed software</div>
+                <div class="arrowRightPrevious1 mt-6">Important part for any well-developed software</div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">
+                <div class="arrowRightPrevious1 mt-6">
                     Interesting tool for the presentation and design of a software
                 </div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">
+                <div class="arrowRightPrevious1 mt-6">
                     Specifically for documents written in a markup language such as HTML
                 </div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">Modulable layout, colors, and fonts</div>
+                <div class="arrowRightPrevious1 mt-6">Modulable layout, colors, and fonts</div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">
+                <div class="arrowRightPrevious1 mt-6">
                     Easy-to access syntax and English keywords to specify the names of various style properties
                 </div>
 
@@ -277,8 +290,13 @@
                     In addition to HTML, other markup languages support the use of CSS including XHTML, plain XHTML,
                     SVG, and XUL
                 </div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.softwareCss.url" />
-                <div class="legendColiKaze textContent italic mt-2">Figure 2: Structure of header declaration</div>
+                <img
+                    x-data="{}"
+                    class="imageContent mt-8 shadow-sm"
+                    :src="window.LINKS.softwareCss.url"
+                    style="max-height: 200px"
+                />
+                <div class="imageAnnotation">Figure 2: Structure of header declaration</div>
                 <div class="addPadding textContent mt-8">
                     We managed to <b>structure the CSS part into different categories</b> to help with formatting the
                     content. This is an <b>efficient programming technique</b> to obtain a structured and presentable
@@ -296,38 +314,40 @@
             </div>
             <div class="container mt-16">
                 <div class="punchline3 mt-16">Because readability is the key!</div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.softwareCss2.url" />
-                <div class="legendColiKaze textContent italic mt-2">Figure 3: Example of a paragraph</div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.softwareCss3.url" />
-                <div class="legendColiKaze textContent italic mt-2">Figure 4: Result of the paragraph</div>
-                <br />
+                <img x-data="{}" class="imageContent mt-8 shadow-sm" :src="window.LINKS.softwareCss2.url" />
+                <div class="imageAnnotation">Figure 3: Example of a paragraph</div>
+                <img x-data="{}" class="imageContent mt-8 shadow-sm" :src="window.LINKS.softwareCss3.url" />
+                <div class="imageAnnotation">Figure 4: Result of the paragraph</div>
                 <div class="arrowRightPrevious mt-8">
                     F12<i data-feather="arrow-right"></i>another style sheet example to check the HTML/CSS code from the
                     website
                 </div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">
+                <div class="arrowRightPrevious1 mt-6">
                     A style sheet ready to be used for every page of our software
                 </div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">
+                <div class="arrowRightPrevious1 mt-6">
                     Use “. title” in every page: make the programming more efficient and simpler
                 </div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">
+                <div class="arrowRightPrevious1 mt-6">
                     Use “text-align” to align the title and “font-size” for its size in pixels
                 </div>
                 <br />
-                <div class="arrowRightPrevious1 mt-8">Use “margin-top”: another way to place our title</div>
+                <div class="arrowRightPrevious1 mt-6">Use “margin-top”: another way to place our title</div>
 
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.softwareCss4.url" />
-                <div class="legendColiKaze textContent italic mt-2">Figure 5: Style sheet of titles</div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.softwareCss5.url" />
-                <div class="legendColiKaze textContent italic mt-2">Figure 6: Result of the style sheet</div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.softwareCss6.url" />
-                <div class="legendColiKaze textContent italic mt-2">
-                    Figure 7: Screen capture of an example <br />result from the Software
-                </div>
+                <img
+                    x-data="{}"
+                    class="imageContent mt-8 shadow-sm"
+                    :src="window.LINKS.softwareCss4.url"
+                    style="max-height: 200px"
+                />
+                <div class="imageAnnotation">Figure 5: Style sheet of titles</div>
+                <img x-data="{}" class="imageContent mt-8 shadow-sm" :src="window.LINKS.softwareCss5.url" />
+                <div class="imageAnnotation">Figure 6: Result of the style sheet</div>
+                <img x-data="{}" class="imageContent mt-8 shadow-sm" :src="window.LINKS.softwareCss6.url" />
+                <div class="imageAnnotation">Figure 7: Screen capture of an example <br />result from the Software</div>
                 <br /><br />
                 <div class="textContent addPadding">
                     <b
@@ -368,7 +388,7 @@
                 </div>
                 <div class="punchline2 mt-16">Perspectives</div>
                 <br />
-                <div class="textContent addPadding">
+                <div class="textContent">
                     Our current software is a tool for the first phase of our project, the specific recognition and
                     binding to the target bacteria.<br />
                     <b>Integrate phase 2 into this software tool.</b>
@@ -385,16 +405,12 @@
             </div>
             <div class="container mt-16">
                 <div class="punchline mt-16">Work on:</div>
-                <div class="row">
-                    <div class="col text-center mt-8">
-                        <h2 class="mt-8">antimicrobial resistance</h2>
-                        <br />
-                        <h2 class="mt-8">phage specificity</h2>
-                        <br />
-                        <h2 class="mt-8">protein expression on the outer membrane</h2>
-                    </div>
+                <div class="flex gap-4 mt-8 flex-wrap justify-center text-center">
+                    <h2>antimicrobial resistance</h2>
+                    <h2>phage specificity</h2>
+                    <h2>protein expression on the outer membrane</h2>
                 </div>
-                <div class="punchline mt-16">
+                <div class="font-bold text-center mt-16">
                     We hope that in the following years the data base will with new characterized sequences!
                 </div>
             </div>
@@ -596,16 +612,26 @@
 
         .timelineMult {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 10px;
         }
 
         .timelineMultItem {
             flex-shrink: 0;
-            max-width: 200px;
+            max-width: 300px;
+            min-width: 200px;
             flex-grow: 1;
             flex-basis: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timelineMultArrrow {
+            max-width: 40px;
+            min-width: 40px;
         }
 
         .timelineMultItemTag {
@@ -617,19 +643,17 @@
             font-weight: 800;
             text-transform: uppercase;
             border-radius: 5px;
-            margin-bottom: 10px;
         }
 
         .timelineMultItemMiddle {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 40px;
+            background-color: rgba(0, 0, 0, 0.03);
+            padding: 10px 20px;
+            border-radius: 5px;
         }
 
         .timelineMultItemArrow {
-            height: 60px;
-            width: 60px;
+            height: 30px;
+            width: 30px;
         }
 
         .timelineMultItemMult {
@@ -657,7 +681,6 @@
             border-radius: 99px 30px 30px 99px;
             padding: 10px 20px;
         }
-
         .iconBig {
             height: 100px;
             width: 100px;
@@ -959,9 +982,28 @@
             margin-right: 30px;
         }
 
+        .imageContent {
+            max-width: 900px;
+            width: 100%;
+            object-fit: contain;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .imageAnnotation {
+            max-width: 900px;
+            font-style: italic;
+            text-align: center;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
         .imgIonis {
-            width: 300px;
+            width: 200px;
             height: 150px;
+            object-fit: contain;
             display: inline;
         }
 
@@ -1038,25 +1080,44 @@
             padding: 10px 20px;
         }
 
+        .linksSoft {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
         .buttonLink {
-            background-color: rgba(0, 0, 0, 0.02) !important;
-            border-radius: 5px;
-            display: inline-block;
+            border-radius: 10px;
             padding: 10px 20px;
-            border: 1px solid rgba(0, 0, 0, 0.03);
             cursor: pointer;
             color: #8d1f24 !important;
             text-decoration: none;
-            margin-top: 20px;
-            font-weight: 800;
-            font-size: 20px;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .buttonLink.primaryBtn {
+            background-color: #8d1f24;
+            color: white !important;
+        }
+
+        .buttonLink.primaryBtn:hover {
+            color: white !important;
         }
 
         .buttonLink:hover {
-            background-color: rgba(0, 0, 0, 0.05) !important;
+            /* background-color: rgba(0, 0, 0, 0.05) !important; */
             color: #8d1f24 !important;
-            text-decoration: none;
+            text-decoration: underline;
         }
+
+        .secondaryBtn {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
         .buttonLink1 {
             background-color: rgba(0, 0, 0, 0.02) !important;
             border-radius: 5px;
