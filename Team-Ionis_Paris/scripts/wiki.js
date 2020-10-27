@@ -1243,7 +1243,7 @@ const links = {
     results2: {
         ext: "png",
         path: "/pictures/results/results2",
-        prod: "https://2020.igem.org/wiki/images/4/49/T--Ionis_Paris--results2.png",
+        prod: "",
     },
     results3: {
         ext: "png",
@@ -1269,6 +1269,76 @@ const links = {
         ext: "png",
         path: "/pictures/results/results7",
         prod: "https://2020.igem.org/wiki/images/5/5d/T--Ionis_Paris--results7.png",
+    },
+    results8: {
+        ext: "png",
+        path: "/pictures/results/results8",
+        prod: "",
+    },
+    results9: {
+        ext: "png",
+        path: "/pictures/results/results9",
+        prod: "",
+    },
+    results10: {
+        ext: "png",
+        path: "/pictures/results/results10",
+        prod: "",
+    },
+    results11: {
+        ext: "png",
+        path: "/pictures/results/results11",
+        prod: "",
+    },
+    results12: {
+        ext: "png",
+        path: "/pictures/results/results12",
+        prod: "",
+    },
+    results13: {
+        ext: "jpg",
+        path: "/pictures/results/results13",
+        prod: "",
+    },
+    results14: {
+        ext: "jpg",
+        path: "/pictures/results/results14",
+        prod: "",
+    },
+    results15: {
+        ext: "png",
+        path: "/pictures/results/results15",
+        prod: "",
+    },
+    results17: {
+        ext: "png",
+        path: "/pictures/results/results17",
+        prod: "",
+    },
+    results18: {
+        ext: "png",
+        path: "/pictures/results/results18",
+        prod: "",
+    },
+    results19: {
+        ext: "png",
+        path: "/pictures/results/results19",
+        prod: "",
+    },
+    results20: {
+        ext: "png",
+        path: "/pictures/results/results20",
+        prod: "",
+    },
+    results21: {
+        ext: "png",
+        path: "/pictures/results/results21",
+        prod: "",
+    },
+    results22: {
+        ext: "jpg",
+        path: "/pictures/results/results22",
+        prod: "",
     },
 
 
