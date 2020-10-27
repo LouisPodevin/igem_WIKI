@@ -23,400 +23,392 @@
         </div>
         <div class="seeMore" target-id="introduction"></div>
         <div id="introduction">
-           
             <div class="container">
                 <div class="lg:flex gap-16">
-
                     <div class="">
                         <div class="introductionTitle">Introduction</div>
                         <div class="mt-4 p-4 cardIntroduction">
                             Phase 1 is the <b>recognition of the target</b>. For this we were inspired by the
                             characteristics of bacteriophages which allow them to <b>specifically bind</b> to their
-                            host. A bacteriophage is a virus which infects a specific bacterium leading to its
-                            lysis. Thus, bacteriophages are the <b>natural predators</b> of bacteria. Thousands of
-                            them exist in nature and every day, new ones are found. There are 10 different
-                            bacteriophage families according to morphology<sup>1</sup>. For example, the families
-                            belonging to the <i>Caudovirales</i> order are <i>Myoviridae</i>,
-                            <i>Siiphoviridae</i> or <i>Podoviridae</i>. A phage will specifically bind to different
-                            <b>bacterial receptors</b> according to the architecture of the target cell wall.
+                            host. A bacteriophage is a virus which infects a specific bacterium leading to its lysis.
+                            Thus, bacteriophages are the <b>natural predators</b> of bacteria. Thousands of them exist
+                            in nature and every day, new ones are found. There are 10 different bacteriophage families
+                            according to morphology<sup>1</sup>. For example, the families belonging to the
+                            <i>Caudovirales</i> order are <i>Myoviridae</i>, <i>Siiphoviridae</i> or <i>Podoviridae</i>.
+                            A phage will specifically bind to different <b>bacterial receptors</b> according to the
+                            architecture of the target cell wall.
                         </div>
                         <div class="mt-4 p-4 cardIntroduction">
-                            For Gram positive bacteria, <b>the binding motifs</b> are found in peptidoglycan,
-                            teichoic acids, lipoteichoic acids or proteins. For Gram negative bacteria, the phage
-                            will bind to the liposaccharides (LPS) or outer membrane proteins (Omp). The specific
-                            binding of the phage to the target cell triggers the
-                            <b>injection of its genetic material</b>. This leads to a <b>multiplication</b> of the
-                            phage inside the host, which ends up <b>lysing</b>(lytic bacteriophages).
+                            For Gram positive bacteria, <b>the binding motifs</b> are found in peptidoglycan, teichoic
+                            acids, lipoteichoic acids or proteins. For Gram negative bacteria, the phage will bind to
+                            the liposaccharides (LPS) or outer membrane proteins (Omp). The specific binding of the
+                            phage to the target cell triggers the <b>injection of its genetic material</b>. This leads
+                            to a <b>multiplication</b> of the phage inside the host, which ends up <b>lysing</b>(lytic
+                            bacteriophages).
                         </div>
                         <div class="mt-4 p-4 cardIntroduction">
-                            To better understand the mechanism of bacteriophage infection, will be taking the
-                            example of the structure of the Myoviridae family which has the particularity to
-                            possess <b>Long Tail Fibers</b> (LTFs). These LTFs are attached to the phages base plate
-                            and play a role in phage <b>adsorption</b> to the target thanks to adhesins. In fact,
-                            they are responsible for the <b>specific</b> and <b>reversible interaction</b> with the
-                            receptors on the host membrane and once bound, they induce a conformational change. This
-                            brings the <b>tail spikes</b> near the target with which they irreversibly interact.
-                            Next is the puncture of the target’s membrane as the <b>tail sheath</b> injects the
-                            phages genetic material for infection. 
+                            To better understand the mechanism of bacteriophage infection, will be taking the example of
+                            the structure of the Myoviridae family which has the particularity to possess
+                            <b>Long Tail Fibers</b> (LTFs). These LTFs are attached to the phages base plate and play a
+                            role in phage <b>adsorption</b> to the target thanks to adhesins. In fact, they are
+                            responsible for the <b>specific</b> and <b>reversible interaction</b> with the receptors on
+                            the host membrane and once bound, they induce a conformational change. This brings the
+                            <b>tail spikes</b> near the target with which they irreversibly interact. Next is the
+                            puncture of the target’s membrane as the <b>tail sheath</b> injects the phages genetic
+                            material for infection. 
+                        </div>
+                        <div class="col">
+                            <img
+                                x-data="{}"
+                                class="imgColiKaze mt-8 shadow-sm"
+                                :src="window.LINKS.phase1Bacteriophage.url"
+                            />
+                            <div class="legendColiKaze textContent text-center italic mt-2">
+                                Figure 1: Annotated structure of the T4 bacteriophage
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            
-                        
-                    </div>
-                    <div class="col">
-                        <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1Bacteriophage.url" />
-                        <div class="legendColiKaze textContent text-center italic mt-2">
-                            Figure 1: Annotated structure of the T4 bacteriophage
-                                </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        
-        <div class="container">
-            <div id="focus">
-                <div class="textFocus">
-                    <div class="textFocus1Goal">
-                        <div class="textFocus1GoalIconWrapper">
-                            <i data-feather="eye"></i>
-                        </div>
-                        Our Focus for Bactail
-                    </div>
-                </div>
-                <div id="#phase1Animate">
-                    <div class="phase1Animation">
-                        <div id="jk"></div>
-                        <script type="module" defer>
-                            const initAnim = async () => {
-                                const animLogoElm = document.getElementById("jk")
-        
-                                while (!window.bodymovin) {
-                                    await new Promise(res => setTimeout(res, 500))
-                                }
-        
-                                const animation = bodymovin.loadAnimation({
-                                    container: animLogoElm,
-                                    renderer: "svg",
-                                    autoplay: false,
-                                    path: window.LINKS.phase1Animate.url,
-                                    loop: false,
-                                })
-        
-                                let animStarted = false
-        
-                                const startAnim = () => {
-                                    if (animStarted) {
-                                        return
-                                    }
-        
-                                    const elmPos = animLogoElm.getBoundingClientRect().top
-                                    const posFromMiddle = elmPos - window.innerHeight / 2
-        
-                                    if (posFromMiddle < 0) {
-                                        animStarted = true
-                                        animation.goToAndPlay(0)
-                                    }
-                                }
-        
-                                while (!window.rxjs) {
-                                    await new Promise(res => setTimeout(res, 300))
-                                }
-        
-                                const { Subject, interval } = rxjs
-                                const { throttle } = rxjs.operators
-        
-                                window.scrollSource
-                                    .pipe(
-                                        throttle(() => interval(300), {
-                                            leading: true,
-                                            trailing: true,
-                                        }),
-                                    )
-                                    .subscribe(startAnim)
-        
-                                window.scrollSource.next()
-                            }
-        
-                            initAnim()
-                        </script>
-                    </div>
-                </div>
-                <div class="focusTitle">Phage therapy</div>
-                <div class="focusContent textContent">
-                    <p>
-                        Bacteriophages have already been identified to target pathogenic bacteria
-                        like Salmonella, Listeria, M. tuberculosis, Pseudomonas or <i>E. coli</i
-                        ><sup>2</sup>. <b>Phage therapy</b> uses bacteriophages, natural bacterial
-                        enemies to kill pathogenic bacteria. It originated in Paris, in the early
-                        20th century. The use of these viruses to treat patients infected by
-                        bacteria was a safe option at the time but it was <b>soon forgotten</b> when
-                        antibiotics were discovered. Nowadays, when the available
-                        <b>antibiotics are starting to show weaknesses</b>, bacteriophages are
-                        gaining interest to fight against antimicrobial resistance. The concept
-                        relies on the use of these bacterial viruses to specifically attach and
-                        inject their genetic material into their host, leading to their lysis. Using
-                        phage therapy to fight against these infections has already proved
-                        beneficial in a number of cases.
-                    </p>
-                    <div class="flex text-center mt-16 mb-16 justify-start">
-                        <div class="targetText p-2 pl-4 pr-4">
-                            In <b>2019</b>, Tkhilaishvili et <i>al</i>. successfully treated multi
-                            drug resistant <i>P. aeruginosa</i> in
-                            <b>prosthetic joint infection</b> by using local phage delivery combined
-                            with other methods such as antibodies<sup>3</sup>.
-                        </div>
-                    </div>
-                    <div class="flex text-center mt-16 mb-16 justify-start">
-                        <div class="targetText p-2 pl-4 pr-4">
-                            In addition, Kuipers et <i>al</i>. administered a personalized
-                            bacteriophage to successfully cure a 58-year-old patient who was
-                            suffering from <b>recurrent urinary tract infections</b> caused by
-                            carbapenemase-producing <i>K. pneumoniae</i>
-                            after a renal transplant<sup>4</sup>.
-                        </div>
-                    </div>
-                    <p>
-                        However, it is important to note that in both of these reported cases,
-                        treating patients using bacteriophages had to sometimes be done
-                        <b>in complement to antibiotics</b>. In fact, phages are
-                        <b>more effective</b> when used with antibiotics and this phenomenon is
-                        called “phage-antibiotic synergy"<sup>5</sup>. Some antibiotics have been
-                        shown to simulate the production of lytic phages. The problem with this
-                        method is that <b>it still requires the use of antibiotics</b> and so, it
-                        continues to increase AMR.
-                    </p>
-                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1Board.url" />
-                    <br>
-                <p>
-                    <b>An alternative to antibiotic resistance would be to harness the
-                    characteristics of bacteriophages that make them efficient
-                    bacterial predators, and integrate them into a well-studied,
-                    controllable chassis.</b>
-                </p>
-                </div>
-                <div class="focusTitle">What we believe</div>
-                <div class="focusContent textContent">
-                    <p>
-                        To comfort this idea, studies have confirmed that the <b>expression of the LTFs is 
-                        sufficient to specifically recognize the target</b>. The first phase of the BacTail 
-                        project was inspired by an articlepublished in 2019 by Dunne et <i>al</i>. The researchers 
-                        successfully showed that the recognition and binding of <i>Salmonella</i> cells could be
-                        accomplished by only using the LTF of the S16 phage which is the natural
-                        predator of <i>Salmonella</i><sup>6</sup>. In fact, they developed a novel
-                        assay called the “Enzyme Linked Long Tail Fiber Assay” (ELLTA) which was
-                        divided into two consecutive steps. Note that the ELLTA is similar to the
-                        ELISA but the capture antibody is replaced by the LTF distal tip. In the
-                        case of the researchers expressed two adjacent receptor binding proteins
-                        (RBP) found at the extremity of the LTF (gene product (gp) 37 and gp38, the
-                        adhesin tip) as well as chaperone proteins, in <i>E. coli</i>, the host
-                        organism. The RBPs were conjugated at their N-ter extremity either to
-                        paramagnetic beads (LTF-MBs) or to horseradish peroxidase (HRPLTF) which are
-                        affinity molecules. Their C-ter extremity, composed of the gp38 was able to
-                        bind to the <i>Salmonella</i> target’s OmpC. The two developed steps allowed
-                        to isolate the <i>Salmonella</i> cells linked to the LTF-MBs and then label
-                        them using the HRP-LTF. The experiments conducted by Dunne et <i>al</i>.
-                        successfully proved that <b>the unique gp37-gp38 protein of the S16 phage is sufficient 
-                        to specifically bind the target Salmonella cell</b>.
-                    </p>
-                    <div class="flex text-center mt-16 mb-16 justify-start">
-                        <div class="targetText p-2 pl-4 pr-4">
-                            All in all, LTFs allow the bacteriophage to have a
-                            <b>narrow bacterial host range</b>. Meaning that according to the type
-                            of LTF expressed, a phage will or will not recognize and infect a
-                            certain bacterium.
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <div id="goals">
-                <div class="titleGoal flex items-center gap-4">
-                    <div class="titleGoalIcon rounded-full flex items-center justify-center">
-                        <i data-feather="check-circle"></i>
-                    </div>
-                    <div class="titleGoalText">Main goal(s)</div>
-                </div>
-                <div class="flex gap-4 mt-8 items-center textContent">
-                    <div class="iconGoalMission"><i data-feather="help-circle"></i></div>
-                    <div class="">
-                        <p>
-                            How will we be conducting our proof of concept ?
-                        </p>
-                    </div>
-                </div>
-                <div class="textContent mt-8 p-4">
-                    <p>
-                        <span class="emphase">Which bacteriophage LTF would we be expressing?</span>
-                        The choice of the bacteriophage LTF we would be expressing was quite
-                        difficult as not many LTFs have been well characterized and most of them
-                        that have, target either pathogenic bacteria or commensal <i>E. coli</i>. We
-                        decided to use the <b>T4 coliphage</b> which is a
-                        <b>well-studied</b> bacteriophage belonging to the
-                        <b><i>Myoviridae</i></b> family and known to
-                        <b>infect <i>E. coli</i> nonpathogenic</b> bacteria such as <i>E. coli</i> B
-                        or K12<sup>7</sup>(Reference sequence: NC_000866.4). Its infection
-                        <b>efficiency</b> is one of the <b>highest</b> as it reaches a theoretical
-                        value of 1. The LTFs of the T4 phage play a role in the first step of
-                        bacterial infection. Indeed, they are known to “walk” on the surface of the
-                        host cell in order to bind to specific motifs found in the <b>LPS</b> and
-                        <b>OmpC</b>. Furthermore, for more precision on the T4 LTF structure, it was
-                        shown that the very
-                        <b>distal tip of the LTF codes for an adhesin protein</b> which is
-                        structured as a <b>trimer</b>. Mutations in this protein can alter the host
-                        specificity of the phage and its ability to bind to the RBP or
-                        not<sup>2</sup>.
-                    </p>
-                </div>
-                <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1LongTailFiber.url" />
-                <div class="legendColiKaze textContent text-center italic mt-2">
-                    Figure 2: Structural organization of the T4 LTF. Formed by gp34, gp35, gp36 and gp37 tip for which the x-raystructure was determined 
-                </div>
-                <div class="textContent mt-8 p-4">
-                    <p>
-                        Generally, the LTF is composed of gp 34, 35, 36, 37 and 38. However, in the
-                        case of the T4 phage, gp38 is not found in the final tail as it codes for a
-                        <b>chaperone protein</b> (same as for gp57A). The distal end of the LTF is a
-                        trimer where 3 molecules of <b>gp37</b> are found. Each domain will interact
-                        either with OmpC, LPS or both. In 2019, Islam et al. successfully over
-                        expressed the gp37(needle sequence), co-expressed with the chaperone
-                        proteins, in <i>E. coli</i> and purified it using the N-ter Histidine
-                        tag<sup>7</sup>. The researchers conducted a binding assay by coating a
-                        plate with the LTF and putting it in contact with over expressed OmpC. They
-                        managed to show that there was no nonspecific binding and that the strength
-                        of binding of the LTF needle to the OmpC trimer depended on their
-                        concentration.
-                    </p>
-                    <br>
-                    <p>
-                        <span class="emphase">Which chassis would we be using?</span> For our chassis, we decided on <b><i>E. coli</i></b>
-                        as it most known for synthetic biology applications. However, since we were going to make it
-                        express the T4 LTF, we had to find a way to make it not self-recognize. After research we found 
-                        a paper stating that the strain of <b><i>E. coli</i>K12 ΔOmpC (JW2203) from the Keio Collection</b
-                        ><sup>8</sup>, a collection that includes knockout mutants for all nonessential genes in <i>E. coli</i> K-12, 
-                        could not be recognized by the T4 LTF<sup>2</sup>.
-                    </p>
-                </div>
-                <div class="flex gap-4 mt-8 items-center textContent">
-                    <div class="iconGoalMission"><i data-feather="crosshair"></i></div>
-                    <div class="">
-                        <p>
-                            Goal for phase 1
-                        </p>
-                    </div>
-                </div>
-                <div class="textContent mt-8 p-4">
-                    <div class="flex text-center mb-16 justify-start">
-                        <div class="targetText p-2 pl-4 pr-4">
-                            Express part of the T4 LTF on the outer membrane of
-                        <i>E. coli</i> K12 ΔOmpC and show that it maintains its ability to
-                        specifically recognize the target <i>E. coli</i> K12 or B is
-                        maintained.
-                        </div>
-                    </div>
-                    <br>
-                    <div class="focusTitle">Theoretical verification of the LTF display</div>
-                    <br>
-                    <p>
-                        In order to conduct our proof of concept, we needed to know if
-                        displaying the T4 bacteriophage’s LTF tip on the surface of
-                        <i>E. coli</i> was sufficient to reach the outer membrane of the target
-                        bacteria (i.e. long enough according to the elements found on
-                        <i>E. coli</i>
-                        outer membranes).
-                    </p>
-                    <br>
-                    <p>
-                        We found that the longest known component of a bacterial cell wall is
-                        the lipopolysaccharide conjugated with an O antigen which has a length
-                        of 49nm<sup>7</sup>. T4 phage’s LTFs have a length of 145nm<sup>9</sup>.
-                    </p>
-                    <br>
-                    <p>
-                        Additional characterization on the exact length of the gp37 was not
-                        available so we had to proceed by assumptions. Based on the molecular
-                        mass of the whole LTF (307 kDa) and the molecular mass of the gp37
-                        product (109 kDa), we can hypothesize that the gp37 protein product has
-                        an average length of 51 nm which would mean that our modified
-                        <i>E. coli</i> must be able to sense other bacteria thanks to the gp37.
-                    </p>
-                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1Chassis.url" />
-                    <div class="legendColiKaze textContent text-center italic mt-2">
-                        Figure 3: Schematic representation of our engineered bacteria (on the left side) and a zoom on the structural representation of the designed BioBrick to express the gp37 on the outer surface of our chassis, E. coli K12 Δ OmpC (on the right side) 
-                    </div>
-                </div>
-            </div>
-        <div id="achieve">
             <div class="container">
-                <div class="titleAchieve flex items-center gap-4">
-                    <div class="titleAchieveIcon rounded-full flex items-center justify-center">
-                        <i data-feather="edit"></i>
+                <div id="focus">
+                    <div class="textFocus">
+                        <div class="textFocus1Goal">
+                            <div class="textFocus1GoalIconWrapper">
+                                <i data-feather="eye"></i>
+                            </div>
+                            Our Focus for Bactail
+                        </div>
                     </div>
-                    <div class="titleAchieveText">How to achieve it?</div>
-                </div>
-                <div class="mt-6 textContent achieveText p-3">
-                    <p>
-                        A BioBrick with the ability to execute this task, is inserted between a
-                        prefix and suffix region of the <b>high copy number plasmid pSB1A3</b>. The
-                        major component is the <b>gp37</b> which codes for the T4 RBP conferring the
-                        recognition ability of the target. Gp37 will be directed to the outer
-                        membrane of our model organism, <i>E. coli</i> K12 Δ OmpC. This will be
-                        achieved thanks to the co-expressed <b><i>Lpp-OmpA</i> gene</b>. The
-                        Lpp-OmpA is an existing part designed by the NCTU-Formosa team in 2015
-                        (Part: BBa_K1694002). It consists of a N-terminal acids of the lipoprotein
-                        (Lpp) sequence followed by amino acids of outer membrane protein A (OmpA).
-                        By fusing gp37 to the C-ter end of Lpp-OmpA, it can be
-                        <b>displayed on the outer membrane</b> of <i>E. coli</i>.
-                    </p>
-                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1BioBrick.url" />
-                    <div class="legendColiKaze textContent text-center italic mt-2">
-                        Figure 4: Figure: Our constructs for the expression and localization of the T4 bacteriophage gp37 to the outer membrane of our chassis
+                    <div id="#phase1Animate">
+                        <div class="phase1Animation">
+                            <div id="jk"></div>
+                            <script type="module" defer>
+                                const initAnim = async () => {
+                                    const animLogoElm = document.getElementById("jk")
 
+                                    while (!window.bodymovin) {
+                                        await new Promise(res => setTimeout(res, 500))
+                                    }
+
+                                    const animation = bodymovin.loadAnimation({
+                                        container: animLogoElm,
+                                        renderer: "svg",
+                                        autoplay: false,
+                                        path: window.LINKS.phase1Animate.url,
+                                        loop: false,
+                                        assetsPath: "https://2020.igem.org/wiki/images",
+                                    })
+
+                                    let animStarted = false
+
+                                    const startAnim = () => {
+                                        if (animStarted) {
+                                            return
+                                        }
+
+                                        const elmPos = animLogoElm.getBoundingClientRect().top
+                                        const posFromMiddle = elmPos - window.innerHeight / 2
+
+                                        if (posFromMiddle < 0) {
+                                            animStarted = true
+                                            animation.goToAndPlay(0)
+                                        }
+                                    }
+
+                                    while (!window.rxjs) {
+                                        await new Promise(res => setTimeout(res, 300))
+                                    }
+
+                                    const { Subject, interval } = rxjs
+                                    const { throttle } = rxjs.operators
+
+                                    window.scrollSource
+                                        .pipe(
+                                            throttle(() => interval(300), {
+                                                leading: true,
+                                                trailing: true,
+                                            }),
+                                        )
+                                        .subscribe(startAnim)
+
+                                    window.scrollSource.next()
+                                }
+
+                                initAnim()
+                            </script>
+                        </div>
                     </div>
-                    <br>
-                    <p>
-                        Between the Lpp-OmpA and the gp37, a <b>red fluorescent protein</b> (RFP)
-                        marker is present allowing with confirmation of LTF expression and
-                        localization in the chassis. Additionally, a <b>TEV cleavage site</b> and a
-                        <b>His tag</b> are inserted before the RFP marker to verify the expression
-                        of the gp37. Finally, LTF assembly is assisted by the chaperone protein
-                        <b>gp57A</b>, which helps in the trimerization of gp37, whereas the
-                        chaperone protein <b>gp38</b> is required for proper folding of
-                        gp37<sup>7</sup>.
-                    </p>
-                    <br>
-                    <p>
-                        Along the development of our project, and after discussing the construction
-                        with some professors, we decided to optimize our BioBrick by removing the RFP.
-                    </p>
-                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1PromoterStrong.url" />
-                    <div class="legendColiKaze textContent text-center italic mt-2">
-                        Figure 5: Our optimized constructs for the expression and localization of
-                        the T4 bacteriophage gp37 to the outer membrane of our chassis
-                    </div>
-                </div>
-                <div class="flex gap-4 mt-8 items-center textContent">
-                    <div class="iconGoalMission"><i data-feather="help-circle"></i></div>
-                    <div class="">
+                    <div class="focusTitle">Phage therapy</div>
+                    <div class="focusContent textContent">
                         <p>
-                            How to validate our system?
+                            Bacteriophages have already been identified to target pathogenic bacteria like Salmonella,
+                            Listeria, M. tuberculosis, Pseudomonas or <i>E. coli</i><sup>2</sup>.
+                            <b>Phage therapy</b> uses bacteriophages, natural bacterial enemies to kill pathogenic
+                            bacteria. It originated in Paris, in the early 20th century. The use of these viruses to
+                            treat patients infected by bacteria was a safe option at the time but it was
+                            <b>soon forgotten</b> when antibiotics were discovered. Nowadays, when the available
+                            <b>antibiotics are starting to show weaknesses</b>, bacteriophages are gaining interest to
+                            fight against antimicrobial resistance. The concept relies on the use of these bacterial
+                            viruses to specifically attach and inject their genetic material into their host, leading to
+                            their lysis. Using phage therapy to fight against these infections has already proved
+                            beneficial in a number of cases.
+                        </p>
+                        <div class="flex text-center mt-16 mb-16 justify-start">
+                            <div class="targetText p-2 pl-4 pr-4">
+                                In <b>2019</b>, Tkhilaishvili et <i>al</i>. successfully treated multi drug resistant
+                                <i>P. aeruginosa</i> in <b>prosthetic joint infection</b> by using local phage delivery
+                                combined with other methods such as antibodies<sup>3</sup>.
+                            </div>
+                        </div>
+                        <div class="flex text-center mt-16 mb-16 justify-start">
+                            <div class="targetText p-2 pl-4 pr-4">
+                                In addition, Kuipers et <i>al</i>. administered a personalized bacteriophage to
+                                successfully cure a 58-year-old patient who was suffering from
+                                <b>recurrent urinary tract infections</b> caused by carbapenemase-producing
+                                <i>K. pneumoniae</i>
+                                after a renal transplant<sup>4</sup>.
+                            </div>
+                        </div>
+                        <p>
+                            However, it is important to note that in both of these reported cases, treating patients
+                            using bacteriophages had to sometimes be done
+                            <b>in complement to antibiotics</b>. In fact, phages are <b>more effective</b> when used
+                            with antibiotics and this phenomenon is called “phage-antibiotic synergy"<sup>5</sup>. Some
+                            antibiotics have been shown to simulate the production of lytic phages. The problem with
+                            this method is that <b>it still requires the use of antibiotics</b> and so, it continues to
+                            increase AMR.
+                        </p>
+                        <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1Board.url" />
+                        <br />
+                        <p>
+                            <b
+                                >An alternative to antibiotic resistance would be to harness the characteristics of
+                                bacteriophages that make them efficient bacterial predators, and integrate them into a
+                                well-studied, controllable chassis.</b
+                            >
                         </p>
                     </div>
-                </div>
-                <div class="mt-6 textContent achieveText p-3">
-                    <p>
-                        Instead of using the RFP to locate the LTF on the surface of our chassis, we
-                        came up with another, more reliable and simple way to confirm the proper
-                        localization of the LTF on the outer membrane of our chassis:
-                        immunofluorescence, meaning targeting the His tag with a fluorescent
-                        antibody.
-                    </p>
-                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1Immunoflurescence.url" />
-                    <div class="legendColiKaze textContent text-center italic mt-2">
-                        Figure 6: Immunofluorescence to validate the localization of the LTF at the surface of our chassisF
+                    <div class="focusTitle">What we believe</div>
+                    <div class="focusContent textContent">
+                        <p>
+                            To comfort this idea, studies have confirmed that the
+                            <b>expression of the LTFs is sufficient to specifically recognize the target</b>. The first
+                            phase of the BacTail project was inspired by an articlepublished in 2019 by Dunne et
+                            <i>al</i>. The researchers successfully showed that the recognition and binding of
+                            <i>Salmonella</i> cells could be accomplished by only using the LTF of the S16 phage which
+                            is the natural predator of <i>Salmonella</i><sup>6</sup>. In fact, they developed a novel
+                            assay called the “Enzyme Linked Long Tail Fiber Assay” (ELLTA) which was divided into two
+                            consecutive steps. Note that the ELLTA is similar to the ELISA but the capture antibody is
+                            replaced by the LTF distal tip. In the case of the researchers expressed two adjacent
+                            receptor binding proteins (RBP) found at the extremity of the LTF (gene product (gp) 37 and
+                            gp38, the adhesin tip) as well as chaperone proteins, in <i>E. coli</i>, the host organism.
+                            The RBPs were conjugated at their N-ter extremity either to paramagnetic beads (LTF-MBs) or
+                            to horseradish peroxidase (HRPLTF) which are affinity molecules. Their C-ter extremity,
+                            composed of the gp38 was able to bind to the <i>Salmonella</i> target’s OmpC. The two
+                            developed steps allowed to isolate the <i>Salmonella</i> cells linked to the LTF-MBs and
+                            then label them using the HRP-LTF. The experiments conducted by Dunne et <i>al</i>.
+                            successfully proved that
+                            <b
+                                >the unique gp37-gp38 protein of the S16 phage is sufficient to specifically bind the
+                                target Salmonella cell</b
+                            >.
+                        </p>
+                        <div class="flex text-center mt-16 mb-16 justify-start">
+                            <div class="targetText p-2 pl-4 pr-4">
+                                All in all, LTFs allow the bacteriophage to have a
+                                <b>narrow bacterial host range</b>. Meaning that according to the type of LTF expressed,
+                                a phage will or will not recognize and infect a certain bacterium.
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
+                <div id="goals">
+                    <div class="titleGoal flex items-center gap-4">
+                        <div class="titleGoalIcon rounded-full flex items-center justify-center">
+                            <i data-feather="check-circle"></i>
+                        </div>
+                        <div class="titleGoalText">Main goal(s)</div>
+                    </div>
+                    <div class="flex gap-4 mt-8 items-center textContent">
+                        <div class="iconGoalMission"><i data-feather="help-circle"></i></div>
+                        <div class="">
+                            <p>How will we be conducting our proof of concept ?</p>
+                        </div>
+                    </div>
+                    <div class="textContent mt-8 p-4">
+                        <p>
+                            <span class="emphase">Which bacteriophage LTF would we be expressing?</span>
+                            The choice of the bacteriophage LTF we would be expressing was quite difficult as not many
+                            LTFs have been well characterized and most of them that have, target either pathogenic
+                            bacteria or commensal <i>E. coli</i>. We decided to use the <b>T4 coliphage</b> which is a
+                            <b>well-studied</b> bacteriophage belonging to the <b><i>Myoviridae</i></b> family and known
+                            to <b>infect <i>E. coli</i> nonpathogenic</b> bacteria such as <i>E. coli</i> B or
+                            K12<sup>7</sup>(Reference sequence: NC_000866.4). Its infection <b>efficiency</b> is one of
+                            the <b>highest</b> as it reaches a theoretical value of 1. The LTFs of the T4 phage play a
+                            role in the first step of bacterial infection. Indeed, they are known to “walk” on the
+                            surface of the host cell in order to bind to specific motifs found in the <b>LPS</b> and
+                            <b>OmpC</b>. Furthermore, for more precision on the T4 LTF structure, it was shown that the
+                            very <b>distal tip of the LTF codes for an adhesin protein</b> which is structured as a
+                            <b>trimer</b>. Mutations in this protein can alter the host specificity of the phage and its
+                            ability to bind to the RBP or not<sup>2</sup>.
+                        </p>
+                    </div>
+                    <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1LongTailFiber.url" />
+                    <div class="legendColiKaze textContent text-center italic mt-2">
+                        Figure 2: Structural organization of the T4 LTF. Formed by gp34, gp35, gp36 and gp37 tip for
+                        which the x-raystructure was determined
+                    </div>
+                    <div class="textContent mt-8 p-4">
+                        <p>
+                            Generally, the LTF is composed of gp 34, 35, 36, 37 and 38. However, in the case of the T4
+                            phage, gp38 is not found in the final tail as it codes for a
+                            <b>chaperone protein</b> (same as for gp57A). The distal end of the LTF is a trimer where 3
+                            molecules of <b>gp37</b> are found. Each domain will interact either with OmpC, LPS or both.
+                            In 2019, Islam et al. successfully over expressed the gp37(needle sequence), co-expressed
+                            with the chaperone proteins, in <i>E. coli</i> and purified it using the N-ter Histidine
+                            tag<sup>7</sup>. The researchers conducted a binding assay by coating a plate with the LTF
+                            and putting it in contact with over expressed OmpC. They managed to show that there was no
+                            nonspecific binding and that the strength of binding of the LTF needle to the OmpC trimer
+                            depended on their concentration.
+                        </p>
+                        <br />
+                        <p>
+                            <span class="emphase">Which chassis would we be using?</span> For our chassis, we decided on
+                            <b><i>E. coli</i></b> as it most known for synthetic biology applications. However, since we
+                            were going to make it express the T4 LTF, we had to find a way to make it not
+                            self-recognize. After research we found a paper stating that the strain of
+                            <b><i>E. coli</i>K12 ΔOmpC (JW2203) from the Keio Collection</b><sup>8</sup>, a collection
+                            that includes knockout mutants for all nonessential genes in <i>E. coli</i> K-12, could not
+                            be recognized by the T4 LTF<sup>2</sup>.
+                        </p>
+                    </div>
+                    <div class="flex gap-4 mt-8 items-center textContent">
+                        <div class="iconGoalMission"><i data-feather="crosshair"></i></div>
+                        <div class="">
+                            <p>Goal for phase 1</p>
+                        </div>
+                    </div>
+                    <div class="textContent mt-8 p-4">
+                        <div class="flex text-center mb-16 justify-start">
+                            <div class="targetText p-2 pl-4 pr-4">
+                                Express part of the T4 LTF on the outer membrane of
+                                <i>E. coli</i> K12 ΔOmpC and show that it maintains its ability to specifically
+                                recognize the target <i>E. coli</i> K12 or B is maintained.
+                            </div>
+                        </div>
+                        <br />
+                        <div class="focusTitle">Theoretical verification of the LTF display</div>
+                        <br />
+                        <p>
+                            In order to conduct our proof of concept, we needed to know if displaying the T4
+                            bacteriophage’s LTF tip on the surface of
+                            <i>E. coli</i> was sufficient to reach the outer membrane of the target bacteria (i.e. long
+                            enough according to the elements found on
+                            <i>E. coli</i>
+                            outer membranes).
+                        </p>
+                        <br />
+                        <p>
+                            We found that the longest known component of a bacterial cell wall is the lipopolysaccharide
+                            conjugated with an O antigen which has a length of 49nm<sup>7</sup>. T4 phage’s LTFs have a
+                            length of 145nm<sup>9</sup>.
+                        </p>
+                        <br />
+                        <p>
+                            Additional characterization on the exact length of the gp37 was not available so we had to
+                            proceed by assumptions. Based on the molecular mass of the whole LTF (307 kDa) and the
+                            molecular mass of the gp37 product (109 kDa), we can hypothesize that the gp37 protein
+                            product has an average length of 51 nm which would mean that our modified
+                            <i>E. coli</i> must be able to sense other bacteria thanks to the gp37.
+                        </p>
+                        <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.phase1Chassis.url" />
+                        <div class="legendColiKaze textContent text-center italic mt-2">
+                            Figure 3: Schematic representation of our engineered bacteria (on the left side) and a zoom
+                            on the structural representation of the designed BioBrick to express the gp37 on the outer
+                            surface of our chassis, E. coli K12 Δ OmpC (on the right side)
+                        </div>
+                    </div>
+                </div>
+                <div id="achieve">
+                    <div class="container">
+                        <div class="titleAchieve flex items-center gap-4">
+                            <div class="titleAchieveIcon rounded-full flex items-center justify-center">
+                                <i data-feather="edit"></i>
+                            </div>
+                            <div class="titleAchieveText">How to achieve it?</div>
+                        </div>
+                        <div class="mt-6 textContent achieveText p-3">
+                            <p>
+                                A BioBrick with the ability to execute this task, is inserted between a prefix and
+                                suffix region of the <b>high copy number plasmid pSB1A3</b>. The major component is the
+                                <b>gp37</b> which codes for the T4 RBP conferring the recognition ability of the target.
+                                Gp37 will be directed to the outer membrane of our model organism, <i>E. coli</i> K12 Δ
+                                OmpC. This will be achieved thanks to the co-expressed <b><i>Lpp-OmpA</i> gene</b>. The
+                                Lpp-OmpA is an existing part designed by the NCTU-Formosa team in 2015 (Part:
+                                BBa_K1694002). It consists of a N-terminal acids of the lipoprotein (Lpp) sequence
+                                followed by amino acids of outer membrane protein A (OmpA). By fusing gp37 to the C-ter
+                                end of Lpp-OmpA, it can be <b>displayed on the outer membrane</b> of <i>E. coli</i>.
+                            </p>
+                            <img
+                                x-data="{}"
+                                class="imgColiKaze mt-8 shadow-sm"
+                                :src="window.LINKS.phase1BioBrick.url"
+                            />
+                            <div class="legendColiKaze textContent text-center italic mt-2">
+                                Figure 4: Figure: Our constructs for the expression and localization of the T4
+                                bacteriophage gp37 to the outer membrane of our chassis
+                            </div>
+                            <br />
+                            <p>
+                                Between the Lpp-OmpA and the gp37, a <b>red fluorescent protein</b> (RFP) marker is
+                                present allowing with confirmation of LTF expression and localization in the chassis.
+                                Additionally, a <b>TEV cleavage site</b> and a <b>His tag</b> are inserted before the
+                                RFP marker to verify the expression of the gp37. Finally, LTF assembly is assisted by
+                                the chaperone protein <b>gp57A</b>, which helps in the trimerization of gp37, whereas
+                                the chaperone protein <b>gp38</b> is required for proper folding of gp37<sup>7</sup>.
+                            </p>
+                            <br />
+                            <p>
+                                Along the development of our project, and after discussing the construction with some
+                                professors, we decided to optimize our BioBrick by removing the RFP.
+                            </p>
+                            <img
+                                x-data="{}"
+                                class="imgColiKaze mt-8 shadow-sm"
+                                :src="window.LINKS.phase1PromoterStrong.url"
+                            />
+                            <div class="legendColiKaze textContent text-center italic mt-2">
+                                Figure 5: Our optimized constructs for the expression and localization of the T4
+                                bacteriophage gp37 to the outer membrane of our chassis
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-8 items-center textContent">
+                            <div class="iconGoalMission"><i data-feather="help-circle"></i></div>
+                            <div class="">
+                                <p>How to validate our system?</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 textContent achieveText p-3">
+                            <p>
+                                Instead of using the RFP to locate the LTF on the surface of our chassis, we came up
+                                with another, more reliable and simple way to confirm the proper localization of the LTF
+                                on the outer membrane of our chassis: immunofluorescence, meaning targeting the His tag
+                                with a fluorescent antibody.
+                            </p>
+                            <img
+                                x-data="{}"
+                                class="imgColiKaze mt-8 shadow-sm"
+                                :src="window.LINKS.phase1Immunoflurescence.url"
+                            />
+                            <div class="legendColiKaze textContent text-center italic mt-2">
+                                Figure 6: Immunofluorescence to validate the localization of the LTF at the surface of
+                                our chassisF
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="results">
                     <div class="titleAchieve flex items-center gap-4">
                         <div class="titleAchieveIcon rounded-full flex items-center justify-center">
@@ -440,18 +432,15 @@
                         <div class="">
                             <p>
                                 Part of the BacTail project also consists in developing a
-                            <b>BioBrick design software</b> which is composed of a
-                            <b>database</b> with the different bacteriophages associated to
-                            their host and the available set of sequences coding for the
-                            <b>receptor binding proteins</b> (distal LTF). The goal is to
-                            <b>assemble</b> in one simple database, all the different
-                            existing and published data. The idea is that from a given
-                            <b>target pathogenic bacterium</b>, the software would directly
-                            <b>identify the associated LTF</b> and design a key BioBrick to
-                            be integrated into our study model. Because this database
-                            depends on the existing literature, it will
-                            <b>constantly evolve</b> throughout the years as more and more
-                            bacteriophages are being discovered and characterized.
+                                <b>BioBrick design software</b> which is composed of a <b>database</b> with the
+                                different bacteriophages associated to their host and the available set of sequences
+                                coding for the <b>receptor binding proteins</b> (distal LTF). The goal is to
+                                <b>assemble</b> in one simple database, all the different existing and published data.
+                                The idea is that from a given <b>target pathogenic bacterium</b>, the software would
+                                directly <b>identify the associated LTF</b> and design a key BioBrick to be integrated
+                                into our study model. Because this database depends on the existing literature, it will
+                                <b>constantly evolve</b> throughout the years as more and more bacteriophages are being
+                                discovered and characterized.
                             </p>
                         </div>
                     </div>
@@ -460,25 +449,20 @@
                         <div class="">
                             <p>
                                 The main characteristic of the BacTail project is its
-                                <b>modularity and specificity</b>. This means that the
-                                engineered bacteria could easily be <b>redesigned</b> to
-                                recognize and kill other targets. For safety reasons, our proof
-                                of concept was conducted on risk group 1 organisms which are not
-                                dangerous for human beings nor the environment. In the future,
-                                we would need maintain the designed LTF expression and
-                                localization system but replace the gp37 of the T4 phage (as
-                                well as the chaperone proteins) by the RBP of another phage
-                                which is known to <b>target pathogenic and antibiotic resistant bacteria</b>.
-                                Specific bacteriophages have already been identified to target
-                                pathogenic bacteria like <i>Salmonella, Listeria, Mycobacterium tuberculosis,
-                                Pseudomonas</i> or pathogenic <i>E. coli</i>. For example, Yochi et al.,
-                                identified the <b>PP01 bacteriophage</b> to specifically target
-                                the <b>shiga toxin-producing strain <i>E. coli</i> O157:H7</b>.
-                                More specifically, the researchers created a recombinant phage
-                                by replacing the distal LTF of the T2 coliphage by the gp38 of
-                                the PP01 phage. They showed that the new phage did not infect
-                                commensal <i>E. coli</i> anymore, but the pathogenic O157:H7
-                                strain<sup>10</sup>.
+                                <b>modularity and specificity</b>. This means that the engineered bacteria could easily
+                                be <b>redesigned</b> to recognize and kill other targets. For safety reasons, our proof
+                                of concept was conducted on risk group 1 organisms which are not dangerous for human
+                                beings nor the environment. In the future, we would need maintain the designed LTF
+                                expression and localization system but replace the gp37 of the T4 phage (as well as the
+                                chaperone proteins) by the RBP of another phage which is known to
+                                <b>target pathogenic and antibiotic resistant bacteria</b>. Specific bacteriophages have
+                                already been identified to target pathogenic bacteria like
+                                <i>Salmonella, Listeria, Mycobacterium tuberculosis, Pseudomonas</i> or pathogenic
+                                <i>E. coli</i>. For example, Yochi et al., identified the <b>PP01 bacteriophage</b> to
+                                specifically target the <b>shiga toxin-producing strain <i>E. coli</i> O157:H7</b>. More
+                                specifically, the researchers created a recombinant phage by replacing the distal LTF of
+                                the T2 coliphage by the gp38 of the PP01 phage. They showed that the new phage did not
+                                infect commensal <i>E. coli</i> anymore, but the pathogenic O157:H7 strain<sup>10</sup>.
                             </p>
                         </div>
                     </div>
@@ -486,20 +470,17 @@
                         <div class="iconGoalMission"><i data-feather="activity"></i></div>
                         <div class="">
                             <p>
-                                In regard to this first phase, future possibilities include an
-                                initial step of <b><i>in silico</i> designing</b> different LTFs
-                                and testing their affinity for specific bacteria using our
-                                system. Following this we could <b>target brand new bacteria</b> 
+                                In regard to this first phase, future possibilities include an initial step of
+                                <b><i>in silico</i> designing</b> different LTFs and testing their affinity for specific
+                                bacteria using our system. Following this we could <b>target brand new bacteria</b>
                                 that could not be specifically targeted before. Another prospect is designing a
-                                <b>bacterial detection machine</b> to identify the bacteria
-                                causing the infection and couple the system to the software. It
-                                would be a fully automized system.
+                                <b>bacterial detection machine</b> to identify the bacteria causing the infection and
+                                couple the system to the software. It would be a fully automized system.
                             </p>
                         </div>
                     </div>
-                  
                 </div>
-                <br><br>
+                <br /><br />
                 <div class="taglines">
                     <div>
                         Antibiotic free approach to fight against AMR
@@ -695,7 +676,7 @@
         }
 
         .emphase {
-            color:  #8d1f24;
+            color: #8d1f24;
             font-weight: 800;
         }
 
@@ -710,14 +691,13 @@
             margin-top: 100px;
         }
 
-        .focusTitle{
+        .focusTitle {
             color: #8d1f24;
             font-size: 20px;
             font-weight: 800;
             margin-top: 30px;
-
         }
-        
+
         .textFocus {
             font-weight: 800;
             display: flex;

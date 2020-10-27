@@ -8,7 +8,7 @@
 -   [Poppins](https://fonts.google.com/specimen/Poppins)
 -   [Bootstrap](https://getbootstrap.com/)
 -   [Alpine.js](https://github.com/alpinejs/alpine)
--   [Tailwind](tailwindcss.com)
+-   [Tailwind](https://tailwindcss.com/)
 
 # Utilities class
 
