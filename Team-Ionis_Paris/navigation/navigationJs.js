@@ -38,6 +38,11 @@ const menu = [
                 match: `^${rootUrl}/Collaborations$`,
             },
             {
+                title: "Contribution",
+                link: rootUrl + "/Contribution",
+                match: `^${rootUrl}/Contribution$`,
+            },
+            {
                 title: "Partnership",
                 link: rootUrl + "/Partnership",
                 match: `^${rootUrl}/Partnership$`,
@@ -46,11 +51,6 @@ const menu = [
                 title: "Attributions",
                 link: rootUrl + "/Attributions",
                 match: `^${rootUrl}/Attributions$`,
-            },
-            {
-                title: "Contribution",
-                link: rootUrl + "/Contribution",
-                match: `^${rootUrl}/Contribution$`,
             },
         ],
     },
