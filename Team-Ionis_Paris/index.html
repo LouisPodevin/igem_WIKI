@@ -59,8 +59,8 @@
         <div class="seeMore" target-id="facts"></div>
         <div id="facts">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
+                <div class="factsRow">
+                    <div>
                         <div class="fact1">
                             <div class="fact1Header">
                                 <div class="fact1LogoContainer" x-data="{}">
@@ -78,31 +78,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="factCard fact2 triggerMiddle">
-                            <div class="factHeader">
-                                <div class="feactHeaderNumber">10</div>
-                                <div class="factHeaderSub">Million</div>
-                                <div class="factIcon">
-                                    <i data-feather="frown" class="factIconFeather iconFrown"></i>
+                    <div>
+                        <div class="factListRight">
+                            <div class="factCard fact2 triggerMiddle">
+                                <div class="factHeader">
+                                    <div class="feactHeaderNumber">10</div>
+                                    <div class="factHeaderSub">Million</div>
+                                    <div class="factIcon">
+                                        <i data-feather="frown" class="factIconFeather iconFrown"></i>
+                                    </div>
+                                </div>
+                                <div class="factText">
+                                    <b>10 million death</b> could occur annually by <b>2050</b> if effective
+                                    intervention methods against antimicrobial resistance are not made.<sup>2</sup>
                                 </div>
                             </div>
-                            <div class="factText">
-                                <b>10 million death</b> could occur annually by <b>2050</b> if effective intervention
-                                methods against antimicrobial resistance are not made.<sup>2</sup>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="factCard fact3 triggerMiddle">
-                            <div class="factHeader">
-                                <div class="factHeaderSub">ANTIMICROBIAL RESISTANCE</div>
-                            </div>
-                            <div class="factText">
-                                <b
-                                    >“a serious threat [that] is no longer a prediction for the future, it is happening
-                                    right now in every region of the world….”</b
-                                >.<sup>3</sup>
+                            <div class="factCard fact3 triggerMiddle">
+                                <div class="factHeader2">
+                                    <div class="factIcon2">
+                                        <i data-feather="shield"></i>
+                                    </div>
+                                    <div class="factHeaderSub2">Antimicrobial resistance</div>
+                                </div>
+                                <div class="factText">
+                                    "a serious threat [that] is no longer a prediction for the future, it is happening
+                                    right now in every region of the world….".<sup>3</sup>
+                                </div>
+                                <div class="citationFactText">World Health Organization</div>
                             </div>
                         </div>
                     </div>
@@ -118,6 +120,7 @@
                                 <div class="infomationIconContainer">
                                     <i class="informationIcon" data-feather="info"></i>
                                 </div>
+                                <div class="fact1Title">Nosocomial Infections in France</div>
                             </div>
                             <div class="informationText">
                                 In hospital, for example, this resistance leads to an increase in
@@ -196,18 +199,19 @@
                 <div class="row">
                     <div class="col-xl-5">
                         <div class="stepIllustrationCard" x-data="{}">
-                            <img :src="window.LINKS.step1Home.url" alt="step1 home" />
+                            <img :src="window.LINKS.designProjectPhase1.url" alt="step1 home" />
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6">
+                    <div class="col-xl-4">
                         <div class="stepCard step1 triggerMiddle fromRight">
                             <div class="stepHeader">
                                 <div class="stepHeaderNumber">1</div>
-                                <div class="stepHeaderSub">Step</div>
+                                <div class="stepHeaderSub">Target</div>
                             </div>
                             <div class="stepText">
-                                Manage to insert and direct
-                                <b>bacteriophage T4 LTFs</b>into E.coli’s outer membranes.
+                                <b>Recognize</b> and <b>bind</b> the target bacteria thanks to the presence of
+                                <b>specific</b>
+                                recognition binding proteins originally from bacteriophages.
                             </div>
                         </div>
                     </div>
@@ -215,17 +219,17 @@
                 <div class="row">
                     <div class="col-xl-5 offset-xl-1">
                         <div class="stepIllustrationCard" x-data="{}">
-                            <img :src="window.LINKS.step2Home.url" alt="step2 home" class="step2Image" />
+                            <img :src="window.LINKS.designProjectPhase2.url" alt="step2 home" class="step2Image" />
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6">
+                    <div class="col-xl-4">
                         <div class="stepCard step2 triggerMiddle fromRight">
                             <div class="stepHeader">
                                 <div class="stepHeaderNumber">2</div>
-                                <div class="stepHeaderSub">Step</div>
+                                <div class="stepHeaderSub">Kill</div>
                             </div>
                             <div class="stepText">
-                                Trigger the <b>recognition</b> and bind the target pathogenic bacteria.
+                                Lyse the target bacteria by expressing and secreting <b>antimicrobial peptides</b>.
                             </div>
                         </div>
                     </div>
@@ -233,16 +237,19 @@
                 <div class="row">
                     <div class="col-xl-5 offset-xl-2">
                         <div class="stepIllustrationCard" x-data="{}">
-                            <img :src="window.LINKS.step3Home.url" alt="step3 home" class="step3Image" />
+                            <img :src="window.LINKS.designProjectPhase3.url" alt="step3 home" class="step3Image" />
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6">
+                    <div class="col-xl-4">
                         <div class="stepCard step3 triggerMiddle fromRight">
                             <div class="stepHeader">
                                 <div class="stepHeaderNumber">3</div>
-                                <div class="stepHeaderSub">Step</div>
+                                <div class="stepHeaderSub">Self destroy</div>
                             </div>
-                            <div class="stepText">Develop a <b>mechanism to attack</b> the target bacteria.</div>
+                            <div class="stepText">
+                                Induce self-destruction via a <b>kill-switch</b> once the mission fulfilled to prevent
+                                dissemination.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -251,7 +258,7 @@
 
         <div id="projectVideo">
             <div class="container">
-                <div class="ProjectVideo triggerMiddle">
+                <div class="ProjectVideo">
                     <video controls muted autoplay>
                         <source
                             src="https://2020.igem.org/wiki/images/0/03/T--Ionis_Paris--Video-2-min.mp4"
@@ -264,18 +271,18 @@
         <div id="wikiLinks">
             <div class="container">
                 <div class="wikiLinkContainer" x-data="{}">
-                    <div class="wikiLinkCard triggerMiddle">
+                    <a class="wikiLinkCard triggerMiddle" :href="window.ROOT_URL + '/Description'">
                         <img :src="window.LINKS.projectHome.url" class="projectLogo" />
                         <div class="wikiLinkCardText projectCard">The Project</div>
-                    </div>
-                    <div class="wikiLinkCard triggerMiddle">
+                    </a>
+                    <a class="wikiLinkCard triggerMiddle" :href="window.ROOT_URL + '/Human_Practices'">
                         <img :src="window.LINKS.humanHome.url" />
                         <div class="wikiLinkCardText humainCard">Humans Pratices</div>
-                    </div>
-                    <div class="wikiLinkCard triggerMiddle">
+                    </a>
+                    <a class="wikiLinkCard triggerMiddle" :href="window.ROOT_URL + '/Software'">
                         <img :src="window.LINKS.softwareHome.url" />
                         <div class="wikiLinkCardText softwareCard">The Software</div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -565,15 +572,39 @@
             padding: 20px 25px;
         }
 
+        .factsRow {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .factsRow > div {
+            flex-grow: 1;
+            flex-basis: 0;
+            flex-shrink: 0;
+            min-width: 500px;
+        }
+
         .factCard {
+            flex-grow: 1;
+            flex-basis: 0;
+            flex-shrink: 0;
             opacity: 0;
             border-radius: 20px;
             background-color: white;
+            padding: 0 0 20px 0;
 
             -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
             -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
             box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
             border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .factListRight {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
         }
 
         @keyframes animFactCard {
@@ -603,6 +634,12 @@
             padding: 25px 20px;
         }
 
+        .factHeader2 {
+            display: flex;
+            align-items: center;
+            padding: 25px 20px;
+        }
+
         .feactHeaderNumber {
             color: #e73327;
             font-weight: 800;
@@ -613,6 +650,13 @@
         .factHeaderSub {
             color: #8d1f24;
             font-size: 25px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .factHeaderSub2 {
+            color: #8d1f24;
+            font-size: 20px;
             font-weight: 800;
             line-height: 1;
         }
@@ -632,6 +676,27 @@
             width: 50px;
         }
 
+        .factIcon2 {
+            color: #e73327;
+            background-color: rgba(231, 52, 39, 0.2);
+            border-radius: 999px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+
+        .citationFactText {
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 10px 20px 0 20px;
+            color: rgba(72, 18, 20, 0.8);
+        }
+
         .factIconFeather {
             height: 30px;
         }
@@ -639,7 +704,7 @@
         .factText {
             font-size: 15px;
             color: rgba(0, 0, 0, 0.8);
-            padding: 0 20px 20px 20px;
+            padding: 0 20px 0 20px;
             line-height: 1.3;
         }
 
@@ -707,6 +772,11 @@
             margin: 100px 0 0 0;
         }
 
+        .informationHeader {
+            display: flex;
+            align-items: center;
+        }
+
         .infomationIconContainer {
             background-color: rgba(231, 52, 39, 0.2);
             border-radius: 999px;
@@ -716,6 +786,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
+            margin-right: 20px;
         }
 
         .informationIcon {
@@ -862,6 +934,7 @@
             color: rgba(0, 0, 0, 0.8);
             padding: 0 20px 20px 20px;
             line-height: 1.3;
+            text-align: center;
         }
 
         .stepText > b {
@@ -875,7 +948,7 @@
         }
 
         .ProjectVideo {
-            opacity: 0;
+            opacity: 1;
             background-color: rgba(0, 0, 0, 0.05);
             border-radius: 20px;
             width: 100%;
@@ -911,11 +984,6 @@
             }
         }
 
-        .ProjectVideo.active {
-            opacity: 1;
-            animation: ProjectVideoAnim 1.4s;
-        }
-
         /* Wiki Links */
 
         #wikiLinks {
@@ -942,6 +1010,8 @@
             height: 300px;
             max-width: 250px;
             flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 0;
             opacity: 0;
             position: relative;
             display: flex;
@@ -952,6 +1022,8 @@
         .wikiLinkCardText {
             position: absolute;
             bottom: 20px;
+            text-align: center;
+            padding: 10px;
         }
 
         .wikiLinkCard > img {
@@ -964,6 +1036,8 @@
 
         .projectLogo {
             height: 200px;
+            object-fit: contain;
+            width: 100%;
         }
 
         .humainCard {
