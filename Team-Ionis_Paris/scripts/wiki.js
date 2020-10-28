@@ -1243,7 +1243,7 @@ const links = {
     results2: {
         ext: "png",
         path: "/pictures/results/results2",
-        prod: "",
+        prod: "https://2020.igem.org/wiki/images/4/49/T--Ionis_Paris--results2.png",
     },
     results3: {
         ext: "png",
