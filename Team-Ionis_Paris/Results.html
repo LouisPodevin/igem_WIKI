@@ -687,7 +687,107 @@
                     disc or if the disc remains white.
                 </p>
             </div>
-            <!-- TODO Board -->
+
+            <table class="agarTable mt-16 shadowed" id="agarTable">
+                <thead>
+                    <tr>
+                        <td>Disc N° and compound</td>
+                        <td>Assay N°1</td>
+                        <td>Assay N°2</td>
+                        <td>Disc observations</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 – plasmid 31</td>
+                        <td><img src="https://2020.igem.org/wiki/images/6/60/T--Ionis_Paris--1_1.png" /></td>
+                        <td><img src="https://2020.igem.org/wiki/images/b/b6/T--Ionis_Paris--1_2.png" /></td>
+                        <td>
+                            <li>Disc 1 Assay N°1: red colonies have grown on the disc and no radius around the disc</li>
+                            <li>Disc 1 Assay N°2: red colonies have grown on the disc and no radius around the disc</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2 – plasmid 39</td>
+                        <td><img src="https://2020.igem.org/wiki/images/2/2a/T--Ionis_Paris--2_1.png" /></td>
+                        <td><img src="https://2020.igem.org/wiki/images/b/bd/T--Ionis_Paris--2_2.png" /></td>
+                        <td>
+                            <li>Disc 2 Assay N°1: no red colonies have grown on the disc and radius around the disc</li>
+                            <li>
+                                Disc 2 Assay N°2 (40 uL instead of 20 uL): no red colonies have grown on the disc and
+                                radius around the disc
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3 – plasmid 31</td>
+                        <td><img src="https://2020.igem.org/wiki/images/1/1a/T--Ionis_Paris--3_1.png" /></td>
+                        <td><img src="https://2020.igem.org/wiki/images/a/aa/T--Ionis_Paris--3_2.png" /></td>
+                        <td>
+                            <li>
+                                Disc 3 Assay N°1: red colonies grown on the perimeter of the disc and no a radius around
+                                the disc
+                            </li>
+                            <li>
+                                Disc 3 Assay N°2: red colonies have grown on the perimeter of the disc and no a radius
+                                around the disc
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4 – plasmid 39</td>
+                        <td><img src="https://2020.igem.org/wiki/images/6/6b/T--Ionis_Paris--4_1.png" /></td>
+                        <td><img src="https://2020.igem.org/wiki/images/8/8a/T--Ionis_Paris--4_2.png" /></td>
+                        <td>
+                            <li>
+                                Disc 4 Assay N°1: red colonies have grown on the perimeter of the disc and no a radius
+                                around the disc
+                            </li>
+                            <li>
+                                Disc 4 Assay N°2: red colonies have grown on the perimeter of the disc and no a radius
+                                around the disc
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5 – Positive control (plasmid original cluster)</td>
+                        <td><img src="https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--5_1.png" /></td>
+                        <td><img src="https://2020.igem.org/wiki/images/3/32/T--Ionis_Paris--5_2.png" /></td>
+                        <td>
+                            <li>
+                                Disc 5 Assay N°1: no red colonies have grown on the perimeter of the disc and a radius
+                                around the disc
+                            </li>
+                            <li>Disc 5 Assay N°2: a radius around the disc</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6 – Negative control (LB media only)</td>
+                        <td><img src="https://2020.igem.org/wiki/images/1/1b/T--Ionis_Paris--6_1.png" /></td>
+                        <td><img src="https://2020.igem.org/wiki/images/9/96/T--Ionis_Paris--6_2.png" /></td>
+                        <td>
+                            <li>
+                                Disc 5 Assay N°1: no red colonies have grown on the perimeter of the disc and a radius
+                                around the disc
+                            </li>
+                            <li>Disc 5 Assay N°2: a radius around the disc</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7 – Positive control (plasmid original cluster)</td>
+                        <td><img src="https://2020.igem.org/wiki/images/8/84/T--Ionis_Paris--7_1.png" /></td>
+                        <td><img src="https://2020.igem.org/wiki/images/e/e8/T--Ionis_Paris--7_2.png" /></td>
+                        <td>
+                            <li>Disc 7 Asssay N°1 fell –no results</li>
+                            <li>
+                                Disc 7 Asssay N°2: No red colonies have grown on the disc perimeter and a radius around
+                                the disc
+                            </li>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
             <div class="resultTitle2 mt-16"><b>Conclusion</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
@@ -923,6 +1023,27 @@
         .link {
             color: inherit !important;
             text-decoration: underline;
+        }
+
+        .agarTable {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .agarTable thead {
+            font-size: 800;
+        }
+
+        .agarTable td {
+            padding: 10px;
+            border: 1px solid rgb(229, 229, 229);
+        }
+
+        .agarTable img {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: contain;
         }
     </style>
 </html>
