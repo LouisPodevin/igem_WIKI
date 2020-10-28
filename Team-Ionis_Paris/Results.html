@@ -89,12 +89,8 @@
             <div class="textContent mt-4 addPadding">
                 <p>
                     The gene product 37 (gp37) is a critical component for the phase I of the project BacTail. To find
-                    out more about the scientific background and design of Phase I click here (<a
-                        x-data="{}"
-                        class="link"
-                        :href="window.ROOT_URL + '/Design'"
-                        >cf. Phase I Design</a
-                    >).<br /><br />
+                    out more about the scientific background and
+                    <a x-data="{}" class="link" :href="window.ROOT_URL + '/Design'">design of Phase I</a>.<br /><br />
 
                     The aim for the first phase is to express the gp37 on the surface of our chassis Escherichia coli
                     (<i>E.coli</i>) K12 thanks to the co-expressed genes Lpp-OmpA. The following BioBrick (<b
@@ -298,8 +294,8 @@
                     Dependent Inhibition) is the critical component in phase 2. The MccPDI gene cluster has been
                     identified in the strain Escherichia coli (E.coli) 25 plasmid (Eberhart et al., 2012 ) for its
                     ability to kill several strains of E. coli. MccPDI targets pathogenic strains as well as Biosafety
-                    Level 1 E. coli strains. To find out more about the scientific background and design of Phase II
-                    please read: (mettre lien vers Phase II Design).
+                    Level 1 E. coli strains. To find out more about the scientific background and
+                    <a x-data="{}" class="link" :href="window.ROOT_URL + '/Design'">design of Phase II</a>.
                 </p>
             </div>
             <div class="textContent mt-4 addPadding">
@@ -853,8 +849,8 @@
             <div class="textContent mt-4 addPadding">
                 <p>
                     In Phase III, the arabinose operon is the key parameter for the regulation of the death inducting
-                    gene DNASE I. To find out more about the scientific background and design of Phase III click here
-                    (Link for Phase III Design).<br /><br />
+                    gene DNASE I. To find out more about the scientific background and
+                    <a x-data="{}" class="link" :href="window.ROOT_URL + '/Design'">design of Phase III</a>.<br /><br />
 
                     This phase aims at controlling the life cycle of our engineered bacteria through a kill switch
                     system. In presence of L-arabinose enables the synthesis of the endonuclease bpDNaseI I that will
@@ -902,7 +898,11 @@
                     assemble the fragments and the backbone all together by restriction enzyme digestion followed by
                     ligation (see restriction enzyme digestion and ligation assembly method further down this the page).
                     However, restriction enzymes need more nucleotides to specifically bind and cut. As the restriction
-                    sites are located on both ends of the fragment, few nucleotides are added to the primers.<br /><br />
+                    sites are located on both ends of the fragment, few nucleotides are added to the primers.(<a
+                        class="link"
+                        href="https://international.neb.com/tools-and-resources/video-library/restriction-enzyme-digest-protocol-cutting-close-to-dna-end"
+                        >Restriction Enzyme Digest Protocol: Cutting Close to DNA End. <i>New England Biolabs</i></a
+                    >)<br /><br />
 
                     The primers and the fragments are synthetized by IDT. Once received, the synthetized fragments are
                     resuspended and amplified via Polymerase Chain Reaction (PCR) to obtain a higher quantity of DNA.
@@ -938,7 +938,12 @@
                     First, a gel purification is realized to discard the circular plasmid template.<br /><br />
                     Second, following this purification step, DpnI is used so it can digest the non-PCR products of this
                     amplification: the template DNA. This way, we reduce the chance of transforming our chassis with the
-                    original circular plasmid used for backbone amplifications (see Engineering success).
+                    original circular plasmid used for backbone amplifications (<a
+                        x-data="{}"
+                        class="link"
+                        :href="window.ROOT_URL + '/Engineering'"
+                        >cf. Engineering success</a
+                    >.).
                 </p>
             </div>
             <img
@@ -965,8 +970,9 @@
                     The cohesive ends of the cut SpeI and XbaI sites can ligate together but a BioBrick scar sequence
                     (5' TACTAGAG 3’) will result from it between the two fragments. Between the digestion and the
                     ligation step, an alkaline phosphatase was added to the digested backbones to dephosphorylate their
-                    cuts so they can not re-ligate (for more information see paragraph Alkaline Phosphatase in
-                    Engineering Success). Once assembled, the recombinant plasmid is used to transform the chassis.
+                    cuts so they can not re-ligate (<a x-data="{}" class="link" :href="window.ROOT_URL + '/Engineering'"
+                        >For more information see paragraph Alkaline Phosphatase in Engineering Success</a
+                    >). Once assembled, the recombinant plasmid is used to transform the chassis.
                 </p>
             </div>
             <img
@@ -992,16 +998,121 @@
             </div>
             <img
                 class="imgColiKaze mt-8 shadow-sm"
-                src="https://2020.igem.org/wiki/images/b/b1/T--Ionis_Paris--resultsPhase3img6.pngg"
+                src="https://2020.igem.org/wiki/images/b/b1/T--Ionis_Paris--resultsPhase3img6.png"
+            />
+            <div class="textContent mt-6 note">
+                <b
+                    >Table 2. Different recombinant plasmids that can be obtained after BioBrick assembly method for
+                    Phase III.</b
+                >
+            </div>
+            <div class="resultTitle1 mt-16">Transformation</div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    The assembled constructs (see above) are transformed into NEB DH5α chemically competent
+                    <i>E. coli</i>. The results are depicted in the following table (Table .3).
+                </p>
+            </div>
+            <img
+                class="imgColiKaze mt-8 shadow-sm"
+                src="https://2020.igem.org/wiki/images/b/b9/T--Ionis_Paris--resultsPhase3img7.png"
+            />
+            <div class="textContent mt-6 note">
+                <b>Table 3: Results of transformations with the final constructions for Phase III</b>
+            </div>
+            <div class="resultTitle1 mt-16">Verification Steps</div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    To verify that clones obtained after transformation contained the well assembled construction,
+                    several validation assays are realized: Colony PCR, Linearization, Insert release, additional double
+                    digestion and <i>DNASE I</i> activation.
+                </p>
+            </div>
+            <div class="resultTitle1 mt-16">1. Colony PCR</div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    The presence or the absence and the size of the inserts can be verified by Colony PCR followed by an
+                    electrophoresis on agarose gel. Additionally, each clone used for this technique are plated on petri
+                    dishes (Table .4).
+                </p>
+            </div>
+            <img
+                class="imgColiKaze mt-8 shadow-sm"
+                src="https://2020.igem.org/wiki/images/1/1f/T--Ionis_Paris--resultsPhase3img8.png"
+            />
+            <div class="textContent mt-6 note">
+                <b>Table 4: Pictures of Colony PCR plates.</b>
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    Through several trouble shouting, the optimal program for Colony PCR was found to be the one
+                    presented in
+                    <b>Figure 30</b>. There, the elongation time is about 2 minutes as the longest construct,
+                    araC+araBADpromoter+DNASEI, is 2538bp long. The set of primer used, VF2 and VR, anneal at 62,5°C.
+                    They are commonly used primers for Colony PCR.
+                </p>
+            </div>
+            <img
+                class="imgColiKaze mt-8 shadow-sm"
+                src="https://2020.igem.org/wiki/images/5/53/T--Ionis_Paris--resultsPhase3img9.png"
+            />
+            <div class="textContent mt-6 note">
+                <b> Figure 30: PCR Program used for the Colony PCR </b>
+            </div>
+            <img
+                class="imgColiKaze mt-8 shadow-sm"
+                src="https://2020.igem.org/wiki/images/7/7f/T--Ionis_Paris--resultsPhase3img10.png"
             />
             <div class="textContent mt-6 note">
                 <b>
-                    Figure 30: BioBrick Assembly method to assemble the possible constructs to the backbone for Phase
-                    III |</b
+                    Figure 31: Gel migration results following a Colony PCR on the fragments “araC+araBAD promoter+mRFP”
+                    and “araC+araBAD promoter+DNaseI” assembled with pSB1A3, pSB4A5 and pSB4K5 backbones | A.</b
                 >
-                1. Restriction digestion (RE) : araC+araBAD promoter with EcoRI and SpeI, DNASE I or mRFP with XbaI and
-                PstI, backbone with EcoRI and PstI; 2. Ligation; 3. Bacterial transformation with the ligated product |
-                Created with BioRender.com
+                Expected results with SnapGene Gel simulation <b>B.</b> Gel Caption after migration through UV
+                transilluminator <b>C.</b> Wells contents and expected sizes.
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    The results of this amplification are shown in <b>Figure 31</b>. For the two controls (circular
+                    pSB4A5 and circular pSB4K5 plasmids), bands with the expected size can be observed (1350 bp both).
+                    Concerning the samples, only wells N°1 and 4 present bands in adequation with the gel simulation
+                    (bands at 2759 bp). They respectively correspond to clones 1 and 4 of the pSB1A3+DNASE I plate.
+                    These colonies both seem to have a well constructed recombinant plasmid with the
+                    araC+araBADpromoter+DNASEI insert but additional verifications are required.
+                </p>
+            </div>
+            <div class="resultTitle1 mt-16">2. Linearization (Single Digestion)</div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    A second way to verify if the transformed bacteria contain our recombinant plasmids is by digesting
+                    them with restriction enzymes. First, we chose to linearize the purified plasmids by choosing an
+                    enzyme that cuts only once. We decided to go with BglI for bacteria with pSB1A3 backbone and NdeI
+                    for pSB4A5 and pSB4K5. Both of their restriction sites are situated on the backbone. The results are
+                    presented in <b>Figure 32</b>.
+                </p>
+            </div>
+            <img
+                class="imgColiKaze mt-8 shadow-sm"
+                src="https://2020.igem.org/wiki/images/f/f6/T--Ionis_Paris--resultsPhase3img11.png"
+            />
+            <div class="textContent mt-6 note">
+                <b>Figure 32: Gel migration results following a single restriction enzyme digestion | A.</b> Expected
+                results with SnapGene Gel simulation <b>B.</b> Gel Caption after migration through UV transilluminator
+                <b>C.</b> Wells contents and expected sizes.
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    The three controls (circular pSB1A3, circular pSB4A5 and circular pSB4K5 digested) gave the expected
+                    bands (respectively at 3225 bp, 4465 bp and 5712 bp). Concerning the samples, the observed bands for
+                    wells N°2, 4, 5, 9, 11, 16, 19 & 21 correspond to the expected bands on the gel simulation. They
+                    respectively correspond to:<br /><br />
+                    Colonies 1, 3, 4 of the pSB1A3 + DNASE I plate<br /><br />
+                    Colony 4 of the pSB1A3 + mRFP plate<br /><br />
+                    Colony 2 of the pSB4A5 + DNASE I plate<br /><br />
+                    Colony 3 of the pSB4A5 + mRFP plate<br /><br />
+                    Colony 1 of the pSB4K5 + DNASE I plate<br /><br />
+                    Colony 1 of the pSB4K5 + mRFP plate<br /><br />
+                </p>
             </div>
         </div>
         <div class="references">
