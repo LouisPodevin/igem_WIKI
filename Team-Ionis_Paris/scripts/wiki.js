@@ -1270,6 +1270,11 @@ const links = {
         path: "/pictures/results/results7",
         prod: "https://2020.igem.org/wiki/images/5/5d/T--Ionis_Paris--results7.png",
     },
+    results7Bis: {
+        ext: "png",
+        path: "/pictures/results/results7Bis",
+        prod: "",
+    },
     results8: {
         ext: "png",
         path: "/pictures/results/results8",
@@ -1338,6 +1343,11 @@ const links = {
     results21: {
         ext: "png",
         path: "/pictures/results/results21",
+        prod: "",
+    },
+    results21Bis: {
+        ext: "png",
+        path: "/pictures/results/results21Bis",
         prod: "",
     },
     results22: {

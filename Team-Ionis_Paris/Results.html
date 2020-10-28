@@ -72,14 +72,16 @@
             </div>
             <div class="textContent mt-4 ml-16 addPadding">
                 <p>
-                    Therefore, we created a software to specifically select and customize a BioBrick to recognize the
-                    desired target bacteria for phase 1.
+                    Therefore, we created a
+                    <a x-data="{}" class="link" :href="window.ROOT_URL + '/Software'">software</a> to specifically
+                    select and customize a BioBrick to recognize the desired target bacteria for phase 1.
                 </p>
             </div>
             <div class="textContent mt-4 addPadding">
                 <p>
-                    Further detail on our experimental procedures and protocols can be found here: Procedures and
-                    Protocols.
+                    Further detail on our experimental procedures and protocols can be found here:
+                    <a x-data="{}" class="link" :href="window.ROOT_URL + '/Notebook'">Procedures</a> and
+                    <a x-data="{}" class="link" :href="window.ROOT_URL + '/Project/Protocols'">Protocols</a>.
                 </p>
             </div>
             <div class="resultTitle mt-16" id="phase1">Phase 1. Targeting and binding to the target bacteria</div>
@@ -87,8 +89,12 @@
             <div class="textContent mt-4 addPadding">
                 <p>
                     The gene product 37 (gp37) is a critical component for the phase I of the project BacTail. To find
-                    out more about the scientific background and design of Phase I click here (mettre lien vers Phase I
-                    Design).<br /><br />
+                    out more about the scientific background and design of Phase I click here (<a
+                        x-data="{}"
+                        class="link"
+                        :href="window.ROOT_URL + '/Design'"
+                        >cf. Phase I Design</a
+                    >).<br /><br />
 
                     The aim for the first phase is to express the gp37 on the surface of our chassis Escherichia coli
                     (<i>E.coli</i>) K12 thanks to the co-expressed genes Lpp-OmpA. The following BioBrick (<b
@@ -159,12 +165,12 @@
                 <b>Figure 5: Expected results of the Hifi Assembly of the 4 fragments and the plasmid pSB1A3 | A.</b>
                 The expected assembled plasmid with Fragments 1,2,3,4 and the backbone | created with SnapGene
             </div>
-            <div class="resultTitle1 mt-16">Conclusion</div>
+            <div class="resultTitle2 mt-16"><b>Conclusion</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
                     Due to difficulties encountered during the experimental procedures and time limitation, we decided
                     to change our verification technique and ordered a new DNA fragment. More information on this in
-                    Engineering Success.
+                    <a x-data="{}" class="link" :href="window.ROOT_URL + '/Engineering'">Engineering Success</a>.
                 </p>
             </div>
             <div class="resultTitle1 mt-16">New BioBrick – Version 2: without RFP</div>
@@ -203,19 +209,78 @@
                 <b>2nd possibility:</b> No attachment of the antibody and therefore no signal is detected at 519 nm |
                 Created with BioRender.com
             </div>
+            <div class="resultTitle2 mt-16">
+                <b>Results of the validation assay of phase I</b>
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    The aim of this assay is to target the his-tag fused to the receptor binding protein gp37, which
+                    should be directed to the outer membrane of our transformed bacteria, via a monoclonal anti-his
+                    antibody conjugated to fluorescein isothiocyanate (FITC). Thus, after the immunolabelling, the
+                    fluorescence is measured at excitation wavelength of 497 nm and emission wavelength of 519 nm.<br /><br />
+
+                    The controls for this assay are bacteria that have been transformed with the pSB1A3 containing the
+                    RFP only and that undergo the same treatment as our samples. The samples are bacteria containing the
+                    plasmid construct of phase I within the his-tag fused to the receptor binding protein gp37.
+                    Additionally, samples and controls are treated with and without anti-his antibodies diluted at
+                    1/1000 and 1/100. Finally, our samples have been done in triplicate (S1-series, B1-series and B2
+                    series).
+                </p>
+            </div>
+            <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results7Bis.url" />
+            <div class="textContent mt-6 note">
+                <b>Figure 8: Results obtained after plate reading with the fluorescent spectrophotometer</b>
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    We can observe that all the negative control samples, which are the samples that are not treated
+                    with the anti-his antibody (S1, B1, B2) and the control (C) emit a similar signal around 27000.
+                    Samples treated with the anti-his antibody 1/1000 dilution (S1 Ab <sub>1/1000</sub>, B1 Ab
+                    <sub>1/1000</sub>, B2 Ab <sub>1/1000</sub> ) and the control that has been treated with the anti-his
+                    antibody 1/1000 dilution (C Ab <sub>1/1000</sub>), emit a signal around 27000 as well. Finally,
+                    samples treated with the anti-his antibody 1/100 dilution (S1 Ab <sub>1/100</sub>, B1 Ab
+                    <sub>1/100</sub> , B2 Ab <sub>1/100</sub> ) emit a signal around 43,000, 38,000, 40,000 restively,
+                    and the control that has been treated with the anti-his antibody 1/100 dilution (C Ab
+                    <sub>1/100</sub>) emit a signal around 40,000.<br /><br />
+
+                    Thus, S1 Ab <sub>1/100</sub> (43,000) is the only sample of transformed bacteria with the construct
+                    of phase I that has a higher signal than its controls (C Ab <sub>1/100</sub> = 40,000 and S1 without
+                    antibody = 27,000), which is not concluding enough to suggest that the receptor binding protein is
+                    well expressed on the outer membrane of our chassis. However, the fact that we have similar signals
+                    for each conditions shows that the measured signals are well due to the presence or absence of the
+                    anti-his antibody. However, what this data shows is that the antibody might bind unspecifically to
+                    other regions of the bacteria or other components in the reaction tube. This specificity issue could
+                    not be analysis in more depth because of a lack of time.<br /><br />
+
+                    After having performed this immunolabelling, we thought that this assay was not enough to confirm
+                    the presence or not of the receptor binding protein gp37 on the surface of our chassis. We should
+                    rather proceed with lysing the cells and differential centrifugation steps to separate the membrane
+                    from the bacterial cytoplasm. Then, both samples should by analyzed by performing a western blot by
+                    targeting again the his-tag with an anti-his antibody. This would show if the protein is present in
+                    the membrane or in the cytoplasm at all.
+                </p>
+            </div>
+
             <div class="resultTitle1 mt-16">
                 Experimental perspectives Phase 1 | Targeting and binding to the target bacteria
             </div>
             <div class="textContent mt-4 addPadding">
                 <ul>
                     <li>
-                        The presence of the receptor binding protein on the surface of our chassis should be confirmed
-                        through repetitions of immunolabeling experiments.<br /><br />
+                        Perform a differential centrifuge to extract the fraction with the membrane the fraction with
+                        the cytoplasm and detect the presence of the gp37 fused to the his-tag via Western blot in
+                        either fraction.<br /><br />
                     </li>
 
                     <li>
-                        Perform the experiments with the TEV protease and proceed with the protein purification Ni2+
-                        chromatography columns specific to the his-tag.<br /><br />
+                        The immunolabelling experiments should be repeated to validate or not the presence of gp37 on
+                        the surface of our chassis by optimizing the unspecific binding (Maybe try to use a higher
+                        concentration of BSA when performing the blocking step).<br /><br />
+                    </li>
+
+                    <li>
+                        Perform the experiment with the TEV protease and proceed with the protein purification with the
+                        Ni2+ chromatography columns specific to the his-tag.<br /><br />
                     </li>
 
                     <li>
@@ -223,7 +288,7 @@
                         surface of the chassis.<br /><br />
                     </li>
 
-                    <li>Confirm the binding of the chassis to the target.</li>
+                    <li>Validate the binding of the chassis to the target.<br /><br /></li>
                 </ul>
             </div>
             <div class="resultTitle mt-16" id="phase2">Phase 2. Lysis of the target bacteria of interest</div>
@@ -254,7 +319,7 @@
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results8.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 8: Our constructs for the expression and secretion of McpM | BioBrick 1</b> (BBa_K3409010)
+                <b>Figure 9: Our constructs for the expression and secretion of McpM | BioBrick 1</b> (BBa_K3409010)
                 contains the gene mcpM which when expressed, will lead microcin PDI. This microcin has two N-Ter signal
                 peptides which are cleaved when secreted. The gene mcpA also present in this BioBrick encodes for an
                 activator of McpM and contains a CaaX protease domain. Finally, the gene mcpI encodes for the immunity
@@ -266,7 +331,7 @@
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results9.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 9: The final construct for the expression and secretion of McpM | A.</b> The expected
+                <b>Figure 10: The final construct for the expression and secretion of McpM | A.</b> The expected
                 assembled plasmid with BioBricks 1,2,3 and the backbone | <b>B.</b> A table giving the detailed
                 composition of the three BioBricks of the second phase of BacTail.
             </div>
@@ -283,7 +348,7 @@
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results10.url" />
             <div class="textContent mt-6 note">
                 <b
-                    >Figure 10: Schematic representation of the three BioBricks for phase II and their corresponding
+                    >Figure 11: Schematic representation of the three BioBricks for phase II and their corresponding
                     length (bp) | A.</b
                 >
                 Primers for the BioBrick Assembly method amplifying on the prefix and suffix region <b>B.</b> Primers
@@ -299,14 +364,16 @@
                     (PCR) to obtain a higher quantity of DNA. Every PCR sample is verified by gel electrophoresis to
                     analyze the PCR results. First, the appropriate bands for BioBrick 1 (1.5 kb), BioBrick 2 (1.4 kb),
                     and BioBrick 3 (2.4 kb) amplified with the primers for Hifi Assembly method are present at their
-                    expected size (<b>Figure 5A</b>). Then, the appropriate bands for BioBrick 1 (1.5 kb), BioBrick 2
+                    expected size (<b>Figure 12A</b>). Then, the appropriate bands for BioBrick 1 (1.5 kb), BioBrick 2
                     (1.4 kb), and BioBrick 3 (2.4 kb) amplified with the primers for BioBrick Assembly method, are
-                    present at their expected size on <b>Figure 5B</b>.
+                    present at their expected size on <b>Figure 12B</b>.Finally, BioBrick 2 (1.4 kb) and BioBrick 3 (2.4
+                    kb) amplified with the primers for BioBrick Assembly method, are present at their expected size on
+                    <b>Figure 12C</b>.
                 </p>
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results11.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 11: Gel migration results of BioBricks 1, 2 and 3 |</b> A 1kb+ DNA ladder was used for all
+                <b>Figure 12: Gel migration results of BioBricks 1, 2 and 3 |</b> A 1kb+ DNA ladder was used for all
                 gels A. PCR amplification of BioBrick (BB) 1(1.5 kb) , BioBrick 2 (1.4 kb) and BioBrick 3 (2.4 kb) with
                 primers for Hifi Assembly method B. PCR amplification of BioBrick (BB) 1(1.5 kb), BioBrick 2 (1.4 kb)
                 and BioBrick 3 (2.4 kb) with primers for BioBrick Assembly method C. Expected results simulated with
@@ -324,14 +391,14 @@
             <div class="textContent mt-4 addPadding">
                 <p>
                     Hifi DNA Assembly method is a molecular cloning technique used to join multiple DNA fragments in a
-                    single isothermal reaction2. As depicted in
-                    <b>Figure 4B</b>, the three BioBrick fragments were designed to add identical end sequences, or
+                    single isothermal reaction<sup>2</sup>. As depicted in
+                    <b>Figure 11B</b>, the three BioBrick fragments were designed to add identical end sequences, or
                     overhangs to adjacent fragment with specific primers via PCR.
                 </p>
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results12.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 12: Hifi Assembly Method of BioBricks 1,2 and 3 |</b> 1. BioBrick fragments and backbone are
+                <b>Figure 13: Hifi Assembly Method of BioBricks 1,2 and 3 |</b> 1. BioBrick fragments and backbone are
                 put together for assembly; 2. The end results is the assembled circular vector containing all the
                 BioBricks and plasmid backbone; 3. Assembled product is transformed into competent cells | Created with
                 BioRender.com
@@ -339,14 +406,14 @@
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results13.url" />
             <div class="textContent mt-6 note">
                 <b
-                    >Figure 13: Transformation after Hifi assembly of Phase 2 – BioBrick 1,2,3 and pSB1A3 | Plate on the
+                    >Figure 14: Transformation after Hifi assembly of Phase 2 – BioBrick 1,2,3 and pSB1A3 | Plate on the
                     left:</b
                 >
                 Escherichia coli DH5 alpha transformed with Hifi assembled product of Phase 2 (BioBrick 1,2,3 and
                 pSB1A3). Plate on the right: Escherichia coli DH5 alpha transformed with the Hifi Assembly positive
                 control.
             </div>
-            <div class="resultTitle1 mt-16">Conclusion</div>
+            <div class="resultTitle2 mt-16"><b>Conclusion</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
                     After Hifi Assembly for phase 2, we should obtain a plate with a certain number of white colonies.
@@ -363,7 +430,7 @@
                 <p>
                     Different workflows have been tested in parallel for the BioBrick Assembly method. One is the
                     <b>2-step workflow</b> where the the ligation is performed in 2 steps as depicted in
-                    <b>Figure 8</b>. The other one is the <b>1-step workflow</b> where the ligation is in done in one
+                    <b>Figure 16</b>. The other one is the <b>1-step workflow</b> where the ligation is in done in one
                     step.
                 </p>
             </div>
@@ -373,12 +440,12 @@
                     BioBrick 2 and 3 need to be assembled first since BioBrick 1 contains the McpM which is toxic for
                     bacteria (see Design Phase 2). Thus, BioBrick 2 and 3 are not killing bacteria during their
                     transformation. As a test, BioBrick 1 is inserted into pSB1A3 and transformed into competent cells,
-                    see <b>Figure 7</b>.
+                    see <b>Figure 15</b>.
                 </p>
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results14.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 14: DH5 alpha bacteria transformed with BioBrick 1 in pSB1A3 |</b> Plates on the left are the
+                <b>Figure 15: DH5 alpha bacteria transformed with BioBrick 1 in pSB1A3 |</b> Plates on the left are the
                 controls (Bacteria transformed only with the plasmid incubated at 30°C and 37°C) and plates on the right
                 are bacteria that have been transformed with the ligated product (plasmid + BioBrick 1 incubated at 30°C
                 and 37°C).
@@ -386,8 +453,8 @@
             <div class="textContent mt-4 addPadding">
                 <p>
                     Concerning the test of the insertion of BioBrick 1 into the pSB1A3, plates have been incubated at
-                    30°C and 37°C degrees. Both plates with the sample (Figure 6 – on the right) containing only
-                    BioBrick 1 do not show any colony. On the other side, the control plates (Figure 6 – on the left)
+                    30°C and 37°C degrees. Both plates with the sample (Figure 14 – on the right) containing only
+                    BioBrick 1 do not show any colony. On the other side, the control plates (Figure 14 – on the left)
                     displayed a few colonies. This suggests that bacteria was not able to survive when expressing McpM
                     in BioBrick 1. McpM thus seems to be toxic for the bacteria.
                 </p>
@@ -402,7 +469,7 @@
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results15.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 15: 2-step BioBrick Assembly method of BioBricks 1,2 and 3 |</b> 1. Restriction (RE)
+                <b>Figure 16: 2-step BioBrick Assembly method of BioBricks 1,2 and 3 |</b> 1. Restriction (RE)
                 digestion: BB2 with EcoRI and SpeI, BB3 with XbaI and PstI, backbone with EcorI and PstI; 2. Ligation;
                 3. Bacterial transformation with the ligated product; 4. Miniprep of the transformed bacteria to collect
                 the plasmid; 5. RE digestion of the plasmid construction with EcorI and XbaI and BB1 EcorI and SpeI; 6.
@@ -414,23 +481,34 @@
                     plasmid pSB1A3 is validated by colony PCR and RE digestion.
                 </p>
             </div>
-            <div class="resultTitle1 mt-16">Results of the 2-step workflow</div>
+            <div class="resultTitle2 mt-16"><b>Results of the 2-step workflow</b></div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results16.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 7: Expected results of the immunofluorescence labelling | 1st possibility:</b> In the case of
-                binding of the monoclonal anti-his antibody to the his-tag, a signal is detected at 519 nm.
-                <b>2nd possibility:</b> No attachment of the antibody and therefore no signal is detected at 519 nm |
-                Created with BioRender.com
+                <b
+                    >Figure 17: Transformation of assembled BB2, BB3 and pSB1A3 | A. DH5 alpha plates with different
+                    ratio of ligated product of BB2, BB3 and pSB1A3, and the control:</b
+                >
+                Plate N°1 is the control (Cut plasmid + ligase without the insert); Plate N°2 Ligation 1:2 ratio; Plate
+                N°2 Ligation 1:2 ratio; Plate N°3 Ligation ratio 1:5; Plate N°4 Ligation ratio 1:3
+                <b>B. Gel migration of verification RE digestions Well N°1, 14:</b> 1kb+ DNA Ladder //
+                <b>Well N°2, 3, 4, 5, 6:</b> Colonies 1, 2, 3, 4, 5 of Plasmid pSB1A3, BB2, BB3 ( Ratio 1:5) digested
+                with BglI+ NdeI // <b>Well N°7, 8, 9, 10, 11, 12:</b> Colonies 1, 2, 3, 4, 5 of Plasmid pSB1A3, BB2, BB3
+                ( Ratio 1:2) digested with BglI+ NdeI // <b>Well N°13:</b> Ligation (20/10/20) pSB1A3, BB2, BB3
+                <b
+                    >C. Expected results obtained with virtual digestion of plasmid BB2,BB3 construction with
+                    SnapGene:</b
+                >
+                Well N°MW: 1kb+ DNA ladder // Well N°1: Assembled plasmid cut with BglI+ NdeI.
             </div>
-            <div class="resultTitle1 mt-16">Conclusion of the 2-step workflow</div>
+            <div class="resultTitle2 mt-16"><b>Conclusion of the 2-step workflow</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
                     When compared to different ligation ratios, a proportional amount of white colonies can be observed
-                    on the plates (Figure 9A) with no colonies counted on the negative control plate. Thus, the
+                    on the plates (Figure 17A) with no colonies counted on the negative control plate. Thus, the
                     transformation seems to have worked. To verify the successful ligation of the plasmid with BB2 and
                     BB3, colonies are tested after miniprep DNA isolation to purify the plasmid of interest. The
                     plasmids purified from the bacterial colonies have been cut with restriction enzymes (RE) BgII and
-                    NdeI. The expected bands are depicted on <b>Figure 9C</b>. Sample of lane 2, 4, and 6 ,
+                    NdeI. The expected bands are depicted on <b>Figure 17C</b>. Sample of lane 2, 4, and 6 ,
                     corresponding to colony N°1, colony N°3, and colony N°5 respectively, seem to have bands at 3.5 kb
                     and 2.4 kb which correspond to the expected size.<br /><br />
 
@@ -451,15 +529,15 @@
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results17.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 17: 1-step BioBrick Assembly method of BioBricks 1,2 and 3 | </b>All in the same tube: 1. 1st
+                <b>Figure 18: 1-step BioBrick Assembly method of BioBricks 1,2 and 3 | </b>All in the same tube: 1. 1st
                 Ligation with BioBrick 1 and BioBrick 2; 2. Addition of BioBrick 3 for 2nd Ligation; Addition of the
                 plasmid for 3rd ligation. Assembled plasmid can be transformed| Created with BioRender.com
             </div>
-            <div class="resultTitle1 mt-16">Results of the 1-step workflow</div>
+            <div class="resultTitle2 mt-16"><b>Results of the 1-step workflow</b></div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results18.url" />
             <div class="textContent mt-6 note">
                 <b
-                    >Figure 18: 1-step workflow - Transformation of assembled BB1, BB2, BB3 and pSB1A3 | A. DH5 alpha
+                    >Figure 19: 1-step workflow - Transformation of assembled BB1, BB2, BB3 and pSB1A3 | A. DH5 alpha
                     plates with ligated product of BB1, BB2 BB2 and pSB1A3, and the control:</b
                 >
                 Plate N°1 One-step workflow ligated product with plasmid 39; Plate N°2 One-step workflow ligated product
@@ -471,10 +549,10 @@
                 <b>C. Expected resultsimulated with SnapGene</b>: Well N°MW : 1kb+ DNA Ladder //Well N°1: plasmid 39
                 Phase II digested by BglI expected //Well N°2: plasmid 31 Phase II digested by SapI expected.
             </div>
-            <div class="resultTitle1 mt-16">Conclusion of the 1-step workflow</div>
+            <div class="resultTitle2 mt-16"><b>Conclusion of the 1-step workflow</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
-                    Several white colonies are obtained on plate N°1 and N°2 (<b>Figure 11A</b>) and no colonies are
+                    Several white colonies are obtained on plate N°1 and N°2 (<b>Figure 19A</b>) and no colonies are
                     counted on the control (plate not present). Thus, the transformation seems to have worked. Regarding
                     the verification of the ligation, colonies needed to be tested after having completed a miniprep
                     procedure to obtain the plasmid. The extracted plasmids of the colonies have been cut with
@@ -482,7 +560,7 @@
                     used to linearize the plasmid 31. SapI is used to cut twice plasmid 31 to obtain 2 distinct bands at
                     10 kb and 3.3 kb as depicted on Well N°2 <b>Figure 11C</b>. For plasmid 39 we did not have any RE
                     available in our inventory to linearize it. Thus, we only used BglI to cut twice plasmid 39 to
-                    obtain 2 distinct bands at 6.7 kb and 1.6 kb as depicted on Well N°1 <b>Figure 11C</b>.
+                    obtain 2 distinct bands at 6.7 kb and 1.6 kb as depicted on Well N°1 <b>Figure 19C</b>.
 
                     <b>For colony 3 of plasmid 39</b>: On lane 4, three bands can be observed: one around 6.7 kb and one
                     around 1.6 kb and a last one unexpected around 3.5 kb. The two first bands correspond to the
@@ -507,13 +585,13 @@
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results19.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 19: Extraction, purification and validation of McpM production |</b> 1. Transformation of the
+                <b>Figure 20: Extraction, purification and validation of McpM production |</b> 1. Transformation of the
                 competent bacteria with our final construction containing the McpM and its secretion system; 2.
                 Overnight growth of the cells; 3. Overnight inoculation of the appropriate clone; 4. Cell lysis; 5.
                 Purification with the his-tag with a Ni2+ IMAC column; 6. SDS-Page, analysis of purification via
                 staining | Created with BioRender.com
             </div>
-            <div class="resultTitle1 mt-16">Expected results</div>
+            <div class="resultTitle2 mt-16"><b>Expected results</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
                     The McpM size is 8.2 kDa. Therefore, we expect that in the lane of the purified cell lysate
@@ -526,14 +604,45 @@
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results20.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 20: Expected results of extraction, purification and validation of McpM production |</b> Well
+                <b>Figure 21: Expected results of extraction, purification and validation of McpM production |</b> Well
                 1: Ladder, Well 2: Elution tube N°1, Well 3: Elution tube N°2, Well 4: Elution tube N°3, Well 5: Flow
                 through, Well 6: Total lysate, Well 7: Laemmli
+            </div>
+            <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results21Bis.url" />
+            <div class="textContent mt-6 note">
+                <b
+                    >Figure 22: SDS-PAGE and Coomassie staining of the purified cell lysate, flow through and total
+                    lysate to validate the presence of McpM |</b
+                >
+                Well 1: Ladder, Well 2: Elution tube N°1, Well 3: Elution tube N°2, Well 4: Elution tube N°3, Well 5:
+                Flow through, Well 6: Total lysate.
+            </div>
+            <div class="resultTitle2 mt-16"><b>Conclusion</b></div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    The chromatography was not 100% efficient as the elution bands still contain many proteins (even
+                    though the band are less intense than for the total lysate). The molecular weight marker did not
+                    migrate very well as the well was a little blocked by polymerized acrylamide towards the top. The
+                    10kDa did not migrate correctly and is not horizontal. The bottom of the gel is not perfect, and it
+                    is difficult to visualize proteins. A light band can be observed at a weight inferior to 10kDa in
+                    the elution 2 lane. This band is expected to be the McpM which is 8.2kDa and which is not
+                    necessarily supposed to be present in large amount. However, we cannot be sure of the presence of
+                    McpM in well 3 (elution 2).<br /><br />
+                    To completely validate the presence of McpM in the purified cell lysate, a Western blot and
+                    immunodetection using an anti-His antibody should be performed. This is done by transferring the
+                    proteins from the gel to a nitrocellulose membrane and then performing the immunodetection, with a
+                    direct rabbit anti-His antibody conjugated to Horseradish Peroxidase, then detecting color using the
+                    HRP color detecting reagent. This will allow us to fully confirm that the low-intense band present
+                    10kDa corresponds to McpM.<br /><br />
+                    For a matter of time and available equipment, we were not able to perform the Western Blot.<br /><br />
+                    Instead, we performed an agar diffusion assay to validate the production and activity of McpM (see
+                    below) by the clone containing plasmid 39.<br /><br />
+                </p>
             </div>
             <div class="resultTitle1 mt-16">B. Agar diffusion assay</div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results21.url" />
             <div class="textContent mt-6 note">
-                <b>Figure 21: Agar diffusion assay to validate the secretion of McpM | 1. The day before:</b> Overnight
+                <b>Figure 23: Agar diffusion assay to validate the secretion of McpM | 1. The day before:</b> Overnight
                 inoculation of the Escherichia coli (E.coli) transformed only with the pSB1A3, E.coli DH5 alpha
                 transformed with our construction (BB1,BB2,BB3), E.coli DH10B containing the native MccpDI cluster.
                 <b>2. The day of the experiment:</b> The E.coli only with the pSB1A3 are lawn on the plate (spread
@@ -542,7 +651,7 @@
                 little circle should appear around the disc of the cultures that expressed mcpM | Created with
                 BioRender.com
             </div>
-            <div class="resultTitle1 mt-16">Expected results</div>
+            <div class="resultTitle2 mt-16"><b>Expected results</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
                     The E.coli DH5 alpha (BB1,BB2,BB3) should kill the surrounding plated E.coli DH5 alpha when it
@@ -551,7 +660,7 @@
                     antimicrobial activity is what we are aiming for phase 2 of the BacTail project.
                 </p>
             </div>
-            <div class="resultTitle1 mt-16">Results</div>
+            <div class="resultTitle2 mt-16"><b>Results</b></div>
             <div class="textContent mt-4 addPadding">
                 <p>
                     We tested in duplicate colony with plasmid 39 assembled with BioBrick 1,2, and 3 (Disc N°2 and N°4),
@@ -561,20 +670,84 @@
                 </p>
             </div>
             <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.results22.url" />
-            <div class="resultTitle1 mt-16">Experimental perspectives of Phase 2| The lysis of the target bacteria</div>
+            <div class="textContent mt-6 note">
+                <b>Figure 24: Results of the agar diffusion assay |</b> Plate on the left side: Assay N°1 and plate on
+                the right: Assay n°2; For both plates: E.coli DH5 alpha transformed with pSB1A3 containing RFP bacterial
+                lawn; Disc 1: E.coli DH5 alpha colonies from plasmid 31; Disc 2: E.coli DH5 alpha colonies from plasmid
+                39; Disc 3: E.coli DH5 alpha colonies from plasmid 31; Disc 4: E.coli DH5 alpha colonies from plasmid
+                39; Disc 5: Positive control - E.coli DH10B strain containing the native MccpDI cluster; Disc 6:
+                Negative control- LB medium; Disc 7: Positive control - E.coli DH10B strain containing the native MccpDI
+                cluster.
+            </div>
             <div class="textContent mt-4 addPadding">
                 <p>
-                    We should continue with the 2-step workflow to add BioBrick 1 to the BioBrick 2, 3 assembled
-                    fragments with the plasmid and transform it into competent cells. After transformation, the plasmid
-                    needs to be purified to proceed with the verification of the assembly of BB1, BB2, and BB3, which
-                    means digestion of the plasmid with an enzyme that cuts it once to linearize it and another pair of
-                    enzymes that cut it twice in the region on the insert. Additionally, the plasmid should be cut with
-                    XbaI and PstI to perform an insert release. Furthermore, a colony PCR can be performed. After having
-                    verified that the plasmid was well assembled, the selected clone will continue with the further
-                    verification steps. These steps include the extraction, purification, and validation of McpM
-                    production via Ni2+ chromatography columns and SDS-Page. Finally, an agar diffusion assay should be
-                    performed as well.
+                    To discuss the results, we zoomed on each disc of both assays, summarized in the table below. Two
+                    characteristics are taken into consideration during observation: presence or absence of a radius
+                    around the disc (due to the excretion of McppPDI microcin) and if some colonies have grown onto the
+                    disc or if the disc remains white.
                 </p>
+            </div>
+            <!-- TODO Board -->
+            <div class="resultTitle2 mt-16"><b>Conclusion</b></div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    Around the original strains (Disc 5 and 7 - positive controls) a small radius (1mm) is observed, and
+                    no red colonies have grown on the disc perimeters, which suggests that the E.coli DH5 alpha of the
+                    bacterial lawn have been killed or could not grow in this area of the plate due to the presence of
+                    the original MccPDI cluster. On the contrary, around the negative control (Dis 6 – LB medium only),
+                    no radius can be observed, and red colonies could grow on the disc, which shows that nothing hinders
+                    the E.coli DH5 alpha of the bacterial lawn to grow on this region. Regarding our samples, we
+                    performed the agar diffusion assay with the candidates kept after the construction validation (<b
+                        >Figure 11B</b
+                    >). We could observe on Disc N°2 Assay N°1 (the construction of plasmid 39), that no red colonies
+                    have grown on the disc perimeters and a small radius (1 mm) appeared on the disc perimeters.
+                    Additionally, a three-time bigger radius (3mm) on the disc N°2 Assay N°1 (construction of plasmid
+                    39) could be observed. This difference in radius size can be explained by the higher volume that has
+                    been used for Disc N°2 Assay N°2. Finally, this observations shows that the construction of plasmid
+                    39 has the same effect than the one of the original MccpDI cluster, meaning to induce the growth of
+                    the E.coli DH5 alpha of the bacterial lawn. This suggest that the construction of plasmid 39
+                    expresses the McpM responsible for killing E.coli DH5 alpha.
+                </p>
+            </div>
+
+            <div class="resultTitle1 mt-16">
+                Experimental perspectives of Phase 2 | The lysis of the target bacteria
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <p>For the 1-step workflow:</p>
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <ul>
+                    <li>
+                        A Western BLOT should be performed to further the validation of McpM production and
+                        secretion.<br /><br />
+                    </li>
+
+                    <li>
+                        Regarding the agar diffusion assay, the experiment should be repeated and E.coli ∆ OmpF should
+                        be used as bacterial lawn as a control plate.<br /><br />
+                    </li>
+
+                    <li>
+                        We should continue with the 2-step workflow to add BioBrick 1 to the already assembled BioBrick
+                        2, 3 fragments with the plasmid and transform it into competent cells. After transformation, the
+                        plasmid needs to be purified to proceed with the verification of the assembly of BB1, BB2, and
+                        BB3, which means digestion of the plasmid with an enzyme that cuts it once to linearize it and
+                        another pair of enzymes that cut it twice in the region on the insert. Additionally, the plasmid
+                        should be cut with XbaI and PstI to perform an insert release. Furthermore, a colony PCR can be
+                        performed. After having verified that the plasmid was well assembled, the selected clone will
+                        continue with the further verification steps. These steps include the extraction, purification,
+                        and validation of McpM production. Finally, an agar diffusion assay should be performed as well
+                        for this 2-step workflow.<br /><br />
+                    </li>
+
+                    <li>
+                        For future step phase 1/phase 2: insert the plasmid of phase I and phase II into the same
+                        bacteria to enable recognition and lysis at the same time and see if the expression of gp37
+                        enhances the lysis of the bacteria of interest (it should enable our chassis to approach the
+                        target and enhance the antimicrobial concentration in proximity of the target).<br /><br />
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="references">
@@ -721,6 +894,11 @@
             font-weight: 800;
         }
 
+        .resultTitle2 {
+            font-size: 15px;
+            font-weight: 800;
+        }
+
         .imgColiKaze {
             max-width: 900px;
             width: 100%;
@@ -741,6 +919,10 @@
             margin-top: 10px;
             font-size: 13px;
             color: rgba(0, 0, 0, 0.6);
+        }
+        .link {
+            color: inherit !important;
+            text-decoration: underline;
         }
     </style>
 </html>
