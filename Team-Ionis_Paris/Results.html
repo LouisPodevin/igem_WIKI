@@ -849,6 +849,98 @@
                     </li>
                 </ul>
             </div>
+            <div class="resultTitle mt-16" id="phase3">Results of Phase 3. The Kill-Switch</div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    In Phase III, the arabinose operon is the key parameter for the regulation of the death inducting
+                    gene DNASE I. To find out more about the scientific background and design of Phase III click here
+                    (Link for Phase III Design).<br /><br />
+
+                    This phase aims at controlling the life cycle of our engineered bacteria through a kill switch
+                    system. In presence of L-arabinose enables the synthesis of the endonuclease bpDNaseI I that will
+                    destroy the producer (i.e. the bacteria). For this phase, two constructs were designed. Each of them
+                    are divided into 2 different fragments (for a matter of cost and assembly).<br /><br />
+
+                    1. The first fragment (BBa_K3519010) contains, among others, the gene coding for the araC regulatory
+                    protein and a minimal pBAD promoter (or araBAD promoter) upstream of the second fragment. Through
+                    the binding of araC to L-arabinose, araC enables the arrival of the RNA polymerase to the pBAD
+                    promoter so the transcription of the gene of the following fragment can occur. To this fragment, the
+                    second or third fragment can be attached (Figure 24).<br /><br />
+
+                    2. The second fragment is the one containing the DNASE I gene coding for the bpDNaseI enzyme.
+                    Additionally, a his-tag is added for further purifications and analysis.<br /><br />
+
+                    3. The third fragment possesses a gene coding for the mRFP. This fluorescent protein enables the
+                    detection of the expression of the gene following pBAD via fluorescence assays. Furthermore, its
+                    quantification will enable the validation of this construct.<br /><br />
+
+                    The fragments are summarized in <b>Table 1</b> for clarity.
+                </p>
+            </div>
+            <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.resultsPhase3img1.url" />
+            <div class="textContent mt-6 note">
+                <b>Figure 25: Representation of the different fragment assembly and the BioBricks they can form |</b>
+                Minimal araBAD promoter (BBa_K2442101), Promoter medium (BBa_J23118), Strong RBS (BBa_BB0034), E. coli
+                araC coding region (BBa_K2442103), mRFP (BBa_E1010), DNASE I + poly his-tag (BBa_K3519004), Spacer
+                (BBa_0040), Terminator (BBa_0015), araC+araBADpromoter (BBa_K3519010), araC+araBADpromoter+mRFP
+                (BBa_K3519011), araC+araBADpromoter+DNASE I (BBa_K3519012).
+            </div>
+            <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.resultsPhase3img2.url" />
+            <div class="textContent mt-6 note">
+                <b>Table 1: List of the fragments composing the BioBricks and the different backbones used</b>
+            </div>
+            <div class="resultTitle1 mt-16">PCR & Gel Migrations</div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    For each fragments, BioBrick prefix and suffix sequences are added on both sides. This is done to
+                    assemble the fragments and the backbone all together by restriction enzyme digestion followed by
+                    ligation (see restriction enzyme digestion and ligation assembly method further down this the page).
+                    However, restriction enzymes need more nucleotides to specifically bind and cut. As the restriction
+                    sites are located on both ends of the fragment, few nucleotides are added to the primers.<br /><br />
+
+                    The primers and the fragments are synthetized by IDT. Once received, the synthetized fragments are
+                    resuspended and amplified via Polymerase Chain Reaction (PCR) to obtain a higher quantity of DNA.
+                    The same process is realized for purified circular pSB1A3, pSB4A5 and pSB4K5 plasmids (already in
+                    our possession) to amplify their backbones. Each PCR samples is verified on a 1% agarose gel through
+                    electrophoresis to verify its size.<br /><br />
+
+                    After some trouble-shouting, we determined the parameters for an optimal PCR (Figure 26). Concerning
+                    the amplification of the fragments, a two-steps PCR is performed as the primers used anneal at 72°C.
+                    The annealing temperature for the backbone amplification is about 68°C with another set of primer.
+                    While a 50 seconds elongation step is sufficient for the amplification of the fragments, a 2 minutes
+                    elongation step is required for the backbones as the longest plasmid, pSB4K5 is 3 378 bp long (Table
+                    1).
+                </p>
+            </div>
+            <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.resultsPhase3img3.url" />
+            <div class="textContent mt-6 note">
+                <b> Figure 27: PCR Program used for the amplification of fragments and backbones</b>
+            </div>
+            <div class="textContent mt-4 addPadding">
+                <p>
+                    The previously presented PCR parameters enabled the amplification of each fragments and backbones as
+                    shown in Figure X. Throughout our repetitive PCR, we observe that the amplification of the DNASE I
+                    is always leading to double bands. However, one of the two bands correspond to the expected size
+                    (1061 bp). Therefore, this band is cut and purified to obtain the fragment bpDNaseI. The same
+                    phenomenon is observed for the backbones. One band corresponds to the amplified backbone size
+                    (pSB1A3: 2155 bp, pSB4A5: 3395 bp, pSB4K5: 4489 bp) and the other to the size of the circular
+                    purified plasmid used as DNA template (pSB1A3: 3225 bp, pSB4A5: 4465 bp, pSB4K5: 3419 bp). Thus, two
+                    decisions have been taken:<br /><br />
+                    First, a gel purification is realized to discard the circular plasmid template.<br /><br />
+                    Second, following this purification step, DpnI is used so it can digest the non-PCR products of this
+                    amplification: the template DNA. This way, we reduce the chance of transforming our chassis with the
+                    original circular plasmid used for backbone amplifications (see Engineering success).
+                </p>
+            </div>
+            <img x-data="{}" class="imgColiKaze mt-8 shadow-sm" :src="window.LINKS.resultsPhase3img4.url" />
+            <div class="textContent mt-6 note">
+                <b>
+                    Figure 28: Gel migration results following a PCR of the fragments “araC+araBAD promoter”, “mRFP” and
+                    “bpDNaseI” and the plasmids pSB1A3, pSB4A5 and pSB4K5 | A.</b
+                >
+                Expected results with SnapGene Gel simulation <b>B.</b> Gel Caption after migration through UV
+                transilluminator <b>C.</b> Wells contents and expected sizes.
+            </div>
         </div>
         <div class="references">
             <div class="container">
