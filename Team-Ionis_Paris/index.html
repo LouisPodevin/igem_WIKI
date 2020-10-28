@@ -199,7 +199,7 @@
                 <div class="row">
                     <div class="col-xl-5">
                         <div class="stepIllustrationCard" x-data="{}">
-                            <img :src="window.LINKS.designProjectPhase1.url" alt="step1 home" />
+                            <img :src="window.LINKS.step1Home.url" alt="step1 home" />
                         </div>
                     </div>
                     <div class="col-xl-4">
@@ -219,7 +219,7 @@
                 <div class="row">
                     <div class="col-xl-5 offset-xl-1">
                         <div class="stepIllustrationCard" x-data="{}">
-                            <img :src="window.LINKS.designProjectPhase2.url" alt="step2 home" class="step2Image" />
+                            <img :src="window.LINKS.step2Home.url" alt="step2 home" class="step2Image" />
                         </div>
                     </div>
                     <div class="col-xl-4">
@@ -237,7 +237,7 @@
                 <div class="row">
                     <div class="col-xl-5 offset-xl-2">
                         <div class="stepIllustrationCard" x-data="{}">
-                            <img :src="window.LINKS.designProjectPhase3.url" alt="step3 home" class="step3Image" />
+                            <img :src="window.LINKS.step3Home.url" alt="step3 home" class="step3Image" />
                         </div>
                     </div>
                     <div class="col-xl-4">
@@ -890,10 +890,16 @@
             margin-top: 30px;
             padding: 40px;
             text-align: center;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .stepIllustrationCard > img {
-            height: 150px;
+            max-height: 150px;
+            width: 100%;
+            object-fit: contain;
         }
 
         .stepHeader {

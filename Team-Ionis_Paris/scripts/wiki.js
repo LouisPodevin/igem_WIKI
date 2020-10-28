@@ -1356,7 +1356,6 @@ const links = {
         prod: "",
     },
 
-
     // EDUCATION
     educationLogo: {
         ext: "png",
