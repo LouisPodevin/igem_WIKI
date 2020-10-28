@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Proof of concept</title>
+    </head>
+    <body>
+        <script src="./scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+        <div id="description">
+            <!-- <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.educationLogo.url + ')'"> -->
+            <div class="container">
+                <h1>Proof of concept - IGEM IONIS</h1>
+                <div class="descriptionContent">
+                    <div class="descriptionText">
+                        <div class="descriptionText1">Proof of concept</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore" target-id="introduction"></div>
+        <div class="part" id="introduction">
+            <div class="container">
+                <div class="textContent font-bold">
+                    <p>
+                        Bactail is a tailor-made and easy to use system designed to fight safely and locally against
+                        antimicrobial resistance (AMR).
+                    </p>
+                </div>
+                <h2 class="mt-8">Tailor-made & easy to use</h2>
+                <div class="textContent mt-6">
+                    <p>
+                        The main characteristic of the BacTail project is its modularity and specificity. This means
+                        that the engineered bacteria could easily be redesigned to recognize and kill other targets. For
+                        safety reasons, our proof of concept was conducted on risk group 1 organisms which are not
+                        dangerous for human beings nor the environment. However, the recognition and the lysis step (<a
+                            x-data="{}"
+                            :href="window.ROOT_URL + '/Phases/phase1'"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Design Phase I</a
+                        >,
+                        <a
+                            x-data="{}"
+                            :href="window.ROOT_URL + '/Phases/phase2'"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Design Phase II</a
+                        >) of our project can easily be used individually and eventually be re-adapted for other
+                        application areas.
+                    </p>
+                    <p>
+                        To encourage the application of our tailor made system, a software tool was created (<a
+                            x-data="{}"
+                            :href="window.ROOT_URL + '/Software'"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Software</a
+                        >). This software aims at generating the BioBrick that gives the ability to recognise a target
+                        bacterium of your choice. Eventually, this was thought as a collaborative software, because
+                        users are able to add new targets or knowledge to the database as well.
+                    </p>
+                </div>
+                <h2 class="mt-8">Safe & locally</h2>
+                <div class="textContent mt-6">
+                    <p>
+                        Our engineered bacteria that has the ability to recognize and bind to bacteria of interest, and
+                        kill it, was carefully thought through. Thanks to a self-deletion system, called a Kill Switch,
+                        the genetically modified bacteria is programmed to die once it has accomplished its mission.
+                        Thus, no dissemination into the environment need be feared (<a
+                            x-data="{}"
+                            :href="window.ROOT_URL + '/Phases/phase3'"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Design Phase III</a
+                        >).
+                    </p>
+                </div>
+                <h2 class="mt-8">BacTail is raising awareness for a major health problem</h2>
+                <div class="textContent mt-6">
+                    <p>
+                        Our project deals with a major health issue: antimicrobial resistance (AMR). This resistance is
+                        already causing a lot of harm to society and concerns everyone. Thus, we were devoted to
+                        participate or even organize our own events to find as many occasions as possible to educate
+                        people regarding this sanitary crisis (see
+                        <a x-data="{}" :href="window.ROOT_URL + '/Education'" target="_blank" rel="noopener noreferrer"
+                            >Public engagement and education</a
+                        >).
+                    </p>
+                    <p>
+                        Eventually, our goal was to talk about AMR and BacTail with a panel of experts. Considering
+                        their point of view, to help shape our project (see
+                        <a
+                            x-data="{}"
+                            :href="window.ROOT_URL + '/Human_Practices'"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Human practices</a
+                        >).
+                    </p>
+                </div>
+                <h2 class="mt-8">Experimental validation</h2>
+                <div class="textContent mt-6">
+                    <p>
+                        <b>Phase 2 |</b> The goal is to express an antimicrobial peptide which will be secreted by our
+                        chassis and act on the bacteria of interest. For this, the production and secretion of the
+                        microcin PDI is needed (<a
+                            x-data="{}"
+                            :href="window.ROOT_URL + '/Phases/phase2'"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >design phase II</a
+                        >) .
+                    </p>
+                    <p>
+                        Once the plasmid assembled we needed to validate the production of McpM, the protein has to be
+                        extracted and purified from the cellular culture via Ni2+ chromatography column and further
+                        revelation via SDS-Page and Coomassie staining technique.
+                    </p>
+                </div>
+                <img
+                    class="imageContent mt-8"
+                    src="https://2020.igem.org/wiki/images/e/e6/T--Ionis_Paris--POC-1.png"
+                    style="max-height: 400px"
+                />
+                <div class="imageAnnotation2">
+                    <b
+                        >Figure X : SDS-PAGE and Coomassie staining of the purified cell lysate, flow through and total
+                        lysate to validate the presence of McpM |</b
+                    >
+                    Well 1: Ladder, Well 2: Elution tube N°1, Well 3: Elution tube N°2, Well 4: Elution tube N°3, Well
+                    5: Flow through, Well 6: Total lysate.
+                </div>
+                <div class="mt-6 textContent">
+                    <p>
+                        Total cell lysate purification of the bacteria that were transformed with the assembled plasmid
+                        (carrying the MccPDI gene cluster: 5 genes necessary for the appropriate expression, activation
+                        and secretion of microcin PDI), migration by SDS-Page and revelation by Coomassie blue, is a
+                        first validation for the production of McpM as a band was observed at the appropriate molecular
+                        weight (8.2kDa).
+                    </p>
+                </div>
+                <img
+                    class="imageContent mt-8"
+                    src="https://2020.igem.org/wiki/images/d/d0/T--Ionis_Paris--POC-2.png"
+                    style="max-height: 400px"
+                />
+                <div class="imageAnnotation2">
+                    <b>Figure X : Results of the agar diffusion assay |</b> Plate on the left side: Assay N°1 and plate
+                    on the right: Assay n°2; For both plates: E.coli DH5 alpha transformed with pSB1A3 containing RFP
+                    bacterial lawn; Disc 1: E.coli DH5 alpha colonies from plasmid 31; Disc 2: E.coli DH5 alpha colonies
+                    from plasmid 39; Disc 3: E.coli DH5 alpha colonies from plasmid 31; Disc 4: E.coli DH5 alpha
+                    colonies from plasmid 39; Disc 5: Positive control - E.coli DH10B strain containing the native
+                    MccpDI cluster; Disc 6: Negative control- LB medium; Disc 7: Positive control - E.coli DH10B strain
+                    containing the native MccpDI cluster;
+                </div>
+                <div class="mt-6 textContent">
+                    <p>
+                        To further confirm this observation, an agar diffusion assay was performed, where the target
+                        strain was put in contact with the microcin producing one. The goal was to see if a zone of
+                        inhibition was visible or not.
+                    </p>
+                    <p>
+                        A zone of inhibition around the microcin producing strain was clear. This indicates that our
+                        engineered bacteria manage to correctly secrete the microcin PDI and that it retains its
+                        activity against the target strain. It is fully functional.
+                    </p>
+                </div>
+                <h2 class="mt-8">Implementing Phase 1 and 2 BacTail in the real world</h2>
+                <div class="textContent mt-6">
+                    <p>
+                        In the lab, we worked on <i>E. coli</i> K12 to model our target bacterium. In the real world,
+                        our system aims at fighting against pathogenic bacteria and antibiotic resistant strains. That
+                        is why the future steps of phase 2 is testing our antimicrobial peptide (MccPDI) which has an
+                        effect against <i>E. coli</i> O157:H7 for example, by performing another agar diffusion assay in
+                        the appropriate biosafety laboratory and safety measures.
+                    </p>
+                    <p>
+                        Succeeding to accomplish phase 1 and phase 2 in parallel in the same chassis would be ideal for
+                        our project. Indeed, once phase 1 has been validated, the goal is to express the LTF at the
+                        surface of antimicrobial producing bacteria and show that it increases the efficiency of our
+                        chassis as it allows it to approach the target and kill it quicker.
+                    </p>
+                    <p>
+                        If we were to accomplish this in a biosafety level 1 laboratory on <i>E. coli K12</i>, we could
+                        go to the next step and test our system with a real pathogenic target, <i>E. coli</i> O157:H7
+                        (as mentioned above), with appropriate safety measures. For this, we would only have to replace
+                        the gp37 sequence of the T4 phage in our chassis, with the gp38 sequence of the PP01 phage,
+                        which is already characterized to specifically bind to the shiga-toxin producing
+                        <i>E. coli</i> strain and no other commensal ones.
+                    </p>
+                    <p>
+                        All in all, these tests would validate the modularity of our system, the fact that it is
+                        tailor-made and easy to use to fight pathogens in a safe and controlled way.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        /* Description */
+
+        #description h1 {
+            display: none;
+        }
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: top -80px right -80px;
+            background-size: auto 100%;
+        }
+
+        .descriptionContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .descriptionText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes description2 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .descriptionText1 {
+            color: #8d1f24;
+            font-size: 50px;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            animation: description1 2s;
+        }
+
+        @keyframes descriptionLogo {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes description1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        .scrollToTop {
+            cursor: pointer;
+            z-index: 20;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            height: 50px;
+            width: 50px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        /* CONTENT */
+
+        .part {
+            margin: 120px 0 40px 0;
+        }
+
+        .textContent {
+            max-width: 900px;
+            font-size: 15px;
+        }
+
+        .textContent p {
+            margin-bottom: 24px;
+            font-size: 17px;
+        }
+
+        .textContent p:last-child {
+            margin-bottom: 0;
+        }
+
+        .leftImage {
+            max-width: 80px;
+            max-height: 80px;
+            width: 100%;
+        }
+
+        .h2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .h2 > h2 {
+            margin-bottom: 0;
+        }
+
+        .h2 > div {
+            margin-right: 20px;
+            background-color: rgba(231, 52, 39, 0.2);
+            color: #8d1f24;
+            border-radius: 999px;
+            height: 40px;
+            width: 40px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container a {
+            color: #8d1f24 !important;
+            text-decoration: none !important;
+        }
+
+        .container a:hover {
+            color: #8d1f24 !important;
+            text-decoration: underline !important;
+        }
+
+        h2 {
+            font-size: 25px;
+            color: #8d1f24;
+            font-weight: 800;
+        }
+
+        .imageContent {
+            max-width: 900px;
+            width: 100%;
+            object-fit: contain;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .imageAnnotation {
+            max-width: 900px;
+            font-style: italic;
+            text-align: center;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .imageAnnotation2 {
+            max-width: 900px;
+            font-style: italic;
+            text-align: left;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .emphase {
+            background-color: rgba(141, 31, 37, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 900px;
+        }
+
+        .emphase > p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</html>
