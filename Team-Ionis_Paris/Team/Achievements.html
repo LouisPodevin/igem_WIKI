@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Achievements</title>
+    </head>
+    <body>
+        <script src="../scripts/wiki.js"></script>
+        <!-- <script src="/Template:Ionis_Paris/scripts/wiki?action=raw&ctype=text/javascript"></script> -->
+
+        <div class="navigation"></div>
+        <div class="tailwind"></div>
+        <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.achievements1.url + ')'">
+            <div class="container">
+                <h1>Achievements - IGEM IONIS</h1>
+                <div class="descriptionContent">
+                    <div class="descriptionText">
+                        <div class="descriptionText1">Achievements</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore" target-id="achievements"></div>
+        <div id="achievements" class="my-16">
+            <div class="container">
+                <div class="flex items-center justify-center flex-wrap gap-32">
+                    <div class="flex flex-col items-center text-center">
+                        <img
+                            x-data="{}"
+                            class="gold-medal-logo"
+                            :src="window.LINKS.achievements2.url"
+                            alt="Gold medal"
+                        />
+                        <div class="font-bold">We won a <span class="colored">gold</span> medal</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div style="height: 250px" class="flex items-center">
+                            <div class="nomination">
+                                <div class="nomination-title uppercase colored font-bold">Nomination</div>
+                                <div class="nomination-text colored font-bold">Best Therapeutics Project</div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-center">
+                            We got nominated for<br />
+                            <span class="colored">Best Therapeutics Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer></footer>
+    </body>
+    <style>
+        html,
+        body {
+            background-color: #fafafa !important;
+        }
+
+        /* Description */
+
+        #description h1 {
+            display: none;
+        }
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            background-repeat: no-repeat;
+            background-position: center right 100px;
+            background-size: auto 500px;
+        }
+
+        .descriptionContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .descriptionText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        @keyframes description2 {
+            0% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            50% {
+                position: relative;
+                top: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        .descriptionText2 {
+            color: #8d1f24;
+            font-size: 50px;
+            text-shadow: 0px 10px 20px rgba(141, 31, 37, 0.3);
+            animation: description2 2s;
+        }
+
+        .descriptionText1 {
+            color: #8d1f24;
+            text-shadow: 0px 10px 20px rgba(231, 52, 39, 0.2);
+            font-size: 50px;
+            animation: description1 1s;
+        }
+
+        @keyframes descriptionLogo {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes description1 {
+            0% {
+                position: relative;
+                left: 100px;
+                opacity: 0;
+            }
+
+            100% {
+                position: relative;
+                left: 0px;
+            }
+        }
+
+        /* CONTENT */
+
+        .gold-medal-logo {
+            height: 270px;
+        }
+
+        .nomination {
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            padding: 20px 60px 20px 20px;
+
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+        }
+
+        .nomination-title {
+            font-size: 15px;
+            opacity: 0.6;
+        }
+
+        .nomination-text {
+            font-size: 20px;
+            line-height: 1;
+        }
+    </style>
+</html>

@@ -1647,6 +1647,18 @@ const links = {
         path: "/pictures/education/education52",
         prod: "https://2020.igem.org/wiki/images/c/c9/T--Ionis_Paris--education52.png",
     },
+
+    // ACHIEVEMENTS
+    achievements1: {
+        ext: "svg",
+        path: "/pictures/achievements/achievement-page",
+        prod: "https://2020.igem.org/wiki/images/7/7a/T--Ionis_Paris--Achievements1.svg",
+    },
+    achievements2: {
+        ext: "svg",
+        path: "/pictures/achievements/achievement-gold",
+        prod: "https://2020.igem.org/wiki/images/3/34/T--Ionis_Paris--Achievements2.svg",
+    },
 }
 
 for (let link in links) {
