@@ -299,6 +299,39 @@
                 </a>
             </div>
         </div>
+        <div class="mt-16 achievements flex flex-col">
+            <div class="container">
+                <div class="font-bold mt-16 achievement-title">Achievements</div>
+                <div class="mt-16 flex flex-wrap items-start justify-center achievement-middle">
+                    <div class="flex-shrink-0 text-center achievement-item flex flex-col items-center gap-4">
+                        <img x-data="{}" class="achievement-img" :src="window.LINKS.medalHome.url" />
+                        <div>We won a <b>Gold medal</b></div>
+                    </div>
+                    <div class="achievement-item flex flex-col">
+                        <div class="achievement-nomination">
+                            <div class="colored font-bold">Nomination</div>
+                            <div class="achievement-nomination-title font-bold">Best Therapeutics Project</div>
+                        </div>
+                        <div class="mt-4">
+                            <div>We got nominated for <b>Best Therapeutics Project</b></div>
+                            <div class="achievement-nomination-text">Please insert here a message</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-start mt-16">
+                    <a
+                        class="flex items-center gap-4 achievement-button"
+                        href="https://2020.igem.org/Competition/Results"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div>Check results</div>
+                        <div class="flex items-center"><i data-feather="arrow-right"></i></div>
+                    </a>
+                </div>
+                <div class="mt-16"></div>
+            </div>
+        </div>
         <div id="references" class="mt-16">
             <div class="container">
                 <hr />
@@ -1115,6 +1148,69 @@
 
         .videoPresentationLink > svg {
             color: #8d1f24 !important;
+        }
+
+        .achievements {
+            background: linear-gradient(15deg, #c36948, #f1ae89);
+            color: white;
+        }
+
+        .achievement-title {
+            font-size: 25px;
+        }
+
+        .achievement-middle {
+            gap: 80px;
+        }
+
+        .achievement-img {
+            max-height: 200px;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .achievement-item {
+            min-width: 400px;
+            max-width: 600px;
+        }
+
+        .achievement-nomination {
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 5px;
+            padding: 15px 15px 10px 15px;
+            border-left: 10px solid white;
+            overflow: hidden;
+        }
+
+        .achievement-nomination > div:first-child {
+            text-transform: uppercase;
+        }
+
+        .achievement-nomination-title {
+            font-size: 20px;
+            color: black;
+        }
+
+        .achievement-nomination-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 15px;
+        }
+
+        .achievement-button {
+            color: white !important;
+            text-decoration: none !important;
+            border: 2px solid rgba(255, 255, 255);
+            border-radius: 7px;
+            padding: 7px 15px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .achievement-button:hover {
+            opacity: 1;
         }
     </style>
 </html>

@@ -142,6 +142,11 @@ const links = {
         path: "/pictures/step3Home",
         prod: "https://2020.igem.org/wiki/images/7/7c/T--Ionis_Paris--step3Index.svg",
     },
+    medalHome: {
+        ext: "svg",
+        path: "/pictures/medal-home",
+        prod: "https://2020.igem.org/wiki/images/b/be/T--Ionis_Paris--Medal-Home.svg",
+    },
     // Sponsors
     benchlingSponsor: {
         ext: "png",
