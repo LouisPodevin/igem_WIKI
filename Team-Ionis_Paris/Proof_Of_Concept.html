@@ -10,12 +10,13 @@
 
         <div class="navigation"></div>
         <div id="description">
-            <!-- <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.educationLogo.url + ')'"> -->
-            <div class="container">
-                <h1>Proof of concept - IGEM IONIS</h1>
-                <div class="descriptionContent">
-                    <div class="descriptionText">
-                        <div class="descriptionText1">Proof of concept</div>
+            <div id="description" x-data="{}" :style="'background-image: url(' + window.LINKS.phase1Logo.url + ')'">
+                <div class="container">
+                    <h1>Proof of concept - IGEM IONIS</h1>
+                    <div class="descriptionContent">
+                        <div class="descriptionText">
+                            <div class="descriptionText1">Proof of concept</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -24,10 +25,10 @@
         <div class="part" id="introduction">
             <div class="container">
                 <div class="textContent font-bold">
-                    <p>
+                    <h2 class="first-h2">
                         Bactail is a tailor-made and easy to use system designed to fight safely and locally against
                         antimicrobial resistance (AMR).
-                    </p>
+                    </h2>
                 </div>
                 <h2 class="mt-8">Tailor-made & easy to use</h2>
                 <div class="textContent mt-6">
@@ -306,6 +307,11 @@
         }
 
         /* CONTENT */
+
+        .first-h2 {
+            color: black;
+            font-size: 30px;
+        }
 
         .part {
             margin: 120px 0 40px 0;
