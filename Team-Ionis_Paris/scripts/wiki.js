@@ -1659,6 +1659,11 @@ const links = {
         path: "/pictures/achievements/achievement-gold",
         prod: "https://2020.igem.org/wiki/images/3/34/T--Ionis_Paris--Achievements2.svg",
     },
+    achievements3: {
+        ext: "jpg",
+        path: "/pictures/achievements/achievement-team",
+        prod: "https://2020.igem.org/wiki/images/c/cd/T--Ionis_Paris--Achievements3.jpg",
+    },
 }
 
 for (let link in links) {
